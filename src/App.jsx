@@ -2611,6 +2611,7 @@ const GlossarySection = () => {
   const [openConcertoHistory, setOpenConcertoHistory] = useState(false);
   const [openRondoForm, setOpenRondoForm] = useState(false);
   const [openSonataForm, setOpenSonataForm] = useState(false);
+  const [openPersonaggi, setOpenPersonaggi] = useState(false);
 
   const toggleCategory = (category) => {
     setOpenCategory(openCategory === category ? null : category);
@@ -3243,6 +3244,586 @@ const GlossarySection = () => {
             )}
           </div>
         ))}
+      </div>
+
+      {/* Approfondimento: Personaggi Storici e Interpreti */}
+      <div className="mt-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <button
+          onClick={() => setOpenPersonaggi(!openPersonaggi)}
+          className={`w-full p-5 flex justify-between items-center transition-all ${
+            openPersonaggi
+              ? 'sticky top-20 z-10 bg-slate-700 text-white'
+              : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <User className="w-5 h-5 text-purple-400" />
+            <div className="text-left">
+              <h3 className="text-lg font-semibold">👥 Indice Analitico dei Personaggi</h3>
+              <span className="text-sm opacity-90">Regnanti, mecenati e interpreti</span>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 transition-transform ${openPersonaggi ? 'rotate-180' : ''}`} />
+        </button>
+        {openPersonaggi && (
+          <div className="p-6 pt-24 bg-slate-900">
+            <div className="space-y-6 text-sm text-slate-300">
+              
+              {/* TABELLA REGNANTI */}
+              <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-10 rounded-3xl shadow-2xl border border-slate-600/50">
+                <h4 className="text-xl font-bold text-slate-200 mb-6 flex items-center">
+                  <span className="text-3xl mr-3">👑</span>
+                  REGNANTI E MECENATI (DA BACH A BEETHOVEN)
+                </h4>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs border-collapse">
+                    <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide">
+                      <tr>
+                        <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Sovrano / Nobile</th>
+                        <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Periodo Regno/Vita</th>
+                        <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Luogo</th>
+                        <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Musicisti Protetti</th>
+                        <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Note e Relazioni</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-slate-300">
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Federico II "il Grande"</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1740–1786</td>
+                        <td className="border border-slate-700 px-3 py-2">Prussia (Berlino)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>J.S. Bach</strong>, C.P.E. Bach</td>
+                        <td className="border border-slate-700 px-3 py-2">Re flautista e compositore. Ospitò Bach nel 1747 (da cui nacque l'<em>Offerta Musicale</em>). Zio di Federico Guglielmo II.</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Federico Guglielmo II</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1786–1797</td>
+                        <td className="border border-slate-700 px-3 py-2">Prussia (Berlino)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Mozart</strong>, <strong>Beethoven</strong>, Boccherini</td>
+                        <td className="border border-slate-700 px-3 py-2">Nipote di Federico II. Violoncellista dilettante. Mozart gli dedicò i <em>Quartetti Prussiani</em>, Beethoven le <em>Sonate per violoncello Op. 5</em>.</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Luigi Ferdinando di Prussia</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1772–1806</td>
+                        <td className="border border-slate-700 px-3 py-2">Prussia</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Beethoven</strong> (Dedicatario Op. 37)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Cugino</strong> di Federico Guglielmo II e nipote di Federico II. Pianista virtuoso e compositore, morì in battaglia.</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Giuseppe II d'Asburgo</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1765–1790</td>
+                        <td className="border border-slate-700 px-3 py-2">Austria (Vienna)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Mozart</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">Figlio di Maria Teresa. "Despota illuminato". Assunse Mozart come <em>Kammermusicus</em>, ma preferiva spesso Salieri.</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Francesco II (poi I)</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1792–1835</td>
+                        <td className="border border-slate-700 px-3 py-2">Austria (Vienna)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Beethoven</strong>, Schubert</td>
+                        <td className="border border-slate-700 px-3 py-2">Ultimo imperatore del Sacro Romano Impero. Regnava durante tutta la carriera viennese di Beethoven. Suonava il violino.</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Arciduca Rodolfo</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1788–1831</td>
+                        <td className="border border-slate-700 px-3 py-2">Austria (Vienna)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Beethoven</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">Fratello minore di Francesco II. Allievo e massimo mecenate di Beethoven (dedicatario di <em>Missa Solemnis</em>, Conc. <em>Imperatore</em>).</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Principe Esterházy</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1762–1790 (Nicola I)</td>
+                        <td className="border border-slate-700 px-3 py-2">Ungheria/Austria</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Haydn</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">La famiglia Esterházy tenne Haydn a servizio per decenni, permettendogli di sviluppare lo stile classico.</td>
+                      </tr>
+                      <tr className="hover:bg-slate-800/50 transition-colors">
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Gottfried van Swieten</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">1733–1803</td>
+                        <td className="border border-slate-700 px-3 py-2">Vienna</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Mozart</strong>, <strong>Haydn</strong>, <strong>Beethoven</strong></td>
+                        <td className="border border-slate-700 px-3 py-2">Diplomatico (non regnante). Introdusse la musica di Bach e Händel a Vienna. Fondamentale per la formazione di Beethoven.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* PERSONAGGI STORICI - EPOCA DI BEETHOVEN */}
+              <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-amber-500">
+                <h4 className="text-xl font-bold text-slate-200 mb-5 flex items-center">
+                  <span className="text-3xl mr-3">📜</span>
+                  PERSONAGGI STORICI (L'EPOCA DI BEETHOVEN)
+                </h4>
+                <p className="text-xs text-slate-400 mb-5 italic">Figure che hanno vissuto durante la vita di Beethoven o nel XIX secolo.</p>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* B */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">BRAUN, Peter von (1758-1819)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> barone, banchiere e impresario teatrale austriaco</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> direttore dei teatri imperiali di Vienna (1794-1806)</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> nel 1802 negò a Beethoven l'uso del teatro per il suo concerto, ritardando di un anno la prima dell'Op. 37</li>
+                      <li><strong className="text-slate-200">Note:</strong> descritto come "stupido e rozzo" dalla famiglia Beethoven, nel 1803 accolse il compositore al Theater an der Wien.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">BREITKOPF & HÄRTEL</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi erano:</strong> casa editrice musicale tedesca fondata a Lipsia (1719)</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> principali editori delle sue opere</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> Karl van Beethoven gestiva la corrispondenza con loro; pubblicarono molte opere incluso l'oratorio <em>Cristo sul Monte degli Ulivi</em></li>
+                      <li><strong className="text-slate-200">Note:</strong> esistono ancora oggi, la più antica casa editrice musicale al mondo.</li>
+                    </ul>
+                  </div>
+
+                  {/* C */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">CZERNY, Carl (1791-1857)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista, compositore e pedagogo austriaco</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> allievo diretto (dal 1800)</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> diede la prima viennese del Quinto Concerto "Imperatore"; testimone oculare dello stile esecutivo beethoveniano</li>
+                      <li><strong className="text-slate-200">Note:</strong> maestro di Liszt e autore di celebri studi tecnici.</li>
+                    </ul>
+                  </div>
+
+                  {/* F */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">FRANCESCO II D'ASBURGO (1768-1835)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> imperatore del Sacro Romano Impero (fino al 1806), poi Imperatore d'Austria</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> sovrano durante la carriera viennese del compositore</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> la stabilità (e poi la crisi bellica) del suo regno influenzò l'economia e la vita musicale viennese</li>
+                      <li><strong className="text-slate-200">Note:</strong> fratello dell'Arciduca Rodolfo.</li>
+                    </ul>
+                  </div>
+
+                  {/* H */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">HAYDN, Joseph (1732-1809)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> compositore austriaco, padre della sinfonia</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> maestro a Vienna (1792-1794)</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> insegnò composizione a Beethoven, pur con un rapporto conflittuale</li>
+                      <li><strong className="text-slate-200">Note:</strong> chiamava Beethoven "il Gran Mogol".</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">HUMMEL, Johann Nepomuk (1778-1837)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista e compositore austriaco</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> rivale amichevole e collega</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> scrisse una cadenza alternativa per l'Op. 37; il suo stile era più decorativo rispetto a quello drammatico di Beethoven</li>
+                      <li><strong className="text-slate-200">Note:</strong> presente al letto di morte di Beethoven.</li>
+                    </ul>
+                  </div>
+
+                  {/* L */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">LICHNOWSKY, Karl Alois von (1761-1814)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> principe della Slesia, mecenate</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> primo grande protettore viennese, lo ospitò in casa</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> gli garantì una rendita annuale; dedicatario della <em>Patetica</em></li>
+                      <li><strong className="text-slate-200">Note:</strong> Beethoven ruppe i rapporti con lui nel 1806 dopo una furiosa lite.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">LOBKOWITZ, Franz Joseph Maximilian von (1772-1816)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> principe boemo e mecenate</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> finanziatore e amico</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> nel suo palazzo avvennero le prime prove dell'Eroica; dedicatario dei Quartetti Op. 18</li>
+                      <li><strong className="text-slate-200">Note:</strong> finì in rovina per le enormi spese musicali.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">LUIGI FERDINANDO DI PRUSSIA (1772-1806)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> principe prussiano, pianista e compositore</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> <strong>dedicatario del Terzo Concerto Op. 37</strong></li>
+                      <li><strong className="text-slate-200">Importanza:</strong> Beethoven lo stimava molto come pianista ("suona non come un re, ma come un artista"); morì eroicamente in battaglia contro i francesi</li>
+                      <li><strong className="text-slate-200">Note:</strong> nipote di Federico il Grande.</li>
+                    </ul>
+                  </div>
+
+                  {/* M */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">MOZART, Wolfgang Amadeus (1756-1791)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> compositore austriaco</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> modello assoluto</li>
+                      <li><strong className="text-slate-200">Importanza per Op. 37:</strong> il Concerto in Do minore K. 491 di Mozart è l'ispirazione diretta per l'Op. 37 di Beethoven</li>
+                      <li><strong className="text-slate-200">Note:</strong> Beethoven disse ascoltando il K. 491: "Non riusciremo mai a fare nulla di simile".</li>
+                    </ul>
+                  </div>
+
+                  {/* N */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">NAPOLEONE BONAPARTE (1769-1821)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> generale e imperatore dei francesi</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> idolo giovanile poi ripudiato</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> la sua figura eroica influenzò lo stile del "periodo di mezzo" (Eroica, Concerto n. 5)</li>
+                      <li><strong className="text-slate-200">Note:</strong> le sue truppe occuparono Vienna nel 1805 e 1809.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">NEEFE, Christian Gottlob (1748-1798)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> compositore e organista</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> primo vero maestro a Bonn</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> gli fece conoscere <em>Il Clavicembalo ben temperato</em> di Bach</li>
+                      <li><strong className="text-slate-200">Note:</strong> scrisse la prima recensione lodando il giovane Ludwig.</li>
+                    </ul>
+                  </div>
+
+                  {/* O */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">ODESCALCHI, Barbara (Principessa Babette) (1754-1802)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> principessa e mecenate</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> dedicataria del Concerto n. 1 Op. 15.</li>
+                    </ul>
+                  </div>
+
+                  {/* R */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">RAZUMOVSKY, Andrey Kirillovich (1752-1836)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> ambasciatore russo a Vienna</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> mecenate</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> committente dei tre quartetti Op. 59 ("Razumovsky").</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">RIES, Ferdinand (1784-1838)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista e compositore, allievo di Beethoven</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> amico intimo e biografo</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> testimone oculare della prima dell'Op. 37; raccontò i dettagli sulla stesura incompleta della parte solistica.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">RODOLFO D'AUSTRIA, Arciduca (1788-1831)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> arciduca e cardinale</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> allievo di pianoforte e principale mecenate</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> garantì a Beethoven la rendita vitalizia per non farlo partire da Vienna.</li>
+                    </ul>
+                  </div>
+
+                  {/* S */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SCHIKANEDER, Emanuel (1751-1812)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> impresario teatrale e librettista (Flauto Magico)</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> gestore del Theater an der Wien</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ospitò Beethoven nel teatro durante la composizione dell'Op. 37.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SCHUMANN, Clara (1819-1896)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista e compositrice tedesca (nata dopo la morte di Beethoven)</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> fondamentale per la diffusione del concerto nell'Ottocento; scrisse una cadenza celebre per il primo movimento</li>
+                      <li><strong className="text-slate-200">Note:</strong> moglie di Robert Schumann.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SEYFRIED, Ignaz von (1776-1841)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> voltapagine alla prima dell'Op. 37</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> tramandò l'aneddoto dei "geroglifici egizi" (pagine vuote) sullo spartito del pianoforte.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">STREICHER, Nannette e Andreas</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi erano:</strong> costruttori di pianoforti viennesi</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> amici intimi</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> fornivano a Beethoven strumenti robusti adatti al suo stile violento.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SWIETEN, Gottfried van (1733-1803)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> barone e mecenate</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> mentore intellettuale</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> introdusse Beethoven alla musica antica (Bach e Händel).</li>
+                    </ul>
+                  </div>
+
+                  {/* V */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">VAN BEETHOVEN, Johann (1740-1792)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> padre di Ludwig</li>
+                      <li><strong className="text-slate-200">Note:</strong> tenore alcolista, cercò di sfruttare il figlio come prodigio.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">VAN BEETHOVEN, Karl (Carl) (1774-1815)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> fratello minore di Ludwig</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> gestiva la corrispondenza commerciale (es. con Breitkopf & Härtel).</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">VAN BEETHOVEN, Karl (nipote) (1806-1858)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> nipote di Ludwig</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> causa della lunga battaglia legale per la custodia che tormentò gli ultimi anni del compositore.</li>
+                    </ul>
+                  </div>
+
+                  {/* W */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">WALDSTEIN, Ferdinand Ernst Gabriel von (1762-1823)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> conte e primo mecenate a Bonn</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> finanziò il viaggio a Vienna augurando a Beethoven di ricevere "lo spirito di Mozart dalle mani di Haydn".</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* INTERPRETI MODERNI */}
+              <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-blue-500">
+                <h4 className="text-xl font-bold text-slate-200 mb-5 flex items-center">
+                  <span className="text-3xl mr-3">🎹</span>
+                  INTERPRETI E FIGURE MODERNE (XX-XXI SECOLO)
+                </h4>
+                <p className="text-xs text-slate-400 mb-5 italic">Direttori e pianisti delle registrazioni discografiche.</p>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* A */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">ABBADO, Claudio (1933-2014)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra italiano</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> registrò l'Op. 37 con Martha Argerich (2004), versione di riferimento moderna.</li>
+                    </ul>
+                  </div>
+
+                  {/* B */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">BÖHM, Karl (1894-1981)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra austriaco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> diresse Maurizio Pollini nell'Op. 37 (1979); simbolo della tradizione classica viennese.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">BRENDEL, Alfred (1931-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista austriaco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> interprete intellettuale e analitico, riferimento per studenti (registrazione con Rattle, 1998).</li>
+                    </ul>
+                  </div>
+
+                  {/* D */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">DUDAMEL, Gustavo (1981-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra venezuelano</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> noto per l'energia ritmica, ha diretto Yuja Wang nel Concerto n. 3.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">DUTOIT, Charles (1936-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra svizzero</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> accompagnò la giovane Martha Argerich nella registrazione del 1982.</li>
+                    </ul>
+                  </div>
+
+                  {/* F */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">FISCHER, Edwin (1886-1960)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista e direttore svizzero</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> pioniere del recupero filologico dello spirito beethoveniano; registrazione storica con Furtwängler (1951).</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">FURTWÄNGLER, Wilhelm (1886-1954)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra tedesco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> massimo esponente dell'interpretazione "titanica" e soggettiva del romanticismo tedesco.</li>
+                    </ul>
+                  </div>
+
+                  {/* G */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">GOULD, Glenn (1932-1982)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista canadese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> interprete eccentrico e geniale, offrì una lettura dell'Op. 37 (1959) asciutta e anti-romantica.</li>
+                    </ul>
+                  </div>
+
+                  {/* H */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">HOGWOOD, Christopher (1941-2014)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore e clavicembalista inglese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> pioniere delle esecuzioni su strumenti originali (registrazione con Steven Lubin, 1988).</li>
+                    </ul>
+                  </div>
+
+                  {/* K */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">KEMPFF, Wilhelm (1895-1991)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista tedesco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> la sua registrazione del 1961 è considerata ideale per il primo ascolto grazie alla chiarezza poetica.</li>
+                    </ul>
+                  </div>
+
+                  {/* L */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">LEITNER, Ferdinand (1912-1996)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra tedesco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> accompagnatore affidabile e classico nella celebre integrale con Kempff.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">LISIECKI, Jan (1995-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista canadese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> talento contemporaneo, ha inciso per Deutsche Grammophon dirigendo dalla tastiera (con Academy of St Martin in the Fields).</li>
+                    </ul>
+                  </div>
+
+                  {/* M */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">MUTI, Riccardo (1941-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra italiano</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ha diretto Sokolov in una rara e preziosa registrazione live del concerto.</li>
+                    </ul>
+                  </div>
+
+                  {/* P */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">POLLINI, Maurizio (1942-2024)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista italiano</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> celebre per il rigore strutturale e la perfezione tecnica nelle opere di Beethoven.</li>
+                    </ul>
+                  </div>
+
+                  {/* R */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">RATTLE, Simon (1955-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra inglese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ha collaborato con Brendel per un ciclo beethoveniano moderno e bilanciato.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">RICHTER, Sviatoslav (1915-1997)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista sovietico</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> leggenda del pianoforte, noto per la potenza e la profondità quasi mistica delle esecuzioni.</li>
+                    </ul>
+                  </div>
+
+                  {/* S */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SANDERLING, Kurt (1912-2011)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra tedesco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ponte tra la cultura musicale tedesca e quella russa (diresse sia Richter che Uchida).</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SARGENT, Malcolm (1895-1967)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra inglese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> diresse la prima registrazione completa storica con Schnabel (anni '30).</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SAY, Fazil (1970-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista e compositore turco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ha scritto una cadenza moderna e controversa per il Terzo Concerto.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SCHNABEL, Artur (1882-1951)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi era:</strong> pianista austriaco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> il primo a registrare l'integrale delle sonate; considerato "l'uomo che ha inventato Beethoven" per il XX secolo.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">SOKOLOV, Grigory (1950-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista russo</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> artista di culto, le sue interpretazioni sono eventi rari di enorme profondità filosofica.</li>
+                    </ul>
+                  </div>
+
+                  {/* U */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">UCHIDA, Mitsuko (1948-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista anglo-giapponese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> porta in Beethoven una chiarezza e un'eleganza tipicamente mozartiane.</li>
+                    </ul>
+                  </div>
+
+                  {/* W */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">WANG, Yuja (1987-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista cinese</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> superstar odierna, unisce tecnica infallibile a una presenza scenica magnetica.</li>
+                    </ul>
+                  </div>
+
+                  {/* Z */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
+                    <h5 className="font-bold text-slate-100 mb-2">ZIMERMAN, Krystian (1956-)</h5>
+                    <ul className="space-y-1 text-xs">
+                      <li><strong className="text-slate-200">Chi è:</strong> pianista polacco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> noto per il perfezionismo maniacale; la sua versione con Bernstein è carica di tensione drammatica.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
