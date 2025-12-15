@@ -2685,7 +2685,7 @@ const GlossarySection = () => {
                 <h4 className="text-base font-semibold text-slate-100">Analisi dello sviluppo</h4>
                 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-slate-200 text-sm mb-2">1. Barocco: Polarità e Ritornello</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">1. Barocco: polarità e ritornello</h5>
                   <p className="text-xs">
                     In Vivaldi e Torelli, il concerto si basa sull'<strong>architettura</strong>. L'orchestra stabilisce 
                     la tonalità con un <strong>Ritornello</strong> ricorrente. Il solista suona episodi virtuosistici 
@@ -2706,7 +2706,7 @@ const GlossarySection = () => {
                 </div>
 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-slate-200 text-sm mb-2">3. Romantico: Abolizione del Ritornello</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">3. Romantico: abolizione del ritornello</h5>
                   <p className="text-xs mb-2">
                     Mendelssohn e Liszt considerano il lungo Tutti iniziale "arcaico e ridondante":
                   </p>
@@ -2723,9 +2723,9 @@ const GlossarySection = () => {
                     Il concerto rappresenta l'individuo (solista) contro o insieme alla società (orchestra):
                   </p>
                   <ul className="space-y-1 text-xs ml-2">
-                    <li>• <strong>Mozart:</strong> Dialogo ideale e cooperazione</li>
-                    <li>• <strong>Beethoven:</strong> L'eroe che si afferma e guida (scale imperiose, Op. 37)</li>
-                    <li>• <strong>Romanticismo:</strong> Il virtuoso soprannaturale domina la massa (Paganini)</li>
+                    <li>• <strong>Mozart:</strong> dialogo ideale e cooperazione</li>
+                    <li>• <strong>Beethoven:</strong> l'eroe che si afferma e guida (scale imperiose, Op. 37)</li>
+                    <li>• <strong>Romanticismo:</strong> il virtuoso soprannaturale domina la massa (Paganini)</li>
                   </ul>
                 </div>
               </div>
