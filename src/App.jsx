@@ -36,7 +36,7 @@ const glossaryData = [
   {
     category: "Forme Musicali",
     items: [
-      { term: "Forma Sonata", definition: "Struttura musicale in tre sezioni principali: Esposizione (presentazione dei temi), Sviluppo (elaborazione dei temi) e Ripresa (ritorno dei temi). Nel concerto classico si alterna tra TUTTI (orchestra) e SOLO (solista + orchestra)." },
+      { term: "Forma Sonata", definition: "Struttura musicale in tre sezioni principali: esposizione (presentazione dei temi), Sviluppo (elaborazione dei temi) e Ripresa (ritorno dei temi). Nel concerto classico si alterna tra TUTTI (orchestra) e SOLO (solista + orchestra)." },
       { term: "Rondò", definition: "Forma musicale basata sull'alternanza di un tema principale (ritornello) con episodi contrastanti. Schema tipico: A-B-A-C-A. Nel concerto, il tema principale si scambia velocemente tra Solo e Tutti in un rapido 'botta e risposta'." },
       { term: "Cadenza", definition: "Sezione virtuosistica per il solista, tradizionalmente improvvisata. Nel Concerto n.3, Beethoven scrisse la propria cadenza (inizialmente improvvisata). È un'area 'protetta' per mostrare il virtuosismo del solista." },
       { term: "Fugato", definition: "Passaggio in stile contrappuntistico dove il tema viene imitato tra le voci. Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale - scelta audace e innovativa." },
@@ -80,13 +80,13 @@ const movementsData = [
     key: "Do minore",
     desc: "Forma sonata con doppia esposizione. Il primo movimento è drammatico ed eroico.",
     details: [
-      "RITORNELLO 1 (batt. 1-111): Esposizione orchestrale con tema primario marziale (P), secondo tema lirico (S) e materiale conclusivo (Z)",
-      "SOLO 1 (batt. 112-243): Ingresso drammatico del pianoforte con tre scale ascendenti fortissimo. Episodi di bravura virtuosistici",
-      "RITORNELLO 2 (breve): Transizione orchestrale",
-      "SVILUPPO (batt. 244-343): Elaborazione dei temi con modulazioni audaci e contrasti dinamici",
-      "SOLO 2 / RIPRESA (batt. 344-387): Ripresa del materiale principale",
-      "CADENZA (batt. 388-403): Area virtuosistica per il solista, inizialmente improvvisata da Beethoven",
-      "RITORNELLO 4 / CODA (batt. 404-502): Innovazione: il pianoforte continua a suonare dopo l'ingresso dell'orchestra"
+      "RITORNELLO 1 (batt. 1-111): esposizione orchestrale con tema primario marziale (P), secondo tema lirico (S) e materiale conclusivo (Z)",
+      "SOLO 1 (batt. 112-243): ingresso drammatico del pianoforte con tre scale ascendenti fortissimo. Episodi di bravura virtuosistici",
+      "RITORNELLO 2 (breve): transizione orchestrale",
+      "SVILUPPO (batt. 244-343): elaborazione dei temi con modulazioni audaci e contrasti dinamici",
+      "SOLO 2 / RIPRESA (batt. 344-387): ripresa del materiale principale",
+      "CADENZA (batt. 388-403): area virtuosistica per il solista, inizialmente improvvisata da Beethoven",
+      "RITORNELLO 4 / CODA (batt. 404-502): innovazione: il pianoforte continua a suonare dopo l'ingresso dell'orchestra"
     ]
   },
   {
@@ -95,11 +95,11 @@ const movementsData = [
     key: "Mi maggiore",
     desc: "Movimento lirico e contemplativo. La tonalità di Mi maggiore crea un contrasto drammatico con il Do minore del primo movimento.",
     details: [
-      "Carattere: Intimo, meditativo, quasi una preghiera. Il pianoforte dialoga con i legni in un'atmosfera sospesa",
-      "Innovazione tecnica: Uso pionieristico del pedale di risonanza del pianoforte Érard, nel secondo movimento",
-      "Struttura: Forma tripartita (A-B-A) con sezione centrale più agitata",
-      "Orchestrazione: Dialogo cameristico tra pianoforte e fagotti, oboi e archi",
-      "Tonalità: Mi maggiore - scelta audace, una terza cromatica distante da Do minore"
+      "Carattere: intimo, meditativo, quasi una preghiera. Il pianoforte dialoga con i legni in un'atmosfera sospesa",
+      "Innovazione tecnica: uso pionieristico del pedale di risonanza del pianoforte Érard, nel secondo movimento",
+      "Struttura: forma tripartita (A-B-A) con sezione centrale più agitata",
+      "Orchestrazione: dialogo cameristico tra pianoforte e fagotti, oboi e archi",
+      "Tonalità: mi maggiore - scelta audace, una terza cromatica distante da Do minore"
     ]
   },
   {
@@ -108,11 +108,11 @@ const movementsData = [
     key: "Do minore → Mib maggiore",
     desc: "Rondò brillante che conclude il concerto con energia e virtuosismo. Finale trionfale in Mib maggiore.",
     details: [
-      "Forma: Rondò (A-B-A-C-A) con tema principale che alterna tra orchestra e solista",
-      "Fugato: Inserimento innovativo di un elaborato fugato sul tema principale - scelta audace per un concerto",
-      "Virtuosismo: Passaggi pianistici brillanti con arpeggi, scale e ottave",
-      "Modulazione finale: Da Do minore a Mib maggiore per una conclusione luminosa e trionfale",
-      "Carattere: Energico, quasi sfrenato, con elementi di danza e umorismo beethoveniano"
+      "Forma: rondò (A-B-A-C-A) con tema principale che alterna tra orchestra e solista",
+      "Fugato: inserimento innovativo di un elaborato fugato sul tema principale - scelta audace per un concerto",
+      "Virtuosismo: passaggi pianistici brillanti con arpeggi, scale e ottave",
+      "Modulazione finale: da Do minore a Mib maggiore per una conclusione luminosa e trionfale",
+      "Carattere: energico, quasi sfrenato, con elementi di danza e umorismo beethoveniano"
     ]
   }
 ];
@@ -550,7 +550,7 @@ const FontiSection = () => {
   return (
     <div className="space-y-8 animate-fadeIn">
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-10 rounded-3xl shadow-2xl border border-slate-600/50">
-        <h2 className="text-4xl font-bold mb-6 text-blue-300">Fonti documentarie</h2>
+        <h2 className="text-4xl font-bold mb-6 text-slate-200">Fonti documentarie</h2>
         <p className="text-lg text-slate-300 leading-relaxed">
           Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
         </p>
@@ -566,25 +566,25 @@ const FontiSection = () => {
             </thead>
             <tbody className="bg-slate-900 text-slate-100">
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Schizzi</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Quaderni di Schizzi</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1798 in poi</td>
                 <td className="px-4 py-3 border border-slate-700">Composizione, sviluppo di idee, memoria artistica.</td>
                 <td className="px-4 py-3 border border-slate-700">Rilegati (da tavolo o tascabili). Mix di idee per varie opere.</td>
               </tr>
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Fogli Sciolti</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Fogli Sciolti</td>
                 <td className="px-4 py-3 border border-slate-700">Pre-1798 (e oltre)</td>
                 <td className="px-4 py-3 border border-slate-700">Esercizi tecnici, esperimenti pianistici, partiture orchestrali abbozzate.</td>
                 <td className="px-4 py-3 border border-slate-700">Sparsi, poi riuniti in miscellanee (es. Kafka) dai collezionisti.</td>
               </tr>
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Conversazione</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Quaderni di Conversazione</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1818 in poi</td>
                 <td className="px-4 py-3 border border-slate-700">Comunicazione quotidiana (causa sordità).</td>
                 <td className="px-4 py-3 border border-slate-700">Dialoghi scritti dagli interlocutori.</td>
               </tr>
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Diario (Tagebuch)</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Diario (Tagebuch)</td>
                 <td className="px-4 py-3 border border-slate-700">1812-1818 (principalmente)</td>
                 <td className="px-4 py-3 border border-slate-700">Riflessione spirituale e intellettuale.</td>
                 <td className="px-4 py-3 border border-slate-700">Annotazioni personali, citazioni.</td>
@@ -629,7 +629,7 @@ const FontiSection = () => {
         
         <div className="space-y-6 text-sm text-slate-300">
           <div>
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Studi Specifici e Analisi del Concerto Op. 37</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Studi Specifici e Analisi del Concerto Op. 37</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Küthen, Hans-Werner.</strong> <em>Ludwig van Beethoven: Klavierkonzert Nr. 3 in c</em>. Kassel-London-New York: Bärenreiter, 1987. 
@@ -665,11 +665,11 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Teoria della Forma e del Concerto</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Teoria della Forma e del Concerto</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Hepokoski, James e Darcy, Warren.</strong> <em>Elements of Sonata Theory: Norms, Types, and Deformations in the Late-Eighteenth-Century Sonata</em>. 
-                Oxford: Oxford University Press, 2006. (Fonte principale per la definizione di "Forma di Sonata per Concerto di Tipo 5").
+                Oxford: Oxford University Press, 2006. (Fonte principale per la definizione di "Forma di Sonata per Concerto").
               </li>
               <li className="leading-relaxed">
                 <strong>Keefe, Simon P. (a cura di).</strong> <em>The Cambridge Companion to the Concerto</em>. Cambridge: Cambridge University Press, 2005.
@@ -685,11 +685,11 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Prassi Esecutiva, Improvvisazione e Strumenti</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Prassi Esecutiva, Improvvisazione e Strumenti</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Chiantore, Luca.</strong> <em>Beethoven al pianoforte: Improvvisazione, composizione e ricerca sonora negli esercizi tecnici</em>. 
-                Milano: Il Saggiatore, 2014. (Fondamentale per il rapporto tra improvvisazione e testo scritto, e per l'aneddoto di Seyfried sulle pagine vuote).
+                Milano: il Saggiatore, 2014. (Fondamentale per il rapporto tra improvvisazione e testo scritto, e per l'aneddoto di Seyfried sulle pagine vuote).
               </li>
               <li className="leading-relaxed">
                 <strong>Czerny, Carl.</strong> <em>On the Proper Performance of All Beethoven's Works for the Piano</em>. Ed. Paul Badura-Skoda. 
@@ -699,7 +699,7 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Biografie e Contesto Storico</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Biografie e Contesto Storico</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Solomon, Maynard.</strong> <em>Beethoven</em>. New York: Schirmer Books, 1977 (ed. riv. 1998).
@@ -718,7 +718,7 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Fonti Epistolari e Documentarie</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Fonti Epistolari e Documentarie</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Beethoven, Ludwig van.</strong> <em>Beethoven's Letters</em>. Ed. Emily Anderson. 3 voll. London: Macmillan, 1961 (o edizioni successive).
@@ -756,7 +756,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
         {/* Tabella I 5 Concerti in Prospettiva */}
         <div className="mb-4 overflow-x-auto">
-          <h4 className="text-base font-semibold text-blue-300 mb-3">I 5 Concerti in prospettiva</h4>
+          <h4 className="text-base font-semibold text-slate-200 mb-3">I 5 Concerti in prospettiva</h4>
           <table className="w-full text-xs text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
@@ -789,13 +789,13 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 <td className="border border-slate-600 p-2">Odescalchi</td>
               </tr>
               <tr className="bg-slate-700/50">
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">3</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">37</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">1803</td>
-                <td className="border border-slate-600 p-2 font-bold text-orange-300">Eroico</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">Do minore</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">Transizione drammatica</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">Louis Ferdinand</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">3</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">37</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">1803</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Eroico</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Do minore</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Transizione drammatica</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Louis Ferdinand</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">4</td>
@@ -821,7 +821,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
         {/* Tabella Evoluzione dei 5 Concerti */}
         <div className="mb-4 bg-slate-700/30 p-4 rounded-lg">
-          <h4 className="text-base font-semibold text-purple-300 mb-3">Evoluzione stilistica</h4>
+          <h4 className="text-base font-semibold text-slate-200 mb-3">Evoluzione stilistica</h4>
           <div className="space-y-2 text-xs text-slate-300">
             <div className="flex items-center">
               <span className="w-32 font-semibold">N.1 Op.15</span>
@@ -832,8 +832,8 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               <span className="flex-1">Sib maggiore → Ancora mozartiano</span>
             </div>
             <div className="flex items-center bg-blue-900/30 p-2 rounded">
-              <span className="w-32 font-bold text-blue-300">N.3 Op.37</span>
-              <span className="flex-1 font-semibold text-blue-200">Do minore →  PONTE DI TRANSIZIONE</span>
+              <span className="w-32 font-bold text-slate-200">N.3 Op.37</span>
+              <span className="flex-1 font-semibold text-slate-200">Do minore →  PONTE DI TRANSIZIONE</span>
             </div>
             <div className="flex items-center">
               <span className="w-32 font-semibold">N.4 Op.58</span>
@@ -855,18 +855,18 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             <p><strong>Compositore:</strong> Ludwig van Beethoven (1770-1827)</p>
             <p><strong>Composizione:</strong> 1800-1803</p>
             <p><strong>Prima esecuzione:</strong> 5 aprile 1803, <Tooltip text="Teatro di Vienna fondato nel 1801 da Emanuel Schikaneder (librettista del Flauto Magico). Divenne essenziale per la carriera di Beethoven che vi abitò e vi presentò molte opere tra 1803-1804.">
-              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Theater an der Wien</span>
+              <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Theater an der Wien</span>
             </Tooltip></p>
           </div>
           <div className="space-y-1.5">
             <p><strong>Dedicato a:</strong> <Tooltip text="Principe prussiano (1772-1806), nipote di Federico il Grande. Compositore dilettante e ammiratore di Beethoven. Morì eroicamente nella battaglia di Saalfeld contro Napoleone.">
-              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Principe Luigi Ferdinando di Prussia</span>
+              <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Principe Luigi Ferdinando di Prussia</span>
             </Tooltip></p>
             <p><strong>Tonalità:</strong> Do minore → Mib maggiore (finale)</p>
             <p><strong>Movimenti:</strong> Allegro con brio → Largo → Rondo: Allegro</p>
           </div>
         </div>
-        <div className="mt-3 p-3 bg-purple-900/20 rounded text-xs text-purple-200 border-l-2 border-purple-500">
+        <div className="mt-3 p-3 bg-purple-900/20 rounded text-xs text-slate-200 border-l-2 border-purple-500">
           💡 <strong>Curiosità:</strong> Il principe dedicatario Louis Ferdinand era lui stesso compositore e pianista di talento. Morì in battaglia nel 1806 a soli 34 anni.
         </div>
       </div>
@@ -921,7 +921,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">📖 Approfondimento: Il "Concerto 0" (WoO. 4)</h3>
+              <h3 className="text-lg font-semibold">📖 Approfondimento: il "Concerto 0" (WoO. 4)</h3>
               <span className="text-sm opacity-90">1784 - Beethoven a 14 anni</span>
             </div>
           </div>
@@ -938,7 +938,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
               <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-blue-500">
                 <p className="text-sm">
-                  Il concerto è talvolta indicato come <strong className="text-blue-300">Concerto per pianoforte n. 0</strong>, 
+                  Il concerto è talvolta indicato come <strong className="text-slate-200">Concerto per pianoforte n. 0</strong>, 
                   poiché precedeva tutti gli altri concerti per pianoforte di Beethoven. <strong>Viene eseguito raramente</strong>. 
                   I pianisti Howard Shelley, Ronald Brautigam e Philippos Tsalachouris, così come il musicologo e compositore svizzero 
                   Willy Hess, hanno ciascuno la propria ricostruzione del concerto.
@@ -955,22 +955,8 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 </ol>
               </div>
 
-              <div className="bg-slate-900/50 p-4 rounded-lg">
-                <h4 className="text-base font-semibold text-slate-100 mb-3">Stile e contesto</h4>
-                <p className="mb-2">
-                  Il fatto che ogni esecuzione abbia un'orchestrazione diversa rende difficile descrivere accuratamente l'opera, 
-                  ma in generale il concerto ha lo <strong>stile dei compositori classici della fine del XVIII secolo</strong> come 
-                  <strong> Joseph Haydn</strong>, che in seguito sarebbe diventato il tutore di Beethoven.
-                </p>
-                <ul className="space-y-1.5 list-disc list-inside text-xs">
-                  <li>Il <strong>primo movimento</strong> ha una parte per pianoforte che utilizza principalmente idee di scale a un tempo veloce.</li>
-                  <li>Il lento <strong>secondo movimento</strong> è simile nella forma, con arpeggi e ornamentazioni comuni.</li>
-                  <li>L'<strong>ultimo movimento</strong> ha una melodia allegra per il tema principale, suonata molto velocemente, ancora una volta basata sulle scale.</li>
-                </ul>
-              </div>
-
               <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-purple-500">
-                <p className="text-xs text-purple-200">
+                <p className="text-xs text-slate-200">
                   <strong>Nota storica:</strong> Beethoven molto probabilmente compose questo concerto nel 1784, quando era ancora a Bonn. 
                   In questo periodo, Mozart non aveva ancora composto le sue Sinfonie n. 39, 40 e 41. Beethoven si recò a Vienna 
                   nel <strong>1792</strong> all'età di 21 anni.
@@ -993,11 +979,11 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               <strong className="text-slate-100">Vienna 1792:</strong> Beethoven arriva nella capitale musicale d'Europa, 
               dove aveva vissuto{' '}
               <Tooltip text="Joseph Haydn (1732-1809), 'Padre della sinfonia', maestro di Beethoven">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Haydn</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Haydn</span>
               </Tooltip>{' '}
               e il geniale{' '}
               <Tooltip text="Wolfgang Amadeus Mozart (1756-1791), morto appena un anno prima">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Mozart</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Mozart</span>
               </Tooltip>.
             </p>
             <p>
@@ -1011,7 +997,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 const element = document.getElementById('contesto-geopolitico');
                 if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
-              className="text-xs text-blue-400 hover:text-blue-300 font-semibold hover:underline"
+              className="text-xs text-blue-400 hover:text-slate-200 font-semibold hover:underline"
             >
               → Approfondisci
             </button>
@@ -1028,7 +1014,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               <strong className="text-slate-100">Il dramma della sordità:</strong> Dal 1796-98 Beethoven inizia a perdere l'udito. 
               Questo concerto nasce nel cuore della crisi, quasi contemporaneamente al{' '}
               <Tooltip text="Ottobre 1802: lettera ai fratelli in cui Beethoven contempla il suicidio ma sceglie di vivere per l'arte">
-                <span className="text-orange-300 font-semibold cursor-help border-b border-orange-500 border-dotted">Testamento di Heiligenstadt</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-orange-500 border-dotted">Testamento di Heiligenstadt</span>
               </Tooltip>.
             </p>
             <p className="italic text-slate-300 border-l-2 border-orange-500 pl-3">
@@ -1041,7 +1027,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 const element = document.getElementById('carattere-beethoven');
                 if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
-              className="text-xs text-orange-400 hover:text-orange-300 font-semibold hover:underline"
+              className="text-xs text-orange-400 hover:text-slate-200 font-semibold hover:underline"
             >
               → Approfondisci
             </button>
@@ -1058,7 +1044,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           <p>
             Il modello è il{' '}
             <Tooltip text="Concerto n. 24 in Do minore K. 491 di Mozart (1786). Uno dei soli due concerti mozartiani in minore (l'altro è il K. 466 in Re minore del 1785). Capolavoro del genere classico che Beethoven ammirò profondamente come modello per l'Op. 37.">
-              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Concerto K. 491 in Do minore</span>
+              <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Concerto K. 491 in Do minore</span>
             </Tooltip>{' '}
             di Mozart. Beethoven però trasforma il genere: il pianoforte non dialoga più armoniosamente, 
             ma si <em>oppone</em> all'orchestra in un confronto drammatico.
@@ -1071,7 +1057,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
         {/* Tabella confronto Mozart vs Beethoven */}
         <div className="mt-5 overflow-x-auto">
-          <h4 className="text-base font-semibold text-purple-300 mb-3">Confronto diretto K. 491 vs Op. 37</h4>
+          <h4 className="text-base font-semibold text-slate-200 mb-3">Confronto diretto K. 491 vs Op. 37</h4>
           <table className="w-full text-xs text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
@@ -1131,7 +1117,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           </p>
 
           <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-orange-500">
-            <h4 className="text-base font-semibold text-orange-300 mb-3">Cronologia contestata</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Cronologia contestata</h4>
             <div className="space-y-2 text-xs">
               <div>
                 <p className="font-semibold text-slate-200">• Ipotesi Küthen:</p>
@@ -1143,11 +1129,11 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 <p className="ml-4">Composizione principale <strong>estate 1802 - primi mesi 1803</strong>, in parallelo al Testamento di Heiligenstadt.</p>
               </div>
               <div className="bg-slate-800 p-2 rounded mt-2">
-                <p className="font-semibold text-blue-300">Prova decisiva:</p>
+                <p className="font-semibold text-slate-200">Prova decisiva:</p>
                 <p className="ml-4">L'analisi paleografica del manoscritto autografo mostra la data <strong>"1803"</strong>, non "1800" come si credeva in passato.</p>
               </div>
               <div className="text-slate-100 font-semibold mt-2">
-                <p>→ Datazione probabile: <span className="text-orange-300">Estate 1802 - inizio 1803</span> (periodo della crisi di Heiligenstadt)</p>
+                <p>→ Datazione probabile: <span className="text-slate-200">Estate 1802 - inizio 1803</span> (periodo della crisi di Heiligenstadt)</p>
               </div>
             </div>
           </div>
@@ -1155,10 +1141,10 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           <p>
             In questo periodo Beethoven soggiornò a{' '}
             <Tooltip text="Piccolo villaggio vicino Vienna dove Beethoven trascorse l'estate-autunno 1802. Qui scrisse il celebre Testamento in cui manifestava la disperazione per la sordità incipiente.">
-              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Heiligenstadt</span>
+              <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Heiligenstadt</span>
             </Tooltip>, dove il 6 ottobre 1802 scrisse il celebre{' '}
             <Tooltip text="Ottobre 1802: lettera ai fratelli in cui Beethoven contempla il suicidio ma sceglie di vivere per l'arte">
-              <span className="text-orange-300 font-semibold cursor-help border-b border-orange-500 border-dotted">Testamento</span>
+              <span className="text-slate-200 font-semibold cursor-help border-b border-orange-500 border-dotted">Testamento</span>
             </Tooltip>{' '}
             in cui manifestava la disperazione per la sordità incipiente.
           </p>
@@ -1189,17 +1175,17 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           Per Beethoven, il <strong>Do minore</strong> è la tonalità della tempesta, del dramma e dell'eroismo. 
           Questo concerto è il ponte tra il classicismo mozartiano e il{' '}
           <Tooltip text="1803-1814: periodo delle grandi sinfonie (Eroica, Quinta, Sesta, Pastorale), del Fidelio e dei concerti Op. 58 e 73.">
-            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo eroico</span>
+            <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo eroico</span>
           </Tooltip>.
         </p>
         <p className="text-xs text-slate-400 mb-3">
           La periodizzazione in tre fasi fu proposta dal musicologo Wilhelm von Lenz (1860): oltre al periodo eroico, il{' '}
           <Tooltip text="1782-1802: periodo della formazione e prime opere pubblicate fino all'Op. 21 (Prima Sinfonia). Include le prime sonate per pianoforte, i primi quartetti Op. 18, il Primo e Secondo Concerto.">
-            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo giovanile</span>
+            <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo giovanile</span>
           </Tooltip>{' '}
           e il{' '}
           <Tooltip text="1815-1827: periodo della massima sperimentazione e profondità spirituale. Include la Missa Solemnis, la Nona Sinfonia, gli ultimi cinque quartetti (Op. 127, 130, 131, 132, 135) e le ultime tre sonate per pianoforte.">
-            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo tardo</span>
+            <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo tardo</span>
           </Tooltip>.
         </p>
         <div className="bg-slate-700 p-3 rounded text-xs text-slate-300">
@@ -1209,7 +1195,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
         {/* Cronologia Do minore eroico */}
         <div className="mt-4 overflow-x-auto">
-          <h4 className="text-base font-semibold text-orange-300 mb-3">Cronologia del "Do minore eroico"</h4>
+          <h4 className="text-base font-semibold text-slate-200 mb-3">Cronologia del "Do minore eroico"</h4>
           <table className="w-full text-xs text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
@@ -1225,9 +1211,9 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 <td className="border border-slate-600 p-2">Op. 13</td>
               </tr>
               <tr className="bg-slate-700/50">
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">1802</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">Concerto n.3</td>
-                <td className="border border-slate-600 p-2 font-bold text-blue-300">Op. 37</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">1802</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Concerto n.3</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Op. 37</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">1806</td>
@@ -1277,11 +1263,11 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             Nella stessa serata furono eseguiti anche la <em>Seconda Sinfonia</em> e l'oratorio <em>Cristo sul Monte degli Ulivi</em>.
           </p>
           <div className="mt-4 space-y-2 p-3 bg-orange-900/20 rounded border-l-2 border-orange-500">
-            <p className="text-xs text-orange-200">
+            <p className="text-xs text-slate-200">
               💡 <strong>Curiosità:</strong> La durata originale del concerto dell'aprile 1803 doveva superare le 4 ore. 
               Alcuni pezzi non furono eseguiti per stanchezza del pubblico!
             </p>
-            <p className="text-xs text-orange-200">
+            <p className="text-xs text-slate-200">
               💰 Beethoven guadagnò poco dalla prima esecuzione: dovette dividere gli incassi con altri artisti e pagare l'orchestra.
             </p>
           </div>
@@ -1290,7 +1276,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
       {/* Innovazioni */}
       <div className="bg-slate-800 p-5 rounded-lg border border-emerald-800">
-        <h3 className="text-lg font-semibold text-emerald-300 mb-4">🎹 Innovazioni chiave</h3>
+        <h3 className="text-lg font-semibold text-slate-200 mb-4">🎹 Innovazioni chiave</h3>
         <div className="grid md:grid-cols-2 gap-3 text-sm text-slate-300">
           <ul className="space-y-2">
             <li className="flex items-start">
@@ -1320,7 +1306,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
         <div className="mt-4 pt-3 border-t border-slate-700">
           <button
             onClick={() => setActiveTab('analysis')}
-            className="text-sm text-emerald-400 hover:text-emerald-300 font-semibold hover:underline"
+            className="text-sm text-emerald-400 hover:text-slate-200 font-semibold hover:underline"
           >
             → Scopri l'analisi dettagliata dei tre movimenti
           </button>
@@ -1342,7 +1328,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             href="https://youtu.be/a0ixaGeQzME?si=vG4tYv1rpwhCFHk0&t=772" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-300 underline font-semibold"
+            className="text-blue-400 hover:text-slate-200 underline font-semibold"
           >
             cadenza creata da Fazil Say nel 2001
           </a>{' '}
@@ -1569,17 +1555,17 @@ const Tooltip = ({ text, children }) => {
               Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d'Europa.
               La città aveva ospitato{' '}
               <Tooltip text="Joseph Haydn (1732-1809): 'Padre della sinfonia', maestro di Beethoven a Vienna dal 1792">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Haydn</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Haydn</span>
               </Tooltip>,{' '}
               <Tooltip text="Christoph Willibald Gluck (1714-1787): Compositore di opere, riformatore del melodramma">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Gluck</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Gluck</span>
               </Tooltip> e{' '}
               <Tooltip text="Wolfgang Amadeus Mozart (1756-1791): Genio del classicismo, morto appena un anno prima dell'arrivo di Beethoven">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Mozart</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Mozart</span>
               </Tooltip>.
               L'imperatore{' '}
               <Tooltip text="Francesco II d'Asburgo (1768-1835): Ultimo imperatore del Sacro Romano Impero, primo imperatore d'Austria, violinista dilettante">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Francesco II</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Francesco II</span>
               </Tooltip>{' '}
               suonava il violino, e la nobiltà finanziava generosamente musicisti e concerti.
             </p>
@@ -1590,7 +1576,7 @@ const Tooltip = ({ text, children }) => {
             <p className="text-sm text-slate-300 leading-relaxed mb-3">
               L'Europa è sconvolta dalle{' '}
               <Tooltip text="1792-1815: conflitti tra la Francia rivoluzionaria/napoleonica e le coalizioni europee. Napoleone conquisterà Vienna nel 1805 e nel 1809">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">guerre napoleoniche</span>
+                <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">guerre napoleoniche</span>
               </Tooltip>.
               La <strong>Rivoluzione francese</strong> (1789) aveva rovesciato l'ordine monarchico, proclamando libertà, uguaglianza e fraternità.
               Napoleone Bonaparte emerge come generale nel 1796 e diventa primo console nel 1799, poi imperatore nel 1804.
@@ -1652,7 +1638,7 @@ const Tooltip = ({ text, children }) => {
             <div className="space-y-2.5">
               {beethovenLifeTimeline.map((item, idx) => (
                 <div key={idx} className="flex flex-col sm:flex-row sm:items-start p-3 rounded-lg bg-slate-800 border-l-2 border-blue-600 shadow-sm">
-                  <span className="font-semibold text-blue-300 text-sm w-28 shrink-0">{item.year}</span>
+                  <span className="font-semibold text-slate-200 text-sm w-28 shrink-0">{item.year}</span>
                   <span className="text-slate-200 text-sm leading-relaxed">{item.event}</span>
                 </div>
               ))}
@@ -1682,7 +1668,7 @@ const Tooltip = ({ text, children }) => {
             <div className="space-y-2.5">
               {concertoTimeline.map((item, idx) => (
                 <div key={idx} className="flex flex-col sm:flex-row sm:items-start p-3 rounded-lg bg-slate-800 border-l-2 border-blue-600 shadow-sm">
-                  <span className="font-semibold text-blue-300 text-sm w-32 shrink-0">{item.year}</span>
+                  <span className="font-semibold text-slate-200 text-sm w-32 shrink-0">{item.year}</span>
                   <span className="text-slate-200 text-sm leading-relaxed">{item.event}</span>
                 </div>
               ))}
@@ -1742,7 +1728,7 @@ const Tooltip = ({ text, children }) => {
                     <td className="border border-slate-700 p-2">Parigi</td>
                     <td className="border border-slate-700 p-2"><strong>Vienna (Ricevuto nel 1803)</strong><br/>Posseduto fino al 1824, poi regalato al fratello Johann.</td>
                     <td className="border border-slate-700 p-2"><strong>5 ottave e mezza (FF-c4)</strong>. Meccanica "inglese" (più pesante). 4 pedali (liuto, smorzatori/forte, celeste/buff, <em>una corda</em>). Tripla cordatura.</td>
-                    <td className="border border-slate-700 p-2"><strong>"Dono sollecitato":</strong> Fu inviato come regalo legato all'accordo per la pubblicazione della Sonata <em>Patetica</em> a Parigi.<br/><strong>Impatto:</strong> L'estensione extra e i pedali influenzarono la <em>Sonata Waldstein</em> (Op. 53) e l'<em>Appassionata</em> (Op. 57).<br/><strong>Problemi:</strong> Beethoven trovava la meccanica troppo pesante; nel 1810 lo definì "inutile".<br/><br/><span className="text-purple-300">💡 I 4 pedali dell'Érard (liuto, forte, celeste, una corda) rivoluzionarono lo stile compositivo di Beethoven, aprendo nuove possibilità timbriche.</span></td>
+                    <td className="border border-slate-700 p-2"><strong>"Dono sollecitato":</strong> Fu inviato come regalo legato all'accordo per la pubblicazione della Sonata <em>Patetica</em> a Parigi.<br/><strong>Impatto:</strong> L'estensione extra e i pedali influenzarono la <em>Sonata Waldstein</em> (Op. 53) e l'<em>Appassionata</em> (Op. 57).<br/><strong>Problemi:</strong> Beethoven trovava la meccanica troppo pesante; nel 1810 lo definì "inutile".<br/><br/><span className="text-slate-200">💡 I 4 pedali dell'Érard (liuto, forte, celeste, una corda) rivoluzionarono lo stile compositivo di Beethoven, aprendo nuove possibilità timbriche.</span></td>
                   </tr>
                   <tr>
                     <td className="border border-slate-700 p-2"><strong>Streicher</strong> (Nannette e Andreas)</td>
@@ -1834,25 +1820,25 @@ const Tooltip = ({ text, children }) => {
             </thead>
             <tbody className="bg-slate-900 text-slate-100">
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Schizzi</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Quaderni di Schizzi</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1798 in poi</td>
                 <td className="px-4 py-3 border border-slate-700">Composizione, sviluppo di idee, memoria artistica.</td>
                 <td className="px-4 py-3 border border-slate-700">Rilegati (da tavolo o tascabili). Mix di idee per varie opere.</td>
               </tr>
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Fogli Sciolti</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Fogli Sciolti</td>
                 <td className="px-4 py-3 border border-slate-700">Pre-1798 (e oltre)</td>
                 <td className="px-4 py-3 border border-slate-700">Esercizi tecnici, esperimenti pianistici, partiture orchestrali abbozzate.</td>
                 <td className="px-4 py-3 border border-slate-700">Sparsi, poi riuniti in miscellanee (es. Kafka) dai collezionisti.</td>
               </tr>
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Conversazione</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Quaderni di Conversazione</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1818 in poi</td>
                 <td className="px-4 py-3 border border-slate-700">Comunicazione quotidiana (causa sordità).</td>
                 <td className="px-4 py-3 border border-slate-700">Dialoghi scritti dagli interlocutori.</td>
               </tr>
               <tr className="odd:bg-slate-800">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Diario (Tagebuch)</td>
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Diario (Tagebuch)</td>
                 <td className="px-4 py-3 border border-slate-700">1812-1818 (principalmente)</td>
                 <td className="px-4 py-3 border border-slate-700">Riflessione spirituale e intellettuale.</td>
                 <td className="px-4 py-3 border border-slate-700">Annotazioni personali, citazioni.</td>
@@ -2042,7 +2028,7 @@ const AnalysisSection = () => {
           </p>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-purple-500">
-            <h4 className="text-base font-semibold text-purple-300 mb-3">Le tre versioni</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Le tre versioni</h4>
             <div className="space-y-3">
               <div>
                 <p className="font-semibold text-slate-100">WoO 58 n. 1 - Breve e classica</p>
@@ -2060,7 +2046,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
-            <h4 className="text-base font-semibold text-orange-300 mb-2">Il problema stilistico</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-2">Il problema stilistico</h4>
             <p className="mb-3">
               Come osserva <strong>Luca Chiantore</strong>, queste cadenze presentano una <em>"incoerenza stilistica lampante"</em>: 
               nel 1809 Beethoven è nel <strong>periodo medio maturo</strong>, ben oltre lo stile del 1803. 
@@ -2074,7 +2060,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg">
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Altre cadenze celebri</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Altre cadenze celebri</h4>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
@@ -2085,7 +2071,7 @@ const AnalysisSection = () => {
                     href="https://youtu.be/a0ixaGeQzME?si=vG4tYv1rpwhCFHk0&t=772" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline ml-1"
+                    className="text-blue-400 hover:text-slate-200 underline ml-1"
                   >
                     Ascolta al min. 12:51
                   </a>
@@ -2102,7 +2088,7 @@ const AnalysisSection = () => {
             </ul>
           </div>
 
-          <div className="mt-3 p-3 bg-purple-900/20 rounded text-xs text-purple-200 border-l-2 border-purple-500">
+          <div className="mt-3 p-3 bg-purple-900/20 rounded text-xs text-slate-200 border-l-2 border-purple-500">
             💡 <strong>Curiosità:</strong> Clara Schumann fu tra le prime donne a eseguire questo concerto in pubblico (1840), 
             sfidando le convenzioni dell'epoca che scoraggiavano le donne dall'eseguire opere così impegnative.
           </div>
@@ -2123,11 +2109,11 @@ const AnalysisSection = () => {
         
         <div className="space-y-4 text-sm text-slate-300">
           <p className="text-base text-slate-200">
-            Il primo movimento è il più complesso, strutturato secondo la <strong>Forma di Sonata per Concerto (Tipo 5)</strong>.
+            Il primo movimento è il più complesso, strutturato secondo la <strong>Forma di Sonata per Concerto</strong>.
           </p>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Ritornello 1 (Orchestra)</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Ritornello 1 (Orchestra)</h4>
             <div className="space-y-2">
               <p>
                 Il movimento apre con un <strong>tema "marziale" e scarno</strong>, esposto <em>piano</em> dagli archi all'unisono 
@@ -2146,10 +2132,10 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-purple-500">
-            <h4 className="text-base font-semibold text-purple-300 mb-3">Solo 1 (Esposizione del pianoforte)</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Solo 1 (Esposizione del pianoforte)</h4>
             <div className="space-y-2">
               <p>
-                <strong className="text-purple-200">L'Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
+                <strong className="text-slate-200">L'Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
                 in <em>fortissimo</em> (do-do-do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un'entrata dolce 
                 o preparatoria, ma un'<strong>affermazione di potenza</strong>.
               </p>
@@ -2161,7 +2147,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
-            <h4 className="text-base font-semibold text-orange-300 mb-3">Sviluppo e Ripresa</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Sviluppo e Ripresa</h4>
             <p>
               Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. Nella ripresa, c'è un momento essenziale 
               dopo la Cadenza (il momento di improvvisazione solistica).
@@ -2169,7 +2155,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-emerald-500">
-            <h4 className="text-base font-semibold text-emerald-300 mb-3">La Coda (innovazione fondamentale)</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">La Coda (innovazione fondamentale)</h4>
             <div className="space-y-2">
               <p>
                 Tradizionalmente, dopo la cadenza, l'orchestra chiudeva il movimento da sola. Qui, invece, <strong>Beethoven fa rientrare 
@@ -2194,7 +2180,7 @@ const AnalysisSection = () => {
             </h4>
 
             <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-amber-500 mb-4">
-              <h5 className="text-base font-semibold text-amber-300 mb-3">IL BLOCCO TRI-MODULARE</h5>
+              <h5 className="text-base font-semibold text-slate-200 mb-3">IL BLOCCO TRI-MODULARE</h5>
               <div className="space-y-2">
                 <p>
                   Nel Ritornello 1, Beethoven potrebbe aver creato un <strong>blocco tri-modulare</strong>, una struttura con 
@@ -2204,14 +2190,14 @@ const AnalysisSection = () => {
                 <div className="bg-slate-800/50 p-3 rounded mt-3">
                   <p className="text-xs font-semibold text-amber-200 mb-2">Struttura:</p>
                   <div className="font-mono text-xs text-slate-300 space-y-1">
-                    <p><strong className="text-blue-300">R1-P</strong> (Do minore) →</p>
-                    <p><strong className="text-blue-300">R1-TR</strong> (transizione) →</p>
-                    <p><strong className="text-purple-300">MC1</strong> (prima cesura mediale) →</p>
-                    <p><strong className="text-emerald-300">R1-S1</strong> (Mi♭ maggiore - primo tentativo di secondo tema) →</p>
-                    <p className="text-red-300 font-bold">[CRISI: S1 non riesce a cadenzare!] →</p>
-                    <p><strong className="text-orange-300">JOLLY: Ritorno di P</strong> (operazione di salvataggio) →</p>
-                    <p><strong className="text-purple-300">MC2</strong> (seconda cesura mediale) →</p>
-                    <p><strong className="text-emerald-300">R1-S2</strong> (Mi♭ maggiore - secondo tema che finalmente cadenza)</p>
+                    <p><strong className="text-slate-200">R1-P</strong> (Do minore) →</p>
+                    <p><strong className="text-slate-200">R1-TR</strong> (transizione) →</p>
+                    <p><strong className="text-slate-200">MC1</strong> (prima cesura mediale) →</p>
+                    <p><strong className="text-slate-200">R1-S1</strong> (Mi♭ maggiore - primo tentativo di secondo tema) →</p>
+                    <p className="text-slate-200 font-bold">[CRISI: S1 non riesce a cadenzare!] →</p>
+                    <p><strong className="text-slate-200">JOLLY: Ritorno di P</strong> (operazione di salvataggio) →</p>
+                    <p><strong className="text-slate-200">MC2</strong> (seconda cesura mediale) →</p>
+                    <p><strong className="text-slate-200">R1-S2</strong> (Mi♭ maggiore - secondo tema che finalmente cadenza)</p>
                   </div>
                 </div>
 
@@ -2225,7 +2211,7 @@ const AnalysisSection = () => {
             </div>
 
             <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-purple-500 mb-4">
-              <h5 className="text-base font-semibold text-purple-300 mb-3">IL TEMA "JOLLY" (Wild Card / Idée Fixe)</h5>
+              <h5 className="text-base font-semibold text-slate-200 mb-3">IL TEMA "JOLLY" (Wild Card / Idée Fixe)</h5>
               <div className="space-y-2">
                 <p>
                   Il tema primario non appare solo nelle posizioni standard, ma <strong>ritorna ossessivamente</strong> in punti strategici:
@@ -2252,7 +2238,7 @@ const AnalysisSection = () => {
 
                 <div className="bg-purple-900/20 p-3 rounded mt-3 border-l-2 border-purple-500">
                   <p className="text-xs">
-                    <strong className="text-purple-200">Funzione:</strong> È come una <strong>carta jolly</strong> che Beethoven 
+                    <strong className="text-slate-200">Funzione:</strong> È come una <strong>carta jolly</strong> che Beethoven 
                     può giocare quando la forma è in crisi. Quando il secondo tema "fallisce", il primo tema interviene per 
                     <strong>ristabilire l'ordine</strong>.
                   </p>
@@ -2261,17 +2247,17 @@ const AnalysisSection = () => {
             </div>
 
             <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-red-500">
-              <h5 className="text-base font-semibold text-red-300 mb-3">LA DEFORMAZIONE FINALE</h5>
+              <h5 className="text-base font-semibold text-slate-200 mb-3">LA DEFORMAZIONE FINALE</h5>
               <div className="space-y-3">
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <p className="text-xs font-semibold text-emerald-300 mb-2">NORMA CLASSICA:</p>
+                  <p className="text-xs font-semibold text-slate-200 mb-2">NORMA CLASSICA:</p>
                   <p className="text-xs text-slate-300">
                     Dopo la cadenza, l'orchestra entra con un <em>tutti fortissimo</em> che conferma la tonica.
                   </p>
                 </div>
 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <p className="text-xs font-semibold text-red-300 mb-2">BEETHOVEN FA:</p>
+                  <p className="text-xs font-semibold text-slate-200 mb-2">BEETHOVEN FA:</p>
                   <ul className="space-y-1.5 ml-4 text-xs text-slate-300">
                     <li className="flex items-start">
                       <span className="text-red-400 mr-2">•</span>
@@ -2313,7 +2299,7 @@ const AnalysisSection = () => {
         
         <div className="space-y-4 text-sm text-slate-300">
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-amber-500">
-            <h4 className="text-base font-semibold text-amber-300 mb-3">Shock tonale</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Shock tonale</h4>
             <p>
               Beethoven compie un salto audace: da <strong>Do minore a Mi maggiore</strong> — una terza cromatica di distanza. 
               È come passare dall'oscurità alla luce abbagliante. Questa scelta crea uno dei <strong>contrasti più drammatici</strong> 
@@ -2322,17 +2308,17 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Struttura e carattere</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Struttura e carattere</h4>
             <ul className="space-y-2 ml-4">
-              <li><strong className="text-blue-200">Forma:</strong> Tema con variazioni ornamentali</li>
-              <li><strong className="text-blue-200">Tempo:</strong> Largo (molto lento, solenne)</li>
-              <li><strong className="text-blue-200">Atmosfera:</strong> Meditativa, quasi improvvisativa</li>
-              <li><strong className="text-blue-200">Timbro:</strong> Predominano legni (fagotti, clarinetti) in dialogo con il pianoforte</li>
+              <li><strong className="text-slate-200">Forma:</strong> Tema con variazioni ornamentali</li>
+              <li><strong className="text-slate-200">Tempo:</strong> Largo (molto lento, solenne)</li>
+              <li><strong className="text-slate-200">Atmosfera:</strong> Meditativa, quasi improvvisativa</li>
+              <li><strong className="text-slate-200">Timbro:</strong> Predominano legni (fagotti, clarinetti) in dialogo con il pianoforte</li>
             </ul>
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-purple-500">
-            <h4 className="text-base font-semibold text-purple-300 mb-3">Il tema principale</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Il tema principale</h4>
             <p>
               Il pianoforte introduce un <strong>tema nobile e cantabile</strong>, accompagnato da <em>pizzicati</em> degli archi. 
               Non c'è la drammaticità del primo movimento — qui Beethoven cerca il <strong>canto puro, la contemplazione</strong>.
@@ -2340,7 +2326,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-emerald-500">
-            <h4 className="text-base font-semibold text-emerald-300 mb-3">Tecnica pianistica</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Tecnica pianistica</h4>
             <ul className="space-y-2 ml-4">
               <li>Ornamentazioni elaborate (trilli, mordenti, gruppetti)</li>
               <li>Uso del registro medio-grave del pianoforte</li>
@@ -2350,7 +2336,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
-            <h4 className="text-base font-semibold text-orange-300 mb-3">La transizione al terzo movimento</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">La transizione al terzo movimento</h4>
             <p>
               Il movimento <strong>non finisce con una chiusura netta</strong>, ma si dissolve in un collegamento (<em>attacca</em>) 
               che riporta gradualmente verso Do minore, preparando il finale.
@@ -2361,9 +2347,9 @@ const AnalysisSection = () => {
             <p className="text-slate-200"><strong>Durata:</strong> 9-11 minuti</p>
             <p className="text-slate-200 mt-3"><strong>Registrazioni consigliate per questo movimento:</strong></p>
             <ul className="mt-2 space-y-1 ml-4 text-slate-300">
-              <li><strong className="text-blue-300">Wilhelm Kempff</strong> - lettura poetica, sublime</li>
-              <li><strong className="text-blue-300">Artur Schnabel</strong> - profondità spirituale</li>
-              <li><strong className="text-blue-300">Kristian Bezuidenhout</strong> (fortepiano) - timbri autentici</li>
+              <li><strong className="text-slate-200">Wilhelm Kempff</strong> - lettura poetica, sublime</li>
+              <li><strong className="text-slate-200">Artur Schnabel</strong> - profondità spirituale</li>
+              <li><strong className="text-slate-200">Kristian Bezuidenhout</strong> (fortepiano) - timbri autentici</li>
             </ul>
           </div>
         </div>
@@ -2383,9 +2369,9 @@ const AnalysisSection = () => {
           </p>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-blue-300 mb-3">Forma: Rondò-Sonata</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Forma: rondò-Sonata</h4>
             <div className="space-y-2">
-              <p className="font-mono text-xs text-blue-200">
+              <p className="font-mono text-xs text-slate-200">
                 A (refrain) - Do minore → <br/>
                 B (episodio 1) → <br/>
                 A (ritorno) → <br/>
@@ -2398,7 +2384,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-purple-500">
-            <h4 className="text-base font-semibold text-purple-300 mb-3">Il refrain (tema A)</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Il refrain (tema A)</h4>
             <p>
               Energico, nervoso, con figurazioni rapide in <strong>terzine</strong>. Il pianoforte dialoga con l'orchestra 
               in un gioco di domanda-risposta sempre più serrato.
@@ -2406,7 +2392,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
-            <h4 className="text-base font-semibold text-orange-300 mb-3">Carattere</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Carattere</h4>
             <ul className="space-y-2 ml-4">
               <li>Virtuosismo brillante</li>
               <li>Ritmo galoppante e inarrestabile</li>
@@ -2416,7 +2402,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-emerald-500">
-            <h4 className="text-base font-semibold text-emerald-300 mb-3">La trasformazione finale</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">La trasformazione finale</h4>
             <div className="space-y-2">
               <p>
                 Nella coda, <strong>il tema che era apparso sempre in minore si trasforma in maggiore</strong>. 
@@ -2427,7 +2413,7 @@ const AnalysisSection = () => {
           </div>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-red-500">
-            <h4 className="text-base font-semibold text-red-300 mb-3">Difficoltà tecniche</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Difficoltà tecniche</h4>
             <ul className="space-y-2 ml-4">
               <li>Passaggi di ottave spezzate velocissime</li>
               <li>Salti ampi con precisione ritmica</li>
@@ -2469,7 +2455,7 @@ const InterpretersSection = () => (
 
           <div className="p-5 bg-slate-900">
             <div className="mb-3 flex items-center justify-between flex-wrap gap-2">
-              <span className="inline-block bg-slate-800/50 text-blue-300 px-3 py-1 rounded-full text-xs font-medium">
+              <span className="inline-block bg-slate-800/50 text-slate-200 px-3 py-1 rounded-full text-xs font-medium">
                 Stile: {interpreter.style}
               </span>
               {interpreter.link && (
@@ -2492,7 +2478,7 @@ const InterpretersSection = () => (
                     href={interpreter.cadenzaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline font-semibold"
+                    className="text-blue-400 hover:text-slate-200 underline font-semibold"
                   >
                     a min. 12:51 del video
                   </a>
@@ -2512,6 +2498,7 @@ const InterpretersSection = () => (
 const GlossarySection = () => {
   const [openCategory, setOpenCategory] = useState(null);
   const [openConcertoHistory, setOpenConcertoHistory] = useState(false);
+  const [openRondoForm, setOpenRondoForm] = useState(false);
 
   const toggleCategory = (category) => {
     setOpenCategory(openCategory === category ? null : category);
@@ -2548,7 +2535,7 @@ const GlossarySection = () => {
             <div className="space-y-5 text-sm text-slate-300">
               {/* Etimologia */}
               <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-orange-500">
-                <h4 className="text-base font-semibold text-orange-300 mb-3">Etimologia e concetto</h4>
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Etimologia e concetto</h4>
                 <p className="mb-3">
                   Il termine <strong>"Concerto"</strong> possiede un'etimologia doppia e apparentemente contraddittoria:
                 </p>
@@ -2565,15 +2552,15 @@ const GlossarySection = () => {
               {/* Tre Fasi */}
               <div className="grid md:grid-cols-3 gap-3">
                 <div className="bg-slate-800 p-3 rounded border-l-2 border-blue-500">
-                  <h5 className="font-semibold text-blue-300 text-xs mb-1">1. Polarità (Barocco)</h5>
+                  <h5 className="font-semibold text-slate-200 text-xs mb-1">1. Polarità (Barocco)</h5>
                   <p className="text-xs">Netta distinzione tra Solo e Tutti</p>
                 </div>
                 <div className="bg-slate-800 p-3 rounded border-l-2 border-purple-500">
-                  <h5 className="font-semibold text-purple-300 text-xs mb-1">2. Reciprocità (Classico)</h5>
+                  <h5 className="font-semibold text-slate-200 text-xs mb-1">2. Reciprocità (Classico)</h5>
                   <p className="text-xs">Dialogo drammatico paritario</p>
                 </div>
                 <div className="bg-slate-800 p-3 rounded border-l-2 border-orange-500">
-                  <h5 className="font-semibold text-orange-300 text-xs mb-1">3. Diffusività (Romantico)</h5>
+                  <h5 className="font-semibold text-slate-200 text-xs mb-1">3. Diffusività (Romantico)</h5>
                   <p className="text-xs">Fusione sinfonica o lotta eroica</p>
                 </div>
               </div>
@@ -2627,15 +2614,15 @@ const GlossarySection = () => {
                       <td className="border border-slate-600 p-2 text-xs">Bach integra solo e tutti, riduce polarità</td>
                     </tr>
                     <tr className="bg-slate-700/30">
-                      <td className="border border-slate-600 p-2 font-semibold text-blue-300">Tardo XVIII (Classico)</td>
+                      <td className="border border-slate-600 p-2 font-semibold text-slate-200">Tardo XVIII (Classico)</td>
                       <td className="border border-slate-600 p-2">
-                        <strong className="text-blue-200">Concerto Classico</strong><br/>
-                        <strong>Forma di Sonata Tipo 5</strong><br/>
+                        <strong className="text-slate-200">Concerto Classico</strong><br/>
+                        <strong>Forma di Sonata</strong><br/>
                         Doppia Esposizione:<br/>
                         1. Ritornello 1 (orchestra)<br/>
                         2. Solo 1 (modulante)
                       </td>
-                      <td className="border border-slate-600 p-2 text-blue-200">
+                      <td className="border border-slate-600 p-2 text-slate-200">
                         <strong>Mozart</strong> (K. 466, K. 491)<br/>
                         J.C. Bach<br/>
                         <strong>Beethoven</strong> (Op. 15, 19, 37)
@@ -2697,7 +2684,7 @@ const GlossarySection = () => {
                 <h4 className="text-base font-semibold text-slate-100">Analisi dello sviluppo</h4>
                 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-blue-300 text-sm mb-2">1. Barocco: Polarità e Ritornello</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">1. Barocco: Polarità e Ritornello</h5>
                   <p className="text-xs">
                     In Vivaldi e Torelli, il concerto si basa sull'<strong>architettura</strong>. L'orchestra stabilisce 
                     la tonalità con un <strong>Ritornello</strong> ricorrente. Il solista suona episodi virtuosistici 
@@ -2706,9 +2693,9 @@ const GlossarySection = () => {
                 </div>
 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-purple-300 text-sm mb-2">2. Classico: "Tipo 5" e Doppia Esposizione</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">2. Classico: forma-Sonata e Doppia Esposizione</h5>
                   <p className="text-xs mb-2">
-                    Mozart e Beethoven assorbono la <strong>Forma-Sonata</strong> (Hepokoski-Darcy: <em>Sonata di Tipo 5</em>).
+                    Mozart e Beethoven assorbono la <strong>Forma-Sonata</strong> (Hepokoski-Darcy).
                   </p>
                   <ul className="space-y-1 text-xs list-disc list-inside ml-2">
                     <li>L'orchestra apre con quasi-esposizione completa (Ritornello 1), ma resta in tonica</li>
@@ -2718,7 +2705,7 @@ const GlossarySection = () => {
                 </div>
 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-orange-300 text-sm mb-2">3. Romantico: Abolizione del Ritornello</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">3. Romantico: Abolizione del Ritornello</h5>
                   <p className="text-xs mb-2">
                     Mendelssohn e Liszt considerano il lungo Tutti iniziale "arcaico e ridondante":
                   </p>
@@ -2730,7 +2717,7 @@ const GlossarySection = () => {
                 </div>
 
                 <div className="bg-slate-800/50 p-3 rounded border-l-2 border-purple-500">
-                  <h5 className="font-semibold text-purple-300 text-sm mb-2">🎭 Il Concerto come metafora sociale</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">🎭 Il Concerto come metafora sociale</h5>
                   <p className="text-xs mb-2">
                     Il concerto rappresenta l'individuo (solista) contro o insieme alla società (orchestra):
                   </p>
@@ -2739,6 +2726,184 @@ const GlossarySection = () => {
                     <li>• <strong>Beethoven:</strong> L'eroe che si afferma e guida (scale imperiose, Op. 37)</li>
                     <li>• <strong>Romanticismo:</strong> Il virtuoso soprannaturale domina la massa (Paganini)</li>
                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Approfondimento: la Forma Rondò */}
+      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <button
+          onClick={() => setOpenRondoForm(!openRondoForm)}
+          className={`w-full p-5 flex justify-between items-center transition-all ${
+            openRondoForm
+              ? 'sticky top-20 z-10 bg-slate-700 text-white'
+              : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <Music className="w-5 h-5 text-purple-400" />
+            <div className="text-left">
+              <h3 className="text-lg font-semibold">🎵 La Forma Rondò</h3>
+              <span className="text-sm opacity-90">Struttura e utilizzo nei concerti classici</span>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 transition-transform ${openRondoForm ? 'rotate-180' : ''}`} />
+        </button>
+        {openRondoForm && (
+          <div className="p-6 pt-24 bg-slate-900">
+            <div className="space-y-5 text-sm text-slate-300">
+              
+              {/* Struttura Generale */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-purple-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Struttura generale del Rondò</h4>
+                <p className="mb-3">
+                  La forma rondò è una delle strutture fondamentali della musica strumentale classica, utilizzata prevalentemente 
+                  nei <strong>movimenti finali</strong> (e talvolta nei movimenti lenti) di sonate, sinfonie e concerti.
+                </p>
+                <p className="mb-3">
+                  Il principio di base è l'<strong>alternanza regolare</strong> tra un tema principale, detto <strong>refrain</strong> 
+                  (o ritornello), e sezioni contrastanti dette <strong>couplets</strong> (o episodi). Il refrain viene esposto 
+                  nella tonalità d'impianto e ritorna più volte, mentre gli episodi sono solitamente in tonalità diverse e 
+                  offrono materiale contrastante.
+                </p>
+                
+                <div className="bg-slate-900/50 p-3 rounded mt-3">
+                  <h5 className="text-sm font-semibold text-slate-200 mb-2">Due categorie principali:</h5>
+                  <div className="space-y-2 text-xs">
+                    <div className="flex items-start">
+                      <span className="text-blue-400 mr-2 font-bold">1.</span>
+                      <div>
+                        <strong className="text-slate-200">Rondò a cinque parti (ABACA):</strong> Il refrain (A) si alterna con 
+                        due episodi (B e C). Il primo episodio (B) funge da complesso tematico secondario, mentre il secondo (C) 
+                        può assumere caratteristiche di sviluppo.
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-blue-400 mr-2 font-bold">2.</span>
+                      <div>
+                        <strong className="text-slate-200">Sonata-Rondò:</strong> È la forma più complessa e frequente 
+                        nei finali veloci classici, specialmente in Mozart e Beethoven. Fonde la struttura del rondò con la 
+                        logica della forma sonata.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sonata-Rondò Dettagliato */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-blue-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">La forma Sonata-Rondò</h4>
+                <p className="mb-3">
+                  La forma sonata-rondò (classificata nella teoria analitica moderna) 
+                  integra l'alternanza tematica del rondò con la tripartizione della sonata (Esposizione, Sviluppo, Ripresa).
+                </p>
+                
+                <div className="bg-slate-900/50 p-3 rounded">
+                  <h5 className="text-sm font-semibold text-slate-200 mb-2">Struttura ABACABA:</h5>
+                  <div className="space-y-3 text-xs">
+                    <div className="border-l-2 border-emerald-500 pl-3">
+                      <p className="font-semibold text-slate-200">Esposizione (A-B)</p>
+                      <p>Il primo refrain (A) funge da tema principale. Segue una transizione e il primo episodio (B), 
+                      che agisce come gruppo tematico secondario in tonalità subordinata (dominante).</p>
+                    </div>
+                    <div className="border-l-2 border-orange-500 pl-3">
+                      <p className="font-semibold text-slate-200">Sviluppo o Episodio Centrale (C)</p>
+                      <p>Il secondo episodio funge da sezione di sviluppo o introduce un nuovo "tema interno" in tonalità 
+                      contrastante (sottodominante, sottomediante o modo minore).</p>
+                    </div>
+                    <div className="border-l-2 border-purple-500 pl-3">
+                      <p className="font-semibold text-slate-200">Ripresa (A-B)</p>
+                      <p>Il refrain (A) ritorna, seguito dalla ripresa del primo episodio (B), che viene trasposto 
+                      nella tonalità d'impianto (tonica), risolvendo la tensione tonale.</p>
+                    </div>
+                    <div className="border-l-2 border-amber-500 pl-3">
+                      <p className="font-semibold text-slate-200">Coda</p>
+                      <p>Spesso segue l'ultimo ritorno del refrain.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Rondò nei Concerti (Mozart) */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Il Rondò nei Concerti Classici (Mozart)</h4>
+                <p className="mb-3">
+                  Nel concerto classico, il rondò è la <strong>scelta quasi invariabile per il movimento finale</strong>. 
+                  Mozart, in particolare, prediligeva la forma sonata-rondò per i suoi finali, trattandola con grande libertà e inventiva.
+                </p>
+                
+                <div className="bg-slate-900/50 p-3 rounded">
+                  <h5 className="text-sm font-semibold text-amber-200 mb-2">Caratteristiche specifiche:</h5>
+                  <ul className="space-y-2 text-xs ml-4">
+                    <li className="flex items-start">
+                      <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
+                      <span><strong>Carattere del tema:</strong> Il refrain (P) ha spesso carattere "popolare", orecchiabile 
+                      e giocoso, talvolta in stile "contredanse"</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
+                      <span><strong>Interazione Solo-Tutti:</strong> Il solista espone il refrain, poi ripreso o completato 
+                      dall'orchestra. Mozart espande il refrain iniziale trasformandolo in un ritornello orchestrale</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
+                      <span><strong>Nuovi temi (sujet libre):</strong> Mozart introduce spesso un "nuovo tema" da parte del 
+                      solista all'inizio della transizione, subito dopo il primo ritornello orchestrale</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
+                      <span><strong>Episodi centrali:</strong> Cambiamenti drastici di carattere (elementi "alla turca", 
+                      sezioni in minore)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Rondò in Beethoven */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-red-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Il Rondò in Beethoven</h4>
+                <p className="mb-3">
+                  Beethoven ereditò i modelli di Haydn e Mozart ma <strong>espanse notevolmente le dimensioni e l'ambizione</strong> 
+                  della forma rondò, rendendola spesso più "sinfonica" e drammatica.
+                </p>
+                
+                <div className="bg-slate-900/50 p-3 rounded">
+                  <h5 className="text-sm font-semibold text-red-200 mb-2">Elementi distintivi:</h5>
+                  <div className="space-y-3 text-xs">
+                    <div className="bg-slate-800/50 p-2 rounded">
+                      <p className="font-semibold text-slate-200 mb-1">1. Scherzi sulla struttura</p>
+                      <p>Beethoven gioca con le aspettative. Esempio: nella <em>Sonata op. 10 n. 3</em>, introduce un ritorno 
+                      del refrain in tonalità "sbagliata" prima di correggerla ("falsa ripresa").</p>
+                    </div>
+                    <div className="bg-slate-800/50 p-2 rounded">
+                      <p className="font-semibold text-slate-200 mb-1">2. Espansione della Coda</p>
+                      <p>La coda diventa una sezione di grande peso strutturale, con ulteriore sviluppo dei temi e un'ultima 
+                      apparizione del refrain principale. Nella <em>Sonata op. 26</em>, la coda è molto estesa.</p>
+                    </div>
+                    <div className="bg-slate-800/50 p-2 rounded">
+                      <p className="font-semibold text-slate-200 mb-1">3. Integrazione tematica</p>
+                      <p>Nei concerti (es. <strong>Concerto per pianoforte n. 3</strong>), integra elementi di virtuosismo 
+                      solistico con sviluppo tematico rigoroso, usando la forma sonata-rondò.</p>
+                    </div>
+                    <div className="bg-slate-800/50 p-2 rounded">
+                      <p className="font-semibold text-slate-200 mb-1">4. Spostamento del baricentro</p>
+                      <p>Nelle opere tarde, Beethoven (e poi Brahms) sposta il peso espressivo verso il finale, rendendo 
+                      il rondò conclusivo non più solo un brano leggero di congedo, ma il <strong>culmine drammatico</strong> 
+                      dell'intero ciclo.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-red-900/20 p-3 rounded mt-3 border-l-2 border-red-500">
+                  <p className="text-xs">
+                    <strong className="text-red-200">Sintesi:</strong> Mentre nel classicismo il rondò era apprezzato per 
+                    la sua simmetria e carattere brillante, con Beethoven (e nei concerti maturi di Mozart) la forma divenne 
+                    un veicolo per <strong>complesse elaborazioni motiviche e drammatiche</strong>, fondendosi sempre più con 
+                    la logica dialettica della forma sonata (Sonata-Rondò).
+                  </p>
                 </div>
               </div>
             </div>
@@ -2927,7 +3092,7 @@ const QuizSection = () => {
     return (
       <div className="max-w-2xl mx-auto bg-slate-800 rounded-lg shadow p-8 text-center animate-fadeIn border border-slate-700">
         <div className="bg-slate-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <GraduationCap className="w-12 h-12 text-blue-300" />
+          <GraduationCap className="w-12 h-12 text-slate-200" />
         </div>
         <h2 className="text-2xl font-bold text-slate-100 mb-4">Quiz Completato!</h2>
         <div className="bg-slate-900 rounded-lg p-6 mb-6">
@@ -2985,7 +3150,7 @@ const QuizSection = () => {
               } else if (index === shuffledQuestions[currentQuestion].correct) {
                 btnClass += "border-green-500 bg-green-900/50 text-green-300";
               } else if (index === selectedOption) {
-                btnClass += "border-red-500 bg-red-900/50 text-red-300";
+                btnClass += "border-red-500 bg-red-900/50 text-slate-200";
               } else {
                 btnClass += "border-slate-700 text-slate-500 opacity-50";
               }
