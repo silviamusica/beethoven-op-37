@@ -1415,7 +1415,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
         <div className="space-y-3 text-sm text-slate-300">
           <p>
             <strong className="text-slate-100">5 aprile 1803:</strong> Beethoven suona al Theater an der Wien. 
-            Il direttore Ignaz von Seyfried raccont" di aver visto "solo geroglifici egizi" sulla partitura: 
+            Il direttore Ignaz von Seyfried raccontò di aver visto "solo geroglifici egizi" sulla partitura: 
             Beethoven suonò gran parte <strong>a memoria</strong>, probabilmente improvvisando intere sezioni!
           </p>
           <div className="bg-slate-900 p-4 rounded border-l-4 border-emerald-500 my-3">
@@ -1510,7 +1510,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             cadenza creata da Fazil Say nel 2001
           </a>{' '}
           per il Concerto op. 37 è una dimostrazione recente di come sia possibile concepire una pagina carica di suggestioni 
-          contemporanee senza allontanarsi dal linguaggio che Beethoven us" nel corso della sua vita. Ma non dimentichiamo che 
+          contemporanee senza allontanarsi dal linguaggio che Beethoven usò nel corso della sua vita. Ma non dimentichiamo che 
           lo stesso Beethoven non ebbe difficoltà a scrivere, nel 1809, una serie di cadenze che poco o niente avevano a che 
           vedere con lo stile dei concerti giovanili ai quali erano destinate. È difficile trovare un esempio più lampante di 
           incoerenza stilistica, e lo troviamo nel cuore stesso della produzione beethoveniana."
@@ -1898,7 +1898,7 @@ const Tooltip = ({ text, children }) => {
                     <td className="border border-slate-700 p-2">Vienna</td>
                     <td className="border border-slate-700 p-2"><strong>Vienna (fine anni 1790 - c. 1803)</strong><br/>Posseduto da Beethoven nel suo primo periodo viennese.</td>
                     <td className="border border-slate-700 p-2">Meccanica viennese (<em>Prellmechanik</em>). Tocco leggero e reattivo, ma considerato "più piatto" rispetto agli inglesi. Smorzatori a ginocchiera (spesso divisi bassi/acuti). Estensione tipica di 5 ottave (FF-f3).</td>
-                    <td className="border border-slate-700 p-2">Beethoven possedeva un Walter, ma desiderava modifiche (es. <em>una corda</em>). Nel 1803, dopo aver ricevuto l'Érard, dichiar" che i pianoforti viennesi (incluso il suo Walter) erano "spazzatura" (<em>Quark</em>) in confronto.</td>
+                    <td className="border border-slate-700 p-2">Beethoven possedeva un Walter, ma desiderava modifiche (es. <em>una corda</em>). Nel 1803, dopo aver ricevuto l'Erard, dichiarò che i pianoforti viennesi (incluso il suo Walter) erano "spazzatura" (<em>Quark</em>) in confronto.</td>
                   </tr>
                   <tr>
                     <td className="border border-slate-700 p-2"><strong>Sébastien Érard</strong> (N. 133)</td>
