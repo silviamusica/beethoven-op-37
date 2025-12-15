@@ -46,19 +46,19 @@ const glossaryData = [
   {
     category: "Terminologia Tecnica",
     items: [
-      { term: "RITORNELLO (R1, R2, etc.)", definition: "Nella teoria Hepokoski-Darcy: sezione orchestrale che ritorna ciclicamente. Nel primo movimento: R1 (batt. 1-111, esposizione orchestrale), R2 (breve, transizione), R4/CODA (batt. 404-502, dove innovativamente il piano continua a suonare)." },
+      { term: "RITORNELLO (R1, R2, etc.)", definition: "Nella teoria Hepokoski-Darcy: sezione orchestrale che ritorna ciclicamente. Nel primo movimento: R1 (batt. 1-111, esposizione orchestrale), R2 (batt. 227-249, transizione), R4 (batt. 403-416), R5/CODA (batt. 481-507, dove innovativamente il piano continua a suonare)." },
       { term: "TUTTI", definition: "Termine generico per indicare l'orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare RITORNELLO per le sezioni orchestrali formali." },
       { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall'orchestra. L'unica sezione di vero solo è la Cadenza." },
       { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mib maggiore → Do maggiore)." },
       { term: "Tema Primario (P)", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
       { term: "Secondo Tema (S)", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
-      { term: "Episodi di Bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli. Nel primo movimento (batt. 199-226), il trillo finale rappresenta il culmine agognato." },
+      { term: "Episodi di Bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli. Nel primo movimento del SOLO 1, il trillo finale (prima della transizione allo sviluppo) rappresenta il culmine agognato." },
       { term: "Transizione (TR)", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Nella teoria Hepokoski-Darcy, la transizione può utilizzare materiale tematico esistente (come nell'Op. 37, dove il tema P agisce come 'jolly')." },
       { term: "Elemento Z", definition: "Materiale di chiusura alla fine dell'esposizione orchestrale (batt. 86-111). Ha carattere ritmico e percussivo, preparando l'entrata drammatica del solista." },
       { term: "Triade", definition: "Accordo di tre note sovrapposte per terze. Il tema primario del primo movimento è basato sulla scansione (arpeggio) della triade di Do minore (Do-Mib-Sol)." },
       { term: "Arpeggio", definition: "Esecuzione delle note di un accordo una dopo l'altra invece che simultaneamente. Gli arpeggi sono fondamentali nel secondo movimento e negli episodi di bravura." },
-      { term: "Trillo", definition: "Rapida alternanza tra due note adiacenti. Il trillo finale dell'episodio di bravura (batt. 226) rappresenta il culmine virtuosistico dell'esposizione." },
-      { term: "Punto Coronato", definition: "Simbolo che indica di prolungare una nota a piacere. Nella preparazione della cadenza (batt. 388-403), segnala la sospensione armonica prima dell'improvvisazione solistica." },
+      { term: "Trillo", definition: "Rapida alternanza tra due note adiacenti. Il trillo finale dell'episodio di bravura nel SOLO 1 rappresenta il culmine virtuosistico dell'esposizione." },
+      { term: "Punto Coronato", definition: "Simbolo che indica di prolungare una nota a piacere. Nella preparazione della cadenza (fine SOLO 3, prima di batt. 417), segnala la sospensione armonica prima dell'improvvisazione solistica." },
       { term: "Rotation (Rotazione)", definition: "Concetto di ripetizione ciclica dei materiali tematici in diverse sezioni del movimento, tipico dell'analisi dei concerti secondo Hepokoski-Darcy." }
     ]
   },
@@ -82,12 +82,14 @@ const movementsData = [
     desc: "Forma sonata con doppia esposizione. Il primo movimento è drammatico ed eroico.",
     details: [
       "RITORNELLO 1 (batt. 1-111): esposizione orchestrale con tema primario marziale (P), secondo tema lirico (S) e materiale conclusivo (Z)",
-      "SOLO 1 (batt. 112-243): ingresso drammatico del pianoforte con tre scale ascendenti fortissimo. Episodi di bravura virtuosistici",
-      "RITORNELLO 2 (breve): transizione orchestrale",
-      "SVILUPPO (batt. 244-343): elaborazione dei temi con modulazioni audaci e contrasti dinamici",
-      "SOLO 2 / RIPRESA (batt. 344-387): ripresa del materiale principale",
-      "CADENZA (batt. 388-403): area virtuosistica per il solista, inizialmente improvvisata da Beethoven",
-      "RITORNELLO 4 / CODA (batt. 404-502): innovazione: il pianoforte continua a suonare dopo l'ingresso dell'orchestra"
+      "SOLO 1 (batt. 112-227): ingresso drammatico del pianoforte con tre scale ascendenti fortissimo. Episodi di bravura virtuosistici",
+      "RITORNELLO 2 (batt. 227-249): transizione orchestrale nello sviluppo",
+      "SOLO 2 (batt. 250-309): sviluppo con elaborazione dei temi, modulazioni audaci e rarefazione timbrica",
+      "RITORNELLO 3 (batt. 309-316): breve ritorno del tema primario",
+      "SOLO 3 (batt. 317-403): ripresa del materiale principale con episodi di bravura",
+      "RITORNELLO 4 (batt. 403-416): transizione alla cadenza",
+      "CADENZA (batt. 417-480): area virtuosistica per il solista, inizialmente improvvisata da Beethoven",
+      "RITORNELLO 5 / CODA (batt. 481-507): innovazione: il pianoforte continua a suonare con i timpani"
     ]
   },
   {
