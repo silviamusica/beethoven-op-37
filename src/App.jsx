@@ -67,7 +67,8 @@ const glossaryData = [
     items: [
       { term: "Do Minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l'Op. 37 alla Patetica, alla Quinta Sinfonia e all'Eroica. Per Beethoven rappresenta il dramma e la lotta." },
       { term: "Mi Maggiore", definition: "Tonalità del secondo movimento (Largo). Estremamente lontana dal Do minore - un salto cromatico audace che crea uno 'shock tonale'. Rappresenta un'oasi lirica e contemplativa." },
-      { term: "Mib Maggiore", definition: "Tonalità relativa maggiore di Do minore. Usata per il secondo tema del primo movimento e per la coda trionfale del terzo movimento (vittoria della luce sul dramma)." },
+      { term: "Mib Maggiore", definition: "Tonalità relativa maggiore di Do minore. Usata per il secondo tema del primo movimento." },
+      { term: "Do Maggiore", definition: "Tonalità parallela maggiore di Do minore. Il terzo movimento conclude in Do maggiore (non nella relativa Mi♭), compiendo il percorso beethoveniano 'dal buio alla luce' - dalla tragedia al trionfo." },
       { term: "Terza Cromatica", definition: "Intervallo tra Do minore e Mi maggiore - una distanza tonale molto remota che rende il secondo movimento un contrasto drammatico e sorprendente." }
     ]
   }
@@ -105,13 +106,13 @@ const movementsData = [
   {
     id: 3,
     title: "III Movimento: Rondo. Allegro",
-    key: "Do minore → Mib maggiore",
-    desc: "Rondò brillante che conclude il concerto con energia e virtuosismo. Finale trionfale in Mib maggiore.",
+    key: "Do minore → Do maggiore",
+    desc: "Rondò brillante che conclude il concerto con energia e virtuosismo. Finale trionfale in Do maggiore.",
     details: [
       "Forma: rondò (A-B-A-C-A) con tema principale che alterna tra orchestra e solista",
       "Fugato: inserimento innovativo di un elaborato fugato sul tema principale - scelta audace per un concerto",
       "Virtuosismo: passaggi pianistici brillanti con arpeggi, scale e ottave",
-      "Modulazione finale: da Do minore a Mib maggiore per una conclusione luminosa e trionfale",
+      "Modulazione finale: da Do minore a Do maggiore (tonalità parallela) - il percorso beethoveniano dal buio alla luce",
       "Carattere: energico, quasi sfrenato, con elementi di danza e umorismo beethoveniano"
     ]
   }
@@ -1038,7 +1039,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             <p><strong>Dedicato a:</strong> <Tooltip text="Principe prussiano (1772-1806), nipote di Federico il Grande. Compositore dilettante e ammiratore di Beethoven. Morì eroicamente nella battaglia di Saalfeld contro Napoleone.">
               <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Principe Luigi Ferdinando di Prussia</span>
             </Tooltip></p>
-            <p><strong>Tonalità:</strong> Do minore → Mib maggiore (finale)</p>
+            <p><strong>Tonalità:</strong> Do minore → Do maggiore (finale)</p>
             <p><strong>Movimenti:</strong> Allegro con brio → Largo → Rondo: Allegro</p>
           </div>
         </div>
@@ -1271,7 +1272,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">Finale</td>
                 <td className="border border-slate-600 p-2">Rimane in minore</td>
-                <td className="border border-slate-600 p-2">Risolve in Mib maggiore</td>
+                <td className="border border-slate-600 p-2">Risolve in Do maggiore</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">Carattere</td>
@@ -1475,7 +1476,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
-              <span>Finale da Do minore a Mib maggiore (dalla tragedia al trionfo)</span>
+              <span>Finale da Do minore a Do maggiore (dalla tragedia al trionfo - percorso parallelo maggiore)</span>
             </li>
           </ul>
         </div>
@@ -2085,7 +2086,7 @@ const AnalysisSection = () => {
             <h4 className="text-base font-semibold text-slate-200 mb-2">Ottoni e Percussioni</h4>
             <ul className="space-y-1.5 text-sm text-slate-300">
               <li>• 2 Corni in Mib, Mi e Do</li>
-              <li>• 2 Trombe in Do</li>
+              <li>• 2 Trombe in Do (Mib nel III movimento)</li>
               <li>• Timpani</li>
             </ul>
           </div>
@@ -2441,7 +2442,7 @@ const AnalysisSection = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="text-red-400 mr-2">•</span>
-                      <span>Invece di <strong>I</strong> (Do maggiore), suona <strong>V7/iv</strong> (Sol7 di Fa minore)</span>
+                      <span>Invece di <strong>I</strong> (Do maggiore), suona <strong>V7</strong> (Sol7 - dominante di Do) che si muove verso <strong>iv</strong> (Fa minore)</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-red-400 mr-2">•</span>
@@ -2535,13 +2536,13 @@ const AnalysisSection = () => {
       <div id="analisi-terzo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700 mt-6">
         <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
           <Music className="w-5 h-5 text-blue-400 mr-2" />
-          Analisi Dettagliata: III Movimento - Rondo. Allegro (Do minore → Mi♭ maggiore)
+          Analisi Dettagliata: III Movimento - Rondo. Allegro (Do minore → Do maggiore)
         </h3>
         
         <div className="space-y-4 text-sm text-slate-300">
           <p className="text-base text-slate-200">
             Il finale è un <strong>rondò-sonata</strong> che compie un viaggio: inizia nell'oscurità di Do minore 
-            e termina nel trionfo di Mi bemolle maggiore. È il movimento della <strong>vittoria</strong>, della luce che vince sulle tenebre.
+            e termina nel trionfo di Do maggiore (tonalità parallela). È il movimento della <strong>vittoria</strong>, della luce che vince sulle tenebre - il classico percorso beethoveniano "dal buio alla luce".
           </p>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
@@ -2554,7 +2555,7 @@ const AnalysisSection = () => {
                 C (episodio centrale/sviluppo) → <br/>
                 A (ritorno) → <br/>
                 B (episodio 2) → <br/>
-                A (finale) - Mi♭ maggiore <span className="text-emerald-400 font-bold">(trasformazione!)</span>
+                A (finale) - Do maggiore <span className="text-emerald-400 font-bold">(trasformazione!)</span>
               </p>
             </div>
           </div>
