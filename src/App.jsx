@@ -118,6 +118,77 @@ const movementsData = [
 ];
 
 const interpretersData = [
+  // 🔥 LA REFERENZA MODERNA
+  {
+    name: "🔥 Martha Argerich (La Referenza Moderna)",
+    conductor: "Claudio Abbado",
+    orchestra: "Mahler Chamber Orchestra",
+    year: "2004 (Live a Ferrara)",
+    description: "È l'equilibrio perfetto tra fuoco argentino e cantabilità italiana. Tempi serrati, dinamiche esplosive ma mai fuori controllo. La chimica tra Argerich e Abbado è leggendaria.",
+    style: "Fuoco, Energia",
+    rating: "⭐⭐⭐⭐⭐",
+    link: "https://www.youtube.com/watch?v=AC4u-sBN3OI"
+  },
+
+  // 🎹 VERSIONI STORICHE LEGGENDARIE
+  {
+    name: "🎹 Wilhelm Kempff (Versione Storica Leggendaria)",
+    conductor: "Ferdinand Leitner",
+    orchestra: "Berliner Philharmoniker",
+    year: "1961",
+    description: "L'opposto della Argerich. Non è una battaglia, ma pura poesia. Il tocco di Kempff è morbido, 'parlante'. Il secondo movimento (Largo) è di una bellezza spirituale assoluta. Ideale per il primo ascolto.",
+    style: "Poetico, Classico",
+    rating: "⭐⭐⭐⭐⭐ (Classico)",
+    link: "https://www.youtube.com/watch?v=3aNkl7wdWyQ"
+  },
+  {
+    name: "🎹 Artur Schnabel (Versione Storica Leggendaria)",
+    conductor: "Malcolm Sargent",
+    orchestra: "London Philharmonic",
+    year: "1933",
+    description: "Schnabel è 'colui che ha inventato Beethoven moderno'. Non curarti dell'audio frusciante: il fraseggio e la comprensione della struttura sono insuperati. I suoi tempi nel primo movimento hanno fatto scuola.",
+    style: "Storico, Profondo",
+    rating: "⭐⭐⭐⭐ (Audio datato, interpretazione stellare)",
+    link: "https://youtu.be/t8z_HiusIL0?si=OO0KRH7dtutylzhs"
+  },
+
+  // 🎼 STRUMENTI D'EPOCA (Filologico)
+  {
+    name: "🎼 Steven Lubin (Strumenti d'Epoca - Filologico)",
+    conductor: "Christopher Hogwood",
+    orchestra: "Academy of Ancient Music",
+    year: "1988",
+    description: "Fortepiano (copia Johann Fritz 1818 ca.). Fondamentale per capire il suono che Beethoven aveva nelle orecchie. L'orchestra è più leggera, il pianoforte più percussivo e secco, i bassi 'gracchiano' deliziosamente. Cambia la percezione del pezzo.",
+    style: "Filologico (Antico)",
+    rating: "⭐⭐⭐⭐½",
+    link: "https://www.youtube.com/watch?v=SiokgMpfyQw"
+  },
+
+  // 🎵 GIOVANI TALENTI CONTEMPORANEI
+  {
+    name: "🎵 Jan Lisiecki (Giovane Talento Contemporaneo)",
+    conductor: "(Dirige dalla tastiera)",
+    orchestra: "Academy of St Martin in the Fields",
+    year: "2019",
+    description: "Lisiecki dirige direttamente dalla tastiera. Suono cristallino, tecnica moderna impeccabile, approccio fresco e senza pesantezze retoriche.",
+    style: "Fresco, Moderno",
+    rating: "⭐⭐⭐⭐",
+    link: "https://www.youtube.com/watch?v=MX5XENd0SeM"
+  },
+
+  // ⚠️ IL CASO GOULD (L'Alternativa)
+  {
+    name: "⚠️ Glenn Gould (Il Caso Gould - L'Alternativa)",
+    conductor: "Leonard Bernstein",
+    orchestra: "Columbia Symphony Orchestra",
+    year: "1959",
+    description: "Un Beethoven volutamente anti-romantico, asciutto, con tempi e articolazioni che sfidano la tradizione. Gould 'radiografa' la partitura. Controversa, geniale, unica.",
+    style: "Eccentrico",
+    rating: "⭐⭐⭐⭐ (Per chi cerca qualcosa di diverso)",
+    link: "https://www.youtube.com/watch?v=vRSCAHDS12g"
+  },
+
+  // ALTRE INTERPRETAZIONI IMPORTANTI
   {
     name: "Claudio Arrau",
     conductor: "Otto Klemperer",
@@ -135,15 +206,6 @@ const interpretersData = [
     description: "Perfezione tecnica assoluta e controllo sovrumano. Michelangeli è un chirurgo del pianoforte: ogni nota è perfettamente calibrata, il suono è cristallino e luminoso. Giulini bilancia questa precisione con calore orchestrale. L'approccio è classico, elegante, quasi apollineo - un Beethoven 'purificato' da ogni eccesso romantico.",
     style: "Cristallino, perfezionista, apollineo",
     link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
-  },
-  {
-    name: "Wilhelm Kempff",
-    conductor: "Paul van Kempen",
-    orchestra: "Orchestra Sinfonica della RAI di Torino",
-    year: "1962",
-    description: "Interpretazione intimista e cantabile. Kempff privilegia la linea melodica e il fraseggio naturale. Il suo Beethoven è umano, diretto, spontaneo - quasi improvvisato. Evita la monumentalità per cercare il dialogo cameristico e l'espressività lirica. Tocco morbido e legato, approccio 'vocale' al pianoforte.",
-    style: "Intimista, cantabile, spontaneo",
-    link: "https://youtu.be/i0zw1uNy6YE?si=L-JIAaUxrIVRthdY"
   },
   {
     name: "Daniel Barenboim",
@@ -2581,6 +2643,11 @@ const InterpretersSection = () => (
                 </a>
               )}
             </div>
+            {interpreter.rating && (
+              <div className="mb-3 text-yellow-400 text-sm font-semibold">
+                {interpreter.rating}
+              </div>
+            )}
             <p className="text-slate-300 text-sm leading-relaxed">
               {interpreter.cadenzaLink ? (
                 <>
@@ -2602,6 +2669,82 @@ const InterpretersSection = () => (
           </div>
         </div>
       ))}
+    </div>
+
+    {/* Tabella Riepilogo */}
+    <div className="mt-10 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="bg-slate-700 p-5">
+        <h3 className="text-xl font-semibold text-white">📊 Riepilogo Rapido</h3>
+      </div>
+      <div className="p-5 bg-slate-900 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead className="bg-slate-800 text-slate-200 uppercase tracking-wide text-xs">
+            <tr>
+              <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Interprete</th>
+              <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Direttore</th>
+              <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Anno</th>
+              <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Stile</th>
+              <th className="border border-slate-700 px-3 py-2 text-center font-semibold">Link</th>
+            </tr>
+          </thead>
+          <tbody className="text-slate-300">
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Kempff</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Leitner</td>
+              <td className="border border-slate-700 px-3 py-2">1961</td>
+              <td className="border border-slate-700 px-3 py-2">Poetico, Classico</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=3aNkl7wdWyQ" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Argerich</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Abbado</td>
+              <td className="border border-slate-700 px-3 py-2">2004</td>
+              <td className="border border-slate-700 px-3 py-2">Fuoco, Energia</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=AC4u-sBN3OI" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Schnabel</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Sargent</td>
+              <td className="border border-slate-700 px-3 py-2">1933</td>
+              <td className="border border-slate-700 px-3 py-2">Storico, Profondo</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://youtu.be/t8z_HiusIL0?si=OO0KRH7dtutylzhs" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Lubin</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Hogwood</td>
+              <td className="border border-slate-700 px-3 py-2">1988</td>
+              <td className="border border-slate-700 px-3 py-2">Filologico (Antico)</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=SiokgMpfyQw" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Gould</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Bernstein</td>
+              <td className="border border-slate-700 px-3 py-2">1959</td>
+              <td className="border border-slate-700 px-3 py-2">Eccentrico</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=vRSCAHDS12g" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Lisiecki</strong></td>
+              <td className="border border-slate-700 px-3 py-2">(Dir. piano)</td>
+              <td className="border border-slate-700 px-3 py-2">2019</td>
+              <td className="border border-slate-700 px-3 py-2">Fresco, Moderno</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=MX5XENd0SeM" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 );
