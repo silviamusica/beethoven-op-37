@@ -120,8 +120,9 @@ const interpretersData = [
     conductor: "Otto Klemperer",
     orchestra: "Philharmonia Orchestra",
     year: "1957",
-    description: "Registrazione storica leggendaria. Arrau porta profondità filosofica e intensità drammatica. Il suo tocco è monumentale, quasi scultoreo. Klemperer dirige con tempi ampi e maestosi, creando un'architettura sonora imponente. Questa interpretazione è considerata un punto di riferimento per l'approccio 'titanico' al concerto.",
-    style: "Monumentale, profondo, titanico"
+    description: "Due giganti beethoveniani si incontrano a Londra per ricreare l'arte pura. Tutto è perfettamente bilanciato: il virtuosismo è onnipresente ma sempre al servizio del significato, i pianissimi sono pura poesia. Arrau descriveva il rapporto con Klemperer come 'controverso', ma la loro collaborazione live del 1957 alla Royal Festival Hall compì il miracolo. Un incontro straordinario tra due leggendari eredi di scuole e tradizioni, con superba maestria.",
+    style: "Monumentale, profondo, titanico",
+    link: "https://youtu.be/iLzjlH9_a6M?si=Wk5cyeFfsx3880nA"
   },
   {
     name: "Arturo Benedetti Michelangeli",
@@ -129,7 +130,8 @@ const interpretersData = [
     orchestra: "Wiener Symphoniker",
     year: "1979 (circa)",
     description: "Perfezione tecnica assoluta e controllo sovrumano. Michelangeli è un chirurgo del pianoforte: ogni nota è perfettamente calibrata, il suono è cristallino e luminoso. Giulini bilancia questa precisione con calore orchestrale. L'approccio è classico, elegante, quasi apollineo - un Beethoven 'purificato' da ogni eccesso romantico.",
-    style: "Cristallino, perfezionista, apollineo"
+    style: "Cristallino, perfezionista, apollineo",
+    link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
   },
   {
     name: "Wilhelm Kempff",
@@ -137,7 +139,8 @@ const interpretersData = [
     orchestra: "Orchestra Sinfonica della RAI di Torino",
     year: "1962",
     description: "Interpretazione intimista e cantabile. Kempff privilegia la linea melodica e il fraseggio naturale. Il suo Beethoven è umano, diretto, spontaneo - quasi improvvisato. Evita la monumentalità per cercare il dialogo cameristico e l'espressività lirica. Tocco morbido e legato, approccio 'vocale' al pianoforte.",
-    style: "Intimista, cantabile, spontaneo"
+    style: "Intimista, cantabile, spontaneo",
+    link: "https://youtu.be/i0zw1uNy6YE?si=L-JIAaUxrIVRthdY"
   },
   {
     name: "Daniel Barenboim",
@@ -145,7 +148,8 @@ const interpretersData = [
     orchestra: "Orchestra di Santa Cecilia (2007) / Israel Philharmonic (2012)",
     year: "2007, 2012",
     description: "Approccio completo e intellettualmente ricco. Barenboim ha inciso il concerto più volte, mostrando diverse sfaccettature. Combina virtuosismo brillante con profondità interpretativa. La sua lettura è flessibile, drammatica ma equilibrata, con grande attenzione alla struttura formale e al dialogo orchestra-solista.",
-    style: "Completo, intellettuale, drammatico"
+    style: "Completo, intellettuale, drammatico",
+    link: "https://youtu.be/UXGy1bpEAUw?si=dYYxQ1hh4UYHBUFI"
   },
   {
     name: "Artur Rubinstein",
@@ -153,7 +157,27 @@ const interpretersData = [
     orchestra: "Concertgebouw Orchestra",
     year: "1973",
     description: "Eleganza e nobiltà romantiche. Rubinstein porta al Beethoven la sua straordinaria cantabilità e il suo tocco vellutato. L'approccio è meno 'eroico' e più lirico, con grande attenzione alle sfumature dinamiche e al colore sonoro. Haitink accompagna con sensibilità raffinata.",
-    style: "Elegante, nobile, lirico"
+    style: "Elegante, nobile, lirico",
+    link: "https://youtu.be/44a2kZ72RzY?si=7dcdXf7FipvyYkQ1"
+  },
+  {
+    name: "Krystian Zimerman",
+    conductor: "Leonard Bernstein",
+    orchestra: "Wiener Philharmoniker",
+    year: "1989",
+    description: "Registrazione live leggendaria dal Musikverein di Vienna. Zimerman unisce precisione tecnica cristallina a grande intensità emotiva. Bernstein dirige con energia travolgente e profondità interpretativa. Un incontro straordinario tra due giganti che crea una performance elettrizzante e profondamente musicale.",
+    style: "Elettrizzante, preciso, emotivo",
+    link: "https://www.youtube.com/watch?v=VCC6KR7-7eI"
+  },
+  {
+    name: "Fazil Say",
+    conductor: "Gianandrea Noseda",
+    orchestra: "BBC Philharmonic",
+    year: "2011",
+    description: "Interpretazione moderna e vibrante. Say porta al Beethoven una freschezza sorprendente, unendo virtuosismo tecnico a profonda sensibilità musicale. La sua famosa cadenza per il primo movimento (composta nel 2001, a min. 12:51 del video) è un esempio straordinario di come si possa creare una pagina contemporanea restando fedele al linguaggio beethoveniano. Noseda accompagna con energia e precisione.",
+    style: "Moderno, virtuoso, innovativo",
+    link: "https://youtu.be/a0ixaGeQzME?si=FIa82djieyaktNdb",
+    cadenzaLink: "https://youtu.be/a0ixaGeQzME?si=zVe756GAmgEMlKQy&t=767"
   }
 ];
 
@@ -775,6 +799,17 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               Beethoven ammira inizialmente Napoleone come simbolo di libertà, ma si disilluderà quando questi si proclamerà imperatore.
             </p>
           </div>
+          <div className="mt-4 pt-3 border-t border-slate-700">
+            <button
+              onClick={() => {
+                const element = document.getElementById('contesto-geopolitico');
+                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className="text-xs text-blue-400 hover:text-blue-300 font-semibold hover:underline"
+            >
+              → Approfondisci
+            </button>
+          </div>
         </div>
 
         <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
@@ -794,44 +829,99 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               "Mi sembrava impossibile lasciare il mondo prima di aver compiuto tutto ciò a cui mi sentivo destinato."
             </p>
           </div>
-        </div>
-
-        <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
-          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
-            <Music className="w-5 h-5 text-purple-400 mr-2" />
-            L'eredità di Mozart
-          </h3>
-          <div className="space-y-3 text-sm text-slate-300">
-            <p>
-              Il modello è il{' '}
-              <Tooltip text="Concerto n. 24 in Do minore K. 491 di Mozart (1786). Uno dei soli due concerti mozartiani in minore (l'altro è il K. 466 in Re minore del 1785). Capolavoro del genere classico che Beethoven ammirò profondamente come modello per l'Op. 37.">
-                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Concerto K. 491 in Do minore</span>
-              </Tooltip>{' '}
-              di Mozart. Beethoven però trasforma il genere: il pianoforte non dialoga più armoniosamente, 
-              ma si <em>oppone</em> all'orchestra in un confronto drammatico.
-            </p>
-            <p className="italic text-slate-200">
-              "Cramer! Non potremo mai fare nulla di simile!" 
-              <span className="text-xs text-slate-500 block mt-1">— Beethoven dopo aver ascoltato il K. 491</span>
-            </p>
+          <div className="mt-4 pt-3 border-t border-slate-700">
+            <button
+              onClick={() => {
+                const element = document.getElementById('carattere-beethoven');
+                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className="text-xs text-orange-400 hover:text-orange-300 font-semibold hover:underline"
+            >
+              → Approfondisci
+            </button>
           </div>
         </div>
+      </div>
 
-        <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
-          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
-            <PlayCircle className="w-5 h-5 text-emerald-400 mr-2" />
-            La prima esecuzione
-          </h3>
-          <div className="space-y-3 text-sm text-slate-300">
-            <p>
-              <strong className="text-slate-100">5 aprile 1803:</strong> Beethoven suona al Theater an der Wien. 
-              Il direttore Ignaz von Seyfried raccontò di aver visto "solo geroglifici egizi" sulla partitura: 
-              Beethoven suonò gran parte <strong>a memoria</strong>, probabilmente improvvisando intere sezioni!
+      <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
+        <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+          <Music className="w-5 h-5 text-purple-400 mr-2" />
+          L'eredità di Mozart
+        </h3>
+        <div className="space-y-3 text-sm text-slate-300">
+          <p>
+            Il modello è il{' '}
+            <Tooltip text="Concerto n. 24 in Do minore K. 491 di Mozart (1786). Uno dei soli due concerti mozartiani in minore (l'altro è il K. 466 in Re minore del 1785). Capolavoro del genere classico che Beethoven ammirò profondamente come modello per l'Op. 37.">
+              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Concerto K. 491 in Do minore</span>
+            </Tooltip>{' '}
+            di Mozart. Beethoven però trasforma il genere: il pianoforte non dialoga più armoniosamente, 
+            ma si <em>oppone</em> all'orchestra in un confronto drammatico.
+          </p>
+          <p className="italic text-slate-200">
+            "Cramer! Non potremo mai fare nulla di simile!" 
+            <span className="text-xs text-slate-500 block mt-1">— Beethoven dopo aver ascoltato il K. 491</span>
+          </p>
+        </div>
+      </div>
+
+      {/* Il Do minore eroico */}
+      <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
+        <h3 className="text-lg font-semibold text-slate-100 mb-3">🎼 Il "Do minore eroico"</h3>
+        <p className="text-sm text-slate-300 mb-3">
+          Per Beethoven, il <strong>Do minore</strong> è la tonalità della tempesta, del dramma e dell'eroismo. 
+          Questo concerto è il ponte tra il classicismo mozartiano e il{' '}
+          <Tooltip text="1803-1814: periodo delle grandi sinfonie (Eroica, Quinta, Sesta, Pastorale), del Fidelio e dei concerti Op. 58 e 73.">
+            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo eroico</span>
+          </Tooltip>.
+        </p>
+        <p className="text-xs text-slate-400 mb-3">
+          La periodizzazione in tre fasi fu proposta dal musicologo Wilhelm von Lenz (1860): oltre al periodo eroico, il{' '}
+          <Tooltip text="1782-1802: periodo della formazione e prime opere pubblicate fino all'Op. 21 (Prima Sinfonia). Include le prime sonate per pianoforte, i primi quartetti Op. 18, il Primo e Secondo Concerto.">
+            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo giovanile</span>
+          </Tooltip>{' '}
+          e il{' '}
+          <Tooltip text="1815-1827: periodo della massima sperimentazione e profondità spirituale. Include la Missa Solemnis, la Nona Sinfonia, gli ultimi cinque quartetti (Op. 127, 130, 131, 132, 135) e le ultime tre sonate per pianoforte.">
+            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo tardo</span>
+          </Tooltip>.
+        </p>
+        <div className="bg-slate-700 p-3 rounded text-xs text-slate-300">
+          <strong>Altre opere in Do minore:</strong> Sonata Patetica Op. 13, Quinta Sinfonia Op. 67, 
+          Quartetto Op. 18 n. 4, Sonata per violino Op. 30 n. 2.
+        </div>
+      </div>
+
+      <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
+        <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+          <PlayCircle className="w-5 h-5 text-emerald-400 mr-2" />
+          La prima esecuzione
+        </h3>
+        <div className="space-y-3 text-sm text-slate-300">
+          <p>
+            <strong className="text-slate-100">5 aprile 1803:</strong> Beethoven suona al Theater an der Wien. 
+            Il direttore Ignaz von Seyfried raccontò di aver visto "solo geroglifici egizi" sulla partitura: 
+            Beethoven suonò gran parte <strong>a memoria</strong>, probabilmente improvvisando intere sezioni!
+          </p>
+          <div className="bg-slate-900 p-4 rounded border-l-4 border-emerald-500 my-3">
+            <p className="italic text-slate-200 mb-2">
+              Un celebre aneddoto raccontato da Ignaz von Seyfried rafforza la credibilità di queste supposizioni. 
+              Seyfried assicura di avere accompagnato Beethoven durante la prima del Terzo Concerto, il 5 aprile 1803, 
+              in qualità di voltapagina, e di avere potuto constatare con stupore come la parte del pianoforte fosse 
+              quasi del tutto in bianco:
             </p>
-            <p>
-              Nella stessa serata furono eseguiti anche la <em>Seconda Sinfonia</em> e l'oratorio <em>Cristo sul Monte degli Ulivi</em>.
+            <blockquote className="text-xs text-slate-300 pl-4 border-l-2 border-slate-700">
+              «Vedevo praticamente solo fogli bianchi; tutt'al più, in una pagina o nell'altra, alcuni geroglifici egiziani, 
+              per me completamente inintelligibili, scarabocchiati perché gli servissero da promemoria. Mi lanciava uno sguardo 
+              fugace ogni volta che arrivava alla fine di uno di quei passaggi invisibili, e la mia ansia di non perdere il 
+              momento decisivo, che riuscivo a malapena a dissimulare, lo divertiva moltissimo; continuò a ridere anche nella 
+              gioviale cena che condividemmo più tardi.»
+            </blockquote>
+            <p className="text-xs text-slate-400 mt-2">
+              — Citato in Luca Chiantore, <em>Beethoven al pianoforte</em>
             </p>
           </div>
+          <p>
+            Nella stessa serata furono eseguiti anche la <em>Seconda Sinfonia</em> e l'oratorio <em>Cristo sul Monte degli Ulivi</em>.
+          </p>
         </div>
       </div>
 
@@ -874,31 +964,38 @@ const IntroduzioneSection = ({ setActiveTab }) => {
         </div>
       </div>
 
-      {/* Il Do minore eroico */}
+      {/* Le cadenze */}
       <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
-        <h3 className="text-lg font-semibold text-slate-100 mb-3">🎼 Il "Do minore eroico"</h3>
-        <p className="text-sm text-slate-300 mb-3">
-          Per Beethoven, il <strong>Do minore</strong> è la tonalità della tempesta, del dramma e dell'eroismo. 
-          Questo concerto è il ponte tra il classicismo mozartiano e il{' '}
-          <Tooltip text="1803-1814: periodo delle grandi sinfonie (Eroica, Quinta, Sesta, Pastorale), del Fidelio e dei concerti Op. 58 e 73.">
-            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo eroico</span>
-          </Tooltip>.
+        <h3 className="text-lg font-semibold text-slate-100 mb-3">🎼 Le cadenze: tra tradizione e sperimentazione</h3>
+        <p className="text-sm text-slate-300 mb-4">
+          Beethoven scrisse le cadenze per il Concerto Op. 37, ma questo non chiude la porta alla sperimentazione. 
+          Come osserva Luca Chiantore:
         </p>
-        <p className="text-xs text-slate-400 mb-3">
-          La periodizzazione in tre fasi fu proposta dal musicologo Wilhelm von Lenz (1860): oltre al periodo eroico, il{' '}
-          <Tooltip text="1782-1802: periodo della formazione e prime opere pubblicate fino all'Op. 21 (Prima Sinfonia). Include le prime sonate per pianoforte, i primi quartetti Op. 18, il Primo e Secondo Concerto.">
-            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo giovanile</span>
-          </Tooltip>{' '}
-          e il{' '}
-          <Tooltip text="1815-1827: periodo della massima sperimentazione e profondità spirituale. Include la Missa Solemnis, la Nona Sinfonia, gli ultimi cinque quartetti (Op. 127, 130, 131, 132, 135) e le ultime tre sonate per pianoforte.">
-            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo tardo</span>
-          </Tooltip>.
+        <blockquote className="bg-slate-900 p-4 border-l-4 border-blue-500 rounded text-sm italic text-slate-300 mb-4">
+          «Non necessariamente ricorrendo ai linguaggi della musica contemporanea: i suoi appunti – e in particolare i più giovanili – 
+          sono il migliore punto di partenza per una sperimentazione che voglia muoversi nel mondo sonoro proprio dei suoi lavori, 
+          così come la formidabile{' '}
+          <a 
+            href="https://youtu.be/a0ixaGeQzME?si=vG4tYv1rpwhCFHk0&t=772" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300 underline font-semibold"
+          >
+            cadenza creata da Fazil Say nel 2001
+          </a>{' '}
+          per il Concerto op. 37 è una dimostrazione recente di come sia possibile concepire una pagina carica di suggestioni 
+          contemporanee senza allontanarsi dal linguaggio che Beethoven usò nel corso della sua vita. Ma non dimentichiamo che 
+          lo stesso Beethoven non ebbe difficoltà a scrivere, nel 1809, una serie di cadenze che poco o niente avevano a che 
+          vedere con lo stile dei concerti giovanili ai quali erano destinate. È difficile trovare un esempio più lampante di 
+          incoerenza stilistica, e lo troviamo nel cuore stesso della produzione beethoveniana.»
+        </blockquote>
+        <p className="text-xs text-slate-400">
+          — Luca Chiantore, <em>Beethoven al pianoforte</em>
         </p>
-        <div className="bg-slate-700 p-3 rounded text-xs text-slate-300">
-          <strong>Altre opere in Do minore:</strong> Sonata Patetica Op. 13, Quinta Sinfonia Op. 67, 
-          Quartetto Op. 18 n. 4, Sonata per violino Op. 30 n. 2.
-        </div>
       </div>
+
+      {/* Contesto storico e cronologie */}
+      <ContestoContent />
     </div>
   );
 };
@@ -906,19 +1003,47 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 // Componente Tooltip
 const Tooltip = ({ text, children }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window);
+  }, []);
+  
+  const handleInteraction = (e) => {
+    if (isTouchDevice) {
+      e.preventDefault();
+      setIsVisible(!isVisible);
+    }
+  };
   
   return (
     <span className="relative inline-block group">
       <span 
-        onClick={() => setIsVisible(!isVisible)}
-        onMouseEnter={() => setIsVisible(true)}
-        onMouseLeave={() => setIsVisible(false)}
+        onClick={handleInteraction}
+        onMouseEnter={() => !isTouchDevice && setIsVisible(true)}
+        onMouseLeave={() => !isTouchDevice && setIsVisible(false)}
       >
         {children}
       </span>
-      <span className={`${isVisible ? 'visible' : 'invisible'} absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-950 text-slate-100 text-xs rounded-lg shadow-xl w-64 z-20 border border-slate-700`}>
-        {text}
-      </span>
+      {isVisible && (
+        <span className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-3 bg-slate-950 text-slate-100 text-sm rounded-lg shadow-2xl max-w-[90vw] sm:max-w-sm z-50 border-2 border-slate-700">
+          {text}
+          {isTouchDevice && (
+            <button 
+              onClick={(e) => { e.stopPropagation(); setIsVisible(false); }}
+              className="absolute top-1 right-2 text-slate-400 hover:text-slate-200 text-lg font-bold"
+            >
+              ×
+            </button>
+          )}
+        </span>
+      )}
+      {isVisible && isTouchDevice && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40"
+          onClick={() => setIsVisible(false)}
+        />
+      )}
     </span>
   );
 };
@@ -948,6 +1073,51 @@ const Tooltip = ({ text, children }) => {
     { year: "1802", event: "Completamento definitivo. Scritto in parallelo al Testamento di Heiligenstadt (ottobre)." },
     { year: "1803 (5 Aprile)", event: "Prima assoluta al Theater an der Wien. Beethoven solista, Seyfried direttore. Partitura incompleta - Beethoven suona 'a memoria'!" },
     { year: "1804", event: "Pubblicazione da Bureau des Arts et d'Industrie. Dedica al Principe Luigi Ferdinando di Prussia." }
+  ];
+
+  const pianofortiTimeline = [
+    { 
+      model: "Späth / Stein (Johann Andreas Stein)", 
+      location: "Ratisbona / Augusta (Germania)",
+      features: "Meccanica tedesca/viennese (Prellmechanik). Azione leggera, martelletti coperti (novità di Stein dal 1783).",
+      period: "Bonn (anni 1780) / Augusta (1787)",
+      notes: "A Bonn, Beethoven suonava strumenti Stein di proprietà della contessa Hatzfeldt. Nel 1787 visitò il laboratorio di Stein ad Augusta. È possibile che il conte Waldstein gliene abbia regalato uno a Bonn."
+    },
+    {
+      model: "Anton Walter",
+      location: "Vienna",
+      features: "Meccanica viennese. Leggero, tocco reattivo, smorzatori a ginocchiera (spesso divisi per bassi/acuti). Estensione tipica di 5 ottave (FF-f3).",
+      period: "Vienna (fine anni 1790 - primi 1800)",
+      notes: "Beethoven possedeva un Walter, ma desiderava che fosse modificato (es. aggiunta di una corda). Czerny riferisce che il tocco di Mozart (legato ai Walter) non era adatto ai nuovi fortepiano che Beethoven prediligeva."
+    },
+    {
+      model: "Sébastien Érard (N. 133)",
+      location: "Parigi",
+      features: "5 ottave e mezza (FF-c4). Meccanica 'inglese' (più pesante). 4 pedali (liuto, smorzatori, celeste/buff, una corda). Corde triple.",
+      period: "Vienna (Ricevuto nel 1803)",
+      notes: "Un dono della ditta Érard legato alla pubblicazione della Sonata Patetica a Parigi. L'estensione extra (fino al Do4) influenzò la Sonata Waldstein (Op. 53) e l'Appassionata (Op. 57). Beethoven trovava la meccanica troppo pesante e nel 1810 lo definì 'inutile' per i danni subiti."
+    },
+    {
+      model: "Streicher (Nannette e Andreas)",
+      location: "Vienna",
+      features: "Meccanica viennese perfezionata. Beethoven cercava uno strumento che potesse 'cantare' e sostenere il suono.",
+      period: "Vienna (Vari periodi)",
+      notes: "Beethoven ebbe un rapporto di amicizia e consulenza vitalizia con i coniugi Streicher. Usò e possedette vari loro strumenti. Nel 1796 prese in prestito uno Streicher per un concerto a Presburgo e lo vendette lì invece di restituirlo."
+    },
+    {
+      model: "Thomas Broadwood",
+      location: "Londra",
+      features: "6 ottave (CC-c4). Suono robusto e potente, meccanica inglese pesante. Tripla cordatura. Nomi dei donatori (Kalkbrenner, Moscheles) firmati sulla tavola armonica.",
+      period: "Mödling / Vienna (1818 - 1827)",
+      notes: "Un regalo della ditta Broadwood. Arrivò a Vienna dopo un lungo viaggio. Beethoven, ormai sordo, lo 'martellava' così forte da rompere le corde e danneggiarlo. È lo strumento associato alle ultime sonate (es. Hammerklavier Op. 106)."
+    },
+    {
+      model: "Conrad Graf",
+      location: "Vienna",
+      features: "Estensione estesa (fino al Fa4 o 6 ottave e mezza). Quadrupla cordatura nei trebles per aumentare il volume.",
+      period: "Vienna (c. 1825 - 1827)",
+      notes: "Prestato a Beethoven per i suoi ultimi anni. Per aiutarlo a sentire, fu costruita una cassa di risonanza (o cupola) in legno speciale per convogliare il suono. Si trovava nella Schwarzspanierhaus insieme al Broadwood."
+    }
   ];
 
   const fontiDocumentarie = [
@@ -1008,102 +1178,83 @@ const Tooltip = ({ text, children }) => {
     }
   ];
 
-  const ContestoContent = () => (
-    <div className="space-y-8">
-      {/* Contesto Geopolitico */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-10 rounded-3xl shadow-2xl border border-slate-600/50">
-        <h2 className="text-4xl font-bold mb-6 text-amber-400">Il contesto geopolitico e culturale</h2>
+  const ContestoContent = () => {
+    const [openBeethovenTimeline, setOpenBeethovenTimeline] = useState(false);
+    const [openConcertoTimeline, setOpenConcertoTimeline] = useState(false);
+    const [openInstrumentsTimeline, setOpenInstrumentsTimeline] = useState(false);
 
-        <div className="space-y-6">
+    return (
+    <div className="space-y-6">
+      {/* Contesto Geopolitico */}
+      <div id="contesto-geopolitico" className="bg-slate-800 p-6 rounded-lg shadow-lg border border-slate-700">
+        <h2 className="text-2xl font-bold mb-5 text-slate-100">Il contesto geopolitico e culturale</h2>
+
+        <div className="space-y-5">
           <div>
-            <h3 className="text-2xl font-bold text-amber-300 mb-3">Vienna: la capitale musicale d'Europa</h3>
-            <p className="text-lg text-slate-300 leading-relaxed">
+            <h3 className="text-lg font-semibold text-slate-100 mb-2">Vienna: la capitale musicale d'Europa</h3>
+            <p className="text-sm text-slate-300 leading-relaxed">
               Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d'Europa.
               La città aveva ospitato{' '}
-              <span className="relative inline-block group cursor-help">
-                <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted">Haydn</span>
-                <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-64 z-10">
-                  Joseph Haydn (1732-1809): "Padre della sinfonia", maestro di Beethoven a Vienna dal 1792
-                </span>
-              </span>,{' '}
-              <span className="relative inline-block group cursor-help">
-                <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted">Gluck</span>
-                <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-64 z-10">
-                  Christoph Willibald Gluck (1714-1787): Compositore di opere, riformatore del melodramma
-                </span>
-              </span> e{' '}
-              <span className="relative inline-block group cursor-help">
-                <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted">Mozart</span>
-                <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-64 z-10">
-                  Wolfgang Amadeus Mozart (1756-1791): Genio del classicismo, morto appena un anno prima dell'arrivo di Beethoven
-                </span>
-              </span>.
+              <Tooltip text="Joseph Haydn (1732-1809): 'Padre della sinfonia', maestro di Beethoven a Vienna dal 1792">
+                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Haydn</span>
+              </Tooltip>,{' '}
+              <Tooltip text="Christoph Willibald Gluck (1714-1787): Compositore di opere, riformatore del melodramma">
+                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Gluck</span>
+              </Tooltip> e{' '}
+              <Tooltip text="Wolfgang Amadeus Mozart (1756-1791): Genio del classicismo, morto appena un anno prima dell'arrivo di Beethoven">
+                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Mozart</span>
+              </Tooltip>.
               L'imperatore{' '}
-              <span className="relative inline-block group cursor-help">
-                <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted">Francesco II</span>
-                <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-64 z-10">
-                  Francesco II d'Asburgo (1768-1835): Ultimo imperatore del Sacro Romano Impero, primo imperatore d'Austria, violinista dilettante
-                </span>
-              </span>{' '}
+              <Tooltip text="Francesco II d'Asburgo (1768-1835): Ultimo imperatore del Sacro Romano Impero, primo imperatore d'Austria, violinista dilettante">
+                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Francesco II</span>
+              </Tooltip>{' '}
               suonava il violino, e la nobiltà finanziava generosamente musicisti e concerti.
             </p>
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold text-amber-300 mb-3">Le guerre napoleoniche (1792-1815)</h3>
-            <p className="text-lg text-slate-300 leading-relaxed mb-3">
+            <h3 className="text-lg font-semibold text-slate-100 mb-2">Le guerre napoleoniche (1792-1815)</h3>
+            <p className="text-sm text-slate-300 leading-relaxed mb-3">
               L'Europa è sconvolta dalle{' '}
-              <span className="relative inline-block group cursor-help">
-                <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted">guerre napoleoniche</span>
-                <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-72 z-10">
-                  1792-1815: conflitti tra la Francia rivoluzionaria/napoleonica e le coalizioni europee. Napoleone conquisterà Vienna nel 1805 e nel 1809
-                </span>
-              </span>.
+              <Tooltip text="1792-1815: conflitti tra la Francia rivoluzionaria/napoleonica e le coalizioni europee. Napoleone conquisterà Vienna nel 1805 e nel 1809">
+                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">guerre napoleoniche</span>
+              </Tooltip>.
               La <strong>Rivoluzione francese</strong> (1789) aveva rovesciato l'ordine monarchico, proclamando libertà, uguaglianza e fraternità.
               Napoleone Bonaparte emerge come generale nel 1796 e diventa primo console nel 1799, poi imperatore nel 1804.
             </p>
-            <p className="text-lg text-slate-300 leading-relaxed">
+            <p className="text-sm text-slate-300 leading-relaxed">
               Beethoven inizialmente ammira Napoleone come simbolo degli ideali repubblicani, ma si disilluderà quando questi si autoincoronerà imperatore.
               Nel <strong>1809</strong>, Napoleone conquisterà Vienna (12 maggio), causando devastazione e carestia.
               Il periodo rivoluzionario influenza profondamente lo stile di Beethoven: uno "stile grandioso" post-rivoluzionario francese si fonde con la tradizione classica viennese.
             </p>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-amber-300 mb-3">La crisi personale di Beethoven</h3>
-            <p className="text-lg text-slate-300 leading-relaxed">
-              Mentre l'Europa è in guerra, Beethoven combatte la sua battaglia personale: la <strong>sordità progressiva</strong> (iniziata 1796-98).
-              Il concerto n. 3 è composto nel cuore di questa crisi esistenziale, quasi in parallelo al drammatico{' '}
-              <span className="relative inline-block group cursor-help">
-                <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted">Testamento di Heiligenstadt</span>
-                <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-72 z-10">
-                  Ottobre 1802: lettera ai fratelli in cui Beethoven contempla il suicidio ma sceglie di vivere per l'arte. Documento straziante della sua disperazione
-                </span>
-              </span>{' '}
-              (1802). È il ponte tra classicismo mozartiano e romanticismo eroico.
-            </p>
-            <div className="mt-5 bg-slate-900/60 border border-amber-400/40 rounded-2xl p-5 text-slate-100 shadow-inner">
-              <h4 className="text-xl font-semibold text-amber-300 mb-1">Testamento di Heiligenstadt</h4>
-              <p className="text-sm text-amber-200/70 mb-4">Beethoven ai fratelli, autunno 1802</p>
-              <ul className="space-y-3 text-sm md:text-base">
-                <li>
-                  <em className="block border-l-2 border-amber-400 pl-4 italic">
-                    "O uomini, che mi considerate duro, misantropo o asociale, quanto profondamente vi ingannate!"
-                  </em>
-                </li>
-                <li>
-                  <em className="block border-l-2 border-amber-400 pl-4 italic">
-                    "Solo l'arte mi ha trattenuto. Mi sembrava impossibile lasciare il mondo prima di aver compiuto tutto ciò a cui mi sentivo destinato."
-                  </em>
-                </li>
-                <li>
-                  <em className="block border-l-2 border-amber-400 pl-4 italic">
-                    "Rassegnati alle mie infermità e perdonami se ti crei dolore, tu creatura così fedele."
-                  </em>
-                </li>
-              </ul>
-            </div>
-          </div>
+      {/* Carattere di Beethoven */}
+      <div id="carattere-beethoven" className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700">
+        <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+          <User className="w-5 h-5 text-blue-400 mr-2" />
+          Il carattere di Beethoven
+        </h3>
+        <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+          <p>
+            <strong className="text-slate-100">Aspetto fisico:</strong> basso e tarchiato, fronte alta e spaziosa,
+            capelli neri e ricci che gli cadevano disordinati sulle spalle. Il suo aspetto variava enormemente:
+            talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivevano come un vulcano umano.
+          </p>
+          <p>
+            <strong className="text-slate-100">Temperamento:</strong> passionale, impulsivo, irascibile ma anche
+            profondamente sentimentale. Poteva passare dalla collera più violenta alla tenerezza più commovente.
+            La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
+          </p>
+          <p>
+            <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era considerato
+            il <em>più grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
+            lasciavano il pubblico letteralmente a bocca aperta. Poteva improvvisare per ore su un tema dato,
+            sviluppandolo in modi sempre diversi e sorprendenti. Questa abilità straordinaria spiega perché
+            alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvvisò intere sezioni!
+          </p>
         </div>
       </div>
 
@@ -1167,92 +1318,52 @@ const Tooltip = ({ text, children }) => {
         )}
       </div>
 
-      {/* Carattere di Beethoven */}
-      <div className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
-        <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
-          <Music className="w-5 h-5 text-blue-400 mr-2" />
-          Il carattere di Beethoven
-        </h3>
-        <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
-          <p>
-            <strong className="text-slate-100">Aspetto fisico:</strong> basso e tarchiato, fronte alta e spaziosa,
-            capelli neri e ricci che gli cadevano disordinati sulle spalle. Il suo aspetto variava enormemente:
-            talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivevano come un vulcano umano.
-          </p>
-          <p>
-            <strong className="text-slate-100">Temperamento:</strong> passionale, impulsivo, irascibile ma anche
-            profondamente sentimentale. Poteva passare dalla collera più violenta alla tenerezza più commovente.
-            La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
-          </p>
-          <p>
-            <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era considerato
-            il <em>più grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
-            lasciavano il pubblico letteralmente a bocca aperta. Poteva improvvisare per ore su un tema dato,
-            sviluppandolo in modi sempre diversi e sorprendenti. Questa abilità straordinaria spiega perché
-            alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvvisò intere sezioni!
-          </p>
-          <p>
-            <strong className="text-slate-100">Il dramma della sordità:</strong> la perdita progressiva dell'udito
-            (iniziata nel 1796-98) fu una tragedia per un musicista. Nel Testamento di Heiligenstadt (1802)
-            Beethoven confessò di aver contemplato il suicidio, ma scelse di vivere per l'arte:
-            <em className="block my-2 pl-4 border-l-2 border-slate-400 text-slate-100">
-              "Mi sembrava impossibile lasciare il mondo prima di aver compiuto tutto ciò a cui mi sentivo destinato."
-            </em>
-            La sordità lo spinse a concentrarsi sulla composizione anziché sull'esecuzione come pianista virtuoso.
-          </p>
-        </div>
+      {/* Cronologia Pianoforti */}
+      <div className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <button
+          onClick={() => setOpenInstrumentsTimeline(!openInstrumentsTimeline)}
+          className={`w-full p-5 flex justify-between items-center transition-all ${
+            openInstrumentsTimeline
+              ? 'sticky top-20 z-10 bg-slate-700 text-white'
+              : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <Music className="w-5 h-5" />
+            <h3 className="text-lg font-semibold">Cronologia: i pianoforti di Beethoven</h3>
+          </div>
+          <ChevronDown className={`w-6 h-6 transition-transform ${openInstrumentsTimeline ? 'rotate-180' : ''}`} />
+        </button>
+        {openInstrumentsTimeline && (
+          <div className="p-6 pt-24 bg-slate-900">
+            <div className="space-y-4">
+              {pianofortiTimeline.map((item, idx) => (
+                <div key={idx} className="p-4 rounded-lg bg-slate-800 border-l-4 border-blue-600 shadow-sm">
+                  <div className="flex flex-col space-y-2">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+                      <span className="font-bold text-blue-300 text-base">{item.model}</span>
+                      <span className="text-slate-400 text-xs">{item.period}</span>
+                    </div>
+                    <div className="text-xs text-slate-400">
+                      <strong>Fabbricato a:</strong> {item.location}
+                    </div>
+                    <div className="text-sm text-slate-200">
+                      <strong className="text-slate-100">Caratteristiche:</strong> {item.features}
+                    </div>
+                    <div className="text-sm text-slate-300 italic border-l-2 border-slate-700 pl-3">
+                      {item.notes}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Aneddoti e Approfondimenti */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-l-4 border-slate-6000">
-          <h3 className="text-2xl font-bold text-slate-100 mb-4 flex items-center">
-            <div className="bg-amber-100 p-2 rounded-lg mr-3">
-              <HelpCircle className="w-6 h-6 text-amber-600" />
-            </div>
-            L'aneddoto delle pagine bianche
-          </h3>
-          <p className="text-slate-200 leading-relaxed">
-            Durante la prima del 5 aprile 1803, il direttore{' '}
-            <span className="relative inline-block group cursor-help">
-              <span className="text-amber-700 font-semibold border-b border-amber-600 border-dotted">Ignaz von Seyfried</span>
-              <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-64 z-10">
-                Ignaz von Seyfried (1776-1841): Direttore d'orchestra e compositore, testimone della prima esecuzione
-              </span>
-            </span>{' '}
-            raccontò:
-            <em className="block my-3 pl-4 border-l-2 border-amber-300 text-amber-900">"Vidi quasi nient'altro che pagine vuote... solo qualche geroglifico egizio."</em>
-            Beethoven suonò la parte solistica quasi interamente <strong>a memoria</strong> perché non aveva
-            completato la scrittura! Continuò a modificare il concerto fino alla consegna all'editore.
-            Nella stessa serata furono eseguiti anche la Seconda Sinfonia e l'oratorio <em>Cristo sul Monte degli Ulivi</em>.
-          </p>
-        </div>
-        <div className="bg-slate-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 border-l-4 border-slate-6000">
-          <h3 className="text-2xl font-bold text-slate-100 mb-4 flex items-center">
-            <div className="bg-amber-100 p-2 rounded-lg mr-3">
-              <PlayCircle className="w-6 h-6 text-amber-600" />
-            </div>
-            Il "C minor mood" e l'eredità di Mozart
-          </h3>
-          <p className="text-slate-200 leading-relaxed">
-            Per Beethoven, il <strong>Do minore</strong> è la tonalità della tempesta e dell'eroismo.
-            Collega quest'opera alla <em>Patetica</em> e alla <em>Quinta sinfonia</em>.
-            Il modello principale è il{' '}
-            <span className="relative inline-block group cursor-help">
-              <span className="text-amber-700 font-semibold border-b border-amber-600 border-dotted">concerto K. 491</span>
-              <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-700 text-white text-sm rounded-lg shadow-lg w-64 z-10">
-                Concerto n. 24 in Do minore K. 491 di Mozart (1786): capolavoro del concerto classico, modello per l'op. 37
-              </span>
-            </span>{' '}
-            di Mozart. Beethoven stesso ammise dopo un'esecuzione:
-            <em className="block my-3 pl-4 border-l-2 border-amber-300 text-amber-900">"Cramer! Non potremo mai fare nulla di simile!"</em>
-            Ma trasforma il concerto da "salotto" in dramma sinfonico,
-            con il pianoforte che si oppone all'orchestra anziché dialogare armoniosamente.
-          </p>
-        </div>
-      </div>
     </div>
-  );
+    );
+  };
 
   const PremesseContent = () => (
     <div className="space-y-8">
@@ -1491,13 +1602,39 @@ const InterpretersSection = () => (
           </div>
 
           <div className="p-5 bg-slate-900">
-            <div className="mb-3">
+            <div className="mb-3 flex items-center justify-between flex-wrap gap-2">
               <span className="inline-block bg-slate-800/50 text-blue-300 px-3 py-1 rounded-full text-xs font-medium">
                 Stile: {interpreter.style}
               </span>
+              {interpreter.link && (
+                <a
+                  href={interpreter.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold transition-colors"
+                >
+                  <PlayCircle className="w-4 h-4" />
+                  Ascolta su YouTube
+                </a>
+              )}
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
-              {interpreter.description}
+              {interpreter.cadenzaLink ? (
+                <>
+                  {interpreter.description.split('a min. 12:51 del video')[0]}
+                  <a 
+                    href={interpreter.cadenzaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 underline font-semibold"
+                  >
+                    a min. 12:51 del video
+                  </a>
+                  {interpreter.description.split('a min. 12:51 del video')[1]}
+                </>
+              ) : (
+                interpreter.description
+              )}
             </p>
           </div>
         </div>
