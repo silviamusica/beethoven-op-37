@@ -4079,15 +4079,15 @@ const QuizSection = () => {
     if (optionIndex === shuffledQuestions[currentQuestion].correct) {
       setScore(score + 1);
     }
-    
-    setTimeout(() => {
-      if (currentQuestion < shuffledQuestions.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
-        setSelectedOption(null);
-      } else {
-        setShowResult(true);
-      }
-    }, 1200);
+  };
+
+  const handleNext = () => {
+    if (currentQuestion < shuffledQuestions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      setSelectedOption(null);
+    } else {
+      setShowResult(true);
+    }
   };
 
   const restartQuiz = () => {
@@ -4310,6 +4310,19 @@ const QuizSection = () => {
                   <p className="text-sm text-slate-300 leading-relaxed">{currentQ.explanation}</p>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Pulsante Avanti - appare quando viene data una risposta */}
+          {selectedOption !== null && (
+            <div className="mt-6 flex justify-end">
+              <button
+                onClick={handleNext}
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all flex items-center space-x-2 shadow-lg"
+              >
+                <span>{currentQuestion < shuffledQuestions.length - 1 ? 'Prossima Domanda' : 'Vedi Risultato'}</span>
+                <ChevronRight className="w-5 h-5" />
+              </button>
             </div>
           )}
         </div>
