@@ -118,29 +118,7 @@ const movementsData = [
 ];
 
 const interpretersData = [
-  // 🔥 LA REFERENZA MODERNA
-  {
-    name: "🔥 Martha Argerich (La Referenza Moderna)",
-    conductor: "Claudio Abbado",
-    orchestra: "Mahler Chamber Orchestra",
-    year: "2004 (Live a Ferrara)",
-    description: "È l'equilibrio perfetto tra fuoco argentino e cantabilità italiana. Tempi serrati, dinamiche esplosive ma mai fuori controllo. La chimica tra Argerich e Abbado è leggendaria.",
-    style: "Fuoco, Energia",
-    rating: "⭐⭐⭐⭐⭐",
-    link: "https://www.youtube.com/watch?v=AC4u-sBN3OI"
-  },
-
-  // 🎹 VERSIONI STORICHE LEGGENDARIE
-  {
-    name: "🎹 Wilhelm Kempff (Versione Storica Leggendaria)",
-    conductor: "Ferdinand Leitner",
-    orchestra: "Berliner Philharmoniker",
-    year: "1961",
-    description: "L'opposto della Argerich. Non è una battaglia, ma pura poesia. Il tocco di Kempff è morbido, 'parlante'. Il secondo movimento (Largo) è di una bellezza spirituale assoluta. Ideale per il primo ascolto.",
-    style: "Poetico, Classico",
-    rating: "⭐⭐⭐⭐⭐ (Classico)",
-    link: "https://www.youtube.com/watch?v=3aNkl7wdWyQ"
-  },
+  // 🎹 VERSIONI STORICHE LEGGENDARIE (1933-1973)
   {
     name: "🎹 Artur Schnabel (Versione Storica Leggendaria)",
     conductor: "Malcolm Sargent",
@@ -151,32 +129,17 @@ const interpretersData = [
     rating: "⭐⭐⭐⭐ (Audio datato, interpretazione stellare)",
     link: "https://youtu.be/t8z_HiusIL0?si=OO0KRH7dtutylzhs"
   },
-
-  // 🎼 STRUMENTI D'EPOCA (Filologico)
   {
-    name: "🎼 Steven Lubin (Strumenti d'Epoca - Filologico)",
-    conductor: "Christopher Hogwood",
-    orchestra: "Academy of Ancient Music",
-    year: "1988",
-    description: "Fortepiano (copia Johann Fritz 1818 ca.). Fondamentale per capire il suono che Beethoven aveva nelle orecchie. L'orchestra è più leggera, il pianoforte più percussivo e secco, i bassi 'gracchiano' deliziosamente. Cambia la percezione del pezzo.",
-    style: "Filologico (Antico)",
-    rating: "⭐⭐⭐⭐½",
-    link: "https://www.youtube.com/watch?v=SiokgMpfyQw"
+    name: "Claudio Arrau",
+    conductor: "Otto Klemperer",
+    orchestra: "Philharmonia Orchestra",
+    year: "1957",
+    description: "Due giganti beethoveniani si incontrano a Londra per ricreare l'arte pura. Tutto è perfettamente bilanciato: il virtuosismo è onnipresente ma sempre al servizio del significato, i pianissimi sono pura poesia. Arrau descriveva il rapporto con Klemperer come 'controverso', ma la loro collaborazione live del 1957 alla Royal Festival Hall compì il miracolo. Un incontro straordinario tra due leggendari eredi di scuole e tradizioni, con superba maestria.",
+    style: "Monumentale, profondo, titanico",
+    link: "https://youtu.be/iLzjlH9_a6M?si=Wk5cyeFfsx3880nA"
   },
-
-  // 🎵 GIOVANI TALENTI CONTEMPORANEI
-  {
-    name: "🎵 Jan Lisiecki (Giovane Talento Contemporaneo)",
-    conductor: "(Dirige dalla tastiera)",
-    orchestra: "Academy of St Martin in the Fields",
-    year: "2019",
-    description: "Lisiecki dirige direttamente dalla tastiera. Suono cristallino, tecnica moderna impeccabile, approccio fresco e senza pesantezze retoriche.",
-    style: "Fresco, Moderno",
-    rating: "⭐⭐⭐⭐",
-    link: "https://www.youtube.com/watch?v=MX5XENd0SeM"
-  },
-
-  // ⚠️ IL CASO GOULD (L'Alternativa)
+  
+  // ⚠️ IL CASO GOULD (1959)
   {
     name: "⚠️ Glenn Gould (Il Caso Gould - L'Alternativa)",
     conductor: "Leonard Bernstein",
@@ -188,33 +151,15 @@ const interpretersData = [
     link: "https://www.youtube.com/watch?v=vRSCAHDS12g"
   },
 
-  // ALTRE INTERPRETAZIONI IMPORTANTI
   {
-    name: "Claudio Arrau",
-    conductor: "Otto Klemperer",
-    orchestra: "Philharmonia Orchestra",
-    year: "1957",
-    description: "Due giganti beethoveniani si incontrano a Londra per ricreare l'arte pura. Tutto è perfettamente bilanciato: il virtuosismo è onnipresente ma sempre al servizio del significato, i pianissimi sono pura poesia. Arrau descriveva il rapporto con Klemperer come 'controverso', ma la loro collaborazione live del 1957 alla Royal Festival Hall compì il miracolo. Un incontro straordinario tra due leggendari eredi di scuole e tradizioni, con superba maestria.",
-    style: "Monumentale, profondo, titanico",
-    link: "https://youtu.be/iLzjlH9_a6M?si=Wk5cyeFfsx3880nA"
-  },
-  {
-    name: "Arturo Benedetti Michelangeli",
-    conductor: "Carlo Maria Giulini",
-    orchestra: "Wiener Symphoniker",
-    year: "1979 (circa)",
-    description: "Perfezione tecnica assoluta e controllo sovrumano. Michelangeli è un chirurgo del pianoforte: ogni nota è perfettamente calibrata, il suono è cristallino e luminoso. Giulini bilancia questa precisione con calore orchestrale. L'approccio è classico, elegante, quasi apollineo - un Beethoven 'purificato' da ogni eccesso romantico.",
-    style: "Cristallino, perfezionista, apollineo",
-    link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
-  },
-  {
-    name: "Daniel Barenboim",
-    conductor: "Antonio Pappano / Zubin Mehta",
-    orchestra: "Orchestra di Santa Cecilia (2007) / Israel Philharmonic (2012)",
-    year: "2007, 2012",
-    description: "Approccio completo e intellettualmente ricco. Barenboim ha inciso il concerto più volte, mostrando diverse sfaccettature. Combina virtuosismo brillante con profondità interpretativa. La sua lettura è flessibile, drammatica ma equilibrata, con grande attenzione alla struttura formale e al dialogo orchestra-solista.",
-    style: "Completo, intellettuale, drammatico",
-    link: "https://youtu.be/UXGy1bpEAUw?si=dYYxQ1hh4UYHBUFI"
+    name: "🎹 Wilhelm Kempff (Versione Storica Leggendaria)",
+    conductor: "Ferdinand Leitner",
+    orchestra: "Berliner Philharmoniker",
+    year: "1961",
+    description: "L'opposto della Argerich. Non è una battaglia, ma pura poesia. Il tocco di Kempff è morbido, 'parlante'. Il secondo movimento (Largo) è di una bellezza spirituale assoluta. Ideale per il primo ascolto.",
+    style: "Poetico, Classico",
+    rating: "⭐⭐⭐⭐⭐ (Classico)",
+    link: "https://www.youtube.com/watch?v=3aNkl7wdWyQ"
   },
   {
     name: "Artur Rubinstein",
@@ -225,6 +170,30 @@ const interpretersData = [
     style: "Elegante, nobile, lirico",
     link: "https://youtu.be/44a2kZ72RzY?si=7dcdXf7FipvyYkQ1"
   },
+  
+  // INTERPRETAZIONI MODERNE (1979-2012)
+  {
+    name: "Arturo Benedetti Michelangeli",
+    conductor: "Carlo Maria Giulini",
+    orchestra: "Wiener Symphoniker",
+    year: "1979 (circa)",
+    description: "Perfezione tecnica assoluta e controllo sovrumano. Michelangeli è un chirurgo del pianoforte: ogni nota è perfettamente calibrata, il suono è cristallino e luminoso. Giulini bilancia questa precisione con calore orchestrale. L'approccio è classico, elegante, quasi apollineo - un Beethoven 'purificato' da ogni eccesso romantico.",
+    style: "Cristallino, perfezionista, apollineo",
+    link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
+  },
+
+  // 🎼 STRUMENTI D'EPOCA (Filologico - 1988)
+  {
+    name: "🎼 Steven Lubin (Strumenti d'Epoca - Filologico)",
+    conductor: "Christopher Hogwood",
+    orchestra: "Academy of Ancient Music",
+    year: "1988",
+    description: "Fortepiano (copia Johann Fritz 1818 ca.). Fondamentale per capire il suono che Beethoven aveva nelle orecchie. L'orchestra è più leggera, il pianoforte più percussivo e secco, i bassi 'gracchiano' deliziosamente. Cambia la percezione del pezzo.",
+    style: "Filologico (Antico)",
+    rating: "⭐⭐⭐⭐½",
+    link: "https://www.youtube.com/watch?v=SiokgMpfyQw"
+  },
+
   {
     name: "Krystian Zimerman",
     conductor: "Leonard Bernstein",
@@ -233,6 +202,28 @@ const interpretersData = [
     description: "Registrazione live leggendaria dal Musikverein di Vienna. Zimerman unisce precisione tecnica cristallina a grande intensità emotiva. Bernstein dirige con energia travolgente e profondità interpretativa. Un incontro straordinario tra due giganti che crea una performance elettrizzante e profondamente musicale.",
     style: "Elettrizzante, preciso, emotivo",
     link: "https://www.youtube.com/watch?v=VCC6KR7-7eI"
+  },
+
+  // 🔥 LA REFERENZA MODERNA (2004)
+  {
+    name: "🔥 Martha Argerich (La Referenza Moderna)",
+    conductor: "Claudio Abbado",
+    orchestra: "Mahler Chamber Orchestra",
+    year: "2004 (Live a Ferrara)",
+    description: "È l'equilibrio perfetto tra fuoco argentino e cantabilità italiana. Tempi serrati, dinamiche esplosive ma mai fuori controllo. La chimica tra Argerich e Abbado è leggendaria.",
+    style: "Fuoco, Energia",
+    rating: "⭐⭐⭐⭐⭐",
+    link: "https://www.youtube.com/watch?v=AC4u-sBN3OI"
+  },
+
+  {
+    name: "Daniel Barenboim",
+    conductor: "Antonio Pappano / Zubin Mehta",
+    orchestra: "Orchestra di Santa Cecilia (2007) / Israel Philharmonic (2012)",
+    year: "2007, 2012",
+    description: "Approccio completo e intellettualmente ricco. Barenboim ha inciso il concerto più volte, mostrando diverse sfaccettature. Combina virtuosismo brillante con profondità interpretativa. La sua lettura è flessibile, drammatica ma equilibrata, con grande attenzione alla struttura formale e al dialogo orchestra-solista.",
+    style: "Completo, intellettuale, drammatico",
+    link: "https://youtu.be/UXGy1bpEAUw?si=dYYxQ1hh4UYHBUFI"
   },
   {
     name: "Fazil Say",
@@ -243,6 +234,18 @@ const interpretersData = [
     style: "Moderno, virtuoso, innovativo",
     link: "https://youtu.be/a0ixaGeQzME?si=FIa82djieyaktNdb",
     cadenzaLink: "https://youtu.be/a0ixaGeQzME?si=zVe756GAmgEMlKQy&t=767"
+  },
+
+  // 🎵 GIOVANI TALENTI CONTEMPORANEI (2019)
+  {
+    name: "🎵 Jan Lisiecki (Giovane Talento Contemporaneo)",
+    conductor: "(Dirige dalla tastiera)",
+    orchestra: "Academy of St Martin in the Fields",
+    year: "2019",
+    description: "Lisiecki dirige direttamente dalla tastiera. Suono cristallino, tecnica moderna impeccabile, approccio fresco e senza pesantezze retoriche.",
+    style: "Fresco, Moderno",
+    rating: "⭐⭐⭐⭐",
+    link: "https://www.youtube.com/watch?v=MX5XENd0SeM"
   }
 ];
 
@@ -1782,10 +1785,10 @@ const Tooltip = ({ text, children }) => {
           </p>
           <p>
             <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era considerato
-            il <em>pi" grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
+            il <em>più grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
             lasciavano il pubblico letteralmente a bocca aperta. Poteva improvvisare per ore su un tema dato,
             sviluppandolo in modi sempre diversi e sorprendenti. Questa abilità straordinaria spiega perché
-            alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvvis" intere sezioni!
+            alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvisò intere sezioni!
           </p>
         </div>
       </div>
@@ -1893,7 +1896,7 @@ const Tooltip = ({ text, children }) => {
                     <td className="border border-slate-700 p-2"><strong>Anton Walter</strong></td>
                     <td className="border border-slate-700 p-2">Vienna</td>
                     <td className="border border-slate-700 p-2"><strong>Vienna (fine anni 1790 - c. 1803)</strong><br/>Posseduto da Beethoven nel suo primo periodo viennese.</td>
-                    <td className="border border-slate-700 p-2">Meccanica viennese (<em>Prellmechanik</em>). Tocco leggero e reattivo, ma considerato "pi" piatto" rispetto agli inglesi. Smorzatori a ginocchiera (spesso divisi bassi/acuti). Estensione tipica di 5 ottave (FF-f3).</td>
+                    <td className="border border-slate-700 p-2">Meccanica viennese (<em>Prellmechanik</em>). Tocco leggero e reattivo, ma considerato "più piatto" rispetto agli inglesi. Smorzatori a ginocchiera (spesso divisi bassi/acuti). Estensione tipica di 5 ottave (FF-f3).</td>
                     <td className="border border-slate-700 p-2">Beethoven possedeva un Walter, ma desiderava modifiche (es. <em>una corda</em>). Nel 1803, dopo aver ricevuto l'Érard, dichiar" che i pianoforti viennesi (incluso il suo Walter) erano "spazzatura" (<em>Quark</em>) in confronto.</td>
                   </tr>
                   <tr>
@@ -1949,7 +1952,7 @@ const Tooltip = ({ text, children }) => {
               Il modello più significativo per il Terzo Concerto è il Concerto per pianoforte n. 24 in Do minore, K. 491 di Wolfgang Amadeus Mozart.
             </p>
             <ul className="mt-3 space-y-2 list-disc pl-5">
-              <li><strong>Ammirazione di Beethoven:</strong> ascoltando il K. 491 all&apos;Augarten nel 1799 con Johann Baptist Cramer, esclam" "Cramer! Cramer! Non saremo mai in grado di fare qualcosa di simile!".</li>
+              <li><strong>Ammirazione di Beethoven:</strong> ascoltando il K. 491 all&apos;Augarten nel 1799 con Johann Baptist Cramer, esclamò "Cramer! Cramer! Non saremo mai in grado di fare qualcosa di simile!".</li>
               <li><strong>Punti di contatto:</strong> entrambi i concerti condividono la stessa tonalità e un ricco dialogo tra archi e fiati nei ritornelli orchestrali.</li>
               <li><strong>Differenze sostanziali:</strong> Beethoven rompe l&apos;integrazione mozartiana tra solista e orchestra: il pianoforte entra con atteggiamento di sfida, appropriandosi dei temi orchestrali. Donald Tovey nota anche come Beethoven, a differenza di Mozart, tenda a esporre tutto il materiale tematico prima dell&apos;ingresso solistico.</li>
             </ul>
