@@ -185,220 +185,331 @@ const interpretersData = [
 ];
 
 const quizData = [
+  // 🟢 BASE - Domande di base su fatti e informazioni generali
   {
     question: "In quale anno avvenne la prima esecuzione assoluta?",
     options: ["1800", "1802", "1803", "1805"],
-    correct: 2
-  },
-  {
-    question: "Chi era il direttore durante la prima, che vide 'geroglifici egizi' invece della partitura?",
-    options: ["Ferdinand Ries", "Ignaz von Seyfried", "Carl Czerny", "Joseph Haydn"],
-    correct: 1
+    correct: 2,
+    difficulty: "base"
   },
   {
     question: "Quando arrivò Beethoven a Vienna?",
     options: ["1789", "1792", "1796", "1800"],
-    correct: 1
+    correct: 1,
+    difficulty: "base"
   },
   {
     question: "Quale concerto di Mozart è il modello principale dell'Op. 37?",
     options: ["K. 466 in Re minore", "K. 467 in Do maggiore", "K. 491 in Do minore", "K. 537 'Coronation'"],
-    correct: 2
-  },
-  {
-    question: "Come entra il pianoforte nel primo movimento?",
-    options: ["Con il tema principale piano", "Con tre arpeggi delicati", "Con tre scale ascendenti fortissimo in doppie ottave", "Con un assolo lirico"],
-    correct: 2
+    correct: 2,
+    difficulty: "base"
   },
   {
     question: "In quale tonalità finisce il terzo movimento?",
     options: ["Do minore", "Do maggiore", "Mi maggiore", "Mib maggiore"],
-    correct: 3
-  },
-  {
-    question: "Qual è l'innovazione tecnica che Beethoven sfruttò nel secondo movimento?",
-    options: ["Uso pionieristico del pedale di risonanza", "Invenzione del forte-piano", "Uso del pizzicato", "Introduzione del clarinetto basso"],
-    correct: 0
-  },
-  {
-    question: "Cosa scrisse Beethoven nel Testamento di Heiligenstadt?",
-    options: ["La dedica del concerto", "La disperazione per la sordità", "Le istruzioni per l'esecuzione", "La cadenza del primo movimento"],
-    correct: 1
-  },
-  {
-    question: "Quale elemento inusuale compare nel terzo movimento?",
-    options: ["Un valzer", "Un fugato elaborato", "Un corale", "Una marcia funebre"],
-    correct: 1
-  },
-  {
-    question: "Quale altro lavoro fu eseguito nella stessa serata della prima dell'Op. 37?",
-    options: ["La Quinta Sinfonia", "La Seconda Sinfonia", "Il Fidelio", "La Nona Sinfonia"],
-    correct: 1
-  },
-  {
-    question: "Come cambia il ruolo del solista rispetto ai concerti mozartiani?",
-    options: ["Diventa più virtuoso", "Si oppone all'orchestra invece di dialogare", "Suona più piano", "Ha meno importanza"],
-    correct: 1
-  },
-  {
-    question: "Quale strumento espone il secondo tema nel primo movimento?",
-    options: ["Violini", "Clarinetto e violini", "Flauto", "Corno"],
-    correct: 1
-  },
-  {
-    question: "Chi ha registrato l'Op. 37 con Otto Klemperer nel 1957?",
-    options: ["Michelangeli", "Kempff", "Arrau", "Barenboim"],
-    correct: 2
-  },
-  {
-    question: "Quale interprete è famoso per l'approccio 'cristallino e apollineo'?",
-    options: ["Arrau", "Michelangeli", "Kempff", "Rubinstein"],
-    correct: 1
-  },
-  {
-    question: "Chi suonò con l'Orchestra della RAI di Torino nel 1962?",
-    options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
-    correct: 2
-  },
-  {
-    question: "Quale interprete usa un approccio 'intimista e cantabile'?",
-    options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
-    correct: 2
-  },
-  {
-    question: "Quanti flauti sono nell'organico orchestrale dell'Op. 37?",
-    options: ["1", "2", "3", "4"],
-    correct: 1
-  },
-  {
-    question: "In quale tonalità sono i clarinetti dell'Op. 37?",
-    options: ["Do", "Sib", "La", "Mib"],
-    correct: 1
-  },
-  {
-    question: "Quale pianoforte possedette Beethoven dal 1803?",
-    options: ["Walter", "Stein", "Érard", "Broadwood"],
-    correct: 2
-  },
-  {
-    question: "Cosa caratterizza il carattere del primo tema (P)?",
-    options: ["Dolce e cantabile", "Marziale con ritmo puntato", "Virtuosistico", "Lirico"],
-    correct: 1
-  },
-  {
-    question: "Come finisce la cadenza del primo movimento?",
-    options: ["Con forte orchestrale", "Con passaggio dolce e liquido", "Con un trillo fortissimo", "Con silenzio totale"],
-    correct: 1
-  },
-  {
-    question: "Quando Napoleone entrò a Vienna?",
-    options: ["1803", "1805", "1809", "1812"],
-    correct: 2
-  },
-  {
-    question: "Chi invitò Beethoven a Vienna nel 1792?",
-    options: ["Haydn", "Mozart", "Conte Waldstein", "Principe Lichnowsky"],
-    correct: 2
-  },
-  {
-    question: "In quale tonalità è il secondo movimento?",
-    options: ["Do maggiore", "Mib maggiore", "Mi maggiore", "Lab maggiore"],
-    correct: 2
-  },
-  {
-    question: "Qual è la forma del primo movimento?",
-    options: ["Rondò", "Tema con variazioni", "Forma sonata con doppia esposizione", "Fuga"],
-    correct: 2
+    correct: 3,
+    difficulty: "base"
   },
   {
     question: "A chi fu dedicato il concerto?",
     options: ["Napoleone Bonaparte", "Principe Luigi Ferdinando di Prussia", "Arciduca Rodolfo", "Conte Waldstein"],
-    correct: 1
+    correct: 1,
+    difficulty: "base"
   },
   {
     question: "In quale teatro avvenne la prima esecuzione?",
     options: ["Theater an der Wien", "Burgtheater", "Kärntnertortheater", "Hofoper"],
-    correct: 0
+    correct: 0,
+    difficulty: "base"
+  },
+  {
+    question: "In quale tonalità è il secondo movimento?",
+    options: ["Do maggiore", "Mib maggiore", "Mi maggiore", "Lab maggiore"],
+    correct: 2,
+    difficulty: "base"
+  },
+  {
+    question: "Quante cadenze sono scritte da Beethoven per il primo movimento?",
+    options: ["Una sola", "Due", "Tre", "Nessuna"],
+    correct: 2,
+    difficulty: "base"
   },
   {
     question: "Quale editore pubblicò per primo il concerto?",
     options: ["Breitkopf & Härtel", "Bureau des Arts et d'Industrie", "Simrock", "Artaria"],
-    correct: 1
+    correct: 1,
+    difficulty: "base"
   },
   {
     question: "In che anno fu pubblicato il concerto?",
     options: ["1800", "1802", "1804", "1806"],
-    correct: 2
+    correct: 2,
+    difficulty: "base"
+  },
+
+  // 🟡 INTERMEDIO - Domande che richiedono comprensione concettuale
+  {
+    question: "Chi era il direttore durante la prima, che vide 'geroglifici egizi' invece della partitura?",
+    options: ["Ferdinand Ries", "Ignaz von Seyfried", "Carl Czerny", "Joseph Haydn"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Come entra il pianoforte nel primo movimento?",
+    options: ["Con il tema principale piano", "Con tre arpeggi delicati", "Con tre scale ascendenti fortissimo in doppie ottave", "Con un assolo lirico"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Qual è l'innovazione tecnica che Beethoven sfruttò nel secondo movimento?",
+    options: ["Uso pionieristico del pedale di risonanza", "Invenzione del forte-piano", "Uso del pizzicato", "Introduzione del clarinetto basso"],
+    correct: 0,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Cosa scrisse Beethoven nel Testamento di Heiligenstadt?",
+    options: ["La dedica del concerto", "La disperazione per la sordità", "Le istruzioni per l'esecuzione", "La cadenza del primo movimento"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale elemento inusuale compare nel terzo movimento?",
+    options: ["Un valzer", "Un fugato elaborato", "Un corale", "Una marcia funebre"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale altro lavoro fu eseguito nella stessa serata della prima dell'Op. 37?",
+    options: ["La Quinta Sinfonia", "La Seconda Sinfonia", "Il Fidelio", "La Nona Sinfonia"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Come cambia il ruolo del solista rispetto ai concerti mozartiani?",
+    options: ["Diventa più virtuoso", "Si oppone all'orchestra invece di dialogare", "Suona più piano", "Ha meno importanza"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale strumento espone il secondo tema nel primo movimento?",
+    options: ["Violini", "Clarinetto e violini", "Flauto", "Corno"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Chi ha registrato l'Op. 37 con Otto Klemperer nel 1957?",
+    options: ["Michelangeli", "Kempff", "Arrau", "Barenboim"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale interprete è famoso per l'approccio 'cristallino e apollineo'?",
+    options: ["Arrau", "Michelangeli", "Kempff", "Rubinstein"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Chi suonò con l'Orchestra della RAI di Torino nel 1962?",
+    options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale interprete usa un approccio 'intimista e cantabile'?",
+    options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quanti flauti sono nell'organico orchestrale dell'Op. 37?",
+    options: ["1", "2", "3", "4"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "In quale tonalità sono i clarinetti dell'Op. 37?",
+    options: ["Do", "Sib", "La", "Mib"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale pianoforte possedette Beethoven dal 1803?",
+    options: ["Walter", "Stein", "Érard", "Broadwood"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Cosa caratterizza il carattere del primo tema (P)?",
+    options: ["Dolce e cantabile", "Marziale con ritmo puntato", "Virtuosistico", "Lirico"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Come finisce la cadenza del primo movimento?",
+    options: ["Con forte orchestrale", "Con passaggio dolce e liquido", "Con un trillo fortissimo", "Con silenzio totale"],
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quando Napoleone entrò a Vienna?",
+    options: ["1803", "1805", "1809", "1812"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Chi invitò Beethoven a Vienna nel 1792?",
+    options: ["Haydn", "Mozart", "Conte Waldstein", "Principe Lichnowsky"],
+    correct: 2,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Qual è la forma del primo movimento?",
+    options: ["Rondò", "Tema con variazioni", "Forma sonata con doppia esposizione", "Fuga"],
+    correct: 2,
+    difficulty: "intermedio"
   },
   {
     question: "Qual è il carattere principale del Do minore beethoveniano?",
     options: ["Pastorale e sereno", "Eroico e tempestoso", "Elegante e galante", "Sacro e mistico"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Quale opera precedente di Beethoven in Do minore è chiamata 'Patetica'?",
     options: ["Op. 1 n. 3", "Op. 10 n. 1", "Op. 13", "Op. 18 n. 4"],
-    correct: 2
+    correct: 2,
+    difficulty: "intermedio"
   },
   {
     question: "Che cosa caratterizza l'ingresso del solista nel primo movimento?",
     options: ["Un tema nuovo e dolce", "Tre scale ascendenti fortissimo", "Un arpeggio delicato", "Una citazione di Mozart"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Quante battute dura circa l'esposizione orchestrale (RITORNELLO 1)?",
     options: ["50 battute", "111 battute", "227 battute", "343 battute"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "La distanza tonale tra primo e secondo movimento (Do minore - Mi maggiore) è chiamata:",
     options: ["Terza maggiore", "Quinta giusta", "Terza cromatica", "Sesta maggiore"],
-    correct: 2
+    correct: 2,
+    difficulty: "intermedio"
   },
   {
     question: "Quale innovazione compare nella coda finale del primo movimento?",
     options: ["Una seconda cadenza", "Il piano continua durante il TUTTI", "Un assolo di timpani", "Una modulazione a Do maggiore"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Nel secondo movimento, quali strumenti dialogano principalmente con il pianoforte?",
     options: ["Violini e viole", "Flauti e oboi", "Fagotti e legni", "Trombe e corni"],
-    correct: 2
+    correct: 2,
+    difficulty: "intermedio"
   },
   {
     question: "Il terzo movimento è in forma:",
     options: ["Sonata", "Rondò", "Tema con variazioni", "Minuetto"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Cosa disse Beethoven del concerto K. 491 di Mozart?",
     options: ["'È troppo semplice'", "'Non saremo mai in grado di fare qualcosa di simile'", "'Lo posso migliorare'", "'È il mio modello perfetto'"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "In quale documento Beethoven scrisse della sua disperazione per la sordità?",
     options: ["Lettera a Bettina Brentano", "Testamento di Heiligenstadt", "Diario personale", "Lettera all'Immortale Amata"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Quale altra grande opera Beethoven completò nello stesso anno del concerto (1802)?",
     options: ["Eroica", "Seconda Sinfonia", "Quinta Sinfonia", "Fidelio"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Quale periodo stilistico di Beethoven inizia con opere come l'Op. 37?",
     options: ["Periodo giovanile", "Periodo eroico", "Periodo tardo", "Periodo classico"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
   },
   {
     question: "Quale caratteristica distingue il pianoforte Érard che Beethoven ricevette nel 1803?",
     options: ["Aveva 88 tasti", "Aveva quattro pedali", "Aveva il pedale di risonanza innovativo", "Era un clavicembalo modificato"],
-    correct: 2
+    correct: 2,
+    difficulty: "intermedio"
   },
   {
     question: "In che anno iniziò a manifestarsi la sordità di Beethoven?",
     options: ["1792", "1796-98", "1802", "1809"],
-    correct: 1
+    correct: 1,
+    difficulty: "intermedio"
+  },
+  {
+    question: "Quale operazione permise il salvataggio delle parti orchestrali?",
+    options: ["Copiatura a mano", "Stampa immediata", "Fotografia", "Microfilm"],
+    correct: 0,
+    difficulty: "intermedio",
+    explanation: "Le parti orchestrali furono salvate grazie alla copiatura manuale effettuata dal copista di Beethoven prima della pubblicazione ufficiale della partitura completa."
+  },
+  {
+    question: "Quale errore famoso di trillo è presente nella cadenza pubblicata nel 1806?",
+    options: ["Trillo troppo lungo", "Trillo nella mano sbagliata", "Trillo sulla nota sbagliata", "Assenza di trillo"],
+    correct: 1,
+    difficulty: "intermedio",
+    explanation: "Nella cadenza pubblicata nel 1806 c'è un errore celebre: il trillo è scritto nella mano sinistra invece che nella destra, rendendo il passaggio praticamente ineseguibile come scritto."
+  },
+  {
+    question: "Quanti pedali aveva il pianoforte Érard del 1803?",
+    options: ["Due", "Tre", "Quattro", "Cinque"],
+    correct: 2,
+    difficulty: "intermedio",
+    explanation: "Il pianoforte Érard del 1803 aveva quattro pedali: sustain, una corda, moderatore e cembalo (quest'ultimo produceva un effetto simile al clavicembalo)."
+  },
+
+  // 🔴 AVANZATO - Domande di analisi teorica approfondita
+  {
+    question: "Qual è la caratteristica principale del 'blocco tri-modulare' nel Ritornello 1?",
+    options: [
+      "Tre temi distinti in tonalità diverse",
+      "Una struttura P-TR-MC1-S1-JOLLY-MC2-S2 con doppia Caesura Mediale",
+      "Un'alternanza di tre strumenti solisti",
+      "Una modulazione attraverso tre tonalità lontane"
+    ],
+    correct: 1,
+    difficulty: "avanzato",
+    explanation: "Il blocco tri-modulare è una struttura rara nelle esposizioni orchestrali: dopo il primo tentativo di S1 che non riesce a cadenzare, il tema 'jolly' (P) riappare per ristabilire l'ordine, seguito da una seconda Medial Caesura (MC2) che conduce finalmente a S2 con cadenza riuscita in Mib."
+  },
+  {
+    question: "Quale relazione tonale crea lo 'shock' tra primo e secondo movimento?",
+    options: [
+      "Passaggio da tonica a dominante",
+      "Salto cromatico di terza (Do minore → Mi maggiore)",
+      "Modulazione al relativo maggiore",
+      "Passaggio da maggiore a minore"
+    ],
+    correct: 1,
+    difficulty: "avanzato",
+    explanation: "Il passaggio da Do minore (I movimento) a Mi maggiore (II movimento) rappresenta un salto cromatico di terza, una scelta tonale audace per l'epoca che Beethoven usa per creare un effetto di 'shock' e contrasto luminoso dopo l'oscurità del primo movimento."
+  },
+  {
+    question: "Cosa rappresenta il Ritornello 4 (R4) finale secondo Hepokoski-Darcy?",
+    options: [
+      "Una ripetizione identica del Ritornello 1",
+      "Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I",
+      "L'eliminazione completa dell'orchestra",
+      "Un passaggio al modo maggiore"
+    ],
+    correct: 1,
+    difficulty: "avanzato",
+    explanation: "R4 finale rappresenta una deformazione della norma classica: invece del tutti fortissimo in tonica (I), Beethoven scrive un trillo pianissimo su V7/iv (dominante della sottodominante), creando un'ambiguità tragica e una vittoria incompleta, con il pianoforte che continua solo sotto questo accordo sospeso."
   }
 ];
 
@@ -3255,6 +3366,19 @@ const QuizSection = () => {
     setSelectedOption(null);
   };
 
+  const getDifficultyBadge = (difficulty) => {
+    switch(difficulty) {
+      case 'base':
+        return <span className="text-xs px-2 py-1 rounded-full bg-green-900/50 text-green-300 border border-green-700 font-semibold">🟢 BASE</span>;
+      case 'intermedio':
+        return <span className="text-xs px-2 py-1 rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700 font-semibold">🟡 INTERMEDIO</span>;
+      case 'avanzato':
+        return <span className="text-xs px-2 py-1 rounded-full bg-red-900/50 text-red-300 border border-red-700 font-semibold">🔴 AVANZATO</span>;
+      default:
+        return null;
+    }
+  };
+
   // Aspetta che le domande siano caricate
   if (shuffledQuestions.length === 0) {
     return <div className="text-center p-8">Caricamento...</div>;
@@ -3293,12 +3417,17 @@ const QuizSection = () => {
     );
   }
 
+  const currentQ = shuffledQuestions[currentQuestion];
+
   return (
     <div className="max-w-3xl mx-auto animate-fadeIn">
       <div className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
         <div className="bg-slate-700 p-5">
           <div className="flex justify-between items-center text-white mb-3">
-            <span className="font-semibold text-sm">Domanda {currentQuestion + 1} / {shuffledQuestions.length}</span>
+            <div className="flex items-center space-x-3">
+              <span className="font-semibold text-sm">Domanda {currentQuestion + 1} / {shuffledQuestions.length}</span>
+              {getDifficultyBadge(currentQ.difficulty)}
+            </div>
             <span className="text-sm bg-blue-600 text-white px-3 py-1 rounded-full">Punteggio: <span className="font-bold">{score}</span></span>
           </div>
           <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden">
@@ -3311,15 +3440,15 @@ const QuizSection = () => {
 
         <div className="p-8">
           <h3 className="text-xl font-semibold text-slate-100 mb-6 leading-relaxed">
-            {shuffledQuestions[currentQuestion].question}
+            {currentQ.question}
           </h3>
 
           <div className="space-y-3">
-            {shuffledQuestions[currentQuestion].options.map((option, index) => {
+            {currentQ.options.map((option, index) => {
               let btnClass = "w-full text-left p-4 rounded-lg border-2 transition-all ";
               if (selectedOption === null) {
                 btnClass += "border-slate-700 hover:border-blue-500 hover:bg-slate-700/50";
-              } else if (index === shuffledQuestions[currentQuestion].correct) {
+              } else if (index === currentQ.correct) {
                 btnClass += "border-green-500 bg-green-900/50 text-green-300";
               } else if (index === selectedOption) {
                 btnClass += "border-red-500 bg-red-900/50 text-slate-200";
@@ -3339,7 +3468,7 @@ const QuizSection = () => {
                       {String.fromCharCode(65 + index)}
                     </span>
                     <span className="font-medium text-base text-slate-100">{option}</span>
-                    {selectedOption !== null && index === shuffledQuestions[currentQuestion].correct && (
+                    {selectedOption !== null && index === currentQ.correct && (
                       <CheckCircle className="ml-auto w-6 h-6 text-green-600" />
                     )}
                   </div>
@@ -3347,6 +3476,19 @@ const QuizSection = () => {
               );
             })}
           </div>
+
+          {/* Mostra spiegazione se presente e se la risposta è stata data */}
+          {selectedOption !== null && currentQ.explanation && (
+            <div className="mt-6 p-4 bg-slate-900 border border-slate-600 rounded-lg">
+              <div className="flex items-start space-x-2">
+                <BookOpen className="w-5 h-5 text-blue-400 mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-blue-400 mb-1">Approfondimento:</p>
+                  <p className="text-sm text-slate-300 leading-relaxed">{currentQ.explanation}</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
