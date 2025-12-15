@@ -2499,6 +2499,7 @@ const GlossarySection = () => {
   const [openCategory, setOpenCategory] = useState(null);
   const [openConcertoHistory, setOpenConcertoHistory] = useState(false);
   const [openRondoForm, setOpenRondoForm] = useState(false);
+  const [openSonataForm, setOpenSonataForm] = useState(false);
 
   const toggleCategory = (category) => {
     setOpenCategory(openCategory === category ? null : category);
@@ -2891,7 +2892,7 @@ const GlossarySection = () => {
                     <div className="bg-slate-800/50 p-2 rounded">
                       <p className="font-semibold text-slate-200 mb-1">4. Spostamento del baricentro</p>
                       <p>Nelle opere tarde, Beethoven (e poi Brahms) sposta il peso espressivo verso il finale, rendendo 
-                      il rondò conclusivo non più solo un brano leggero di congedo, ma il <strong>culmine drammatico</strong> 
+                      il rondò conclusivo non più solo un brano leggero di congedo, ma il <strong>culmine drammatico </strong> 
                       dell'intero ciclo.</p>
                     </div>
                   </div>
@@ -2905,6 +2906,177 @@ const GlossarySection = () => {
                     la logica dialettica della forma sonata (Sonata-Rondò).
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Approfondimento: La Forma Sonata */}
+      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <button
+          onClick={() => setOpenSonataForm(!openSonataForm)}
+          className={`w-full p-5 flex justify-between items-center transition-all ${
+            openSonataForm
+              ? 'sticky top-20 z-10 bg-slate-700 text-white'
+              : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <Music className="w-5 h-5 text-blue-400" />
+            <div className="text-left">
+              <h3 className="text-lg font-semibold">🎼 La Forma Sonata</h3>
+              <span className="text-sm opacity-90">Schema del primo movimento (Esposizione-Sviluppo-Ripresa)</span>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 transition-transform ${openSonataForm ? 'rotate-180' : ''}`} />
+        </button>
+        {openSonataForm && (
+          <div className="p-6 pt-24 bg-slate-900">
+            <div className="space-y-5 text-sm text-slate-300">
+              
+              {/* Definizione */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-blue-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Definizione</h4>
+                <p className="mb-3">
+                  La <strong>forma sonata</strong> (o forma del primo movimento) è lo schema costruttivo utilizzato prevalentemente 
+                  nel primo tempo di sonate, sinfonie e quartetti del periodo classico.
+                </p>
+                <p className="mb-3">
+                  Non va confusa con il <strong>genere sonata</strong>, che indica l'intera opera composta da più movimenti 
+                  (solitamente tre o quattro).
+                </p>
+                <div className="bg-slate-900/50 p-3 rounded mt-3">
+                  <p className="text-xs">
+                    La struttura si articola in <strong>tre macro-sezioni principali</strong>, che rappresentano un percorso 
+                    narrativo di presentazione, conflitto e risoluzione.
+                  </p>
+                </div>
+              </div>
+
+              {/* Le Tre Sezioni */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-purple-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Le tre sezioni principali</h4>
+                
+                <div className="space-y-3">
+                  <div className="bg-slate-900/50 p-3 rounded border-l-2 border-emerald-500">
+                    <p className="text-sm font-semibold text-slate-200 mb-2">1. Esposizione</p>
+                    <p className="text-xs">
+                      Ha il compito di <strong>presentare i materiali tematici</strong> e stabilire il <strong>conflitto tonale</strong> 
+                      tra la tonalità d'impianto e una tonalità subordinata. Secondo la <em>Sonata Theory</em>, l'obiettivo è 
+                      raggiungere la "Chiusura Essenziale dell'Esposizione" (EEC), ovvero la prima cadenza autentica perfetta 
+                      soddisfacente nella nuova tonalità.
+                    </p>
+                  </div>
+
+                  <div className="bg-slate-900/50 p-3 rounded border-l-2 border-orange-500">
+                    <p className="text-sm font-semibold text-slate-200 mb-2">2. Sviluppo</p>
+                    <p className="text-xs">
+                      È la sezione dell'<strong>instabilità e dell'elaborazione motivica</strong>. I temi vengono frammentati 
+                      e trasformati attraverso modulazioni armoniche. Spesso contiene un "Core" (nucleo) di massima instabilità 
+                      preceduto da un "Pre-Core".
+                    </p>
+                  </div>
+
+                  <div className="bg-slate-900/50 p-3 rounded border-l-2 border-purple-500">
+                    <p className="text-sm font-semibold text-slate-200 mb-2">3. Ripresa (Recapitolazione)</p>
+                    <p className="text-xs">
+                      Risolve la <strong>tensione tonale accumulata</strong>. Il materiale dell'esposizione viene riproposto, 
+                      ma il Secondo Tema (S) viene ora eseguito nella tonalità d'impianto (Tonica), eliminando il conflitto iniziale.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tabella Struttura */}
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Tabella riassuntiva della struttura</h4>
+                <p className="text-xs mb-3">
+                  Integra la terminologia classica con le funzioni formali della <em>Sonata Theory</em> (Hepokoski & Darcy):
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs border-collapse">
+                    <thead className="bg-slate-700 text-white">
+                      <tr>
+                        <th className="border border-slate-600 p-2 text-left">Sezione</th>
+                        <th className="border border-slate-600 p-2 text-left">Sottosezione / Funzione</th>
+                        <th className="border border-slate-600 p-2 text-left">Caratteristiche Principali</th>
+                        <th className="border border-slate-600 p-2 text-left">Tonalità</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-slate-900/50">
+                      <tr>
+                        <td className="border border-slate-600 p-2 italic">(Introduzione)</td>
+                        <td className="border border-slate-600 p-2 italic">(Opzionale)</td>
+                        <td className="border border-slate-600 p-2">Prepara l'inizio del movimento, spesso con tempo lento</td>
+                        <td className="border border-slate-600 p-2">Varia (spesso instabile)</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-bold" rowSpan="4">ESPOSIZIONE</td>
+                        <td className="border border-slate-600 p-2 font-semibold">Primo Tema (P)</td>
+                        <td className="border border-slate-600 p-2">Tema principale. Struttura stabile ("tight-knit"), stabilisce l'identità del brano</td>
+                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-semibold">Transizione (TR)</td>
+                        <td className="border border-slate-600 p-2">Sezione di energia crescente che destabilizza la tonica. Conduce alla <strong>Medial Caesura (MC)</strong>, una pausa retorica che divide l'esposizione in due parti</td>
+                        <td className="border border-slate-600 p-2">Modulante (verso V o III)</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-semibold">Secondo Tema (S)</td>
+                        <td className="border border-slate-600 p-2">Tema secondario, spesso più lirico e "loose" (libero). Il suo compito è confermare la nuova tonalità fino alla cadenza EEC</td>
+                        <td className="border border-slate-600 p-2 font-bold">Dominante (V)</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-semibold">Coda/Chiusura (C)</td>
+                        <td className="border border-slate-600 p-2">Conferma la conclusione della sezione dopo la cadenza risolutiva</td>
+                        <td className="border border-slate-600 p-2">Nuova tonalità</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-slate-600 p-2 font-bold" rowSpan="2">SVILUPPO</td>
+                        <td className="border border-slate-600 p-2 font-semibold">Elaborazione</td>
+                        <td className="border border-slate-600 p-2">Frammentazione dei temi, sequenze armoniche, instabilità, assenza di cadenze forti di riposo</td>
+                        <td className="border border-slate-600 p-2 font-bold">Varie (Modulante)</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-slate-600 p-2 font-semibold">Retransizione</td>
+                        <td className="border border-slate-600 p-2">Prepara il ritorno del tema principale, spesso insistendo sulla Dominante ("standing on the dominant")</td>
+                        <td className="border border-slate-600 p-2">Dominante della tonalità d'impianto</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-bold" rowSpan="3">RIPRESA</td>
+                        <td className="border border-slate-600 p-2 font-semibold">Primo Tema (P)</td>
+                        <td className="border border-slate-600 p-2">Ritorno del tema principale come nell'esposizione</td>
+                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-semibold">Transizione (TR)</td>
+                        <td className="border border-slate-600 p-2">Viene modificata per <em>non</em> modulare e rimanere nella tonalità di casa</td>
+                        <td className="border border-slate-600 p-2">Rimane verso la Tonica</td>
+                      </tr>
+                      <tr className="bg-slate-800/30">
+                        <td className="border border-slate-600 p-2 font-semibold">Secondo Tema (S)</td>
+                        <td className="border border-slate-600 p-2">Riproposto, ma trasposto nella tonalità d'impianto per risolvere il conflitto (raggiungimento della ESC - Essential Structural Closure)</td>
+                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-slate-600 p-2 italic">(Coda)</td>
+                        <td className="border border-slate-600 p-2 italic">(Opzionale)</td>
+                        <td className="border border-slate-600 p-2">Sezione conclusiva finale, talvolta estesa (specie in Beethoven) per affermare definitivamente la fine</td>
+                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
+                <p className="text-xs">
+                  <strong className="text-slate-200">Nota teorica:</strong> Il Concerto per pianoforte n. 3 di Beethoven 
+                  utilizza la <strong>Forma di Sonata per Concerto</strong>, una variante che prevede la doppia esposizione 
+                  (prima l'orchestra, poi il solista) e l'integrazione della cadenza virtuosistica prima della coda finale.
+                </p>
               </div>
             </div>
           </div>
