@@ -93,7 +93,7 @@ const movementsData = [
     desc: "Movimento lirico e contemplativo. La tonalità di Mi maggiore crea un contrasto drammatico con il Do minore del primo movimento.",
     details: [
       "Carattere: Intimo, meditativo, quasi una preghiera. Il pianoforte dialoga con i legni in un'atmosfera sospesa",
-      "Innovazione tecnica: Uso pionieristico del pedale di risonanza (damper pedal) del pianoforte Érard",
+      "Innovazione tecnica: Uso pionieristico del pedale di risonanza del pianoforte Érard, nel secondo movimento",
       "Struttura: Forma tripartita (A-B-A) con sezione centrale più agitata",
       "Orchestrazione: Dialogo cameristico tra pianoforte e fagotti, oboi e archi",
       "Tonalità: Mi maggiore - scelta audace, una terza cromatica distante da Do minore"
@@ -400,7 +400,7 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
           <div className="flex items-center space-x-3 font-bold text-xl">
             <Music className="h-6 w-6 text-blue-400" />
             <div>
-              <div className="text-blue-900">Beethoven Op. 37</div>
+              <div className="text-slate-100">Beethoven Op. 37</div>
             </div>
           </div>
 
@@ -865,7 +865,7 @@ const Tooltip = ({ text, children }) => (
           <ChevronDown className={`w-6 h-6 transition-transform ${openBeethovenTimeline ? 'rotate-180' : ''}`} />
         </button>
         {openBeethovenTimeline && (
-          <div className="p-6 pt-8 bg-slate-900">
+          <div className="p-6 pt-24 bg-slate-900">
             <div className="space-y-2.5">
               {beethovenLifeTimeline.map((item, idx) => (
                 <div key={idx} className="flex flex-col sm:flex-row sm:items-start p-3 rounded-lg bg-slate-800 border-l-2 border-blue-600 shadow-sm">
@@ -895,7 +895,7 @@ const Tooltip = ({ text, children }) => (
           <ChevronDown className={`w-6 h-6 transition-transform ${openConcertoTimeline ? 'rotate-180' : ''}`} />
         </button>
         {openConcertoTimeline && (
-          <div className="p-6 pt-8 bg-slate-900">
+          <div className="p-6 pt-24 bg-slate-900">
             <div className="space-y-2.5">
               {concertoTimeline.map((item, idx) => (
                 <div key={idx} className="flex flex-col sm:flex-row sm:items-start p-3 rounded-lg bg-slate-800 border-l-2 border-blue-600 shadow-sm">
@@ -1120,7 +1120,7 @@ const AnalysisSection = () => {
   return (
     <div className="space-y-6 animate-fadeIn">
       <div className="bg-slate-800/50 border-l-4 border-blue-600 p-5 rounded-lg">
-        <p className="text-slate-200"><strong>Nota tecnica:</strong> L'analisi usa la teoria <em>Hepokoski-Darcy</em> (es. R1-P = Ritornello 1, Tema Primario).</p>
+        <p className="text-slate-200"><strong>Nota tecnica:</strong> l'analisi usa la teoria <em>Hepokoski-Darcy</em> (es. R1-P = Ritornello 1, Tema Primario).</p>
       </div>
 
       <div className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
@@ -1186,7 +1186,7 @@ const AnalysisSection = () => {
               <ChevronDown className={`w-6 h-6 transition-transform ${openMovement === mov.id ? 'rotate-180' : ''}`} />
             </button>
             {openMovement === mov.id && (
-              <div className="p-6 pt-8 bg-slate-900">
+              <div className="p-6 pt-24 bg-slate-900">
                 <p className="text-base text-slate-200 mb-4 pb-4 border-b border-slate-700">{mov.desc}</p>
                 <ul className="space-y-2.5">
                   {mov.details.map((detail, idx) => (
@@ -1291,7 +1291,7 @@ const GlossarySection = () => {
             </button>
 
             {openCategory === catIdx && (
-              <div className="p-6 pt-8 bg-slate-900">
+              <div className="p-6 pt-24 bg-slate-900">
                 <div className="space-y-3">
                   {category.items.map((item, itemIdx) => (
                     <div
