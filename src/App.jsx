@@ -48,7 +48,7 @@ const glossaryData = [
     items: [
       { term: "TUTTI", definition: "Sezione in cui suona SOLO l'orchestra, senza il solista. Nel primo movimento: TUTTI 1 (esposizione orchestrale), TUTTI 2-4 (sviluppo e ripresa), TUTTI 5 (coda innovativa dove il piano continua a suonare)." },
       { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall'orchestra. L'unica sezione di vero solo è la Cadenza." },
-      { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è cruciale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mi♭ maggiore → Do maggiore)." },
+      { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mi♭ maggiore → Do maggiore)." },
       { term: "Tema Primario (P)", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
       { term: "Secondo Tema (S)", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mi♭ maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
       { term: "Episodi di Bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli. Nel primo movimento (batt. 199-226), il trillo finale rappresenta il culmine agognato." },
@@ -380,6 +380,7 @@ const quizData = [
 const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const tabs = [
     { id: 'introduzione', label: 'Introduzione', icon: BookOpen },
+    { id: 'fonti', label: 'Fonti', icon: Library },
     { id: 'analysis', label: 'Analisi', icon: Music },
     { id: 'interpreters', label: 'Interpreti', icon: PlayCircle },
     { id: 'glossary', label: 'Glossario', icon: Library },
@@ -457,6 +458,146 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
   );
 };
 
+const FontiSection = () => {
+  const [openSource, setOpenSource] = useState(1);
+  const toggleSource = (id) => setOpenSource(openSource === id ? null : id);
+
+  const fonti = [
+    {
+      id: 1,
+      title: "Quaderni di Schizzi (Skizzenbücher)",
+      content: (
+        <ul className="space-y-3 text-slate-200">
+          <li><strong>Concezione ed evoluzione:</strong> Fino al <strong>1798</strong> circa, Beethoven usava fogli sciolti o piccoli fascicoli raccolti in portafogli. Dal 1798 passò a quaderni rilegati, custoditi fino alla morte come memoria del proprio sviluppo artistico.</li>
+          <li><strong>Tipologie:</strong>
+            <ul className="mt-2 space-y-2 pl-5 list-disc">
+              <li><strong>Quaderni da scrivania:</strong> formato grande, scrittura a inchiostro, usati a casa per elaborazioni sistematiche.</li>
+              <li><strong>Quaderni tascabili:</strong> formato piccolo, scrittura a matita. Portati durante le passeggiate per fissare idee improvvise. Beethoven diceva: «Non oso uscire senza il mio stendardo».</li>
+            </ul>
+          </li>
+          <li><strong>Organizzazione interna:</strong>
+            <ul className="mt-2 space-y-2 pl-5 list-disc">
+              <li><strong>Concept sketches:</strong> idee iniziali per definire il carattere di un&apos;opera.</li>
+              <li><strong>Continuity drafts:</strong> bozze lunghe su un singolo rigo per l&apos;andamento complessivo.</li>
+              <li><strong>Varianti:</strong> alternative per brevi passaggi.</li>
+              <li><strong>Piani di movimento:</strong> sinossi per opere in più movimenti.</li>
+            </ul>
+          </li>
+        </ul>
+      )
+    },
+    {
+      id: 2,
+      title: "Fogli Sciolti e Miscellanee (Kafka, Fischhof)",
+      content: (
+        <ul className="space-y-3 text-slate-200">
+          <li><strong>Concezione:</strong> prima del 1798 o parallelamente ai quaderni, Beethoven usava fogli singoli per scopi specifici.</li>
+          <li><strong>Funzione:</strong> area privilegiata per <strong>sperimentazione tecnica e pianistica</strong>.</li>
+          <li><strong>Contenuto:</strong> ricerche di Luca Chiantore mostrano esercizi tecnici (<em>Klavierübungen</em>): formule ripetitive, modulazioni, diteggiature nuove, suoni sperimentali.</li>
+          <li><strong>Partiture orchestrali:</strong> per opere sinfoniche abbozzava partiture su più righi, cosa difficile nei quaderni di schizzi.</li>
+        </ul>
+      )
+    },
+    {
+      id: 3,
+      title: "Quaderni di Conversazione (Konversationshefte)",
+      content: (
+        <ul className="space-y-3 text-slate-200">
+          <li><strong>Uso:</strong> introdotti verso il <strong>1818</strong> quando la sordità era grave. Gli interlocutori scrivevano domande/riposte, Beethoven rispondeva a voce.</li>
+          <li><strong>Contenuto:</strong> circa 400 quaderni con dialoghi su musica, politica, vita quotidiana. Fonti biografiche primarie, sebbene Schindler ne abbia alterati alcuni.</li>
+        </ul>
+      )
+    },
+    {
+      id: 4,
+      title: "Diari (Tagebuch) e \"Concetti\" (Konzept)",
+      content: (
+        <ul className="space-y-3 text-slate-200">
+          <li><strong>Tagebuch:</strong> diario (1812-1818) per introspezione, preghiere, citazioni filosofiche, riflessioni personali.</li>
+          <li><strong>Concetto:</strong> stadio intermedio tra schizzo e partitura finale. Partitura quasi completa ma non definitiva, da ripulire prima della copia per l&apos;editore.</li>
+        </ul>
+      )
+    }
+  ];
+
+  return (
+    <div className="space-y-8 animate-fadeIn">
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-10 rounded-3xl shadow-2xl border border-slate-600/50">
+        <h2 className="text-4xl font-bold mb-6 text-blue-300">Fonti documentarie</h2>
+        <p className="text-lg text-slate-300 leading-relaxed">
+          Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
+        </p>
+        <div className="overflow-x-auto mt-8">
+          <table className="min-w-full text-sm md:text-base border border-slate-300 rounded-2xl overflow-hidden">
+            <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide">
+              <tr>
+                <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Tipologia</th>
+                <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Periodo</th>
+                <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Funzione primaria</th>
+                <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Organizzazione</th>
+              </tr>
+            </thead>
+            <tbody className="bg-slate-900 text-slate-100">
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Schizzi</td>
+                <td className="px-4 py-3 border border-slate-700">Dal 1798 in poi</td>
+                <td className="px-4 py-3 border border-slate-700">Composizione, sviluppo di idee, memoria artistica.</td>
+                <td className="px-4 py-3 border border-slate-700">Rilegati (da tavolo o tascabili). Mix di idee per varie opere.</td>
+              </tr>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Fogli Sciolti</td>
+                <td className="px-4 py-3 border border-slate-700">Pre-1798 (e oltre)</td>
+                <td className="px-4 py-3 border border-slate-700">Esercizi tecnici, esperimenti pianistici, partiture orchestrali abbozzate.</td>
+                <td className="px-4 py-3 border border-slate-700">Sparsi, poi riuniti in miscellanee (es. Kafka) dai collezionisti.</td>
+              </tr>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Conversazione</td>
+                <td className="px-4 py-3 border border-slate-700">Dal 1818 in poi</td>
+                <td className="px-4 py-3 border border-slate-700">Comunicazione quotidiana (causa sordità).</td>
+                <td className="px-4 py-3 border border-slate-700">Dialoghi scritti dagli interlocutori.</td>
+              </tr>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Diario (Tagebuch)</td>
+                <td className="px-4 py-3 border border-slate-700">1812-1818 (principalmente)</td>
+                <td className="px-4 py-3 border border-slate-700">Riflessione spirituale e intellettuale.</td>
+                <td className="px-4 py-3 border border-slate-700">Annotazioni personali, citazioni.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
+        <h3 className="text-2xl font-semibold text-slate-100 mb-4">Approfondisci ogni supporto</h3>
+        <p className="text-slate-300 leading-relaxed mb-6">
+          Le schede seguenti si aprono con un tocco e permettono di esplorare ruolo, contenuti e casi studio per ciascuna tipologia di documento.
+        </p>
+        <div className="space-y-4">
+          {fonti.map(fonte => (
+            <div key={fonte.id} className="rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
+              <button
+                onClick={() => toggleSource(fonte.id)}
+                className={`w-full flex justify-between items-center px-5 py-4 text-left transition-all ${
+                  openSource === fonte.id
+                    ? 'bg-slate-700 text-white font-semibold'
+                    : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+                }`}
+              >
+                <span className="text-lg font-semibold">{fonte.title}</span>
+                <ChevronDown className={`w-5 h-5 transition-transform ${openSource === fonte.id ? 'rotate-180' : ''}`} />
+              </button>
+              {openSource === fonte.id && (
+                <div className="px-5 pb-5 pt-4 text-sm leading-relaxed bg-slate-900 text-slate-200 border-t border-slate-700">
+                  {fonte.content}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const IntroduzioneSection = ({ setActiveTab }) => {
   return (
@@ -468,10 +609,14 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           <div className="space-y-1.5">
             <p><strong>Compositore:</strong> Ludwig van Beethoven (1770-1827)</p>
             <p><strong>Composizione:</strong> 1800-1803</p>
-            <p><strong>Prima esecuzione:</strong> 5 aprile 1803, Theater an der Wien</p>
+            <p><strong>Prima esecuzione:</strong> 5 aprile 1803, <Tooltip text="Teatro di Vienna fondato nel 1801 da Emanuel Schikaneder (librettista del Flauto Magico). Divenne essenziale per la carriera di Beethoven che vi abitò e vi presentò molte opere tra 1803-1804.">
+              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Theater an der Wien</span>
+            </Tooltip></p>
           </div>
           <div className="space-y-1.5">
-            <p><strong>Dedicato a:</strong> Principe Luigi Ferdinando di Prussia</p>
+            <p><strong>Dedicato a:</strong> <Tooltip text="Principe prussiano (1772-1806), nipote di Federico il Grande. Compositore dilettante e ammiratore di Beethoven. Morì eroicamente nella battaglia di Saalfeld contro Napoleone.">
+              <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Principe Luigi Ferdinando di Prussia</span>
+            </Tooltip></p>
             <p><strong>Tonalità:</strong> Do minore → Mi♭ maggiore (finale)</p>
             <p><strong>Movimenti:</strong> Allegro con brio • Largo • Rondo: Allegro</p>
           </div>
@@ -482,6 +627,12 @@ const IntroduzioneSection = ({ setActiveTab }) => {
       <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
         <h3 className="text-sm font-semibold text-slate-300 mb-3">🔗 Esplora</h3>
         <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setActiveTab('fonti')}
+            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            → Fonti documentarie
+          </button>
           <button
             onClick={() => setActiveTab('analysis')}
             className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
@@ -1052,26 +1203,26 @@ const Tooltip = ({ text, children }) => (
               </tr>
             </thead>
             <tbody className="bg-slate-900 text-slate-100">
-              <tr className="odd:bg-white">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-900">Quaderni di Schizzi</td>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Schizzi</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1798 in poi</td>
                 <td className="px-4 py-3 border border-slate-700">Composizione, sviluppo di idee, memoria artistica.</td>
                 <td className="px-4 py-3 border border-slate-700">Rilegati (da tavolo o tascabili). Mix di idee per varie opere.</td>
               </tr>
-              <tr className="odd:bg-white">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-900">Fogli Sciolti</td>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Fogli Sciolti</td>
                 <td className="px-4 py-3 border border-slate-700">Pre-1798 (e oltre)</td>
                 <td className="px-4 py-3 border border-slate-700">Esercizi tecnici, esperimenti pianistici, partiture orchestrali abbozzate.</td>
                 <td className="px-4 py-3 border border-slate-700">Sparsi, poi riuniti in miscellanee (es. Kafka) dai collezionisti.</td>
               </tr>
-              <tr className="odd:bg-white">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-900">Quaderni di Conversazione</td>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Quaderni di Conversazione</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1818 in poi</td>
                 <td className="px-4 py-3 border border-slate-700">Comunicazione quotidiana (causa sordità).</td>
                 <td className="px-4 py-3 border border-slate-700">Dialoghi scritti dagli interlocutori.</td>
               </tr>
-              <tr className="odd:bg-white">
-                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-900">Diario (Tagebuch)</td>
+              <tr className="odd:bg-slate-800">
+                <td className="px-4 py-3 border border-slate-700 font-semibold text-blue-300">Diario (Tagebuch)</td>
                 <td className="px-4 py-3 border border-slate-700">1812-1818 (principalmente)</td>
                 <td className="px-4 py-3 border border-slate-700">Riflessione spirituale e intellettuale.</td>
                 <td className="px-4 py-3 border border-slate-700">Annotazioni personali, citazioni.</td>
@@ -1081,20 +1232,20 @@ const Tooltip = ({ text, children }) => (
         </div>
       </div>
 
-      <div className="bg-slate-100 p-8 rounded-3xl shadow-2xl border border-slate-300">
-        <h3 className="text-2xl font-semibold text-blue-900 mb-4">Approfondisci ogni supporto</h3>
-        <p className="text-slate-200 leading-relaxed mb-6">
+      <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
+        <h3 className="text-2xl font-semibold text-slate-100 mb-4">Approfondisci ogni supporto</h3>
+        <p className="text-slate-300 leading-relaxed mb-6">
           Le schede seguenti si aprono con un tocco e permettono di esplorare ruolo, contenuti e casi studio per ciascuna tipologia di documento.
         </p>
         <div className="space-y-4">
           {fontiDocumentarie.map(fonte => (
-            <div key={fonte.id} className="rounded-2xl border border-slate-300 overflow-hidden shadow-lg">
+            <div key={fonte.id} className="rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
               <button
                 onClick={() => toggleSourceAccordion(fonte.id)}
                 className={`w-full flex justify-between items-center px-5 py-4 text-left transition-all ${
                   openSourceAccordion === fonte.id
                     ? 'bg-slate-700 text-white font-semibold'
-                    : 'bg-slate-600 text-white hover:bg-slate-9000'
+                    : 'bg-slate-600 text-white hover:bg-slate-900'
                 }`}
               >
                 <span className="text-lg font-semibold">{fonte.title}</span>
@@ -1558,6 +1709,7 @@ const App = () => {
         />
         <main className="max-w-5xl mx-auto px-4 py-12 pb-16">
           {activeTab === 'introduzione' && <IntroduzioneSection setActiveTab={setActiveTab} />}
+          {activeTab === 'fonti' && <FontiSection />}
           {activeTab === 'analysis' && <AnalysisSection />}
           {activeTab === 'interpreters' && <InterpretersSection />}
           {activeTab === 'glossary' && <GlossarySection />}
