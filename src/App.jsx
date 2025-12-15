@@ -804,12 +804,9 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           <div className="space-y-3 text-sm text-slate-300">
             <p>
               Il modello è il{' '}
-              <button
-                onClick={() => setActiveTab('glossary')}
-                className="text-purple-700 font-semibold hover:underline"
-              >
-                Concerto K. 491 in Do minore
-              </button>{' '}
+              <Tooltip text="Concerto n. 24 in Do minore K. 491 di Mozart (1786). Uno dei soli due concerti mozartiani in minore (l'altro è il K. 466 in Re minore del 1785). Capolavoro del genere classico che Beethoven ammirò profondamente come modello per l'Op. 37.">
+                <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">Concerto K. 491 in Do minore</span>
+              </Tooltip>{' '}
               di Mozart. Beethoven però trasforma il genere: il pianoforte non dialoga più armoniosamente, 
               ma si <em>oppone</em> all'orchestra in un confronto drammatico.
             </p>
@@ -850,7 +847,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
               <span>Uso pionieristico del{' '}
-                <Tooltip text="Pedale che prolunga il suono, creando effetti di risonanza misteriosi">
+                <Tooltip text="Il pianoforte Érard che Beethoven ricevette in dono nel 1803 aveva un innovativo pedale di risonanza (sostenuto) che permetteva effetti sonori nuovi. Beethoven lo utilizzò magistralmente nel secondo movimento dell'Op. 37 per creare atmosfere misteriose e sognanti.">
                   <span className="font-semibold cursor-help border-b border-emerald-500 border-dotted">pedale di risonanza</span>
                 </Tooltip>
               </span>
@@ -883,8 +880,18 @@ const IntroduzioneSection = ({ setActiveTab }) => {
         <p className="text-sm text-slate-300 mb-3">
           Per Beethoven, il <strong>Do minore</strong> è la tonalità della tempesta, del dramma e dell'eroismo. 
           Questo concerto è il ponte tra il classicismo mozartiano e il{' '}
-          <Tooltip text="1803-1814: periodo delle grandi sinfonie (Eroica, Quinta, Sesta) e del Fidelio">
+          <Tooltip text="1803-1814: periodo delle grandi sinfonie (Eroica, Quinta, Sesta, Pastorale), del Fidelio e dei concerti Op. 58 e 73.">
             <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo eroico</span>
+          </Tooltip>.
+        </p>
+        <p className="text-xs text-slate-400 mb-3">
+          La periodizzazione in tre fasi fu proposta dal musicologo Wilhelm von Lenz (1860): oltre al periodo eroico, il{' '}
+          <Tooltip text="1782-1802: periodo della formazione e prime opere pubblicate fino all'Op. 21 (Prima Sinfonia). Include le prime sonate per pianoforte, i primi quartetti Op. 18, il Primo e Secondo Concerto.">
+            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo giovanile</span>
+          </Tooltip>{' '}
+          e il{' '}
+          <Tooltip text="1815-1827: periodo della massima sperimentazione e profondità spirituale. Include la Missa Solemnis, la Nona Sinfonia, gli ultimi cinque quartetti (Op. 127, 130, 131, 132, 135) e le ultime tre sonate per pianoforte.">
+            <span className="text-blue-300 font-semibold cursor-help border-b border-blue-500 border-dotted">periodo tardo</span>
           </Tooltip>.
         </p>
         <div className="bg-slate-700 p-3 rounded text-xs text-slate-300">
