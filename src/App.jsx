@@ -595,6 +595,97 @@ const FontiSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Bibliografia */}
+      <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
+        <h3 className="text-2xl font-semibold text-slate-100 mb-6">📚 Bibliografia</h3>
+        
+        <div className="space-y-6 text-sm text-slate-300">
+          <div>
+            <h4 className="text-base font-semibold text-blue-300 mb-3">Studi Specifici e Analisi del Concerto Op. 37</h4>
+            <ul className="space-y-2 pl-5">
+              <li className="leading-relaxed">
+                <strong>Plantinga, Leon.</strong> <em>Beethoven's Concertos: History, Style, Performance</em>. New York: W. W. Norton & Company, 1999. 
+                (In particolare il Capitolo 6: "On the Origins of Piano Concerto no. 3 in C minor, Op. 37").
+              </li>
+              <li className="leading-relaxed">
+                <strong>Scalfaro, Anna.</strong> "L'Allegro con brio del Concerto op. 37 di Ludwig van Beethoven: un modello di conversazione". 
+                In <em>Musica Docta. Rivista digitale di Pedagogia e Didattica della musica</em>, VI, 2016, pp. 211-237.
+              </li>
+              <li className="leading-relaxed">
+                <strong>Yahşi, Fahrettin Eren.</strong> "Thematic Analysis of Op. 37 3. Piano Concerto by L. v. Beethoven: The Third Movement Consisting of the First Movement". 
+                In <em>Arts and Design Studies</em>, Vol. 95, 2021, pp. 8-16.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-base font-semibold text-blue-300 mb-3">Teoria della Forma e del Concerto</h4>
+            <ul className="space-y-2 pl-5">
+              <li className="leading-relaxed">
+                <strong>Hepokoski, James e Darcy, Warren.</strong> <em>Elements of Sonata Theory: Norms, Types, and Deformations in the Late-Eighteenth-Century Sonata</em>. 
+                Oxford: Oxford University Press, 2006. (Fonte principale per la definizione di "Forma di Sonata per Concerto di Tipo 5").
+              </li>
+              <li className="leading-relaxed">
+                <strong>Keefe, Simon P. (a cura di).</strong> <em>The Cambridge Companion to the Concerto</em>. Cambridge: Cambridge University Press, 2005.
+              </li>
+              <li className="leading-relaxed">
+                <strong>Caplin, William E.</strong> <em>Classical Form: A Theory of Formal Functions for the Instrumental Music of Haydn, Mozart, and Beethoven</em>. 
+                Oxford: Oxford University Press, 1998.
+              </li>
+              <li className="leading-relaxed">
+                <strong>Rosen, Charles.</strong> <em>Lo stile classico: Haydn, Mozart, Beethoven</em> (<em>The Classical Style</em>). Edizione italiana, 1986.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-base font-semibold text-blue-300 mb-3">Prassi Esecutiva, Improvvisazione e Strumenti</h4>
+            <ul className="space-y-2 pl-5">
+              <li className="leading-relaxed">
+                <strong>Chiantore, Luca.</strong> <em>Beethoven al pianoforte: Improvvisazione, composizione e ricerca sonora negli esercizi tecnici</em>. 
+                Milano: Il Saggiatore, 2014. (Fondamentale per il rapporto tra improvvisazione e testo scritto, e per l'aneddoto di Seyfried sulle pagine vuote).
+              </li>
+              <li className="leading-relaxed">
+                <strong>Czerny, Carl.</strong> <em>On the Proper Performance of All Beethoven's Works for the Piano</em>. Ed. Paul Badura-Skoda. 
+                Vienna: Universal Edition, 1970. (Citato per le indicazioni sugli arpeggi e il carattere del secondo movimento).
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-base font-semibold text-blue-300 mb-3">Biografie e Contesto Storico</h4>
+            <ul className="space-y-2 pl-5">
+              <li className="leading-relaxed">
+                <strong>Solomon, Maynard.</strong> <em>Beethoven</em>. New York: Schirmer Books, 1977 (ed. riv. 1998).
+              </li>
+              <li className="leading-relaxed">
+                <strong>Thayer, Alexander Wheelock.</strong> <em>Thayer's Life of Beethoven</em>. Rev. e ed. da Elliot Forbes. 
+                Princeton: Princeton University Press, 1967.
+              </li>
+              <li className="leading-relaxed">
+                <strong>Riezler, Walter.</strong> <em>Beethoven</em>. Traduzione italiana a cura di Piero Buscaroli. Milano: Rusconi, 1977.
+              </li>
+              <li className="leading-relaxed">
+                <strong>Lenz, Wilhelm von.</strong> <em>Beethoven et ses trois styles</em>. Parigi: Lavinée, 1855 (ristampa moderna).
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-base font-semibold text-blue-300 mb-3">Fonti Epistolari e Documentarie</h4>
+            <ul className="space-y-2 pl-5">
+              <li className="leading-relaxed">
+                <strong>Beethoven, Ludwig van.</strong> <em>Beethoven's Letters</em>. Ed. Emily Anderson. 3 voll. London: Macmillan, 1961 (o edizioni successive).
+              </li>
+              <li className="leading-relaxed">
+                <em>Ludwig van Beethovens Konversationshefte</em> (Quaderni di Conversazione). Ed. Karl-Heinz Köhler, Grita Herre, et al. 
+                Leipzig: Deutscher Verlag für Musik. (Riferimenti sparsi nelle biografie citate).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
