@@ -380,11 +380,11 @@ const quizData = [
 const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const tabs = [
     { id: 'introduzione', label: 'Introduzione', icon: BookOpen },
-    { id: 'fonti', label: 'Fonti', icon: Library },
     { id: 'analysis', label: 'Analisi', icon: Music },
     { id: 'interpreters', label: 'Interpreti', icon: PlayCircle },
     { id: 'glossary', label: 'Glossario', icon: Library },
     { id: 'quiz', label: 'Quiz', icon: GraduationCap },
+    { id: 'fonti', label: 'Fonti', icon: Library },
   ];
 
   const handleTabClick = (tabId) => {
@@ -719,12 +719,6 @@ const IntroduzioneSection = ({ setActiveTab }) => {
         <h3 className="text-sm font-semibold text-slate-300 mb-3">🔗 Esplora</h3>
         <div className="flex flex-wrap gap-2">
           <button
-            onClick={() => setActiveTab('fonti')}
-            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-          >
-            → Fonti documentarie
-          </button>
-          <button
             onClick={() => setActiveTab('analysis')}
             className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
@@ -747,6 +741,12 @@ const IntroduzioneSection = ({ setActiveTab }) => {
             className="text-xs px-3 py-1.5 bg-slate-700 border border-emerald-700 text-emerald-400 rounded hover:bg-slate-600 transition-colors font-medium"
           >
             → Mettiti alla prova
+          </button>
+          <button
+            onClick={() => setActiveTab('fonti')}
+            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            → Fonti documentarie
           </button>
         </div>
       </div>
