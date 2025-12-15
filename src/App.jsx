@@ -904,14 +904,24 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 };
 
 // Componente Tooltip
-const Tooltip = ({ text, children }) => (
-  <span className="relative inline-block group">
-    {children}
-    <span className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-950 text-slate-100 text-xs rounded-lg shadow-xl w-64 z-20 pointer-events-none border border-slate-700">
-      {text}
+const Tooltip = ({ text, children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  return (
+    <span className="relative inline-block group">
+      <span 
+        onClick={() => setIsVisible(!isVisible)}
+        onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}
+      >
+        {children}
+      </span>
+      <span className={`${isVisible ? 'visible' : 'invisible'} absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-950 text-slate-100 text-xs rounded-lg shadow-xl w-64 z-20 border border-slate-700`}>
+        {text}
+      </span>
     </span>
-  </span>
-);
+  );
+};
 
   const toggleSection = (id) => setOpenSection(openSection === id ? null : id);
   const toggleSourceAccordion = (id) => setOpenSourceAccordion(openSourceAccordion === id ? null : id);
