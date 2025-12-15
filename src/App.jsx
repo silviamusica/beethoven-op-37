@@ -3329,17 +3329,23 @@ const FlashcardsSection = () => {
 };
 
 const QuizSection = () => {
+  const [selectedDifficulty, setSelectedDifficulty] = useState(null);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // Randomizza le domande all'inizio
-  useState(() => {
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+  const startQuiz = (difficulty) => {
+    const filtered = quizData.filter(q => q.difficulty === difficulty);
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     setShuffledQuestions(shuffled);
-  }, []);
+    setSelectedDifficulty(difficulty);
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowResult(false);
+    setSelectedOption(null);
+  };
 
   const handleAnswer = (optionIndex) => {
     setSelectedOption(optionIndex);
@@ -3358,8 +3364,18 @@ const QuizSection = () => {
   };
 
   const restartQuiz = () => {
-    const shuffled = [...quizData].sort(() => Math.random() - 0.5);
+    const filtered = quizData.filter(q => q.difficulty === selectedDifficulty);
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     setShuffledQuestions(shuffled);
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowResult(false);
+    setSelectedOption(null);
+  };
+
+  const changeDifficulty = () => {
+    setSelectedDifficulty(null);
+    setShuffledQuestions([]);
     setCurrentQuestion(0);
     setScore(0);
     setShowResult(false);
@@ -3378,6 +3394,78 @@ const QuizSection = () => {
         return null;
     }
   };
+
+  // Schermata di selezione difficoltà
+  if (!selectedDifficulty) {
+    const baseCount = quizData.filter(q => q.difficulty === 'base').length;
+    const intermedioCount = quizData.filter(q => q.difficulty === 'intermedio').length;
+    const avanzatoCount = quizData.filter(q => q.difficulty === 'avanzato').length;
+
+    return (
+      <div className="max-w-4xl mx-auto animate-fadeIn">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-slate-100 mb-3">Scegli il livello di difficoltà</h2>
+          <p className="text-slate-400">Seleziona il livello più adatto alla tua preparazione</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* BASE */}
+          <button
+            onClick={() => startQuiz('base')}
+            className="bg-slate-800 border-2 border-green-700 rounded-lg p-8 hover:bg-slate-700 hover:border-green-500 transition-all group text-left"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-4xl">🟢</span>
+              <span className="text-sm text-slate-400">{baseCount} domande</span>
+            </div>
+            <h3 className="text-2xl font-bold text-green-300 mb-3">BASE</h3>
+            <p className="text-slate-300 text-sm leading-relaxed mb-4">
+              Domande sui fatti principali: date, luoghi, tonalità, dedica, storia della composizione.
+            </p>
+            <div className="flex items-center text-green-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+              <span>Inizia →</span>
+            </div>
+          </button>
+
+          {/* INTERMEDIO */}
+          <button
+            onClick={() => startQuiz('intermedio')}
+            className="bg-slate-800 border-2 border-yellow-700 rounded-lg p-8 hover:bg-slate-700 hover:border-yellow-500 transition-all group text-left"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-4xl">🟡</span>
+              <span className="text-sm text-slate-400">{intermedioCount} domande</span>
+            </div>
+            <h3 className="text-2xl font-bold text-yellow-300 mb-3">INTERMEDIO</h3>
+            <p className="text-slate-300 text-sm leading-relaxed mb-4">
+              Domande su tecnica pianistica, interpreti, stile, organico orchestrale, elementi musicali.
+            </p>
+            <div className="flex items-center text-yellow-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+              <span>Inizia →</span>
+            </div>
+          </button>
+
+          {/* AVANZATO */}
+          <button
+            onClick={() => startQuiz('avanzato')}
+            className="bg-slate-800 border-2 border-red-700 rounded-lg p-8 hover:bg-slate-700 hover:border-red-500 transition-all group text-left"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-4xl">🔴</span>
+              <span className="text-sm text-slate-400">{avanzatoCount} domande</span>
+            </div>
+            <h3 className="text-2xl font-bold text-red-300 mb-3">AVANZATO</h3>
+            <p className="text-slate-300 text-sm leading-relaxed mb-4">
+              Analisi teorica approfondita con terminologia Hepokoski-Darcy, strategie tonali, deformazioni.
+            </p>
+            <div className="flex items-center text-red-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
+              <span>Inizia →</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   // Aspetta che le domande siano caricate
   if (shuffledQuestions.length === 0) {
@@ -3406,13 +3494,21 @@ const QuizSection = () => {
           )}
         </div>
 
-        <button
-          onClick={restartQuiz}
-          className="flex items-center justify-center space-x-2 bg-slate-700 text-white px-6 py-3 rounded-lg mx-auto hover:bg-slate-600 transition-all shadow font-semibold"
-        >
-          <RotateCcw className="w-5 h-5" />
-          <span>Ricomincia Quiz</span>
-        </button>
+        <div className="flex gap-4 justify-center">
+          <button
+            onClick={restartQuiz}
+            className="flex items-center justify-center space-x-2 bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-all shadow font-semibold"
+          >
+            <RotateCcw className="w-5 h-5" />
+            <span>Ricomincia</span>
+          </button>
+          <button
+            onClick={changeDifficulty}
+            className="flex items-center justify-center space-x-2 bg-slate-600 text-white px-6 py-3 rounded-lg hover:bg-slate-500 transition-all shadow font-semibold"
+          >
+            <span>Cambia Livello</span>
+          </button>
+        </div>
       </div>
     );
   }
