@@ -36,7 +36,7 @@ const glossaryData = [
   {
     category: "Forme Musicali",
     items: [
-      { term: "Forma Sonata", definition: "Struttura musicale in tre sezioni principali: esposizione (presentazione dei temi), Sviluppo (elaborazione dei temi) e Ripresa (ritorno dei temi). Nel concerto classico si alterna tra TUTTI (orchestra) e SOLO (solista + orchestra)." },
+      { term: "Forma Sonata", definition: "Struttura musicale in tre sezioni principali: esposizione (presentazione dei temi), sviluppo (elaborazione dei temi) e Ripresa (ritorno dei temi). Nel concerto classico si alterna tra TUTTI (orchestra) e SOLO (solista + orchestra)." },
       { term: "Rondò", definition: "Forma musicale basata sull'alternanza di un tema principale (ritornello) con episodi contrastanti. Schema tipico: A-B-A-C-A. Nel concerto, il tema principale si scambia velocemente tra Solo e Tutti in un rapido 'botta e risposta'." },
       { term: "Cadenza", definition: "Sezione virtuosistica per il solista, tradizionalmente improvvisata. Nel Concerto n.3, Beethoven scrisse la propria cadenza (inizialmente improvvisata). È un'area 'protetta' per mostrare il virtuosismo del solista." },
       { term: "Fugato", definition: "Passaggio in stile contrappuntistico dove il tema viene imitato tra le voci. Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale - scelta audace e innovativa." },
@@ -97,7 +97,7 @@ const movementsData = [
     desc: "Movimento lirico e contemplativo. La tonalità di Mi maggiore crea un contrasto drammatico con il Do minore del primo movimento.",
     details: [
       "Carattere: intimo, meditativo, quasi una preghiera. Il pianoforte dialoga con i legni in un'atmosfera sospesa",
-      "Innovazione tecnica: uso pionieristico del pedale di risonanza del pianoforte Érard, nel secondo movimento",
+      "Innovazione tecnica: uso pionieristico del pedale di risonanza del pianoforte Érard nel secondo movimento",
       "Struttura: forma tripartita (A-B-A) con sezione centrale più agitata",
       "Orchestrazione: dialogo cameristico tra pianoforte e fagotti, oboi e archi",
       "Tonalità: mi maggiore - scelta audace, una terza cromatica distante da Do minore"
@@ -1393,7 +1393,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                 <td className="border border-slate-600 p-2 font-bold text-slate-200">Op. 37</td>
               </tr>
               <tr>
-                <td className="border border-slate-600 p-2 font-semibold">1806</td>
+                <td className="border border-slate-600 p-2 font-semibold">1800</td>
                 <td className="border border-slate-600 p-2">Quartetto per archi n. 4</td>
                 <td className="border border-slate-600 p-2">Op. 18 n. 4</td>
               </tr>
@@ -1464,7 +1464,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               <span className="text-green-600 mr-2">•</span>
               <span>Uso pionieristico del{' '}
                 <Tooltip text="Il pianoforte Érard che Beethoven ricevette in dono nel 1803 aveva un innovativo pedale di risonanza (sostenuto) che permetteva effetti sonori nuovi. Beethoven lo utilizzò magistralmente nel secondo movimento dell'Op. 37 per creare atmosfere misteriose e sognanti.">
-                  <span className="font-semibold cursor-help border-b border-emerald-500 border-dotted">pedale di risonanza</span>
+                  <span className="font-semibold cursor-help border-b border-emerald-500 border-dotted">pedale di risonanza del pianoforte Érard, che permette effetti sonori nuovi</span>
                 </Tooltip>
               </span>
             </li>
@@ -1730,7 +1730,7 @@ const Tooltip = ({ text, children }) => {
             <h3 className="text-lg font-semibold text-slate-100 mb-2">Vienna: la capitale musicale d'Europa</h3>
             <p className="text-sm text-slate-300 leading-relaxed">
               Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d'Europa.
-              La città aveva ospitato{' '}
+              Nella città viveva{' '}
               <Tooltip text="Joseph Haydn (1732-1809): 'Padre della sinfonia', maestro di Beethoven a Vienna dal 1792">
                 <span className="text-slate-200 font-semibold cursor-help border-b border-blue-500 border-dotted">Haydn</span>
               </Tooltip>,{' '}
@@ -2546,7 +2546,7 @@ const AnalysisSection = () => {
           </p>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Forma: rondò-Sonata</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Forma: rondò-sonata</h4>
             <div className="space-y-2">
               <p className="font-mono text-xs text-slate-200">
                 A (refrain) - Do minore → <br/>
