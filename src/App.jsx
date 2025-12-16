@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User } from 'lucide-react';
+import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
+import { Document, Page, pdfjs } from 'react-pdf';
+
+// Configurazione worker per PDF.js
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 // Error Boundary per debug
 class ErrorBoundary extends React.Component {
@@ -1752,19 +1756,19 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           </div>
 
           <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
-            <Music className="w-5 h-5 text-orange-400 mr-2" />
+            <Music className="w-5 h-5 text-blue-400 mr-2" />
             I pianoforti di Beethoven
           </h3>
           <p className="text-sm text-slate-300 mb-4">
             Da Stein a Graf: evoluzione degli strumenti di Beethoven. Érard 1803 con{' '}
             <Tooltip text="I 4 pedali dell'Érard: liuto, smorzatori, celeste/buff, una corda">
-              <span className="text-amber-400 font-semibold border-b border-amber-400 border-dotted cursor-help">4 pedali</span>
+              <span className="text-blue-400 font-semibold border-b border-blue-400 border-dotted cursor-help">4 pedali</span>
             </Tooltip>, 
             Broadwood 1818, e l'impatto sulla composizione.
           </p>
           <button
             onClick={() => openModal('I Pianoforti di Beethoven', <PianofortiModal />)}
-            className="text-sm text-orange-400 hover:text-orange-300 font-semibold flex items-center group"
+            className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
           >
             Approfondisci 
             <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -1886,6 +1890,114 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           </div>
         )}
       </div>
+    </div>
+  );
+};
+
+// Componente PDF Score Viewer con scroll continuo
+const PdfScoreViewer = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [scale, setScale] = useState(1.2);
+  const [pdfError, setPdfError] = useState(false);
+
+  // Percorso del PDF
+  const pdfUrl = '/spartito-primo-movimento.pdf';
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+    setPdfError(false);
+  }
+
+  function onDocumentLoadError(error) {
+    console.error('Errore caricamento PDF:', error);
+    setPdfError(true);
+  }
+
+  const zoomIn = () => {
+    setScale(prev => Math.min(prev + 0.2, 2.5));
+  };
+
+  const zoomOut = () => {
+    setScale(prev => Math.max(prev - 0.2, 0.5));
+  };
+
+  return (
+    <div className="mt-8 pt-6 border-t border-slate-700">
+      <div className="flex items-center justify-between mb-4">
+        <h4 className="text-lg font-semibold text-slate-100 flex items-center">
+          <FileText className="w-5 h-5 text-blue-400 mr-2" />
+          Spartito del Primo Movimento
+        </h4>
+      </div>
+
+      {pdfError ? (
+        <div className="bg-slate-800/50 border-2 border-dashed border-slate-600 rounded-lg p-8 text-center">
+          <FileText className="w-12 h-12 text-slate-500 mx-auto mb-3" />
+          <p className="text-slate-300 mb-2">
+            File PDF non trovato. Aggiungi il file <code className="bg-slate-700 px-2 py-1 rounded text-blue-400">spartito-primo-movimento.pdf</code> nella cartella <code className="bg-slate-700 px-2 py-1 rounded text-blue-400">public/</code>
+          </p>
+          <p className="text-slate-400 text-sm">
+            Il file deve essere nella cartella <code className="bg-slate-700 px-1 rounded">beethoven-app/public/</code>
+          </p>
+        </div>
+      ) : (
+        <div className="bg-slate-800 rounded-lg border border-slate-700 overflow-hidden">
+          {/* Controlli */}
+          <div className="bg-slate-700 p-4 flex flex-wrap items-center justify-between gap-3">
+            <div className="text-slate-200 text-sm font-medium">
+              {numPages ? `${numPages} pagine` : 'Caricamento...'}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={zoomOut}
+                className="p-2 bg-slate-600 hover:bg-slate-500 text-white rounded transition-colors"
+                title="Riduci zoom"
+              >
+                <ZoomOut className="w-5 h-5" />
+              </button>
+              <span className="text-slate-200 text-sm font-medium px-2">
+                {Math.round(scale * 100)}%
+              </span>
+              <button
+                onClick={zoomIn}
+                className="p-2 bg-slate-600 hover:bg-slate-500 text-white rounded transition-colors"
+                title="Aumenta zoom"
+              >
+                <ZoomIn className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Visualizzatore PDF con scroll continuo */}
+          <div className="bg-slate-900 p-4 max-h-[800px] overflow-y-auto">
+            <div className="flex flex-col items-center gap-6">
+              <Document
+                file={pdfUrl}
+                onLoadSuccess={onDocumentLoadSuccess}
+                onLoadError={onDocumentLoadError}
+                loading={
+                  <div className="text-slate-400 text-center py-12">
+                    <FileText className="w-12 h-12 mx-auto mb-3 animate-pulse" />
+                    Caricamento spartito...
+                  </div>
+                }
+              >
+                {Array.from(new Array(numPages), (el, index) => (
+                  <div key={`page_${index + 1}`} className="shadow-lg mb-4">
+                    <Page
+                      pageNumber={index + 1}
+                      scale={scale}
+                      renderTextLayer={false}
+                      renderAnnotationLayer={false}
+                    />
+                  </div>
+                ))}
+              </Document>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -2030,7 +2142,7 @@ const AnalysisSection = () => {
         </div>
       </div>
 
-      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
         <h4 className="text-base font-semibold text-slate-200 mb-3">Sviluppo e Ripresa</h4>
         <p>
           Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. Nella ripresa, c'è un momento essenziale 
@@ -2174,12 +2286,16 @@ const AnalysisSection = () => {
                   <div className="mt-6 pt-4 border-t border-slate-700">
                     <button
                       onClick={() => openModal('Analisi Dettagliata del Primo Movimento', <AnalisiPrimoMovimentoModal />)}
-                      className="text-xs px-3 py-1.5 bg-slate-800 border border-orange-600 text-orange-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+                      className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
                     >
-                      → Approfondisci: Analisi Dettagliata
+                      Approfondisci
+                      <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 )}
+                
+                {/* PDF Viewer per lo spartito - solo per il primo movimento */}
+                {mov.id === 1 && <PdfScoreViewer />}
               </div>
             )}
           </div>
