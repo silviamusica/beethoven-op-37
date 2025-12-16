@@ -37,17 +37,17 @@ const glossaryData = [
     category: "Forme Musicali",
     items: [
       { term: "Forma Sonata", definition: "Struttura musicale in tre sezioni principali: esposizione (presentazione dei temi), sviluppo (elaborazione dei temi) e Ripresa (ritorno dei temi). Nel concerto classico si alterna tra TUTTI (orchestra) e SOLO (solista + orchestra)." },
-      { term: "Rondò", definition: "Forma musicale basata sull'alternanza di un tema principale (ritornello) con episodi contrastanti. Schema tipico: A-B-A-C-A. Nel concerto, il tema principale si scambia velocemente tra Solo e Tutti in un rapido 'botta e risposta'." },
+      { term: "Rondò", definition: "Forma musicale basata sull'alternanza di un tema principale (esposizione) con episodi contrastanti. Schema tipico: A-B-A-C-A. Nel concerto, il tema principale si scambia velocemente tra Solo e Tutti in un rapido 'botta e risposta'." },
       { term: "Cadenza", definition: "Sezione virtuosistica per il solista, tradizionalmente improvvisata. Nel Concerto n.3, Beethoven scrisse la propria cadenza (inizialmente improvvisata). È un'area 'protetta' per mostrare il virtuosismo del solista." },
       { term: "Fugato", definition: "Passaggio in stile contrappuntistico dove il tema viene imitato tra le voci. Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale - scelta audace e innovativa." },
-      { term: "Doppia Esposizione", definition: "Nel primo movimento del concerto classico: prima l'orchestra presenta i temi (RITORNELLO 1), poi il solista li riespone con l'orchestra (SOLO 1), spesso con variazioni e abbellimenti." }
+      { term: "Doppia Esposizione", definition: "Nel primo movimento del concerto classico: prima l'orchestra presenta i temi (ESPOSIZIONE 1), poi il solista li riespone con l'orchestra (SOLO 1), spesso con variazioni e abbellimenti." }
     ]
   },
   {
     category: "Terminologia Tecnica",
     items: [
-      { term: "RITORNELLO (R1, R2, etc.)", definition: "Nella teoria Hepokoski-Darcy: sezione orchestrale che ritorna ciclicamente. Nel primo movimento: R1 (batt. 1-111, esposizione orchestrale), R2 (batt. 227-249, transizione), R4 (batt. 403-416), R5/CODA (batt. 481-507, dove innovativamente il piano continua a suonare)." },
-      { term: "TUTTI", definition: "Termine generico per indicare l'orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare RITORNELLO per le sezioni orchestrali formali." },
+      { term: "ESPOSIZIONE (R1, R2, etc.)", definition: "Nella teoria Hepokoski-Darcy: sezione orchestrale che ritorna ciclicamente. Nel primo movimento: R1 (batt. 1-111, esposizione orchestrale), R2 (batt. 227-249, transizione), R4 (batt. 403-416), R5/CODA (batt. 481-507, dove innovativamente il piano continua a suonare)." },
+      { term: "TUTTI", definition: "Termine generico per indicare l'orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare ESPOSIZIONE per le sezioni orchestrali formali." },
       { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall'orchestra. L'unica sezione di vero solo è la Cadenza." },
       { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mib maggiore → Do maggiore)." },
       { term: "Tema Primario (P)", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
@@ -81,15 +81,15 @@ const movementsData = [
     key: "Do minore",
     desc: "Forma sonata con doppia esposizione. Il primo movimento è drammatico ed eroico.",
     details: [
-      "RITORNELLO 1 (batt. 1-111): esposizione orchestrale con tema primario marziale (P), secondo tema lirico (S) e materiale conclusivo (Z)",
+      "ESPOSIZIONE 1 (batt. 1-111): esposizione orchestrale con tema primario marziale (P), secondo tema lirico (S) e materiale conclusivo (Z)",
       "SOLO 1 (batt. 112-227): ingresso drammatico del pianoforte con tre scale ascendenti fortissimo. Episodi di bravura virtuosistici",
-      "RITORNELLO 2 (batt. 227-249): transizione orchestrale nello sviluppo",
+      "ESPOSIZIONE 2 (batt. 227-249): transizione orchestrale nello sviluppo",
       "SOLO 2 (batt. 250-309): sviluppo con elaborazione dei temi, modulazioni audaci e rarefazione timbrica",
-      "RITORNELLO 3 (batt. 309-316): breve ritorno del tema primario",
+      "ESPOSIZIONE 3 (batt. 309-316): breve ritorno del tema primario",
       "SOLO 3 (batt. 317-403): ripresa del materiale principale con episodi di bravura",
-      "RITORNELLO 4 (batt. 403-416): transizione alla cadenza",
+      "ESPOSIZIONE 4 (batt. 403-416): transizione alla cadenza",
       "CADENZA (batt. 417-480): area virtuosistica per il solista, inizialmente improvvisata da Beethoven",
-      "RITORNELLO 5 / CODA (batt. 481-507): innovazione: il pianoforte continua a suonare con i timpani"
+      "ESPOSIZIONE 5 / CODA (batt. 481-507): innovazione: il pianoforte continua a suonare con i timpani"
     ]
   },
   {
@@ -275,7 +275,7 @@ const quizData = [
   {
     question: "In quale tonalità finisce il terzo movimento?",
     options: ["Do minore", "Do maggiore", "Mi maggiore", "Mib maggiore"],
-    correct: 3,
+    correct: 1,
     difficulty: "base"
   },
   {
@@ -455,7 +455,7 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quante battute dura circa l'esposizione orchestrale (RITORNELLO 1)?",
+    question: "Quante battute dura circa l'esposizione orchestrale (ESPOSIZIONE 1)?",
     options: ["50 battute", "111 battute", "227 battute", "343 battute"],
     correct: 1,
     difficulty: "intermedio"
@@ -544,18 +544,6 @@ const quizData = [
 
   // 🔴 AVANZATO - Domande di analisi teorica approfondita
   {
-    question: "Qual è la caratteristica principale del 'blocco tri-modulare' nel Ritornello 1?",
-    options: [
-      "Tre temi distinti in tonalità diverse",
-      "Una struttura P-TR-MC1-S1-JOLLY-MC2-S2 con doppia Caesura Mediale",
-      "Un'alternanza di tre strumenti solisti",
-      "Una modulazione attraverso tre tonalità lontane"
-    ],
-    correct: 1,
-    difficulty: "avanzato",
-    explanation: "Il blocco tri-modulare è una struttura rara nelle esposizioni orchestrali: dopo il primo tentativo di S1 che non riesce a cadenzare, il tema 'jolly' (P) riappare per ristabilire l'ordine, seguito da una seconda Medial Caesura (MC2) che conduce finalmente a S2 con cadenza riuscita in Mib."
-  },
-  {
     question: "Quale relazione tonale crea lo 'shock' tra primo e secondo movimento?",
     options: [
       "Passaggio da tonica a dominante",
@@ -568,9 +556,9 @@ const quizData = [
     explanation: "Il passaggio da Do minore (I movimento) a Mi maggiore (II movimento) rappresenta un salto cromatico di terza, una scelta tonale audace per l'epoca che Beethoven usa per creare un effetto di 'shock' e contrasto luminoso dopo l'oscurità del primo movimento."
   },
   {
-    question: "Cosa rappresenta il Ritornello 4 (R4) finale secondo Hepokoski-Darcy?",
+    question: "Cosa rappresenta il Esposizione 4 (R4) finale secondo Hepokoski-Darcy?",
     options: [
-      "Una ripetizione identica del Ritornello 1",
+      "Una ripetizione identica del Esposizione 1",
       "Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I",
       "L'eliminazione completa dell'orchestra",
       "Un passaggio al modo maggiore"
@@ -1007,6 +995,16 @@ const IntroduzioneSection = ({ setActiveTab }) => {
 
   const ConcertoTimelineModal = () => (
     <div className="space-y-5">
+      {/* Immagine concerto */}
+      <div className="mb-4 rounded-lg overflow-hidden">
+        <img 
+          src="/images/op37-manuscript.jpg" 
+          alt="Manoscritto del Concerto Op. 37"
+          className="w-full h-[350px] object-cover object-top rounded-lg"
+        />
+        <p className="text-xs text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
+      </div>
+
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-3">La controversia sulla datazione</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
@@ -1289,7 +1287,216 @@ const IntroduzioneSection = ({ setActiveTab }) => {
     </div>
   );
 
-  // Contenuto modale: Contesto geopolitico
+
+  // Modale Cadenze
+  const CadenzeModal = () => (
+    <div className="space-y-4 text-sm text-slate-300">
+      <p className="text-base text-slate-200">
+        Nel <strong>1809</strong>, sei anni dopo la prima esecuzione, Beethoven scrisse tre cadenze per il primo movimento dell'Op. 37, 
+        catalogate come <strong>WoO 58</strong> (Werke ohne Opuszahl - opere senza numero d'opus).
+      </p>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Le tre versioni</h4>
+        <div className="space-y-3">
+          <div>
+            <p className="font-semibold text-slate-100">WoO 58 n. 1 - Breve e classica</p>
+            <p className="text-xs text-slate-400">70 battute → Stile più contenuto, vicino all'estetica del 1803</p>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-100">WoO 58 n. 2 - Moderata</p>
+            <p className="text-xs text-slate-400">90 battute → Equilibrio tra concisione e sviluppo tematico</p>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-100">WoO 58 n. 3 - Espansa</p>
+            <p className="text-xs text-slate-400">130 battute → Quasi un secondo sviluppo, la più virtuosistica</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-2">Il problema stilistico</h4>
+        <p className="mb-3">
+          Come osserva <strong>Luca Chiantore</strong>, queste cadenze presentano una <em>"incoerenza stilistica lampante"</em>: 
+          nel 1809 Beethoven è nel <strong>periodo medio maturo</strong>, ben oltre lo stile del 1803. 
+          Le cadenze riflettono il linguaggio armonico e pianistico della <em>Sonata Waldstein</em> Op. 53 o dell'<em>Appassionata</em> Op. 57, 
+          risultando più avanzate del concerto stesso.
+        </p>
+        <p className="text-xs italic text-slate-400">
+          Questo dimostra che Beethoven non considerava la cadenza come parte immutabile del concerto, 
+          ma come spazio di libertà espressiva legato al momento dell'esecuzione.
+        </p>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Altre cadenze celebri</h4>
+        <ul className="space-y-2">
+          <li className="flex items-start">
+            <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+            <span>
+              <strong>Fazil Say (2001)</strong> → Linguaggio contemporaneo con cluster e ritmi irregolari, 
+              ma profondamente radicato nel materiale tematico beethoveniano. 
+              <a 
+                href="https://youtu.be/a0ixaGeQzME?si=vG4tYv1rpwhCFHk0&t=772" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-slate-200 underline ml-1"
+              >
+                Ascolta al min. 12:51
+              </a>
+            </span>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+            <span><strong>Johann Nepomuk Hummel</strong> → Contemporanea di Beethoven, stile virtuosistico brillante</span>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+            <span><strong>Clara Schumann</strong> → Cadenza romantica del XIX secolo, espressività lirica</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="mt-3 p-3 bg-blue-900/20 rounded text-xs text-slate-200 border-l-2 border-blue-500">
+        💡 <strong>Curiosità:</strong> Clara Schumann fu tra le prime donne a eseguire questo concerto in pubblico (1840), 
+        sfidando le convenzioni dell'epoca che scoraggiavano le donne dall'eseguire opere così impegnative.
+      </div>
+
+      <p className="text-xs text-slate-400 italic pt-3 border-t border-slate-700">
+        La tradizione di scrivere cadenze personali per i concerti di Beethoven è viva ancora oggi, 
+        dimostrando come questi capolavori continuino a ispirare creatività e dialogo tra epoche.
+      </p>
+    </div>
+  );
+
+  const AnalisiPrimoMovimentoModal = () => (
+    <div className="space-y-4 text-sm text-slate-300">
+      <p className="text-base text-slate-200 mb-4">
+        Ecco una tabella dettagliata della struttura formale del primo movimento (<strong>Allegro con brio</strong>) del Concerto n. 3 op. 37 di Beethoven.
+        La forma è quella della <strong>forma-sonata con doppia esposizione</strong> (orchestrale e solistica).
+      </p>
+
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl shadow-2xl border border-slate-600/50 overflow-x-auto">
+        <h3 className="text-lg font-bold text-slate-100 mb-4">Struttura dell'Allegro con brio</h3>
+        
+        <table className="w-full border-collapse text-xs">
+          <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide">
+            <tr>
+              <th className="border border-slate-600 p-2 text-left">Sezione</th>
+              <th className="border border-slate-600 p-2 text-left">Sottosezione</th>
+              <th className="border border-slate-600 p-2 text-left">Battute</th>
+              <th className="border border-slate-600 p-2 text-left">Descrizione e Contenuto Musicale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-slate-800/50">
+              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="2">ESPOSIZIONE</td>
+              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 1</strong> (Esposizione Orchestrale)</td>
+              <td className="border border-slate-600 p-2 align-top">1–111</td>
+              <td className="border border-slate-600 p-2">
+                L'orchestra espone i temi principali.<br/>
+                • <strong>I Tema:</strong> in Do minore, carattere "marziale" e "cadenzato".<br/>
+                • <strong>II Tema:</strong> carattere più "cantabile" e "melodioso".<br/>
+                • <strong>Elemento <em>z</em>:</strong> tema conclusivo.<br/>
+                • Chiusura con tre "colpi" e corona.
+              </td>
+            </tr>
+            <tr className="bg-slate-800/50">
+              <td className="border border-slate-600 p-2 align-top"><strong>SOLO 1</strong> (Esposizione Solistica)</td>
+              <td className="border border-slate-600 p-2 align-top">112–227</td>
+              <td className="border border-slate-600 p-2">
+                <strong>Ingresso del Pianoforte:</strong> Entra con <strong>tre potenti scale ascendenti</strong> ("gesto di sfida") che conducono a un registro acuto, riaffermando il primo tema con autorità.<br/>
+                • Il solista riespone e analizza il <strong>I Tema</strong>.<br/>
+                • <strong>II Tema:</strong> Esposto in <strong>Mi bemolle maggiore</strong> (batt. 164-171).<br/>
+                • <strong>Elemento <em>z</em>:</strong> (batt. 186-199).<br/>
+                • <strong>Episodio di bravura:</strong> Il solista esegue cascate di note veloci e un trillo finale (batt. 219-227) che sale di grado tre volte.
+              </td>
+            </tr>
+            
+            <tr className="bg-slate-700/50">
+              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="2">SVILUPPO</td>
+              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 2</strong></td>
+              <td className="border border-slate-600 p-2 align-top">227–249</td>
+              <td className="border border-slate-600 p-2">
+                Ritorno potente dell'orchestra in <em>forte</em> che segna l'avvio della sezione di elaborazione.
+              </td>
+            </tr>
+            <tr className="bg-slate-700/50">
+              <td className="border border-slate-600 p-2 align-top"><strong>SOLO 2</strong> (Cuore dello Sviluppo)</td>
+              <td className="border border-slate-600 p-2 align-top">250–309</td>
+              <td className="border border-slate-600 p-2">
+                • Il pianoforte apre nuovamente con tre scale ascendenti (dominante di Sol minore).<br/>
+                • Elaborazione della testa del I Tema (elemento <em>x</em>) e della cellula ritmica (elemento <em>y</em>).<br/>
+                • Caratterizzato da una <strong>"rarefazione timbrica"</strong> e sonorità evanescenti.
+              </td>
+            </tr>
+            
+            <tr className="bg-slate-800/50">
+              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="2">RIPRESA</td>
+              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 3</strong></td>
+              <td className="border border-slate-600 p-2 align-top">309–316</td>
+              <td className="border border-slate-600 p-2">
+                L'orchestra riprende il I Tema in <em>fortissimo</em>, segnando l'inizio formale della Ripresa, per poi fondersi con il solista.
+              </td>
+            </tr>
+            <tr className="bg-slate-800/50">
+              <td className="border border-slate-600 p-2 align-top"><strong>SOLO 3</strong></td>
+              <td className="border border-slate-600 p-2 align-top">317–403</td>
+              <td className="border border-slate-600 p-2">
+                • Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema e ritorno del <strong>II Tema</strong> (ora nella tonalità d'impianto).<br/>
+                • Ripresa dell'elemento <em>z</em> e nuovo <strong>episodio di bravura</strong> con trillo lungo e scala discendente.
+              </td>
+            </tr>
+            
+            <tr className="bg-slate-700/50">
+              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="3">CODA</td>
+              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 4</strong></td>
+              <td className="border border-slate-600 p-2 align-top">403–416</td>
+              <td className="border border-slate-600 p-2">
+                Breve transizione orchestrale che si interrompe su un accordo sospeso ("corona"), invitando il solista alla cadenza.
+              </td>
+            </tr>
+            <tr className="bg-slate-700/50">
+              <td className="border border-slate-600 p-2 align-top"><strong>CADENZA</strong></td>
+              <td className="border border-slate-600 p-2 align-top">417–480</td>
+              <td className="border border-slate-600 p-2">
+                Momento di massima "esibizione" del solista (inizialmente improvvisata da Beethoven), che rielabora i temi in modo virtuosistico.
+              </td>
+            </tr>
+            <tr className="bg-slate-700/50">
+              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 5</strong></td>
+              <td className="border border-slate-600 p-2 align-top">481–Fine</td>
+              <td className="border border-slate-600 p-2">
+                <strong>Innovazione timbrica:</strong> Il pianoforte non tace ma continua a suonare accompagnato dai <strong>timpani</strong>, che scandiscono il ritmo marziale (elemento <em>y</em>). Crescendo finale e chiusura.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-amber-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Note Analitiche</h4>
+        <ul className="space-y-2 text-xs">
+          <li>
+            <strong className="text-amber-200">Solo 1 (Innovazione nella scrittura):</strong> L'ingresso del pianoforte alle battute 112-114 con le scale ascendenti in doppie ottave è considerato un "miracolo biomeccanico" che permette l'uso del peso del braccio e modifica il senso del tema rispetto all'esposizione orchestrale, creando un contrasto dialettico tra solista e orchestra.
+          </li>
+          <li>
+            <strong className="text-amber-200">Carattere:</strong> Il primo movimento si distingue per un dialogo "acceso", quasi una sfida tra Solo e Tutti, che si alterna a momenti di conciliazione.
+          </li>
+        </ul>
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-slate-700">
+        <button
+          onClick={() => openModal('Le Tre Cadenze di Beethoven', <CadenzeModal />)}
+          className="text-xs px-3 py-1.5 bg-slate-800 border border-orange-600 text-orange-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+        >
+          → Approfondisci: Le Cadenze scritte da Beethoven
+        </button>
+      </div>
+    </div>
+  );
+
   const ContestoGeopoliticoModal = () => (
     <div className="space-y-5">
       {/* Immagine contesto storico */}
@@ -2023,10 +2230,6 @@ const AnalysisSection = () => {
 
   return (
     <div className="space-y-6 animate-fadeIn">
-      <div className="bg-slate-800/50 border-l-4 border-blue-600 p-5 rounded-lg">
-        <p className="text-slate-200"><strong>Nota tecnica:</strong> l'analisi usa la teoria <em>Hepokoski-Darcy</em> (es. R1-P = Ritornello 1, Tema Primario).</p>
-      </div>
-
       <div className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
         <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
           <Music className="w-5 h-5 text-blue-400 mr-2" />
@@ -2100,51 +2303,6 @@ const AnalysisSection = () => {
                     </li>
                   ))}
                 </ul>
-                {mov.id === 1 && (
-                  <div className="mt-4 pt-4 border-t border-slate-700">
-                    <button
-                      onClick={() => {
-                        const element = document.getElementById('analisi-primo-movimento');
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                      }}
-                      className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-                    >
-                      → Approfondisci l'analisi del I movimento
-                    </button>
-                  </div>
-                )}
-                {mov.id === 2 && (
-                  <div className="mt-4 pt-4 border-t border-slate-700">
-                    <button
-                      onClick={() => {
-                        const element = document.getElementById('analisi-secondo-movimento');
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                      }}
-                      className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-                    >
-                      → Approfondisci l'analisi del II movimento
-                    </button>
-                  </div>
-                )}
-                {mov.id === 3 && (
-                  <div className="mt-4 pt-4 border-t border-slate-700">
-                    <button
-                      onClick={() => {
-                        const element = document.getElementById('analisi-terzo-movimento');
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                      }}
-                      className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-                    >
-                      → Approfondisci l'analisi del III movimento
-                    </button>
-                  </div>
-                )}
               </div>
             )}
           </div>
@@ -2152,7 +2310,8 @@ const AnalysisSection = () => {
       </div>
 
       {/* Sezione Le Tre Cadenze */}
-      <div className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
+      {/* TEMPORANEAMENTE NASCOSTO - Ora disponibile come modale */}
+      {false && <div className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
         <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
           <Music className="w-5 h-5 text-blue-400 mr-2" />
           Le Tre Cadenze di Beethoven
@@ -2235,7 +2394,7 @@ const AnalysisSection = () => {
             dimostrando come questi capolavori continuino a ispirare creatività e dialogo tra epoche.
           </p>
         </div>
-      </div>
+      </div>}
 
       {/* Analisi Dettagliata I Movimento */}
       <div id="analisi-primo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
@@ -2250,7 +2409,7 @@ const AnalysisSection = () => {
           </p>
 
           <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Ritornello 1 (Orchestra)</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Esposizione 1 (Orchestra)</h4>
             <div className="space-y-2">
               <p>
                 Il movimento apre con un <strong>tema "marziale" e scarno</strong>, esposto <em>piano</em> dagli archi all'unisono 
@@ -2258,12 +2417,12 @@ const AnalysisSection = () => {
               </p>
               <p>
                 Dopo una transizione che collassa in minore, appare il <strong>Secondo Tema in Mib maggiore</strong> — 
-                una <strong>modulazione insolita</strong> per un Ritornello 1, che normalmente resta in tonica. 
+                una <strong>modulazione insolita</strong> per un Esposizione 1, che normalmente resta in tonica. 
                 Questa "finta" mozartiana crea <strong>instabilità già nella prima esposizione</strong>. 
                 Il tema è più lirico e cantabile, affidato a violini e clarinetti.
               </p>
               <p>
-                Il Ritornello si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
+                Il Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
               </p>
             </div>
           </div>
@@ -2309,126 +2468,13 @@ const AnalysisSection = () => {
             </div>
           </div>
 
-          {/* Sezione Analisi Avanzata */}
-          <div className="mt-6 pt-6 border-t border-slate-600">
-            <h4 className="text-lg font-bold text-slate-100 mb-4 flex items-center">
-              <BookOpen className="w-5 h-5 text-amber-400 mr-2" />
-              Analisi Avanzata (Teoria di Hepokoski-Darcy)
-            </h4>
 
-            <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-amber-500 mb-4">
-              <h5 className="text-base font-semibold text-slate-200 mb-3">IL BLOCCO TRI-MODULARE</h5>
-              <div className="space-y-2">
-                <p>
-                  Nel Ritornello 1, Beethoven potrebbe aver creato un <strong>blocco tri-modulare</strong>, una struttura con 
-                  <strong>due cesure mediali e due temi secondari</strong>. Questo è <em>raro</em> in un'esposizione orchestrale.
-                </p>
-                
-                <div className="bg-slate-800/50 p-3 rounded mt-3">
-                  <p className="text-xs font-semibold text-amber-200 mb-2">Struttura:</p>
-                  <div className="font-mono text-xs text-slate-300 space-y-1">
-                    <p><strong className="text-slate-200">R1-P</strong> (Do minore) →</p>
-                    <p><strong className="text-slate-200">R1-TR</strong> (transizione) →</p>
-                    <p><strong className="text-slate-200">MC1</strong> (prima cesura mediale) →</p>
-                    <p><strong className="text-slate-200">R1-S1</strong> (Mi♭ maggiore - primo tentativo di secondo tema) →</p>
-                    <p className="text-slate-200 font-bold">[CRISI: S1 non riesce a cadenzare!] →</p>
-                    <p><strong className="text-slate-200">JOLLY: Ritorno di P</strong> (operazione di salvataggio) →</p>
-                    <p><strong className="text-slate-200">MC2</strong> (seconda cesura mediale) →</p>
-                    <p><strong className="text-slate-200">R1-S2</strong> (Mi♭ maggiore - secondo tema che finalmente cadenza)</p>
-                  </div>
-                </div>
-
-                <div className="bg-amber-900/20 p-3 rounded mt-3 border-l-2 border-amber-500">
-                  <p className="text-xs">
-                    <strong className="text-amber-200">Perché è importante:</strong> I blocchi tri-modulari sono tipici delle 
-                    <em>esposizioni solistiche</em>, non orchestrali. Beethoven crea <strong>ambiguità formale già nel Ritornello 1</strong>.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
-              <h5 className="text-base font-semibold text-slate-200 mb-3">IL TEMA "JOLLY" (Wild Card / Idée Fixe)</h5>
-              <div className="space-y-2">
-                <p>
-                  Il tema primario non appare solo nelle posizioni standard, ma <strong>ritorna ossessivamente</strong> in punti strategici:
-                </p>
-                
-                <ul className="space-y-2 ml-4 mt-3">
-                  <li className="flex items-start">
-                    <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
-                    <span>Dopo R1-S1 (operazione di salvataggio)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
-                    <span>Nella coda di R1</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
-                    <span>Dopo S1-S (altra operazione di salvataggio)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
-                    <span>Nella coda finale (timpani sotto il pianoforte)</span>
-                  </li>
-                </ul>
-
-                <div className="bg-blue-900/20 p-3 rounded mt-3 border-l-2 border-blue-500">
-                  <p className="text-xs">
-                    <strong className="text-slate-200">Funzione:</strong> È come una <strong>carta jolly</strong> che Beethoven 
-                    può giocare quando la forma è in crisi. Quando il secondo tema "fallisce", il primo tema interviene per 
-                    <strong>ristabilire l'ordine</strong>.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-red-500">
-              <h5 className="text-base font-semibold text-slate-200 mb-3">LA DEFORMAZIONE FINALE</h5>
-              <div className="space-y-3">
-                <div className="bg-slate-800/50 p-3 rounded">
-                  <p className="text-xs font-semibold text-slate-200 mb-2">NORMA CLASSICA:</p>
-                  <p className="text-xs text-slate-300">
-                    Dopo la cadenza, l'orchestra entra con un <em>tutti fortissimo</em> che conferma la tonica.
-                  </p>
-                </div>
-
-                <div className="bg-slate-800/50 p-3 rounded">
-                  <p className="text-xs font-semibold text-slate-200 mb-2">BEETHOVEN FA:</p>
-                  <ul className="space-y-1.5 ml-4 text-xs text-slate-300">
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-2">•</span>
-                      <span>Il trillo si spegne in <em>pianissimo</em> (invece di esplodere)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-2">•</span>
-                      <span>Invece di <strong>I</strong> (Do maggiore), suona <strong>V7</strong> (Sol7 - dominante di Do) che si muove verso <strong>iv</strong> (Fa minore)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-2">•</span>
-                      <span>Il pianoforte <strong>continua a suonare</strong> (invece di tacere)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-400 mr-2">•</span>
-                      <span>Risoluzione ambigua tra Do maggiore e Do minore</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-red-900/20 p-3 rounded border-l-2 border-red-500">
-                  <p className="text-xs">
-                    <strong className="text-red-200">Effetto:</strong> <strong>Incertezza tragica</strong>. La vittoria non è completa. 
-                    Il dramma continua fino all'ultimo accordo.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Analisi Dettagliata II Movimento */}
-      <div id="analisi-secondo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700 mt-6">
+      {/* TEMPORANEAMENTE NASCOSTO */}
+      {false && <div id="analisi-secondo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700 mt-6">
         <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
           <Music className="w-5 h-5 text-blue-400 mr-2" />
           Analisi Dettagliata: II Movimento - Largo (Mi maggiore)
@@ -2490,10 +2536,11 @@ const AnalysisSection = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div>}
 
       {/* Analisi Dettagliata III Movimento */}
-      <div id="analisi-terzo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700 mt-6">
+      {/* TEMPORANEAMENTE NASCOSTO */}
+      {false && <div id="analisi-terzo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700 mt-6">
         <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
           <Music className="w-5 h-5 text-blue-400 mr-2" />
           Analisi Dettagliata: III Movimento - Rondo. Allegro (Do minore → Do maggiore)
@@ -2559,7 +2606,7 @@ const AnalysisSection = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
@@ -2823,9 +2870,9 @@ const GlossarySection = () => {
                     <tr>
                       <td className="border border-slate-600 p-2 font-semibold">Primo XVIII (Alto Barocco)</td>
                       <td className="border border-slate-600 p-2">
-                        <strong>Forma Ritornello</strong><br/>
+                        <strong>Forma Esposizione</strong><br/>
                         3 movimenti (V-L-V)<br/>
-                        Ritornello orchestrale + episodi solistici
+                        Esposizione orchestrale + episodi solistici
                       </td>
                       <td className="border border-slate-600 p-2">
                         <strong>Vivaldi</strong> (codifica la forma)<br/>
@@ -2839,7 +2886,7 @@ const GlossarySection = () => {
                         <strong className="text-slate-200">Concerto Classico</strong><br/>
                         <strong>Forma di Sonata</strong><br/>
                         Doppia Esposizione:<br/>
-                        1. Ritornello 1 (orchestra)<br/>
+                        1. Esposizione 1 (orchestra)<br/>
                         2. Solo 1 (modulante)
                       </td>
                       <td className="border border-slate-600 p-2 text-slate-200">
@@ -2878,7 +2925,7 @@ const GlossarySection = () => {
                         Schumann, Brahms
                       </td>
                       <td className="border border-slate-600 p-2 text-xs">
-                        Mendelssohn elimina Ritornello 1<br/>
+                        Mendelssohn elimina Esposizione 1<br/>
                         Concerto in 1 movimento (Liszt)
                       </td>
                     </tr>
@@ -2904,10 +2951,10 @@ const GlossarySection = () => {
                 <h4 className="text-base font-semibold text-slate-100">Analisi dello sviluppo</h4>
                 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-slate-200 text-sm mb-2">1. Barocco: polarità e ritornello</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">1. Barocco: polarità e esposizione</h5>
                   <p className="text-xs">
                     In Vivaldi e Torelli, il concerto si basa sull'<strong>architettura</strong>. L'orchestra stabilisce 
-                    la tonalità con un <strong>Ritornello</strong> ricorrente. Il solista suona episodi virtuosistici 
+                    la tonalità con un <strong>Esposizione</strong> ricorrente. Il solista suona episodi virtuosistici 
                     modulanti tra i ritornelli. Forma additiva, alternanza netta.
                   </p>
                 </div>
@@ -2918,14 +2965,14 @@ const GlossarySection = () => {
                     Mozart e Beethoven assorbono la <strong>Forma-Sonata</strong> (Hepokoski-Darcy).
                   </p>
                   <ul className="space-y-1 text-xs list-disc list-inside ml-2">
-                    <li>L'orchestra apre con quasi-esposizione completa (Ritornello 1), ma resta in tonica</li>
+                    <li>L'orchestra apre con quasi-esposizione completa (Esposizione 1), ma resta in tonica</li>
                     <li>Il solista ri-espone (Solo 1), modulando alla tonalità secondaria</li>
                     <li>Mozart trasforma la polarità barocca in <strong>dialogo paritario</strong></li>
                   </ul>
                 </div>
 
                 <div className="bg-slate-800/50 p-3 rounded">
-                  <h5 className="font-semibold text-slate-200 text-sm mb-2">3. Romantico: abolizione del ritornello</h5>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-2">3. Romantico: abolizione del esposizione</h5>
                   <p className="text-xs mb-2">
                     Mendelssohn e Liszt considerano il lungo Tutti iniziale "arcaico e ridondante":
                   </p>
@@ -2985,7 +3032,7 @@ const GlossarySection = () => {
                 </p>
                 <p className="mb-3">
                   Il principio di base è l'<strong>alternanza regolare</strong> tra un tema principale, detto <strong>refrain</strong> 
-                  (o ritornello), e sezioni contrastanti dette <strong>couplets</strong> (o episodi). Il refrain viene esposto 
+                  (o esposizione), e sezioni contrastanti dette <strong>couplets</strong> (o episodi). Il refrain viene esposto 
                   nella tonalità d'impianto e ritorna più volte, mentre gli episodi sono solitamente in tonalità diverse e 
                   offrono materiale contrastante.
                 </p>
@@ -3066,12 +3113,12 @@ const GlossarySection = () => {
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
                       <span><strong>Interazione Solo-Tutti:</strong> Il solista espone il refrain, poi ripreso o completato 
-                      dall'orchestra. Mozart espande il refrain iniziale trasformandolo in un ritornello orchestrale</span>
+                      dall'orchestra. Mozart espande il refrain iniziale trasformandolo in un esposizione orchestrale</span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
                       <span><strong>Nuovi temi (sujet libre):</strong> Mozart introduce spesso un "nuovo tema" da parte del 
-                      solista all'inizio della transizione, subito dopo il primo ritornello orchestrale</span>
+                      solista all'inizio della transizione, subito dopo il primo esposizione orchestrale</span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
