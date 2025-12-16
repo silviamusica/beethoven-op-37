@@ -80,16 +80,18 @@ const movementsData = [
     title: "I Movimento: Allegro con brio",
     key: "Do minore",
     desc: "Forma sonata con doppia esposizione. Il primo movimento è drammatico ed eroico.",
-    details: [
-      "ESPOSIZIONE 1 (batt. 1-111): esposizione orchestrale con tema primario marziale (P), secondo tema lirico (S) e materiale conclusivo (Z)",
-      "SOLO 1 (batt. 112-227): ingresso drammatico del pianoforte con tre scale ascendenti fortissimo. Episodi di bravura virtuosistici",
-      "ESPOSIZIONE 2 (batt. 227-249): transizione orchestrale nello sviluppo",
-      "SOLO 2 (batt. 250-309): sviluppo con elaborazione dei temi, modulazioni audaci e rarefazione timbrica",
-      "ESPOSIZIONE 3 (batt. 309-316): breve ritorno del tema primario",
-      "SOLO 3 (batt. 317-403): ripresa del materiale principale con episodi di bravura",
-      "ESPOSIZIONE 4 (batt. 403-416): transizione alla cadenza",
-      "CADENZA (batt. 417-480): area virtuosistica per il solista, inizialmente improvvisata da Beethoven",
-      "ESPOSIZIONE 5 / CODA (batt. 481-507): innovazione: il pianoforte continua a suonare con i timpani"
+    isTable: true,
+    hasModal: true,
+    tableData: [
+      { sezione: "ESPOSIZIONE", sottosezione: "TUTTI 1", battute: "1-111", descrizione: "I Tema in Do minore (carattere marziale, cadenzato, incisivo). Transizione con scomposizione del tema. II Tema (batt. 50-74, carattere cantabile, dolce, melodioso). Sezione conclusiva (batt. 86-111) con elemento z e chiusura drammatica", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 1", battute: "112-227", descrizione: "Ingresso con tre potenti scale ascendenti come gesto di sfida. Il pianoforte espone e analizza il I Tema. II Tema (batt. 164-171) in Mi bemolle maggiore. Elemento z (batt. 186-199). Episodio di bravura (batt. 199-226) con cascate di note veloci e trillo finale" },
+      { sezione: "SVILUPPO", sottosezione: "TUTTI 2", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte. Ripresa di un elemento conclusivo del Tutti 1 con nuova funzione introduttiva", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 2", battute: "250-309", descrizione: "Apertura con tre scale ascendenti (dominante di Sol minore). Elaborazione della testa del tema (elemento x) e della cellula ritmica (elemento y). Atmosfera di rarefazione timbrica (dialogo tra pianoforte e fiati, sonorità evanescenti)" },
+      { sezione: "RIPRESA", sottosezione: "TUTTI 3", battute: "309-316", descrizione: "Ripresa del I Tema in fortissimo (segna l'avvio formale della Ripresa)", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 3", battute: "317-403", descrizione: "Scomposizione del I Tema e dell'elemento x. II Tema (batt. 340-355) ripreso nella tonalità d'impianto. Elemento z (batt. 363-375) ed episodio di bravura finale" },
+      { sezione: "CODA", sottosezione: "TUTTI 4", battute: "403-416", descrizione: "Riparte dalla testa del tema (x) e si interrompe su un accordo sospeso (corona) per invitare il solista", rowSpan: 3 },
+      { sezione: "", sottosezione: "CADENZA", battute: "417-480", descrizione: "Sezione in cui il solista è realmente solo (esibizione), con rielaborazione virtuosistica dei temi principali" },
+      { sezione: "", sottosezione: "TUTTI 5", battute: "481-507", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani. Scansione della cellula ritmica y, crescendo rapido e accordi finali" }
     ]
   },
   {
@@ -1369,134 +1371,6 @@ const IntroduzioneSection = ({ setActiveTab }) => {
     </div>
   );
 
-  const AnalisiPrimoMovimentoModal = () => (
-    <div className="space-y-4 text-sm text-slate-300">
-      <p className="text-base text-slate-200 mb-4">
-        Ecco una tabella dettagliata della struttura formale del primo movimento (<strong>Allegro con brio</strong>) del Concerto n. 3 op. 37 di Beethoven.
-        La forma è quella della <strong>forma-sonata con doppia esposizione</strong> (orchestrale e solistica).
-      </p>
-
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl shadow-2xl border border-slate-600/50 overflow-x-auto">
-        <h3 className="text-lg font-bold text-slate-100 mb-4">Struttura dell'Allegro con brio</h3>
-        
-        <table className="w-full border-collapse text-xs">
-          <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide">
-            <tr>
-              <th className="border border-slate-600 p-2 text-left">Sezione</th>
-              <th className="border border-slate-600 p-2 text-left">Sottosezione</th>
-              <th className="border border-slate-600 p-2 text-left">Battute</th>
-              <th className="border border-slate-600 p-2 text-left">Descrizione e Contenuto Musicale</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-slate-800/50">
-              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="2">ESPOSIZIONE</td>
-              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 1</strong> (Esposizione Orchestrale)</td>
-              <td className="border border-slate-600 p-2 align-top">1–111</td>
-              <td className="border border-slate-600 p-2">
-                L'orchestra espone i temi principali.<br/>
-                • <strong>I Tema:</strong> in Do minore, carattere "marziale" e "cadenzato".<br/>
-                • <strong>II Tema:</strong> carattere più "cantabile" e "melodioso".<br/>
-                • <strong>Elemento <em>z</em>:</strong> tema conclusivo.<br/>
-                • Chiusura con tre "colpi" e corona.
-              </td>
-            </tr>
-            <tr className="bg-slate-800/50">
-              <td className="border border-slate-600 p-2 align-top"><strong>SOLO 1</strong> (Esposizione Solistica)</td>
-              <td className="border border-slate-600 p-2 align-top">112–227</td>
-              <td className="border border-slate-600 p-2">
-                <strong>Ingresso del Pianoforte:</strong> Entra con <strong>tre potenti scale ascendenti</strong> ("gesto di sfida") che conducono a un registro acuto, riaffermando il primo tema con autorità.<br/>
-                • Il solista riespone e analizza il <strong>I Tema</strong>.<br/>
-                • <strong>II Tema:</strong> Esposto in <strong>Mi bemolle maggiore</strong> (batt. 164-171).<br/>
-                • <strong>Elemento <em>z</em>:</strong> (batt. 186-199).<br/>
-                • <strong>Episodio di bravura:</strong> Il solista esegue cascate di note veloci e un trillo finale (batt. 219-227) che sale di grado tre volte.
-              </td>
-            </tr>
-            
-            <tr className="bg-slate-700/50">
-              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="2">SVILUPPO</td>
-              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 2</strong></td>
-              <td className="border border-slate-600 p-2 align-top">227–249</td>
-              <td className="border border-slate-600 p-2">
-                Ritorno potente dell'orchestra in <em>forte</em> che segna l'avvio della sezione di elaborazione.
-              </td>
-            </tr>
-            <tr className="bg-slate-700/50">
-              <td className="border border-slate-600 p-2 align-top"><strong>SOLO 2</strong> (Cuore dello Sviluppo)</td>
-              <td className="border border-slate-600 p-2 align-top">250–309</td>
-              <td className="border border-slate-600 p-2">
-                • Il pianoforte apre nuovamente con tre scale ascendenti (dominante di Sol minore).<br/>
-                • Elaborazione della testa del I Tema (elemento <em>x</em>) e della cellula ritmica (elemento <em>y</em>).<br/>
-                • Caratterizzato da una <strong>"rarefazione timbrica"</strong> e sonorità evanescenti.
-              </td>
-            </tr>
-            
-            <tr className="bg-slate-800/50">
-              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="2">RIPRESA</td>
-              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 3</strong></td>
-              <td className="border border-slate-600 p-2 align-top">309–316</td>
-              <td className="border border-slate-600 p-2">
-                L'orchestra riprende il I Tema in <em>fortissimo</em>, segnando l'inizio formale della Ripresa, per poi fondersi con il solista.
-              </td>
-            </tr>
-            <tr className="bg-slate-800/50">
-              <td className="border border-slate-600 p-2 align-top"><strong>SOLO 3</strong></td>
-              <td className="border border-slate-600 p-2 align-top">317–403</td>
-              <td className="border border-slate-600 p-2">
-                • Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema e ritorno del <strong>II Tema</strong> (ora nella tonalità d'impianto).<br/>
-                • Ripresa dell'elemento <em>z</em> e nuovo <strong>episodio di bravura</strong> con trillo lungo e scala discendente.
-              </td>
-            </tr>
-            
-            <tr className="bg-slate-700/50">
-              <td className="border border-slate-600 p-2 font-semibold align-top" rowSpan="3">CODA</td>
-              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 4</strong></td>
-              <td className="border border-slate-600 p-2 align-top">403–416</td>
-              <td className="border border-slate-600 p-2">
-                Breve transizione orchestrale che si interrompe su un accordo sospeso ("corona"), invitando il solista alla cadenza.
-              </td>
-            </tr>
-            <tr className="bg-slate-700/50">
-              <td className="border border-slate-600 p-2 align-top"><strong>CADENZA</strong></td>
-              <td className="border border-slate-600 p-2 align-top">417–480</td>
-              <td className="border border-slate-600 p-2">
-                Momento di massima "esibizione" del solista (inizialmente improvvisata da Beethoven), che rielabora i temi in modo virtuosistico.
-              </td>
-            </tr>
-            <tr className="bg-slate-700/50">
-              <td className="border border-slate-600 p-2 align-top"><strong>TUTTI 5</strong></td>
-              <td className="border border-slate-600 p-2 align-top">481–Fine</td>
-              <td className="border border-slate-600 p-2">
-                <strong>Innovazione timbrica:</strong> Il pianoforte non tace ma continua a suonare accompagnato dai <strong>timpani</strong>, che scandiscono il ritmo marziale (elemento <em>y</em>). Crescendo finale e chiusura.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-amber-500">
-        <h4 className="text-base font-semibold text-slate-200 mb-3">Note Analitiche</h4>
-        <ul className="space-y-2 text-xs">
-          <li>
-            <strong className="text-amber-200">Solo 1 (Innovazione nella scrittura):</strong> L'ingresso del pianoforte alle battute 112-114 con le scale ascendenti in doppie ottave è considerato un "miracolo biomeccanico" che permette l'uso del peso del braccio e modifica il senso del tema rispetto all'esposizione orchestrale, creando un contrasto dialettico tra solista e orchestra.
-          </li>
-          <li>
-            <strong className="text-amber-200">Carattere:</strong> Il primo movimento si distingue per un dialogo "acceso", quasi una sfida tra Solo e Tutti, che si alterna a momenti di conciliazione.
-          </li>
-        </ul>
-      </div>
-
-      <div className="mt-4 pt-4 border-t border-slate-700">
-        <button
-          onClick={() => openModal('Le Tre Cadenze di Beethoven', <CadenzeModal />)}
-          className="text-xs px-3 py-1.5 bg-slate-800 border border-orange-600 text-orange-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-        >
-          → Approfondisci: Le Cadenze scritte da Beethoven
-        </button>
-      </div>
-    </div>
-  );
-
   const ContestoGeopoliticoModal = () => (
     <div className="space-y-5">
       {/* Immagine contesto storico */}
@@ -1672,12 +1546,11 @@ const IntroduzioneSection = ({ setActiveTab }) => {
           <div className="space-y-1.5">
             <p>
               <strong>Dedicato a:</strong>{' '}
-              <button
-                onClick={() => openModal('Contesto Geopolitico', <ContestoGeopoliticoModal />)}
-                className="text-blue-400 hover:text-blue-300 underline cursor-pointer"
-              >
-                Principe Luigi Ferdinando di Prussia
-              </button>
+              <Tooltip text="Comandante militare prussiano, nipote di Federico il Grande. Morto nella battaglia di Saalfeld (1806) contro le truppe napoleoniche. Appassionato di musica e ammiratore di Beethoven.">
+                <span className="text-blue-400 underline decoration-dotted cursor-help">
+                  Principe Luigi Ferdinando di Prussia
+                </span>
+              </Tooltip>
             </p>
             <p><strong>Tonalità:</strong> Do minore → Do maggiore (finale)</p>
             <p><strong>Movimenti:</strong> Allegro con brio • Largo • Rondo</p>
@@ -2081,12 +1954,12 @@ const Tooltip = ({ text, children }) => {
         {children}
       </span>
       {isVisible && (
-        <span className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-3 bg-slate-950 text-slate-100 text-sm rounded-lg shadow-2xl max-w-[90vw] sm:max-w-sm z-50 border-2 border-slate-700">
+        <span className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-3 bg-slate-950 text-slate-100 text-sm rounded-lg shadow-2xl max-w-[90vw] sm:max-w-sm z-50 border-2 border-slate-700 pointer-events-none">
           {text}
           {isTouchDevice && (
             <button 
               onClick={(e) => { e.stopPropagation(); setIsVisible(false); }}
-              className="absolute top-1 right-2 text-slate-400 hover:text-slate-200 text-lg font-bold"
+              className="absolute top-1 right-2 text-slate-400 hover:text-slate-200 text-lg font-bold pointer-events-auto"
             >
               ×
             </button>
@@ -2105,8 +1978,85 @@ const Tooltip = ({ text, children }) => {
 
 const AnalysisSection = () => {
   const [openMovement, setOpenMovement] = useState(1);
+  const [modalContent, setModalContent] = useState(null);
   
   const toggleMovement = (id) => setOpenMovement(openMovement === id ? null : id);
+  
+  const openModal = (title, content) => {
+    setModalContent({ title, content });
+  };
+
+  const closeModal = () => {
+    setModalContent(null);
+  };
+  
+  const AnalisiPrimoMovimentoModal = () => (
+    <div className="space-y-4 text-sm text-slate-300">
+      <p className="text-base text-slate-200">
+        Il primo movimento è il più complesso, strutturato secondo la <strong>Forma di Sonata per Concerto</strong>.
+      </p>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Esposizione 1 (Orchestra)</h4>
+        <div className="space-y-2">
+          <p>
+            Il movimento apre con un <strong>tema "marziale" e scarno</strong>, esposto <em>piano</em> dagli archi all'unisono 
+            (Do-Mib-Sol...). Questo tema definisce il carattere "eroico" e severo.
+          </p>
+          <p>
+            Dopo una transizione che collassa in minore, appare il <strong>Secondo Tema in Mib maggiore</strong> — 
+            una <strong>modulazione insolita</strong> per un Esposizione 1, che normalmente resta in tonica. 
+            Questa "finta" mozartiana crea <strong>instabilità già nella prima esposizione</strong>. 
+            Il tema è più lirico e cantabile, affidato a violini e clarinetti.
+          </p>
+          <p>
+            Il Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Solo 1 (Esposizione del pianoforte)</h4>
+        <div className="space-y-2">
+          <p>
+            <strong className="text-slate-200">L'Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
+            in <em>fortissimo</em> (do-do-do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un'entrata dolce 
+            o preparatoria, ma un'<strong>affermazione di potenza</strong>.
+          </p>
+          <p>
+            Il solista riprende poi il tema principale ma lo elabora immediatamente, dimostrando che il "composto" (l'individuo) 
+            non è semplicemente subordinato alla "massa" (l'orchestra).
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Sviluppo e Ripresa</h4>
+        <p>
+          Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. Nella ripresa, c'è un momento essenziale 
+          dopo la Cadenza (il momento di improvvisazione solistica).
+        </p>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">La Coda (innovazione fondamentale)</h4>
+        <div className="space-y-2">
+          <p>
+            Tradizionalmente, dopo la cadenza, l'orchestra chiudeva il movimento da sola. Qui, invece, <strong>Beethoven fa rientrare 
+            il pianoforte</strong>.
+          </p>
+          <p>
+            Il <strong>trillo finale della cadenza</strong> non risolve in un <em>tutti</em> trionfale, ma viene "soffocato" 
+            (choked back) in un <em>pianissimo</em> misterioso. Il pianoforte continua a suonare <strong>arpeggi vibranti</strong> mentre 
+            i timpani scandiscono il ritmo del tema principale, creando un effetto di <strong>tensione e mistero</strong> prima dell'esplosione finale.
+          </p>
+          <p className="text-slate-100 font-semibold">
+            Questo estende il ruolo del solista fino all'ultimissima battuta, anticipando le soluzioni del Quarto e Quinto concerto.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className="space-y-6 animate-fadeIn">
@@ -2175,99 +2125,85 @@ const AnalysisSection = () => {
             {openMovement === mov.id && (
               <div className="p-6 pt-24 bg-slate-900">
                 <p className="text-base text-slate-200 mb-4 pb-4 border-b border-slate-700">{mov.desc}</p>
-                <ul className="space-y-2.5">
-                  {mov.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-slate-300">
-                      <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                
+                {mov.isTable ? (
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse text-sm">
+                      <thead className="bg-slate-800">
+                        <tr>
+                          <th className="border border-slate-600 p-3 text-left text-slate-200 font-semibold">Sezione</th>
+                          <th className="border border-slate-600 p-3 text-left text-slate-200 font-semibold">Sottosezione</th>
+                          <th className="border border-slate-600 p-3 text-left text-slate-200 font-semibold">Battute</th>
+                          <th className="border border-slate-600 p-3 text-left text-slate-200 font-semibold">Descrizione</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {mov.tableData.map((row, idx) => (
+                          <tr key={idx} className="bg-slate-800/50">
+                            {row.sezione && (
+                              <td className="border border-slate-600 p-3 font-semibold text-slate-100 align-top" rowSpan={row.rowSpan || 1}>
+                                {row.sezione}
+                              </td>
+                            )}
+                            <td className="border border-slate-600 p-3 text-slate-300 align-top">
+                              <strong>{row.sottosezione}</strong>
+                            </td>
+                            <td className="border border-slate-600 p-3 text-slate-300 align-top whitespace-nowrap">
+                              {row.battute}
+                            </td>
+                            <td className="border border-slate-600 p-3 text-slate-300">
+                              {row.descrizione}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
+                  <ul className="space-y-2.5">
+                    {mov.details.map((detail, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-slate-300">
+                        <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                {mov.hasModal && (
+                  <div className="mt-6 pt-4 border-t border-slate-700">
+                    <button
+                      onClick={() => openModal('Analisi Dettagliata del Primo Movimento', <AnalisiPrimoMovimentoModal />)}
+                      className="text-xs px-3 py-1.5 bg-slate-800 border border-orange-600 text-orange-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+                    >
+                      → Approfondisci: Analisi Dettagliata
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </div>
         ))}
       </div>
 
-      {/* Analisi Dettagliata I Movimento */}
-      <div id="analisi-primo-movimento" className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
-        <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
-          <Music className="w-5 h-5 text-blue-400 mr-2" />
-          Analisi Dettagliata: I Movimento - Allegro con brio (Do minore)
-        </h3>
-        
-        <div className="space-y-4 text-sm text-slate-300">
-          <p className="text-base text-slate-200">
-            Il primo movimento è il più complesso, strutturato secondo la <strong>Forma di Sonata per Concerto</strong>.
-          </p>
-
-          <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Esposizione 1 (Orchestra)</h4>
-            <div className="space-y-2">
-              <p>
-                Il movimento apre con un <strong>tema "marziale" e scarno</strong>, esposto <em>piano</em> dagli archi all'unisono 
-                (Do-Mib-Sol...). Questo tema definisce il carattere "eroico" e severo.
-              </p>
-              <p>
-                Dopo una transizione che collassa in minore, appare il <strong>Secondo Tema in Mib maggiore</strong> — 
-                una <strong>modulazione insolita</strong> per un Esposizione 1, che normalmente resta in tonica. 
-                Questa "finta" mozartiana crea <strong>instabilità già nella prima esposizione</strong>. 
-                Il tema è più lirico e cantabile, affidato a violini e clarinetti.
-              </p>
-              <p>
-                Il Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
-              </p>
+      {/* Analisi Dettagliata movimenti - ORA NEI MODALI */}
+      
+      {/* Modal generico */}
+      {modalContent && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 overflow-y-auto" onClick={closeModal}>
+          <div className="bg-slate-800 rounded-lg shadow-2xl w-full max-w-3xl border border-slate-600 my-8" onClick={(e) => e.stopPropagation()}>
+            <div className="bg-slate-700 p-4 rounded-t-lg flex justify-between items-center sticky top-0 z-10">
+              <h2 className="text-xl font-bold text-white">{modalContent.title}</h2>
+              <button onClick={closeModal} className="text-white hover:text-slate-300 transition-colors">
+                <X size={24} />
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto max-h-[calc(100vh-200px)]">
+              {modalContent.content}
             </div>
           </div>
-
-          <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Solo 1 (Esposizione del pianoforte)</h4>
-            <div className="space-y-2">
-              <p>
-                <strong className="text-slate-200">L'Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
-                in <em>fortissimo</em> (do-do-do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un'entrata dolce 
-                o preparatoria, ma un'<strong>affermazione di potenza</strong>.
-              </p>
-              <p>
-                Il solista riprende poi il tema principale ma lo elabora immediatamente, dimostrando che il "composto" (l'individuo) 
-                non è semplicemente subordinato alla "massa" (l'orchestra).
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Sviluppo e Ripresa</h4>
-            <p>
-              Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. Nella ripresa, c'è un momento essenziale 
-              dopo la Cadenza (il momento di improvvisazione solistica).
-            </p>
-          </div>
-
-          <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-            <h4 className="text-base font-semibold text-slate-200 mb-3">La Coda (innovazione fondamentale)</h4>
-            <div className="space-y-2">
-              <p>
-                Tradizionalmente, dopo la cadenza, l'orchestra chiudeva il movimento da sola. Qui, invece, <strong>Beethoven fa rientrare 
-                il pianoforte</strong>.
-              </p>
-              <p>
-                Il <strong>trillo finale della cadenza</strong> non risolve in un <em>tutti</em> trionfale, ma viene "soffocato" 
-                (choked back) in un <em>pianissimo</em> misterioso. Il pianoforte continua a suonare <strong>arpeggi vibranti</strong> mentre 
-                i timpani scandiscono il ritmo del tema principale, creando un effetto di <strong>tensione e mistero</strong> prima dell'esplosione finale.
-              </p>
-              <p className="text-slate-100 font-semibold">
-                Questo estende il ruolo del solista fino all'ultimissima battuta, anticipando le soluzioni del Quarto e Quinto concerto.
-              </p>
-            </div>
-          </div>
-
-
         </div>
-      </div>
-
-      {/* Analisi Dettagliata II Movimento - RIMOSSO */}
-
-      {/* Analisi Dettagliata III Movimento - RIMOSSO */}
+      )}
     </div>
   );
 };
