@@ -1,6 +1,9 @@
 SITO: struttura e contenuti estratti
 ==================================
 
+Rigenerato il 17 dicembre 2025.
+
+
 Sezioni / Navigazione (label dei tab):
 - (navigazione non rilevata automaticamente)
 
