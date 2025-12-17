@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Puoi loggare l'errore qui se vuoi
+    // Puoi loggare l’errore qui se vuoi
   }
 
   render() {
@@ -40,24 +40,24 @@ const glossaryData = [
   {
     category: "Terminologia Tecnica",
     items: [
-      { term: "TUTTI", definition: "Termine generico per indicare l'orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare ESPOSIZIONE per le sezioni orchestrali formali." },
-      { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall'orchestra. L'unica sezione di vero solo è la Cadenza." },
-      { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mib maggiore → Do maggiore)." },
-      { term: "Tema primario", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
-      { term: "Secondo tema", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
+      { term: "TUTTI", definition: "Termine generico per indicare l’orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare ESPOSIZIONE per le sezioni orchestrali formali." },
+      { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall’orchestra. L’unica sezione di vero solo è la Cadenza." },
+      { term: "Modulazione", definition: "Passaggio da una tonalità all’altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mib maggiore → Do maggiore)." },
+      { term: "Tema primario", definition: "Il tema principale di un movimento. Nell’Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
+      { term: "Secondo tema", definition: "Tema contrastante, solitamente in tonalità relativa. Nell’Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
       { term: "Episodi di bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli." },
-      { term: "Ponte modulante", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Può utilizzare materiale tematico esistente (come nell'Op. 37, dove il tema principale agisce come 'jolly')." },
+      { term: "Ponte modulante", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Può utilizzare materiale tematico esistente (come nell’Op. 37, dove il tema principale agisce come 'jolly')." },
       { term: "Triade", definition: "Accordo di tre note sovrapposte per terze. Il tema primario del primo movimento è basato sulla scansione (arpeggio) della triade di Do minore (Do-Mib-Sol)." },
-      { term: "Arpeggio", definition: "Esecuzione delle note di un accordo una dopo l'altra invece che simultaneamente. Gli arpeggi sono fondamentali nel secondo movimento e negli episodi di bravura." },
+      { term: "Arpeggio", definition: "Esecuzione delle note di un accordo una dopo l’altra invece che simultaneamente. Gli arpeggi sono fondamentali nel secondo movimento e negli episodi di bravura." },
       { term: "Trillo", definition: "Rapida alternanza tra due note adiacenti." },
-      { term: "Punto coronato", definition: "Simbolo che indica di prolungare una nota a piacere. Nella preparazione della cadenza (fine SOLO 3, prima di batt. 417), segnala la sospensione armonica prima dell'improvvisazione solistica." }
+      { term: "Punto coronato", definition: "Simbolo che indica di prolungare una nota a piacere. Nella preparazione della cadenza (fine SOLO 3, prima di batt. 417), segnala la sospensione armonica prima dell’improvvisazione solistica." }
     ]
   },
   {
     category: "Tonalità e Armonia",
     items: [
-      { term: "Do minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l'Op. 37 alla Patetica, alla Quinta Sinfonia e all'Eroica. Per Beethoven rappresenta il dramma e la lotta." },
-      { term: "Mi maggiore", definition: "Tonalità del secondo movimento (Largo). Estremamente lontana dal Do minore - un salto cromatico audace che crea uno 'shock tonale'. Rappresenta un'oasi lirica e contemplativa." },
+      { term: "Do minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l’Op. 37 alla Patetica, alla Quinta Sinfonia e all’Eroica. Per Beethoven rappresenta il dramma e la lotta." },
+      { term: "Mi maggiore", definition: "Tonalità del secondo movimento (Largo). Estremamente lontana dal Do minore - un salto cromatico audace che crea uno 'shock tonale'. Rappresenta un’oasi lirica e contemplativa." },
       { term: "Mib maggiore", definition: "Tonalità relativa maggiore di Do minore. Usata per il secondo tema del primo movimento." },
       { term: "Do maggiore", definition: "Tonalità parallela maggiore di Do minore. Il terzo movimento conclude in Do maggiore (non nella relativa Mi♭), compiendo il percorso beethoveniano 'dal buio alla luce' - dalla tragedia al trionfo." },
       { term: "Terza Cromatica", definition: "Intervallo tra Do minore e Mi maggiore - una distanza tonale molto remota che rende il secondo movimento un contrasto drammatico e sorprendente." }
@@ -76,13 +76,13 @@ const movementsData = [
     tableData: [
       { sezione: "Esposizione (batt. 1-227)", sottosezione: "Tutti 1 (batt. 1-111)", battute: "1-111", descrizione: "I Tema: esposto dagli archi in Do minore con carattere \"marziale\" e \"cadenzato\" (batt. 1-8).\n• I Tema (Periodo b): esposto dai fiati (batt. 9-16).\n• II Tema: carattere \"cantabile\" e \"ornato\" (batt. 50-74).\n• Coda (batt. 86-111)", rowSpan: 2 },
       { sezione: "", sottosezione: "Solo 1 (batt. 112-227)", battute: "112-227", descrizione: "Ingresso del pianoforte: entra dopo 111 battute con tre potenti scale ascendenti (\"gesto di sfida\").\n• I Tema: riesposto dal pianoforte.\n• II Tema: (batt. 164-171).\n• Episodio di bravura: cascate di note veloci e un trillo finale complesso che sale di grado tre volte (batt. 219-225)." },
-      { sezione: "Sviluppo (batt. 227-309)", sottosezione: "Tutti 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte che segna l'avvio dello sviluppo.\n• Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
-      { sezione: "", sottosezione: "Solo 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore).\n• Elaborazione di elementi tematici in un dialogo serrato con l'orchestra.\n• Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
-      { sezione: "Ripresa (batt. 309-fine)", sottosezione: "Tutti 3 (batt. 309-316)", battute: "309-316", descrizione: "L'orchestra riprende il I Tema in fortissimo, segnando l'avvio formale della Ripresa.", rowSpan: 2 },
+      { sezione: "Sviluppo (batt. 227-309)", sottosezione: "Tutti 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell’orchestra in forte che segna l’avvio dello sviluppo.\n• Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
+      { sezione: "", sottosezione: "Solo 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore).\n• Elaborazione di elementi tematici in un dialogo serrato con l’orchestra.\n• Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
+      { sezione: "Ripresa (batt. 309-fine)", sottosezione: "Tutti 3 (batt. 309-316)", battute: "309-316", descrizione: "L’orchestra riprende il I Tema in fortissimo, segnando l’avvio formale della Ripresa.", rowSpan: 2 },
       { sezione: "", sottosezione: "Solo 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339).\n• II Tema: riesposto (batt. 340-355).\n• Nuovo episodio di bravura (batt. 364-403)." },
       { sezione: "Coda", sottosezione: "Tutti 4 (batt. 403-416)", battute: "403-416", descrizione: "Breve transizione orchestrale che riparte dalla testa del tema e si interrompe su un accordo sospeso (\"corona\"), invitando il solista alla cadenza.", rowSpan: 3 },
       { sezione: "", sottosezione: "Cadenza (batt. 416)", battute: "416", descrizione: "Momento di massima \"esibizione\" del solista, dove il pianoforte è completamente solo.\nIl resto della cadenza (batt. 417-443) disegna un arco ascendente di tensione." },
-      { sezione: "", sottosezione: "Tutti 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale.\n• Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
+      { sezione: "", sottosezione: "Tutti 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale.\n• Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell’orchestra." }
     ]
   },
   {
@@ -91,7 +91,7 @@ const movementsData = [
     key: "Mi maggiore",
     desc: "Movimento lirico e contemplativo. La tonalità di Mi maggiore crea un contrasto drammatico con il Do minore del primo movimento.",
     details: [
-      "Carattere: intimo, meditativo, quasi una preghiera. Il pianoforte dialoga con i legni in un'atmosfera sospesa",
+      "Carattere: intimo, meditativo, quasi una preghiera. Il pianoforte dialoga con i legni in un’atmosfera sospesa",
       "Innovazione tecnica: uso pionieristico del pedale di risonanza del pianoforte Érard nel secondo movimento",
       "Struttura: forma tripartita (A-B-A) con sezione centrale più agitata",
       "Orchestrazione: dialogo cameristico tra pianoforte e fagotti, oboi e archi",
@@ -121,7 +121,7 @@ const interpretersData = [
     conductor: "Malcolm Sargent",
     orchestra: "London Philharmonic",
     year: "1933",
-    description: "Schnabel è 'colui che ha inventato Beethoven moderno'. Non curarti dell'audio frusciante: il fraseggio e la comprensione della struttura sono insuperati. I suoi tempi nel primo movimento hanno fatto scuola.",
+    description: "Schnabel è 'colui che ha inventato Beethoven moderno'. Non curarti dell’audio frusciante: il fraseggio e la comprensione della struttura sono insuperati. I suoi tempi nel primo movimento hanno fatto scuola.",
     style: "Storico, Profondo",
     rating: "⭐⭐⭐⭐ (Audio datato, interpretazione stellare)",
     link: "https://youtu.be/t8z_HiusIL0?si=OO0KRH7dtutylzhs"
@@ -132,14 +132,14 @@ const interpretersData = [
     conductor: "Otto Klemperer",
     orchestra: "Philharmonia Orchestra",
     year: "1957",
-    description: "Due giganti beethoveniani si incontrano a Londra per ricreare l'arte pura. Tutto è perfettamente bilanciato: il virtuosismo è onnipresente ma sempre al servizio del significato, i pianissimi sono pura poesia. Arrau descriveva il rapporto con Klemperer come 'controverso', ma la loro collaborazione live del 1957 alla Royal Festival Hall compì il miracolo. Un incontro straordinario tra due leggendari eredi di scuole e tradizioni, con superba maestria.",
+    description: "Due giganti beethoveniani si incontrano a Londra per ricreare l’arte pura. Tutto è perfettamente bilanciato: il virtuosismo è onnipresente ma sempre al servizio del significato, i pianissimi sono pura poesia. Arrau descriveva il rapporto con Klemperer come 'controverso', ma la loro collaborazione live del 1957 alla Royal Festival Hall compì il miracolo. Un incontro straordinario tra due leggendari eredi di scuole e tradizioni, con superba maestria.",
     style: "Monumentale, profondo, titanico",
     link: "https://youtu.be/iLzjlH9_a6M?si=Wk5cyeFfsx3880nA"
   },
   
   // ⚠️ IL CASO GOULD (1959)
   {
-    name: "⚠️ Glenn Gould (Il Caso Gould - L'Alternativa)",
+    name: "⚠️ Glenn Gould (Il Caso Gould - L’Alternativa)",
     bio: "Pianista canadese (1932-1982), celebre per le sue interpretazioni non convenzionali",
     conductor: "Leonard Bernstein",
     orchestra: "Columbia Symphony Orchestra",
@@ -156,7 +156,7 @@ const interpretersData = [
     conductor: "Ferdinand Leitner",
     orchestra: "Berliner Philharmoniker",
     year: "1961",
-    description: "L'opposto della Argerich. Non è una battaglia, ma pura poesia. Il tocco di Kempff è morbido, 'parlante'. Il secondo movimento (Largo) è di una bellezza spirituale assoluta. Ideale per il primo ascolto.",
+    description: "L’opposto della Argerich. Non è una battaglia, ma pura poesia. Il tocco di Kempff è morbido, 'parlante'. Il secondo movimento (Largo) è di una bellezza spirituale assoluta. Ideale per il primo ascolto.",
     style: "Poetico, Classico",
     rating: "⭐⭐⭐⭐⭐ (Classico)",
     link: "https://www.youtube.com/watch?v=3aNkl7wdWyQ"
@@ -167,7 +167,7 @@ const interpretersData = [
     conductor: "Bernard Haitink",
     orchestra: "Concertgebouw Orchestra",
     year: "1973",
-    description: "Eleganza e nobiltà romantiche. Rubinstein porta al Beethoven la sua straordinaria cantabilità e il suo tocco vellutato. L'approccio è meno 'eroico' e più lirico, con grande attenzione alle sfumature dinamiche e al colore sonoro. Haitink accompagna con sensibilità raffinata.",
+    description: "Eleganza e nobiltà romantiche. Rubinstein porta al Beethoven la sua straordinaria cantabilità e il suo tocco vellutato. L’approccio è meno 'eroico' e più lirico, con grande attenzione alle sfumature dinamiche e al colore sonoro. Haitink accompagna con sensibilità raffinata.",
     style: "Elegante, nobile, lirico",
     link: "https://youtu.be/44a2kZ72RzY?si=7dcdXf7FipvyYkQ1"
   },
@@ -179,26 +179,26 @@ const interpretersData = [
     conductor: "Carlo Maria Giulini",
     orchestra: "Wiener Symphoniker",
     year: "1979 (circa)",
-    description: "Perfezione tecnica assoluta e controllo sovrumano. Michelangeli è un chirurgo del pianoforte: ogni nota è perfettamente calibrata, il suono è cristallino e luminoso. Giulini bilancia questa precisione con calore orchestrale. L'approccio è classico, elegante, quasi apollineo - un Beethoven 'purificato' da ogni eccesso romantico.",
+    description: "Perfezione tecnica assoluta e controllo sovrumano. Michelangeli è un chirurgo del pianoforte: ogni nota è perfettamente calibrata, il suono è cristallino e luminoso. Giulini bilancia questa precisione con calore orchestrale. L’approccio è classico, elegante, quasi apollineo - un Beethoven 'purificato' da ogni eccesso romantico.",
     style: "Cristallino, perfezionista, apollineo",
     link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
   },
 
-  // 🎼 STRUMENTI D'EPOCA (Filologico - 1988-2000)
+  // 🎼 STRUMENTI D’EPOCA (Filologico - 1988-2000)
   {
-    name: "🎼 Steven Lubin (Strumenti d'Epoca - Filologico)",
+    name: "🎼 Steven Lubin (Strumenti d’Epoca - Filologico)",
     bio: "Pianista e fortepianista americano, specialista della prassi esecutiva storica",
     conductor: "Christopher Hogwood",
     orchestra: "Academy of Ancient Music",
     year: "1988",
-    description: "Fortepiano (copia Johann Fritz 1818 ca.). Fondamentale per capire il suono che Beethoven aveva nelle orecchie. L'orchestra è più leggera, il pianoforte più percussivo e secco, i bassi 'gracchiano' deliziosamente. Cambia la percezione del pezzo.",
+    description: "Fortepiano (copia Johann Fritz 1818 ca.). Fondamentale per capire il suono che Beethoven aveva nelle orecchie. L’orchestra è più leggera, il pianoforte più percussivo e secco, i bassi 'gracchiano' deliziosamente. Cambia la percezione del pezzo.",
     style: "Filologico",
     rating: "⭐⭐⭐⭐½",
     link: "https://www.youtube.com/watch?v=SiokgMpfyQw"
   },
   {
     name: "Krystian Zimerman",
-    bio: "Pianista polacco, vincitore del Concorso Chopin 1975, noto per l'eccellenza tecnica",
+    bio: "Pianista polacco, vincitore del Concorso Chopin 1975, noto per l’eccellenza tecnica",
     conductor: "Leonard Bernstein",
     orchestra: "Wiener Philharmoniker",
     year: "1989",
@@ -207,12 +207,12 @@ const interpretersData = [
     link: "https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB"
   },
   {
-    name: "🎼 Maria João Pires (Strumenti d'Epoca)",
+    name: "🎼 Maria João Pires (Strumenti d’Epoca)",
     bio: "Pianista portoghese, celebre per la sua sensibilità interpretativa e il tocco raffinato",
     conductor: "Frans Brüggen",
     orchestra: "Orchestra of the Eighteenth Century",
     year: "2000 (circa)",
-    description: "Esecuzione su strumento d'epoca che unisce la sensibilità poetica di Pires all'approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
+    description: "Esecuzione su strumento d’epoca che unisce la sensibilità poetica di Pires all’approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
     style: "Filologico, Poetico",
     rating: "⭐⭐⭐⭐⭐",
     link: "https://www.youtube.com/watch?v=hR95EK9fEKo"
@@ -224,7 +224,7 @@ const interpretersData = [
     conductor: "Claudio Abbado",
     orchestra: "Mahler Chamber Orchestra",
     year: "2004 (Live a Ferrara)",
-    description: "È l'equilibrio perfetto tra fuoco argentino e cantabilità italiana. Tempi serrati, dinamiche esplosive ma mai fuori controllo. La chimica tra Argerich e Abbado è leggendaria.",
+    description: "È l’equilibrio perfetto tra fuoco argentino e cantabilità italiana. Tempi serrati, dinamiche esplosive ma mai fuori controllo. La chimica tra Argerich e Abbado è leggendaria.",
     style: "Fuoco, Energia",
     rating: "⭐⭐⭐⭐⭐",
     link: "https://www.youtube.com/watch?v=AC4u-sBN3OI"
@@ -297,7 +297,7 @@ const quizData = [
     difficulty: "base"
   },
   {
-    question: "Quale concerto di Mozart è il modello principale dell'Op. 37?",
+    question: "Quale concerto di Mozart è il modello principale dell’Op. 37?",
     options: ["K. 466 in Re minore", "K. 467 in Do maggiore", "K. 491 in Do minore", "K. 537 'Coronation'"],
     correct: 2,
     difficulty: "base"
@@ -334,7 +334,7 @@ const quizData = [
   },
   {
     question: "Quale editore pubblicò per primo il concerto?",
-    options: ["Breitkopf & Härtel", "Bureau des Arts et d'Industrie", "Simrock", "Artaria"],
+    options: ["Breitkopf & Härtel", "Bureau des Arts et d’Industrie", "Simrock", "Artaria"],
     correct: 1,
     difficulty: "base"
   },
@@ -359,14 +359,14 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Qual è l'innovazione tecnica che Beethoven sfruttò nel secondo movimento?",
+    question: "Qual è l’innovazione tecnica che Beethoven sfruttò nel secondo movimento?",
     options: ["Uso pionieristico del pedale di risonanza", "Invenzione del forte-piano", "Uso del pizzicato", "Introduzione del clarinetto basso"],
     correct: 0,
     difficulty: "intermedio"
   },
   {
     question: "Cosa scrisse Beethoven nel Testamento di Heiligenstadt?",
-    options: ["La dedica del concerto", "La disperazione per la sordità", "Le istruzioni per l'esecuzione", "La cadenza del primo movimento"],
+    options: ["La dedica del concerto", "La disperazione per la sordità", "Le istruzioni per l’esecuzione", "La cadenza del primo movimento"],
     correct: 1,
     difficulty: "intermedio"
   },
@@ -377,14 +377,14 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quale altro lavoro fu eseguito nella stessa serata della prima dell'Op. 37?",
+    question: "Quale altro lavoro fu eseguito nella stessa serata della prima dell’Op. 37?",
     options: ["La Quinta Sinfonia", "La Seconda Sinfonia", "Il Fidelio", "La Nona Sinfonia"],
     correct: 1,
     difficulty: "intermedio"
   },
   {
     question: "Come cambia il ruolo del solista rispetto ai concerti mozartiani?",
-    options: ["Diventa più virtuoso", "Si oppone all'orchestra invece di dialogare", "Suona più piano", "Ha meno importanza"],
+    options: ["Diventa più virtuoso", "Si oppone all’orchestra invece di dialogare", "Suona più piano", "Ha meno importanza"],
     correct: 1,
     difficulty: "intermedio"
   },
@@ -395,19 +395,19 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Chi ha registrato l'Op. 37 con Otto Klemperer nel 1957?",
+    question: "Chi ha registrato l’Op. 37 con Otto Klemperer nel 1957?",
     options: ["Michelangeli", "Kempff", "Arrau", "Barenboim"],
     correct: 2,
     difficulty: "intermedio"
   },
   {
-    question: "Quale interprete è famoso per l'approccio 'cristallino e apollineo'?",
+    question: "Quale interprete è famoso per l’approccio 'cristallino e apollineo'?",
     options: ["Arrau", "Michelangeli", "Kempff", "Rubinstein"],
     correct: 1,
     difficulty: "intermedio"
   },
   {
-    question: "Chi suonò con l'Orchestra della RAI di Torino nel 1962?",
+    question: "Chi suonò con l’Orchestra della RAI di Torino nel 1962?",
     options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
     correct: 2,
     difficulty: "intermedio"
@@ -419,13 +419,13 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quanti flauti sono nell'organico orchestrale dell'Op. 37?",
+    question: "Quanti flauti sono nell’organico orchestrale dell’Op. 37?",
     options: ["1", "2", "3", "4"],
     correct: 1,
     difficulty: "intermedio"
   },
   {
-    question: "In quale tonalità sono i clarinetti dell'Op. 37?",
+    question: "In quale tonalità sono i clarinetti dell’Op. 37?",
     options: ["Do", "Sib", "La", "Mib"],
     correct: 1,
     difficulty: "intermedio"
@@ -479,13 +479,13 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Che cosa caratterizza l'ingresso del solista nel primo movimento?",
+    question: "Che cosa caratterizza l’ingresso del solista nel primo movimento?",
     options: ["Un tema nuovo e dolce", "Tre scale ascendenti fortissimo", "Un arpeggio delicato", "Una citazione di Mozart"],
     correct: 1,
     difficulty: "intermedio"
   },
   {
-    question: "Quante battute dura circa l'esposizione orchestrale (ESPOSIZIONE 1)?",
+    question: "Quante battute dura circa l’esposizione orchestrale (ESPOSIZIONE 1)?",
     options: ["50 battute", "111 battute", "227 battute", "343 battute"],
     correct: 1,
     difficulty: "intermedio"
@@ -522,7 +522,7 @@ const quizData = [
   },
   {
     question: "In quale documento Beethoven scrisse della sua disperazione per la sordità?",
-    options: ["Lettera a Bettina Brentano", "Testamento di Heiligenstadt", "Diario personale", "Lettera all'Immortale Amata"],
+    options: ["Lettera a Bettina Brentano", "Testamento di Heiligenstadt", "Diario personale", "Lettera all’Immortale Amata"],
     correct: 1,
     difficulty: "intermedio"
   },
@@ -533,7 +533,7 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quale periodo stilistico di Beethoven inizia con opere come l'Op. 37?",
+    question: "Quale periodo stilistico di Beethoven inizia con opere come l’Op. 37?",
     options: ["Periodo giovanile", "Periodo eroico", "Periodo tardo", "Periodo classico"],
     correct: 1,
     difficulty: "intermedio"
@@ -562,14 +562,14 @@ const quizData = [
     options: ["Trillo troppo lungo", "Trillo nella mano sbagliata", "Trillo sulla nota sbagliata", "Assenza di trillo"],
     correct: 1,
     difficulty: "intermedio",
-    explanation: "Nella cadenza pubblicata nel 1806 c'è un errore celebre: il trillo è scritto nella mano sinistra invece che nella destra, rendendo il passaggio praticamente ineseguibile come scritto."
+    explanation: "Nella cadenza pubblicata nel 1806 c’è un errore celebre: il trillo è scritto nella mano sinistra invece che nella destra, rendendo il passaggio praticamente ineseguibile come scritto."
   },
   {
     question: "Quanti pedali aveva il pianoforte Érard del 1803?",
     options: ["Due", "Tre", "Quattro", "Cinque"],
     correct: 2,
     difficulty: "intermedio",
-    explanation: "Il pianoforte Érard del 1803 aveva quattro pedali: sustain, una corda, moderatore e cembalo (quest'ultimo produceva un effetto simile al clavicembalo)."
+    explanation: "Il pianoforte Érard del 1803 aveva quattro pedali: sustain, una corda, moderatore e cembalo (quest’ultimo produceva un effetto simile al clavicembalo)."
   },
 
   // 🔴 AVANZATO - Domande di analisi teorica approfondita
@@ -583,19 +583,19 @@ const quizData = [
     ],
     correct: 1,
     difficulty: "avanzato",
-    explanation: "Il passaggio da Do minore (I movimento) a Mi maggiore (II movimento) rappresenta un salto cromatico di terza, una scelta tonale audace per l'epoca che Beethoven usa per creare un effetto di 'shock' e contrasto luminoso dopo l'oscurità del primo movimento."
+    explanation: "Il passaggio da Do minore (I movimento) a Mi maggiore (II movimento) rappresenta un salto cromatico di terza, una scelta tonale audace per l’epoca che Beethoven usa per creare un effetto di 'shock' e contrasto luminoso dopo l’oscurità del primo movimento."
   },
   {
     question: "Cosa rappresenta il Esposizione 4 (R4) finale?",
     options: [
       "Una ripetizione identica del Esposizione 1",
       "Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I",
-      "L'eliminazione completa dell'orchestra",
+      "L’eliminazione completa dell’orchestra",
       "Un passaggio al modo maggiore"
     ],
     correct: 1,
     difficulty: "avanzato",
-    explanation: "R4 finale rappresenta una deformazione della norma classica: invece del tutti fortissimo in tonica (I), Beethoven scrive un trillo pianissimo su V7/iv (dominante della sottodominante), creando un'ambiguità tragica e una vittoria incompleta, con il pianoforte che continua solo sotto questo accordo sospeso."
+    explanation: "R4 finale rappresenta una deformazione della norma classica: invece del tutti fortissimo in tonica (I), Beethoven scrive un trillo pianissimo su V7/iv (dominante della sottodominante), creando un’ambiguità tragica e una vittoria incompleta, con il pianoforte che continua solo sotto questo accordo sospeso."
   }
 ];
 
@@ -785,7 +785,7 @@ const FontiSection = () => {
 
                 <div className="bg-slate-900/50 p-3 rounded-md border border-slate-700">
                   <p className="font-semibold">Dettagli</p>
-                  <p className="mt-2"><strong>Recto (lato visibile nell'immagine):</strong></p>
+                  <p className="mt-2"><strong>Recto (lato visibile nell’immagine):</strong></p>
                   <ul className="space-y-1 ml-2">
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
@@ -818,7 +818,7 @@ const FontiSection = () => {
 
                 <div className="text-sm text-slate-300">
                   <p className="font-semibold">Provenienza</p>
-                  <p className="mt-1">Joseph Fischhof (1804-1857), pianista e professore al Conservatorio di Vienna, fu un importante collezionista di partiture e manoscritti beethoveniani. Il frammento testimonia la circolazione di manoscritti fra collezionisti e studiosi nell'Ottocento.</p>
+                  <p className="mt-1">Joseph Fischhof (1804-1857), pianista e professore al Conservatorio di Vienna, fu un importante collezionista di partiture e manoscritti beethoveniani. Il frammento testimonia la circolazione di manoscritti fra collezionisti e studiosi nell’Ottocento.</p>
                 </div>
               </div>
             ))}
@@ -955,17 +955,17 @@ const FontiSection = () => {
                 (Confronto con i concerti di Mozart e analisi delle caratteristiche stilistiche).
               </li>
               <li className="leading-relaxed">
-                <strong>Plantinga, Leon.</strong> <em>Beethoven's Concertos: History, Style, Performance</em>. New York-London: W. W. Norton & Company, 1999, pp. 113-135. 
+                <strong>Plantinga, Leon.</strong> <em>Beethoven’s Concertos: History, Style, Performance</em>. New York-London: W. W. Norton & Company, 1999, pp. 113-135. 
                 (In particolare il Capitolo 6: "On the Origins of Piano Concerto no. 3 in C minor, Op. 37").
               </li>
               <li className="leading-relaxed">
-                <strong>Scalfaro, Anna.</strong> "L'Allegro con brio del Concerto op. 37 di Ludwig van Beethoven: un modello di conversazione". 
+                <strong>Scalfaro, Anna.</strong> "L’Allegro con brio del Concerto op. 37 di Ludwig van Beethoven: un modello di conversazione". 
                 In <em>Musica Docta. Rivista digitale di Pedagogia e Didattica della musica</em>, VI, 2016, pp. 211-237. 
                 (Analisi del primo movimento come dialogo e contesto storico del genere concerto).
               </li>
               <li className="leading-relaxed">
                 <strong>Tovey, Donald Francis.</strong> <em>Essays in Musical Analysis</em>, III: <em>Concertos and Choral Works</em>. London: Oxford University Press, 1936, p. 73. 
-                (Collocazione dell'Op. 37 nella fase eroica beethoveniana).
+                (Collocazione dell’Op. 37 nella fase eroica beethoveniana).
               </li>
               <li className="leading-relaxed">
                 <strong>Yahşi, Fahrettin Eren.</strong> "Thematic Analysis of Op. 37 3. Piano Concerto by L. v. Beethoven: The Third Movement Consisting of the First Movement". 
@@ -999,10 +999,10 @@ const FontiSection = () => {
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Chiantore, Luca.</strong> <em>Beethoven al pianoforte: Improvvisazione, composizione e ricerca sonora negli esercizi tecnici</em>. 
-                Milano: il Saggiatore, 2014. (Fondamentale per il rapporto tra improvvisazione e testo scritto, e per l'aneddoto di Seyfried sulle pagine vuote).
+                Milano: il Saggiatore, 2014. (Fondamentale per il rapporto tra improvvisazione e testo scritto, e per l’aneddoto di Seyfried sulle pagine vuote).
               </li>
               <li className="leading-relaxed">
-                <strong>Czerny, Carl.</strong> <em>On the Proper Performance of All Beethoven's Works for the Piano</em>. Ed. Paul Badura-Skoda. 
+                <strong>Czerny, Carl.</strong> <em>On the Proper Performance of All Beethoven’s Works for the Piano</em>. Ed. Paul Badura-Skoda. 
                 Vienna: Universal Edition, 1970, p. 13. (Testimonianza diretta su Beethoven che dichiara di intraprendere un nuovo percorso compositivo).
               </li>
             </ul>
@@ -1015,7 +1015,7 @@ const FontiSection = () => {
                 <strong>Solomon, Maynard.</strong> <em>Beethoven</em>. New York: Schirmer Books, 1977 (ed. riv. 1998).
               </li>
               <li className="leading-relaxed">
-                <strong>Thayer, Alexander Wheelock.</strong> <em>Thayer's Life of Beethoven</em>. Rev. e ed. da Elliot Forbes. 
+                <strong>Thayer, Alexander Wheelock.</strong> <em>Thayer’s Life of Beethoven</em>. Rev. e ed. da Elliot Forbes. 
                 Princeton: Princeton University Press, 1967.
               </li>
               <li className="leading-relaxed">
@@ -1031,11 +1031,11 @@ const FontiSection = () => {
             <h4 className="text-base font-semibold text-slate-200 mb-3">Fonti epistolari e documentarie</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
-                <strong>Beethoven, Ludwig van.</strong> <em>Beethoven's Letters</em>. Ed. Emily Anderson. 3 voll. London: Macmillan, 1961 (o edizioni successive).
+                <strong>Beethoven, Ludwig van.</strong> <em>Beethoven’s Letters</em>. Ed. Emily Anderson. 3 voll. London: Macmillan, 1961 (o edizioni successive).
               </li>
               <li className="leading-relaxed">
                 <strong>Beethoven, Ludwig van.</strong> <em>Epistolario</em>, I (1783-1807), a cura di Sieghard Brandenburg. Milano: Skira, 1999, pp. 150, 160, 166. 
-                (Lettere agli editori Hoffmeister e Breitkopf &amp; Härtel in cui giudica l'Op. 37 superiore ai primi due concerti).
+                (Lettere agli editori Hoffmeister e Breitkopf &amp; Härtel in cui giudica l’Op. 37 superiore ai primi due concerti).
               </li>
               <li className="leading-relaxed">
                 <em>Ludwig van Beethovens Konversationshefte</em> (Quaderni di Conversazione). Ed. Karl-Heinz Köhler, Grita Herre, et al.
@@ -1075,7 +1075,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
     { year: "1787", event: "Primo viaggio a Vienna. Forse incontra Mozart. Ritorna a Bonn per la morte della madre." },
     { year: "1792", event: "Trasferimento definitivo a Vienna. Inizia gli studi con Haydn." },
     { year: "1795", event: "Primo concerto pubblico a Vienna. Pubblica le prime opere." },
-    { year: "1796-98", event: "Prime manifestazioni della sordità. Inizia il declino dell'udito." },
+    { year: "1796-98", event: "Prime manifestazioni della sordità. Inizia il declino dell’udito." },
     { year: "1800", event: "Prima Sinfonia. Affermazione come compositore oltre che come pianista." },
     { year: "1802", event: "Testamento di Heiligenstadt. Crisi esistenziale profonda." },
     { year: "1803-1814", event: "Periodo Eroico: Terza Sinfonia (Eroica), Quinta, Sesta (Pastorale), Fidelio." },
@@ -1125,8 +1125,8 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
             </p>
             <p>
-              <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era il
-              <em>più grande improvvisatore dell'epoca</em>.
+              <strong className="text-slate-100">L’improvvisatore leggendario:</strong> Beethoven era il
+              <em>più grande improvvisatore dell’epoca</em>.
             </p>
             <p>
               Durante i concerti pubblici le sue improvvisazioni lasciavano il pubblico a bocca aperta. Poteva
@@ -1150,7 +1150,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
     { year: "1802", event: "Testamento di Heiligenstadt (ottobre). Secondo Plantinga: estate 1802 - lavoro intenso al concerto." },
     { year: "1803 (primi mesi)", event: "Completamento definitivo. Analisi paleografica del manoscritto mostra '1803', non '1800' (Plantinga)." },
     { year: "1803 (5 Aprile)", event: "Prima assoluta al Theater an der Wien. Beethoven solista, Seyfried direttore. Partitura incompleta - Beethoven suona 'a memoria'!" },
-    { year: "1804", event: "Pubblicazione da Bureau des Arts et d'Industrie. Dedica al Principe Luigi Ferdinando di Prussia." }
+    { year: "1804", event: "Pubblicazione da Bureau des Arts et d’Industrie. Dedica al Principe Luigi Ferdinando di Prussia." }
   ];
 
   const ConcertoTimelineModal = () => (
@@ -1174,7 +1174,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <ul className="space-y-2 ml-2">
           <li className="flex items-start space-x-2">
             <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-            <span className="text-sm text-slate-300"><strong>Ipotesi Küthen:</strong> composizione principale 1799-1800, destinata a un'accademia prevista per aprile 1800 (mai realizzata).</span>
+            <span className="text-sm text-slate-300"><strong>Ipotesi Küthen:</strong> composizione principale 1799-1800, destinata a un’accademia prevista per aprile 1800 (mai realizzata).</span>
           </li>
           <li className="flex items-start space-x-2">
             <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
@@ -1190,7 +1190,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
           Il concerto nasce quindi tra il <strong>1802 e i primi mesi del 1803</strong>, periodo della transizione dal primo 
-          stile al periodo eroico. È l'opera che segna il <strong>passaggio definitivo da Mozart a Beethoven</strong>.
+          stile al periodo eroico. È l’opera che segna il <strong>passaggio definitivo da Mozart a Beethoven</strong>.
         </p>
       </div>
 
@@ -1229,7 +1229,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       location: "Parigi",
       features: "5 ottave e mezza (FF-c4). Meccanica 'inglese' (più pesante). 4 pedali (liuto, smorzatori, celeste/buff, una corda). Corde triple.",
       period: "Vienna (Ricevuto nel 1803)",
-      notes: "Un dono della ditta Érard legato alla pubblicazione della Sonata Patetica a Parigi. L'estensione extra (fino al Do4) influenzò la Sonata Waldstein (Op. 53) e l'Appassionata (Op. 57). Beethoven trovava la meccanica troppo pesante e nel 1810 lo definì 'inutile' per i danni subiti."
+      notes: "Un dono della ditta Érard legato alla pubblicazione della Sonata Patetica a Parigi. L’estensione extra (fino al Do4) influenzò la Sonata Waldstein (Op. 53) e l’Appassionata (Op. 57). Beethoven trovava la meccanica troppo pesante e nel 1810 lo definì 'inutile' per i danni subiti."
     },
     {
       model: "Streicher (Nannette e Andreas)",
@@ -1268,12 +1268,12 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Introduzione */}
       <div>
-        <h3 className="text-xl font-bold text-slate-100 mb-4">L'evoluzione dello strumento e del compositore</h3>
+        <h3 className="text-xl font-bold text-slate-100 mb-4">L’evoluzione dello strumento e del compositore</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          La carriera di Beethoven (1770-1827) coincide con un momento rivoluzionario nella storia del pianoforte: la <strong>trasformazione dal fortepiano classico al pianoforte romantico moderno</strong>. In soli quarant'anni, lo strumento passò da 5 ottave (FF-f³) a oltre 6 ottave e mezza, da corde doppie a quadruple, da meccaniche leggere a azioni pesanti e potenti.
+          La carriera di Beethoven (1770-1827) coincide con un momento rivoluzionario nella storia del pianoforte: la <strong>trasformazione dal fortepiano classico al pianoforte romantico moderno</strong>. In soli quarant’anni, lo strumento passò da 5 ottave (FF-f³) a oltre 6 ottave e mezza, da corde doppie a quadruple, da meccaniche leggere a azioni pesanti e potenti.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Beethoven non fu solo testimone di questa evoluzione: <strong>la influenzò attivamente</strong> e <strong>ne fu influenzato profondamente</strong>. Ogni nuovo strumento che riceveva o acquistava apriva nuove possibilità compositive. L'estensione del pianoforte Érard (1803) gli permise di scrivere la Waldstein e l'Appassionata; la potenza del <Tooltip text="Il pianoforte Broadwood 1818 era un dono inglese dal suono potente, fondamentale per le ultime opere di Beethoven">
+          Beethoven non fu solo testimone di questa evoluzione: <strong>la influenzò attivamente</strong> e <strong>ne fu influenzato profondamente</strong>. Ogni nuovo strumento che riceveva o acquistava apriva nuove possibilità compositive. L’estensione del pianoforte Érard (1803) gli permise di scrivere la Waldstein e l’Appassionata; la potenza del <Tooltip text="Il pianoforte Broadwood 1818 era un dono inglese dal suono potente, fondamentale per le ultime opere di Beethoven">
             <span className="text-blue-300 underline decoration-dotted cursor-help">Broadwood (1818)</span>
           </Tooltip> accompagnò la nascita della monumentale Hammerklavier.
         </p>
@@ -1302,7 +1302,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           Intorno al 1798 la sordità cambiò radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martellava" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf fu costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Paradossalmente, la perdita dell'udito <strong>liberò Beethoven dai limiti fisici dello strumento</strong>: componeva non più per quello che poteva sentire, ma per quello che immaginava. Le ultime sonate richiedono dinamiche, estensioni e sonorità che superavano le possibilità dei pianoforti dell'epoca.
+          Paradossalmente, la perdita dell’udito <strong>liberò Beethoven dai limiti fisici dello strumento</strong>: componeva non più per quello che poteva sentire, ma per quello che immaginava. Le ultime sonate richiedono dinamiche, estensioni e sonorità che superavano le possibilità dei pianoforti dell’epoca.
         </p>
         <div className="mb-4 flex flex-col gap-4 md:flex-row">
           <div className="md:w-1/2 rounded-lg border border-slate-600 overflow-hidden">
@@ -1350,7 +1350,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           </tbody>
         </table>
         <p className="text-sm text-slate-400 italic mt-4">
-          <strong>Nota <br /></strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l'Érard al Kunsthistorisches Museum di Vienna.
+          <strong>Nota <br /></strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l’Érard al Kunsthistorisches Museum di Vienna.
         </p>
       </div>
     </div>
@@ -1379,7 +1379,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul "Triplo Concerto" (Op. 56)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
           Nella lettera a Breitkopf & Härtel del 26 agosto 1804, Beethoven offre un gruppo
-          di opere (tra cui la Sinfonia Eroica e l'oratorio Cristo sul Monte degli Ulivi) e sottolinea la novità della
+          di opere (tra cui la Sinfonia Eroica e l’oratorio Cristo sul Monte degli Ulivi) e sottolinea la novità della
           combinazione strumentale del Triplo Concerto per incentivarne la pubblicazione.
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
@@ -1391,7 +1391,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           </p>
         </div>
         <p className="text-sm text-slate-300 italic">
-          <strong>Nota:</strong> il Triplo Concerto non ebbe grande successo né all'epoca né oggi. Beethoven stesso
+          <strong>Nota:</strong> il Triplo Concerto non ebbe grande successo né all’epoca né oggi. Beethoven stesso
           sembrava consapevole della sua natura sperimentale più che del suo valore assoluto.
         </p>
       </div>
@@ -1402,7 +1402,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <p className="text-sm text-slate-300 mb-3 italic">
           <strong>Contesto:</strong> Ferdinand Ries racconta che Beethoven gli portò lo spartito del concerto appena
           completato, pretendendo che lo eseguisse in pubblico con soli cinque giorni di preavviso. Ries rifiutò per la
-          brevità del tempo, scatenando l'ira di Beethoven, che si rivolse al pianista Friedrich Stein. Stein accettò,
+          brevità del tempo, scatenando l’ira di Beethoven, che si rivolse al pianista Friedrich Stein. Stein accettò,
           ma non riuscendo a padroneggiare il concerto in tempo, finì per suonare invece il Terzo Concerto (Op. 37).
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
@@ -1416,7 +1416,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <p className="text-sm text-slate-300 italic">
           <strong>Epilogo:</strong> Stein, incapace di preparare il concerto in tempo, finì per eseguire il Terzo
           Concerto (Op. 37) anziché il Quarto. Beethoven stesso eseguì la prima pubblica del Quarto Concerto solo
-          il <strong>22 dicembre 1808</strong> all'Akademie al Theater an der Wien, in un concerto maratona che
+          il <strong>22 dicembre 1808</strong> all’Akademie al Theater an der Wien, in un concerto maratona che
           includeva anche la Quinta e la Sesta Sinfonia, la Fantasia Corale Op. 80 e brani della Messa in Do maggiore
           Op. 86.
         </p>
@@ -1426,37 +1426,37 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quinto Concerto "Imperatore" (Op. 73)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
-          <strong>Contesto:</strong> questo concerto fu composto nel 1809, l'anno dell'invasione napoleonica. Durante
-          il bombardamento e l'occupazione di Vienna (12 maggio - novembre 1809), Beethoven si rifugiò nella casa del
+          <strong>Contesto:</strong> questo concerto fu composto nel 1809, l’anno dell’invasione napoleonica. Durante
+          il bombardamento e l’occupazione di Vienna (12 maggio - novembre 1809), Beethoven si rifugiò nella casa del
           fratello Caspar Carl; le lettere e gli appunti di questo periodo riflettono la profonda angoscia per le
-          condizioni esterne, descrivendo la sua vita come una «morte» rispetto all'immortalità artistica a cui aspirava.
+          condizioni esterne, descrivendo la sua vita come una «morte» rispetto all’immortalità artistica a cui aspirava.
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-amber-500">
           <div className="mb-3">
             <p className="text-sm text-slate-200 leading-relaxed mb-2">
-              <strong>Contesto storico e carattere:</strong> l'opera appartiene all'anno dell'invasione, 1809.
-              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) definì questo concerto «l'apoteosi del concetto militare» in Beethoven.
-              Grazie ai suoi ritmi e alle melodie energiche, l'opera non solo soddisfaceva, ma superava le aspettative di un pubblico che reclamava uno stile marziale.
+              <strong>Contesto storico e carattere:</strong> l’opera appartiene all’anno dell’invasione, 1809.
+              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) definì questo concerto «l’apoteosi del concetto militare» in Beethoven.
+              Grazie ai suoi ritmi e alle melodie energiche, l’opera non solo soddisfaceva, ma superava le aspettative di un pubblico che reclamava uno stile marziale.
             </p>
             <p className="text-sm text-slate-200 leading-relaxed mb-2">
-              <strong>Dedicatario:</strong> fu pubblicato nel febbraio 1811 con una dedica all'Arciduca Rodolfo, il
+              <strong>Dedicatario:</strong> fu pubblicato nel febbraio 1811 con una dedica all’Arciduca Rodolfo, il
               protettore più importante di Beethoven, al quale il compositore fu legato da profonda gratitudine per
-              tutta la vita. In una lettera successiva all'Arciduca Rodolfo (riferita alla Missa Solemnis Op. 123,
-              composta 1819-1823 e anch'essa dedicata a lui), Beethoven scrisse:
+              tutta la vita. In una lettera successiva all’Arciduca Rodolfo (riferita alla Missa Solemnis Op. 123,
+              composta 1819-1823 e anch’essa dedicata a lui), Beethoven scrisse:
             </p>
             <p className="text-sm text-slate-200 leading-relaxed italic">
               «Nulla è più sublime che avvicinarsi alla divinità più degli altri mortali, e mediante quel contatto
               diffondere i raggi della divinità tra il genere umano».
             </p>
             <p className="text-sm text-slate-300 leading-relaxed mt-2">
-              Queste parole rivelano l'importanza spirituale che Beethoven attribuiva al rapporto con il suo allievo
+              Queste parole rivelano l’importanza spirituale che Beethoven attribuiva al rapporto con il suo allievo
               e mecenate.
             </p>
           </div>
           <div className="bg-slate-800 p-3 rounded">
             <p className="text-sm text-slate-400 mb-1">Nota nel catalogo di Lenz:</p>
             <p className="text-sm text-slate-200 leading-relaxed">
-              Wilhelm von Lenz descrisse l'opera con questa celebre definizione: «L'orgoglio del pianoforte
+              Wilhelm von Lenz descrisse l’opera con questa celebre definizione: «L’orgoglio del pianoforte
               in quanto strumento da concerto».
             </p>
           </div>
@@ -1470,8 +1470,8 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
   const CadenzeModal = () => (
     <div className="space-y-4 text-sm text-slate-300">
       <p className="text-base text-slate-200">
-        Nel <strong>1809</strong>, sei anni dopo la prima esecuzione, Beethoven scrisse tre cadenze per il primo movimento dell'Op. 37, 
-        catalogate come <strong>WoO 58</strong> (Werke ohne Opuszahl - opere senza numero d'opus).
+        Nel <strong>1809</strong>, sei anni dopo la prima esecuzione, Beethoven scrisse tre cadenze per il primo movimento dell’Op. 37, 
+        catalogate come <strong>WoO 58</strong> (Werke ohne Opuszahl - opere senza numero d’opus).
       </p>
 
       <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
@@ -1479,7 +1479,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <div className="space-y-3">
           <div>
             <p className="font-semibold text-slate-100">WoO 58 n. 1 - Breve e classica</p>
-            <p className="text-sm text-slate-400">70 battute → Stile più contenuto, vicino all'estetica del 1803</p>
+            <p className="text-sm text-slate-400">70 battute → Stile più contenuto, vicino all’estetica del 1803</p>
           </div>
           <div>
             <p className="font-semibold text-slate-100">WoO 58 n. 2 - Moderata</p>
@@ -1502,7 +1502,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </p>
         <p className="text-sm italic text-slate-400">
           Questo dimostra che Beethoven non considerava la cadenza come parte immutabile del concerto, 
-          ma come spazio di libertà espressiva legato al momento dell'esecuzione.
+          ma come spazio di libertà espressiva legato al momento dell’esecuzione.
         </p>
       </div>
 
@@ -1537,7 +1537,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       <div className="mt-3 p-3 bg-blue-900/20 rounded text-sm text-slate-200 border-l-2 border-blue-500">
         💡 <strong>Curiosità:</strong> Clara Schumann fu tra le prime donne a eseguire questo concerto in pubblico (1840), 
-        sfidando le convenzioni dell'epoca che scoraggiavano le donne dall'eseguire opere così impegnative.
+        sfidando le convenzioni dell’epoca che scoraggiavano le donne dall’eseguire opere così impegnative.
       </div>
 
       <p className="text-sm text-slate-400 italic pt-3 border-t border-slate-700">
@@ -1562,8 +1562,8 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Le guerre napoleoniche (1792-1815)</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          L'Europa è sconvolta dalle <strong>guerre napoleoniche</strong>. La <strong>Rivoluzione francese</strong> (1789) 
-          aveva rovesciato l'ordine monarchico, proclamando libertà, uguaglianza e fraternità. <strong>Napoleone Bonaparte</strong> emerge 
+          L’Europa è sconvolta dalle <strong>guerre napoleoniche</strong>. La <strong>Rivoluzione francese</strong> (1789) 
+          aveva rovesciato l’ordine monarchico, proclamando libertà, uguaglianza e fraternità. <strong>Napoleone Bonaparte</strong> emerge 
           come generale nel 1796 e diventa primo console nel 1799, poi imperatore nel 1804.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
@@ -1575,14 +1575,14 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       </div>
 
       <div>
-        <h3 className="text-lg font-semibold text-slate-100 mb-2">Vienna: la capitale musicale d'Europa</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Vienna: la capitale musicale d’Europa</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d'Europa: 
-          nella città viveva <strong>Haydn</strong> ed era stata la casa di <strong>Mozart</strong>. L'imperatore{' '}
-          <Tooltip text="Francesco II d'Asburgo (1768-1835): ultimo imperatore del Sacro Romano Impero (1792-1806), primo imperatore d'Austria come Francesco I (1804-1835). Violinista dilettante, incarnava il gusto musicale della corte viennese.">
+          Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d’Europa: 
+          nella città viveva <strong>Haydn</strong> ed era stata la casa di <strong>Mozart</strong>. L’imperatore{' '}
+          <Tooltip text="Francesco II d’Asburgo (1768-1835): ultimo imperatore del Sacro Romano Impero (1792-1806), primo imperatore d’Austria come Francesco I (1804-1835). Violinista dilettante, incarnava il gusto musicale della corte viennese.">
             <span className="text-blue-300 underline decoration-dotted cursor-help">Francesco II</span>
           </Tooltip>{' '}
-          suonava il violino, e l'aristocrazia viennese considerava un dovere e un onore finanziare musicisti e concerti.
+          suonava il violino, e l’aristocrazia viennese considerava un dovere e un onore finanziare musicisti e concerti.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
           Il sistema del <strong>mecenatismo</strong> permetteva ai compositori di vivere grazie al sostegno economico della nobiltà, 
@@ -1612,9 +1612,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                 <td className="border border-slate-600 p-2">Sonata Patetica Op. 13, Concerto n. 2 Op. 19, Trii Op. 1</td>
               </tr>
               <tr>
-                <td className="border border-slate-600 p-2 font-semibold">Arciduca Rodolfo d'Austria</td>
+                <td className="border border-slate-600 p-2 font-semibold">Arciduca Rodolfo d’Austria</td>
                 <td className="border border-slate-600 p-2">1788-1831</td>
-                <td className="border border-slate-600 p-2">Allievo, fratello dell'imperatore</td>
+                <td className="border border-slate-600 p-2">Allievo, fratello dell’imperatore</td>
                 <td className="border border-slate-600 p-2">Rendita vitalizia (dal 1809)</td>
                 <td className="border border-slate-600 p-2">Concerti n. 4 e 5, Sonata Arciduca Op. 97, Les Adieux Op. 81a, Hammerklavier Op. 106, Missa Solemnis Op. 123</td>
               </tr>
@@ -1648,7 +1648,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <h3 className="text-lg font-semibold text-slate-100 mb-2">La rendita garantita del 1809</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
           Nel 1809, tre mecenati (Arciduca Rodolfo, Lobkowitz e il Principe Ferdinand Kinsky) garantirono a Beethoven una{' '}
-          <strong>rendita vitalizia di 4.000 fiorini annui</strong> per impedirgli di lasciare Vienna e accettare l'offerta del 
+          <strong>rendita vitalizia di 4.000 fiorini annui</strong> per impedirgli di lasciare Vienna e accettare l’offerta del 
           re di Westfalia. Questa sicurezza economica permise a Beethoven di comporre senza pressioni finanziarie.
         </p>
         <div className="bg-slate-800/50 p-3 rounded text-sm text-slate-300 space-y-1">
@@ -1656,7 +1656,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <ul className="space-y-1 ml-2">
             <li className="flex items-start space-x-2">
               <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-              <span>Solo davanti all'Arciduca Rodolfo, Beethoven toglieva il cappello in segno di rispetto</span>
+              <span>Solo davanti all’Arciduca Rodolfo, Beethoven toglieva il cappello in segno di rispetto</span>
             </li>
             <li className="flex items-start space-x-2">
               <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
@@ -1698,13 +1698,13 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
         <div className="mb-5">
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            Il Concerto per pianoforte n. 3 in Do minore, Op. 37 rappresenta l'inizio dei concerti maturi di Beethoven: iniziato nel 1799, fu completato all'inizio del 1803.
+            Il Concerto per pianoforte n. 3 in Do minore, Op. 37 rappresenta l’inizio dei concerti maturi di Beethoven: iniziato nel 1799, fu completato all’inizio del 1803.
           </p>
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma era sovraccarico: Beethoven eseguì nuovamente la Sinfonia n. 1, presentò per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l'oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l'eccessiva durata dell'Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrisse: «Il concerto è iniziato alle sei, ma è durato così tanto che un paio di brani non sono stati eseguiti».
+            La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma era sovraccarico: Beethoven eseguì nuovamente la Sinfonia n. 1, presentò per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l’oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l’eccessiva durata dell’Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrisse: «Il concerto è iniziato alle sei, ma è durato così tanto che un paio di brani non sono stati eseguiti».
           </p>
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            Dei cinque concerti per pianoforte scritti da Beethoven, Mozart ne compose venticinque; il compositore considerava i primi due inferiori all'op. 37. Quest'ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
+            Dei cinque concerti per pianoforte scritti da Beethoven, Mozart ne compose venticinque; il compositore considerava i primi due inferiori all’op. 37. Quest’ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
           </p>
         </div>
 
@@ -1795,7 +1795,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               alt="Theater an der Wien nel 1803"
               className="w-full h-48 sm:h-72 object-cover rounded-lg max-h-[55vh]"
             />
-            <p className="text-sm text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d'epoca.</p>
+            <p className="text-sm text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d’epoca.</p>
           </div>
 
           <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-600 shadow-lg mb-4">
@@ -1806,8 +1806,8 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             </p>
             <p className="text-sm text-slate-400 mb-2">A Franz Anton Hoffmeister (editore a Lipsia), circa 15 dicembre 1800 o 15 gennaio 1801:</p>
             <p className="text-sm text-slate-200 leading-relaxed italic">
-              «Terzo, un concerto per pianoforte [l'Op. 19] che in verità non spaccio per uno dei
-              miei migliori, così come un altro [l'Op. 15] che uscirà qui da Mollo (per informazione ai recensori
+              «Terzo, un concerto per pianoforte [l’Op. 19] che in verità non spaccio per uno dei
+              miei migliori, così come un altro [l’Op. 15] che uscirà qui da Mollo (per informazione ai recensori
               di Lipsia), perché i migliori li tengo ancora per me, finché non farò io stesso un viaggio; tuttavia
               non dovrebbe essere una vergogna per voi stamparlo».
             </p>
@@ -1840,8 +1840,8 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             Contesto storico
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            Vienna 1792: Beethoven era già stato in città nel 1789 per studiare con Mozart, ma dovette tornare rapidamente a Bonn per seguire la madre ammalata. Tornato nel 1792, trovò una capitale musicale dominata da Haydn e ancora segnata dalla memoria di Mozart, scomparso solo l'anno prima.
-            Le guerre napoleoniche (1792-1815) sconvolgono l'Europa.
+            Vienna 1792: Beethoven era già stato in città nel 1789 per studiare con Mozart, ma dovette tornare rapidamente a Bonn per seguire la madre ammalata. Tornato nel 1792, trovò una capitale musicale dominata da Haydn e ancora segnata dalla memoria di Mozart, scomparso solo l’anno prima.
+            Le guerre napoleoniche (1792-1815) sconvolgono l’Europa.
           </p>
           <button
             onClick={() => openModal('Contesto Geopolitico', <ContestoGeopoliticoModal />)}
@@ -1869,7 +1869,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             Vita di Beethoven
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            1770-1827: nato a Bonn, protetto da <Tooltip text="Il conte Ferdinand von Waldstein fu il primo grande mecenate di Beethoven, gli offrì borse di studio e lo sostenne nei viaggi a Vienna">Waldstein</Tooltip> e formato da Haydn prima dell'incontro con Mozart; la crisi di Heiligenstadt (1802) segnò l'inizio del suo periodo eroico. Stabilizzatosi a Vienna, affrontò la sordità crescente mentre componeva sinfonie, concerti e sonate che lo consacrarono come genio immortale.
+            1770-1827: nato a Bonn, protetto da <Tooltip text="Il conte Ferdinand von Waldstein fu il primo grande mecenate di Beethoven, gli offrì borse di studio e lo sostenne nei viaggi a Vienna">Waldstein</Tooltip> e formato da Haydn prima dell’incontro con Mozart; la crisi di Heiligenstadt (1802) segnò l’inizio del suo periodo eroico. Stabilizzatosi a Vienna, affrontò la sordità crescente mentre componeva sinfonie, concerti e sonate che lo consacrarono come genio immortale.
           </p>
           <button
             onClick={() => openModal('Cronologia: vita di Ludwig van Beethoven', <BeethovenLifeModal />)}
@@ -1897,7 +1897,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             Genesi del Concerto
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            1796-1803: abbozzi, Testamento di Heiligenstadt e prima esecuzione al Theater an der Wien con partitura incompleta; il ritorno definitivo a Vienna nel 1792 consolidò la sua vocazione eroica, lettere agli editori e correzioni successive intrecciarono un percorso travagliato fino all'edizione definitiva del 1803.
+            1796-1803: abbozzi, Testamento di Heiligenstadt e prima esecuzione al Theater an der Wien con partitura incompleta; il ritorno definitivo a Vienna nel 1792 consolidò la sua vocazione eroica, lettere agli editori e correzioni successive intrecciarono un percorso travagliato fino all’edizione definitiva del 1803.
           </p>
           <button
             onClick={() => openModal('Cronologia: Concerto n. 3 in Do minore, Op. 37', <ConcertoTimelineModal />)}
@@ -1925,7 +1925,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             I pianoforti di Beethoven
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            Stein, Graf ed Érard guidarono l'evoluzione degli strumenti di Beethoven. L'Érard del 1803 con i suoi quattro pedali ampliò le possibilità dinamiche e timbriche, aiutando il compositore a scrivere le opere del periodo eroico.
+            Stein, Graf ed Érard guidarono l’evoluzione degli strumenti di Beethoven. L’Érard del 1803 con i suoi quattro pedali ampliò le possibilità dinamiche e timbriche, aiutando il compositore a scrivere le opere del periodo eroico.
           </p>
           <button
             onClick={() => openModal('I Pianoforti di Beethoven', <PianofortiModal />)}
@@ -1939,7 +1939,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Link rapidi */}
       <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-        <h3 className="text-sm font-semibold text-slate-300 mb-3">🔗 Esplora l'app</h3>
+        <h3 className="text-sm font-semibold text-slate-300 mb-3">🔗 Esplora l’app</h3>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setActiveTab('analysis')}
@@ -2012,7 +2012,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
               <div className="bg-slate-900 p-4 rounded-lg">
                 <h4 className="text-base font-semibold text-slate-100 mb-3">Struttura</h4>
-                <p className="mb-3">L'opera è suddivisa in tre movimenti:</p>
+                <p className="mb-3">L’opera è suddivisa in tre movimenti:</p>
                 <ol className="space-y-1.5 list-decimal list-inside">
                   <li><strong>Allegro moderato</strong></li>
                   <li><strong>Larghetto</strong></li>
@@ -2056,7 +2056,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               <div className="bg-slate-800/50 p-4 rounded-lg border border-blue-500/30 mt-4">
                 <h4 className="text-base font-semibold text-slate-100 mb-2 flex items-center">
                   <span className="mr-2">🎵</span>
-                  Ascolta l'esecuzione
+                  Ascolta l’esecuzione
                 </h4>
                 <p className="text-sm text-slate-300 mb-3">
                   Berlin Chamber Orchestra diretta da Peter Gülke, con Eva Ander al pianoforte
@@ -2306,16 +2306,16 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
         <h4 className="text-base font-semibold text-slate-200 mb-3">Esposizione 1 (Orchestra)</h4>
         <div className="space-y-2">
           <p>
-            Il movimento apre con un <strong>tema "marziale" e scarno</strong>, esposto <em>piano</em> dagli archi all'unisono 
+            Il movimento apre con un <strong>tema "marziale" e scarno</strong>, esposto <em>piano</em> dagli archi all’unisono 
             (Do-Mib-Sol...). Questo tema definisce il carattere "eroico" e severo.
           </p>
           <p>
             Dopo una transizione appare il <strong>Secondo Tema in Mib maggiore</strong>, 
-            una <strong>modulazione insolita</strong> per un'esposizione 1 che normalmente resta in tonica. 
+            una <strong>modulazione insolita</strong> per un’esposizione 1 che normalmente resta in tonica. 
             Il tema è più lirico e cantabile, affidato a violini e clarinetti.
           </p>
           <p>
-            L'Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
+            L’Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l’ingresso del solista.
           </p>
         </div>
       </div>
@@ -2324,13 +2324,13 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
         <h4 className="text-base font-semibold text-slate-200 mb-3">Solo 1 (esposizione del pianoforte)</h4>
         <div className="space-y-2">
           <p>
-            <strong className="text-slate-200">L'Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
-            in <em>fortissimo</em> (Do-Do-Do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un'entrata dolce 
+            <strong className="text-slate-200">L’Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
+            in <em>fortissimo</em> (Do-Do-Do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un’entrata dolce 
             o preparatoria, ma un'<strong>affermazione di potenza</strong>.
           </p>
           <p>
-            Il solista riprende poi il tema principale ma lo elabora immediatamente, dimostrando che il "composto" (l'individuo) 
-            non è semplicemente subordinato alla "massa" (l'orchestra).
+            Il solista riprende poi il tema principale ma lo elabora immediatamente, dimostrando che il "composto" (l’individuo) 
+            non è semplicemente subordinato alla "massa" (l’orchestra).
           </p>
         </div>
       </div>
@@ -2338,7 +2338,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
         <h4 className="text-base font-semibold text-slate-200 mb-3">Sviluppo e Ripresa</h4>
         <p>
-          Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. La Ripresa ripropone il materiale ascoltato durante l'esposizione, ulteriormente arricchito.
+          Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. La Ripresa ripropone il materiale ascoltato durante l’esposizione, ulteriormente arricchito.
         </p>
       </div>
 
@@ -2346,16 +2346,16 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
         <h4 className="text-base font-semibold text-slate-200 mb-3">La Coda (innovazione fondamentale)</h4>
         <div className="space-y-2">
           <p>
-            Tradizionalmente, dopo la cadenza, l'orchestra chiudeva il movimento da sola; qui, invece, <strong>Beethoven fa rientrare 
+            Tradizionalmente, dopo la cadenza, l’orchestra chiudeva il movimento da sola; qui, invece, <strong>Beethoven fa rientrare 
             il pianoforte</strong>.
           </p>
           <p>
             Il <strong>trillo finale della cadenza</strong> non risolve in un <em>tutti</em> trionfale, ma viene "soffocato" 
              in un <em>pianissimo</em> misterioso. Il pianoforte continua a suonare <strong>arpeggi vibranti</strong> mentre 
-            i timpani scandiscono il ritmo del tema principale, creando un effetto di <strong>tensione e mistero</strong> prima dell'esplosione finale.
+            i timpani scandiscono il ritmo del tema principale, creando un effetto di <strong>tensione e mistero</strong> prima dell’esplosione finale.
           </p>
           <p className="text-slate-100 font-semibold">
-            Questo estende il ruolo del solista fino all'ultimissima battuta, anticipando le soluzioni del Quarto e Quinto concerto.
+            Questo estende il ruolo del solista fino all’ultimissima battuta, anticipando le soluzioni del Quarto e Quinto concerto.
           </p>
         </div>
       </div>
@@ -2371,7 +2371,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
             <h2 className="text-3xl font-bold text-slate-100 mb-4">Analisi Musicale</h2>
             <p className="text-slate-300 leading-relaxed mb-6">
               Un viaggio attraverso la struttura formale del Concerto n. 3. 
-              Scopri l'architettura sonora, i temi, le modulazioni e le innovazioni 
+              Scopri l’architettura sonora, i temi, le modulazioni e le innovazioni 
               che rendono questo capolavoro un punto di svolta nella storia della musica.
             </p>
             <ul className="space-y-2 text-blue-200 text-sm list-none">
@@ -2759,7 +2759,7 @@ const InterpretersSection = () => {
           <div className="p-8 md:p-10 flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-slate-100 mb-4">Interpretazioni del Concerto</h2>
             <p className="text-slate-300 leading-relaxed">
-              Un viaggio attraverso le grandi registrazioni che hanno segnato la storia dell'interpretazione, 
+              Un viaggio attraverso le grandi registrazioni che hanno segnato la storia dell’interpretazione, 
               dalle leggendarie incisioni storiche alle esecuzioni filologiche su fortepiano, 
               fino alle performance contemporanee di riferimento.
             </p>
@@ -2817,7 +2817,7 @@ const InterpretersSection = () => {
             </div>
             <div className="text-left">
               <h3 className="text-xl font-bold text-white">Interpretazioni con fortepiano (1988-2000)</h3>
-              <p className="text-slate-400 text-sm">Approccio filologico su strumenti d'epoca</p>
+              <p className="text-slate-400 text-sm">Approccio filologico su strumenti d’epoca</p>
             </div>
           </div>
           <ChevronDown className={`w-6 h-6 text-slate-400 transition-transform ${openCategory === 'fortepiano' ? 'rotate-180' : ''}`} />
@@ -3074,12 +3074,12 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
         <img
           src="/images/beethoven-conducting-orchestra.jpg"
-          alt="Beethoven dirige un'orchestra nonostante la sordità"
+          alt="Beethoven dirige un’orchestra nonostante la sordità"
           className="w-full h-64 object-contain rounded-lg"
         />
         <p className="text-sm text-slate-400 mt-3 italic text-center">
-          Ludwig van Beethoven dirige un'orchestra nonostante la sordità.<br/>
-          <span className="text-slate-500">Scuola francese, XIX secolo - da "Le leggende dell'arte: Musicisti" (Parigi, ca. 1890)</span>
+          Ludwig van Beethoven dirige un’orchestra nonostante la sordità.<br/>
+          <span className="text-slate-500">Scuola francese, XIX secolo - da "Le leggende dell’arte: Musicisti" (Parigi, ca. 1890)</span>
         </p>
       </div>
 
@@ -3091,7 +3091,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
           Teoria musicale del Concerto: dalla storia del genere alle forme classiche (Sonata e Rondò),
-          fino alle tecniche compositive come la Cadenza e il Fugato utilizzate da Beethoven nell'Op. 37.
+          fino alle tecniche compositive come la Cadenza e il Fugato utilizzate da Beethoven nell’Op. 37.
         </p>
       </div>
 
@@ -3108,7 +3108,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5 text-orange-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">Che cos'è il Concerto? Storia ed evoluzione del genere</h3>
+              <h3 className="text-lg font-semibold">Che cos’è il Concerto? Storia ed evoluzione del genere</h3>
               <span className="text-sm opacity-90">Dal Barocco al Novecento</span>
             </div>
           </div>
@@ -3121,7 +3121,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
               <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-orange-500">
                 <h4 className="text-base font-semibold text-slate-200 mb-3">Etimologia e concetto</h4>
                 <p className="mb-3">
-                  Il termine <strong>"Concerto"</strong> possiede un'etimologia doppia e apparentemente contraddittoria:
+                  Il termine <strong>"Concerto"</strong> possiede un’etimologia doppia e apparentemente contraddittoria:
                 </p>
                 <ul className="space-y-2 ml-2">
                   <li className="flex items-start space-x-2">
@@ -3130,7 +3130,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   </li>
                   <li className="flex items-start space-x-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-slate-200">Dall'italiano <em>concertare</em> = <strong>accordarsi, agire insieme</strong></span>
+                    <span className="text-sm text-slate-200">Dall’italiano <em>concertare</em> = <strong>accordarsi, agire insieme</strong></span>
                   </li>
                 </ul>
                 <p className="mt-3 text-slate-200">
@@ -3276,7 +3276,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <div className="bg-slate-800/50 p-3 rounded">
                   <h5 className="font-semibold text-slate-200 text-sm mb-2">1. Barocco: polarità e esposizione</h5>
                   <p className="text-xs">
-                    In Vivaldi e Torelli, il concerto si basa sull'<strong>architettura</strong>. L'orchestra stabilisce 
+                    In Vivaldi e Torelli, il concerto si basa sull'<strong>architettura</strong>. L’orchestra stabilisce 
                     la tonalità con un <strong>Esposizione</strong> ricorrente. Il solista suona episodi virtuosistici 
                     modulanti tra i ritornelli. Forma additiva, alternanza netta.
                   </p>
@@ -3290,7 +3290,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <ul className="space-y-1 ml-2">
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                      <span className="text-xs text-slate-200">L'orchestra apre con quasi-esposizione completa (Esposizione 1), ma resta in tonica</span>
+                      <span className="text-xs text-slate-200">L’orchestra apre con quasi-esposizione completa (Esposizione 1), ma resta in tonica</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
@@ -3327,11 +3327,11 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <div className="bg-slate-800/50 p-3 rounded border-l-2 border-blue-500">
                   <h5 className="font-semibold text-slate-200 text-sm mb-2">🎭 Il Concerto come metafora sociale</h5>
                   <p className="text-xs mb-2">
-                    Il concerto rappresenta l'individuo (solista) contro o insieme alla società (orchestra):
+                    Il concerto rappresenta l’individuo (solista) contro o insieme alla società (orchestra):
                   </p>
                   <ul className="space-y-1 text-xs ml-2">
                     <li>• <strong>Mozart:</strong> dialogo ideale e cooperazione</li>
-                    <li>• <strong>Beethoven:</strong> l'eroe che si afferma e guida (scale imperiose, Op. 37)</li>
+                    <li>• <strong>Beethoven:</strong> l’eroe che si afferma e guida (scale imperiose, Op. 37)</li>
                     <li>• <strong>Romanticismo:</strong> il virtuoso soprannaturale domina la massa (Paganini)</li>
                   </ul>
                 </div>
@@ -3374,7 +3374,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <p className="mb-3">
                   Il principio di base è l'<strong>alternanza regolare</strong> tra un tema principale, detto <strong>refrain</strong> 
                   (o esposizione), e sezioni contrastanti dette <strong>couplets</strong> (o episodi). Il refrain viene esposto 
-                  nella tonalità d'impianto e ritorna più volte, mentre gli episodi sono solitamente in tonalità diverse e 
+                  nella tonalità d’impianto e ritorna più volte, mentre gli episodi sono solitamente in tonalità diverse e 
                   offrono materiale contrastante.
                 </p>
                 
@@ -3406,7 +3406,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <h4 className="text-base font-semibold text-slate-200 mb-3">La forma Sonata-Rondò</h4>
                 <p className="mb-3">
                   La forma sonata-rondò (classificata nella teoria analitica moderna) 
-                  integra l'alternanza tematica del rondò con la tripartizione della sonata (Esposizione, Sviluppo, Ripresa).
+                  integra l’alternanza tematica del rondò con la tripartizione della sonata (Esposizione, Sviluppo, Ripresa).
                 </p>
                 
                 <div className="bg-slate-900/50 p-3 rounded">
@@ -3425,11 +3425,11 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <div className="border-l-2 border-blue-500 pl-3">
                       <p className="font-semibold text-slate-200">Ripresa (A-B)</p>
                       <p>Il refrain (A) ritorna, seguito dalla ripresa del primo episodio (B), che viene trasposto 
-                      nella tonalità d'impianto (tonica), risolvendo la tensione tonale.</p>
+                      nella tonalità d’impianto (tonica), risolvendo la tensione tonale.</p>
                     </div>
                     <div className="border-l-2 border-amber-500 pl-3">
                       <p className="font-semibold text-slate-200">Coda</p>
-                      <p>Spesso segue l'ultimo ritorno del refrain.</p>
+                      <p>Spesso segue l’ultimo ritorno del refrain.</p>
                     </div>
                   </div>
                 </div>
@@ -3454,12 +3454,12 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
                       <span><strong>Interazione Solo-Tutti:</strong> Il solista espone il refrain, poi ripreso o completato 
-                      dall'orchestra. Mozart espande il refrain iniziale trasformandolo in un'esposizione orchestrale</span>
+                      dall’orchestra. Mozart espande il refrain iniziale trasformandolo in un’esposizione orchestrale</span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
                       <span><strong>Nuovi temi (sujet libre):</strong> Mozart introduce spesso un "nuovo tema" da parte del 
-                      solista all'inizio della transizione, subito dopo il primo esposizione orchestrale</span>
+                      solista all’inizio della transizione, subito dopo il primo esposizione orchestrale</span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
@@ -3474,7 +3474,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
               <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-red-500">
                 <h4 className="text-base font-semibold text-slate-200 mb-3">Il Rondò in Beethoven</h4>
                 <p className="mb-3">
-                  Beethoven ereditò i modelli di Haydn e Mozart ma <strong>espanse notevolmente le dimensioni e l'ambizione</strong> 
+                  Beethoven ereditò i modelli di Haydn e Mozart ma <strong>espanse notevolmente le dimensioni e l’ambizione</strong> 
                   della forma rondò, rendendola spesso più "sinfonica" e drammatica.
                 </p>
                 
@@ -3488,7 +3488,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     </div>
                     <div className="bg-slate-800/50 p-2 rounded">
                       <p className="font-semibold text-slate-200 mb-1">2. Espansione della Coda</p>
-                      <p>La coda diventa una sezione di grande peso strutturale, con ulteriore sviluppo dei temi e un'ultima 
+                      <p>La coda diventa una sezione di grande peso strutturale, con ulteriore sviluppo dei temi e un’ultima 
                       apparizione del refrain principale. Nella <em>Sonata op. 26</em>, la coda è molto estesa.</p>
                     </div>
                     <div className="bg-slate-800/50 p-2 rounded">
@@ -3500,7 +3500,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                       <p className="font-semibold text-slate-200 mb-1">4. Spostamento del baricentro</p>
                       <p>Nelle opere tarde, Beethoven (e poi Brahms) sposta il peso espressivo verso il finale, rendendo 
                       il rondò conclusivo non più solo un brano leggero di congedo, ma il <strong>culmine drammatico </strong> 
-                      dell'intero ciclo.</p>
+                      dell’intero ciclo.</p>
                     </div>
                   </div>
                 </div>
@@ -3550,7 +3550,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   nel primo tempo di sonate, sinfonie e quartetti del periodo classico.
                 </p>
                 <p className="mb-3">
-                  Non va confusa con il <strong>genere sonata</strong>, che indica l'intera opera composta da più movimenti 
+                  Non va confusa con il <strong>genere sonata</strong>, che indica l’intera opera composta da più movimenti 
                   (solitamente tre o quattro).
                 </p>
                 <div className="bg-slate-900/50 p-3 rounded mt-3">
@@ -3570,8 +3570,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <p className="text-sm font-semibold text-slate-200 mb-2">1. Esposizione</p>
                     <p className="text-xs">
                       Ha il compito di <strong>presentare i materiali tematici</strong> e stabilire il <strong>conflitto tonale</strong> 
-                      tra la tonalità d'impianto e una tonalità subordinata. Secondo la <em>Sonata Theory</em>, l'obiettivo è 
-                      raggiungere la "Chiusura Essenziale dell'Esposizione" (EEC), ovvero la prima cadenza autentica perfetta 
+                      tra la tonalità d’impianto e una tonalità subordinata. Secondo la <em>Sonata Theory</em>, l’obiettivo è 
+                      raggiungere la "Chiusura Essenziale dell’Esposizione" (EEC), ovvero la prima cadenza autentica perfetta 
                       soddisfacente nella nuova tonalità.
                     </p>
                   </div>
@@ -3579,7 +3579,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900/50 p-3 rounded border-l-2 border-orange-500">
                     <p className="text-sm font-semibold text-slate-200 mb-2">2. Sviluppo</p>
                     <p className="text-xs">
-                      È la sezione dell'<strong>instabilità e dell'elaborazione motivica</strong>. I temi vengono frammentati 
+                      È la sezione dell'<strong>instabilità e dell’elaborazione motivica</strong>. I temi vengono frammentati 
                       e trasformati attraverso modulazioni armoniche. Spesso contiene un "Core" (nucleo) di massima instabilità 
                       preceduto da un "Pre-Core".
                     </p>
@@ -3588,8 +3588,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900/50 p-3 rounded border-l-2 border-blue-500">
                     <p className="text-sm font-semibold text-slate-200 mb-2">3. Ripresa (Recapitolazione)</p>
                     <p className="text-xs">
-                      Risolve la <strong>tensione tonale accumulata</strong>. Il materiale dell'esposizione viene riproposto, 
-                      ma il Secondo Tema (S) viene ora eseguito nella tonalità d'impianto (Tonica), eliminando il conflitto iniziale.
+                      Risolve la <strong>tensione tonale accumulata</strong>. Il materiale dell’esposizione viene riproposto, 
+                      ma il Secondo Tema (S) viene ora eseguito nella tonalità d’impianto (Tonica), eliminando il conflitto iniziale.
                     </p>
                   </div>
                 </div>
@@ -3599,7 +3599,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <p className="text-xs">
                   <strong className="text-slate-200">Nota teorica:</strong> Il Concerto per pianoforte n. 3 di Beethoven 
                   utilizza la <strong>Forma di Sonata per Concerto</strong>, una variante che prevede la doppia esposizione 
-                  (prima l'orchestra, poi il solista) e l'integrazione della cadenza virtuosistica prima della coda finale.
+                  (prima l’orchestra, poi il solista) e l’integrazione della cadenza virtuosistica prima della coda finale.
                 </p>
               </div>
             </div>
@@ -3637,7 +3637,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 </p>
                 <p className="mb-3">
                   Nel Concerto n. 3, Beethoven scrisse 3 cadenze, nel 1809. 
-                  È un'area 'protetta' in cui il solista può mostrare il proprio virtuosismo tecnico ed espressivo, 
+                  È un’area 'protetta' in cui il solista può mostrare il proprio virtuosismo tecnico ed espressivo, 
                   elaborando i temi principali del movimento.
                 </p>
               </div>
@@ -3647,7 +3647,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <ul className="space-y-2 ml-2">
                   <li className="flex items-start space-x-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-slate-200">L'orchestra si ferma su un <strong>punto coronato</strong> (accordo di dominante sospeso)</span>
+                    <span className="text-sm text-slate-200">L’orchestra si ferma su un <strong>punto coronato</strong> (accordo di dominante sospeso)</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
@@ -3659,7 +3659,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   </li>
                   <li className="flex items-start space-x-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                    <span className="text-sm text-slate-200">Conclude con un trillo sulla dominante, segnalando il ritorno dell'orchestra</span>
+                    <span className="text-sm text-slate-200">Conclude con un trillo sulla dominante, segnalando il ritorno dell’orchestra</span>
                   </li>
                 </ul>
               </div>
@@ -3667,7 +3667,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
               <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
                 <p className="text-xs">
                   <strong className="text-slate-200">Nota storica:</strong> Beethoven fu tra i primi compositori a scrivere 
-                  le proprie cadenze, invece di lasciarle all'improvvisazione del solista. Questa scelta riflette il desiderio 
+                  le proprie cadenze, invece di lasciarle all’improvvisazione del solista. Questa scelta riflette il desiderio 
                   di controllo totale sulla forma e il contenuto drammatico del concerto.
                 </p>
               </div>
@@ -3706,7 +3706,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   tutte le regole formali della fuga vera e propria.
                 </p>
                 <p className="mb-3">
-                  Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale del rondò - 
+                  Nel terzo movimento dell’Op. 37, Beethoven inserisce un elaborato fugato sul tema principale del rondò - 
                   una scelta audace e innovativa che unisce la brillantezza del finale concertistico con la profondità 
                   del contrappunto bachiano.
                 </p>
@@ -3736,7 +3736,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
               <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
                 <p className="text-xs">
-                  <strong className="text-slate-200">Nota stilistica:</strong> L'uso del fugato in un finale di concerto 
+                  <strong className="text-slate-200">Nota stilistica:</strong> L’uso del fugato in un finale di concerto 
                   è raro nel periodo classico. Beethoven dimostra qui la sua ambizione di elevare il concerto oltre il puro 
                   intrattenimento virtuosistico, fondendo brillantezza e profondità intellettuale.
                 </p>
@@ -3753,7 +3753,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           📚 Terminologia Musicale
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Dizionario rapido dei termini tecnici, tonalità e armonie utilizzati nell'analisi del Concerto Op. 37.
+          Dizionario rapido dei termini tecnici, tonalità e armonie utilizzati nell’analisi del Concerto Op. 37.
         </p>
       </div>
 
@@ -3886,7 +3886,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                         <td className="border border-slate-700 px-3 py-2"><strong>Cugino</strong> di Federico Guglielmo II e nipote di Federico II. Pianista virtuoso e compositore, morì in battaglia.</td>
                       </tr>
                       <tr className="hover:bg-slate-800/50 transition-colors">
-                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Giuseppe II d'Asburgo</strong></td>
+                        <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Giuseppe II d’Asburgo</strong></td>
                         <td className="border border-slate-700 px-3 py-2">1765–1790</td>
                         <td className="border border-slate-700 px-3 py-2">Austria (Vienna)</td>
                         <td className="border border-slate-700 px-3 py-2"><strong>Mozart</strong></td>
@@ -3929,7 +3929,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
               <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-amber-500">
                 <h4 className="text-xl font-bold text-slate-200 mb-5 flex items-center">
                   <span className="text-3xl mr-3">📜</span>
-                  PERSONAGGI STORICI (L'EPOCA DI BEETHOVEN)
+                  PERSONAGGI STORICI (L’EPOCA DI BEETHOVEN)
                 </h4>
                 <p className="text-xs text-slate-400 mb-5 italic">Figure che hanno vissuto durante la vita di Beethoven o nel XIX secolo.</p>
 
@@ -3940,7 +3940,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> barone, banchiere e impresario teatrale austriaco</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> direttore dei teatri imperiali di Vienna (1794-1806)</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> nel 1802 negò a Beethoven l'uso del teatro per il suo concerto, ritardando di un anno la prima dell'Op. 37</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> nel 1802 negò a Beethoven l’uso del teatro per il suo concerto, ritardando di un anno la prima dell’Op. 37</li>
                       <li><strong className="text-slate-200">Note:</strong> descritto come "stupido e rozzo" dalla famiglia Beethoven, nel 1803 accolse il compositore al Theater an der Wien.</li>
                     </ul>
                   </div>
@@ -3950,7 +3950,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi erano:</strong> casa editrice musicale tedesca fondata a Lipsia (1719)</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> principali editori delle sue opere</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> Karl van Beethoven gestiva la corrispondenza con loro; pubblicarono molte opere incluso l'oratorio <em>Cristo sul Monte degli Ulivi</em></li>
+                      <li><strong className="text-slate-200">Importanza:</strong> Karl van Beethoven gestiva la corrispondenza con loro; pubblicarono molte opere incluso l’oratorio <em>Cristo sul Monte degli Ulivi</em></li>
                       <li><strong className="text-slate-200">Note:</strong> esistono ancora oggi, la più antica casa editrice musicale al mondo.</li>
                     </ul>
                   </div>
@@ -3968,12 +3968,12 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
                   {/* F */}
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                    <h5 className="font-bold text-slate-100 mb-2">FRANCESCO II D'ASBURGO (1768-1835)</h5>
+                    <h5 className="font-bold text-slate-100 mb-2">FRANCESCO II D’ASBURGO (1768-1835)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> imperatore del Sacro Romano Impero (fino al 1806), poi Imperatore d'Austria</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> imperatore del Sacro Romano Impero (fino al 1806), poi Imperatore d’Austria</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> sovrano durante la carriera viennese del compositore</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> la stabilità (e poi la crisi bellica) del suo regno influenzò l'economia e la vita musicale viennese</li>
-                      <li><strong className="text-slate-200">Note:</strong> fratello dell'Arciduca Rodolfo.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> la stabilità (e poi la crisi bellica) del suo regno influenzò l’economia e la vita musicale viennese</li>
+                      <li><strong className="text-slate-200">Note:</strong> fratello dell’Arciduca Rodolfo.</li>
                     </ul>
                   </div>
 
@@ -3993,7 +3993,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista e compositore austriaco</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> rivale amichevole e collega</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> scrisse una cadenza alternativa per l'Op. 37; il suo stile era più decorativo rispetto a quello drammatico di Beethoven</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> scrisse una cadenza alternativa per l’Op. 37; il suo stile era più decorativo rispetto a quello drammatico di Beethoven</li>
                       <li><strong className="text-slate-200">Note:</strong> presente al letto di morte di Beethoven.</li>
                     </ul>
                   </div>
@@ -4014,7 +4014,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> principe boemo e mecenate</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> finanziatore e amico</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> nel suo palazzo avvennero le prime prove dell'Eroica; dedicatario dei Quartetti Op. 18</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> nel suo palazzo avvennero le prime prove dell’Eroica; dedicatario dei Quartetti Op. 18</li>
                       <li><strong className="text-slate-200">Note:</strong> finì in rovina per le enormi spese musicali.</li>
                     </ul>
                   </div>
@@ -4035,7 +4035,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> compositore austriaco</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> modello assoluto</li>
-                      <li><strong className="text-slate-200">Importanza per Op. 37:</strong> il Concerto in Do minore K. 491 di Mozart è l'ispirazione diretta per l'Op. 37 di Beethoven</li>
+                      <li><strong className="text-slate-200">Importanza per Op. 37:</strong> il Concerto in Do minore K. 491 di Mozart è l’ispirazione diretta per l’Op. 37 di Beethoven</li>
                       <li><strong className="text-slate-200">Note:</strong> Beethoven disse ascoltando il K. 491: "Non riusciremo mai a fare nulla di simile".</li>
                     </ul>
                   </div>
@@ -4085,12 +4085,12 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista e compositore, allievo di Beethoven</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> amico intimo e biografo</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> testimone oculare della prima dell'Op. 37; raccontò i dettagli sulla stesura incompleta della parte solistica.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> testimone oculare della prima dell’Op. 37; raccontò i dettagli sulla stesura incompleta della parte solistica.</li>
                     </ul>
                   </div>
 
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                    <h5 className="font-bold text-slate-100 mb-2">RODOLFO D'AUSTRIA, Arciduca (1788-1831)</h5>
+                    <h5 className="font-bold text-slate-100 mb-2">RODOLFO D’AUSTRIA, Arciduca (1788-1831)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> arciduca e cardinale</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> allievo di pianoforte e principale mecenate</li>
@@ -4104,7 +4104,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> impresario teatrale e librettista (Flauto Magico)</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> gestore del Theater an der Wien</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> ospitò Beethoven nel teatro durante la composizione dell'Op. 37.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ospitò Beethoven nel teatro durante la composizione dell’Op. 37.</li>
                     </ul>
                   </div>
 
@@ -4112,7 +4112,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">SCHUMANN, Clara (1819-1896)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista e compositrice tedesca (nata dopo la morte di Beethoven)</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> fondamentale per la diffusione del concerto nell'Ottocento; scrisse una cadenza celebre per il primo movimento</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> fondamentale per la diffusione del concerto nell’Ottocento; scrisse una cadenza celebre per il primo movimento</li>
                       <li><strong className="text-slate-200">Note:</strong> moglie di Robert Schumann.</li>
                     </ul>
                   </div>
@@ -4120,9 +4120,9 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">SEYFRIED, Ignaz von (1776-1841)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra</li>
-                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> voltapagine alla prima dell'Op. 37</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> tramandò l'aneddoto dei "geroglifici egizi" (pagine vuote) sullo spartito del pianoforte.</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> voltapagine alla prima dell’Op. 37</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> tramandò l’aneddoto dei "geroglifici egizi" (pagine vuote) sullo spartito del pianoforte.</li>
                     </ul>
                   </div>
 
@@ -4193,8 +4193,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">ABBADO, Claudio (1933-2014)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra italiano</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> registrò l'Op. 37 con Martha Argerich (2004), versione di riferimento moderna.</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra italiano</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> registrò l’Op. 37 con Martha Argerich (2004), versione di riferimento moderna.</li>
                     </ul>
                   </div>
 
@@ -4202,8 +4202,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">BÖHM, Karl (1894-1981)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra austriaco</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> diresse Maurizio Pollini nell'Op. 37 (1979); simbolo della tradizione classica viennese.</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra austriaco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> diresse Maurizio Pollini nell’Op. 37 (1979); simbolo della tradizione classica viennese.</li>
                     </ul>
                   </div>
 
@@ -4219,15 +4219,15 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">DUDAMEL, Gustavo (1981-)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra venezuelano</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> noto per l'energia ritmica, ha diretto Yuja Wang nel Concerto n. 3.</li>
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d’orchestra venezuelano</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> noto per l’energia ritmica, ha diretto Yuja Wang nel Concerto n. 3.</li>
                     </ul>
                   </div>
 
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">DUTOIT, Charles (1936-)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra svizzero</li>
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d’orchestra svizzero</li>
                       <li><strong className="text-slate-200">Importanza:</strong> accompagnò la giovane Martha Argerich nella registrazione del 1982.</li>
                     </ul>
                   </div>
@@ -4244,8 +4244,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">FURTWÄNGLER, Wilhelm (1886-1954)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra tedesco</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> massimo esponente dell'interpretazione "titanica" e soggettiva del romanticismo tedesco.</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra tedesco</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> massimo esponente dell’interpretazione "titanica" e soggettiva del romanticismo tedesco.</li>
                     </ul>
                   </div>
 
@@ -4254,7 +4254,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">GOULD, Glenn (1932-1982)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista canadese</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> interprete eccentrico e geniale, offrì una lettura dell'Op. 37 (1959) asciutta e anti-romantica.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> interprete eccentrico e geniale, offrì una lettura dell’Op. 37 (1959) asciutta e anti-romantica.</li>
                     </ul>
                   </div>
 
@@ -4280,7 +4280,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">LEITNER, Ferdinand (1912-1996)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra tedesco</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra tedesco</li>
                       <li><strong className="text-slate-200">Importanza:</strong> accompagnatore affidabile e classico nella celebre integrale con Kempff.</li>
                     </ul>
                   </div>
@@ -4297,7 +4297,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">MUTI, Riccardo (1941-)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra italiano</li>
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d’orchestra italiano</li>
                       <li><strong className="text-slate-200">Importanza:</strong> ha diretto Sokolov in una rara e preziosa registrazione live del concerto.</li>
                     </ul>
                   </div>
@@ -4315,7 +4315,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">RATTLE, Simon (1955-)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi è:</strong> direttore d'orchestra inglese</li>
+                      <li><strong className="text-slate-200">Chi è:</strong> direttore d’orchestra inglese</li>
                       <li><strong className="text-slate-200">Importanza:</strong> ha collaborato con Brendel per un ciclo beethoveniano moderno e bilanciato.</li>
                     </ul>
                   </div>
@@ -4332,7 +4332,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">SANDERLING, Kurt (1912-2011)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra tedesco</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra tedesco</li>
                       <li><strong className="text-slate-200">Importanza:</strong> ponte tra la cultura musicale tedesca e quella russa (diresse sia Richter che Uchida).</li>
                     </ul>
                   </div>
@@ -4340,7 +4340,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
                     <h5 className="font-bold text-slate-100 mb-2">SARGENT, Malcolm (1895-1967)</h5>
                     <ul className="space-y-1 text-xs">
-                      <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra inglese</li>
+                      <li><strong className="text-slate-200">Chi era:</strong> direttore d’orchestra inglese</li>
                       <li><strong className="text-slate-200">Importanza:</strong> diresse la prima registrazione completa storica con Schnabel (anni '30).</li>
                     </ul>
                   </div>
@@ -4357,7 +4357,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">SCHNABEL, Artur (1882-1951)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista austriaco</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> il primo a registrare l'integrale delle sonate; considerato "l'uomo che ha inventato Beethoven" per il XX secolo.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> il primo a registrare l’integrale delle sonate; considerato "l’uomo che ha inventato Beethoven" per il XX secolo.</li>
                     </ul>
                   </div>
 
@@ -4374,7 +4374,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">UCHIDA, Mitsuko (1948-)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi è:</strong> pianista anglo-giapponese</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> porta in Beethoven una chiarezza e un'eleganza tipicamente mozartiane.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> porta in Beethoven una chiarezza e un’eleganza tipicamente mozartiane.</li>
                     </ul>
                   </div>
 
@@ -4653,9 +4653,9 @@ const QuizSection = () => {
 
         <div className="mb-8 p-5 rounded-lg bg-slate-900">
           {score === shuffledQuestions.length ? (
-            <p className="text-blue-600 font-semibold text-lg">🎉 Eccezionale! Sei pronto per l'esame.</p>
+            <p className="text-blue-600 font-semibold text-lg">🎉 Eccezionale! Sei pronto per l’esame.</p>
           ) : score >= shuffledQuestions.length / 2 ? (
-            <p className="text-blue-400 font-semibold text-lg">👍 Buon lavoro! Ripassa l'analisi per perfezionarti.</p>
+            <p className="text-blue-400 font-semibold text-lg">👍 Buon lavoro! Ripassa l’analisi per perfezionarti.</p>
           ) : (
             <p className="text-orange-600 font-semibold text-lg">📚 Consiglio: Rileggi la sezione "Analisi" e riprova.</p>
           )}
