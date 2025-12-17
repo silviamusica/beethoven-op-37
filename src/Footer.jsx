@@ -27,15 +27,18 @@ export default function Footer({ setActiveTab }) {
   };
 
   return (
-    <footer className="border-t border-slate-700 mt-8">
-      <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col items-center text-sm text-slate-300">
-        <div className="mb-4 w-full flex justify-center">
-          <div className="flex items-center gap-6 justify-center">
-            <img src="/Logo%20vlr.png" alt="Logo vlr" className="h-12 w-auto" />
-            <img src="/Logo%20Sip.png" alt="Logo Sip" className="h-12 w-auto" />
+    <footer className="border-t border-slate-700 mt-12">
+      <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col items-center text-sm text-slate-300">
+        <div className="mb-6 w-full flex justify-center">
+          <div className="flex items-center gap-8 justify-center">
+            <img src="/Logo%20vlr.png" alt="Logo vlr" className="h-16 w-auto" />
+            <img src="/Logo%20Sip.png" alt="Logo Sip" className="h-16 w-auto" />
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 justify-center w-full">
+        <div className="w-full">
+          <hr className="border-t border-slate-700/60 my-4" />
+        </div>
+        <div className="flex flex-wrap gap-2 justify-center w-full mt-2">
           <button
             onClick={() => goto('introduzione')}
             className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
