@@ -11,37 +11,37 @@ export default function Footer({ setActiveTab }) {
             onClick={() => setActiveTab('introduzione')}
             className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
-            → Introduzione
+            Introduzione
           </button>
           <button
             onClick={() => setActiveTab('analysis')}
             className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
-            → Analisi movimenti
-          </button>
-          <button
-            onClick={() => setActiveTab('glossary')}
-            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-          >
-            → Glossario
+            Analisi
           </button>
           <button
             onClick={() => setActiveTab('interpreters')}
             className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
-            → Interpretazioni
+            Interpreti
+          </button>
+          <button
+            onClick={() => setActiveTab('glossary')}
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            Glossario
           </button>
           <button
             onClick={() => setActiveTab('quiz')}
-            className="text-sm px-3 py-2 bg-slate-700 border border-blue-700 text-blue-400 rounded hover:bg-slate-600 transition-colors font-medium"
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
-            → Mettiti alla prova
+            Quiz
           </button>
           <button
             onClick={() => setActiveTab('fonti')}
             className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
-            → Fonti
+            Fonti
           </button>
         </div>
       </div>

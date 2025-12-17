@@ -3742,7 +3742,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
               <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
                 <p className="text-xs">
-                  <strong className="text-slate-200">Nota stilistica:</strong> L’uso del fugato in un finale di concerto 
+                  <strong className="text-slate-200">Nota stilistica:</strong> l’uso del fugato in un finale di concerto 
                   è raro nel periodo classico. Beethoven dimostra qui la sua ambizione di elevare il concerto oltre il puro 
                   intrattenimento virtuosistico, fondendo brillantezza e profondità intellettuale.
                 </p>
@@ -4860,7 +4860,13 @@ const App = () => {
           {isMobile && activeTab === 'introduzione' && (
             <div className="max-w-5xl mx-auto px-4 py-2 mb-4 text-sm text-slate-300 bg-slate-800 rounded-lg border border-slate-700 flex items-center">
               <span>Puoi navigare fra le varie pagine cliccando sull'icona</span>
-              <Menu className="w-5 h-5 text-blue-400 ml-2" />
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                aria-label="Apri menu"
+                className="ml-2 p-1 rounded hover:bg-slate-700/40"
+              >
+                <Menu className="w-5 h-5 text-blue-400" />
+              </button>
             </div>
           )}
           {activeTab === 'introduzione' && (
