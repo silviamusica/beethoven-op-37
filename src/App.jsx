@@ -4858,8 +4858,9 @@ const App = () => {
         <main className="max-w-5xl mx-auto px-4 py-12 pb-16">
           {/* Mobile-only hint: visible on small screens when hamburger menu is present */}
           {isMobile && activeTab === 'introduzione' && (
-            <div className="max-w-5xl mx-auto px-4 py-2 mb-4 text-sm text-slate-300 bg-slate-800 rounded-lg border border-slate-700">
-              Puoi navigare fra le varie pagine cliccando sul simbolo in alto a destra.
+            <div className="max-w-5xl mx-auto px-4 py-2 mb-4 text-sm text-slate-300 bg-slate-800 rounded-lg border border-slate-700 flex items-center">
+              <span>Puoi navigare fra le varie pagine cliccando sull'icona</span>
+              <Menu className="w-5 h-5 text-blue-400 ml-2" />
             </div>
           )}
           {activeTab === 'introduzione' && (
