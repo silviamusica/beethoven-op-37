@@ -2263,10 +2263,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
               </li>
             </ul>
             <button
-              onClick={() => {
-                  setActiveTab('glossary');
-                  setGlossaryFocus('Rondò');
-                }}
+              onClick={() => setActiveTab('glossary')}
               className="mt-3 text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
             >
               Approfondisci
@@ -2858,8 +2855,29 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
     if (targetIdx >= 0) {
       setOpenCategory(targetIdx);
     }
-    setOpenSonataForm(true);
-    setOpenRondoForm(true);
+    // scroll the category into view centered vertically
+    if (targetIdx >= 0) {
+      setTimeout(() => {
+        const el = document.querySelector(`[data-gloss-cat=\"${targetIdx}\"]`);
+        if (el && el.scrollIntoView) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 120);
+    }
+    // Open only the subpanel relevant to the requested focusCategory.
+    // Previously both Sonata and Rondò were opened unconditionally which
+    // caused links to always expand the Rondò panel.
+    if (focusCategory === 'Rondò' || /rondo|rondò/i.test(focusCategory)) {
+      setOpenRondoForm(true);
+    } else if (/sonata|sonata/i.test(focusCategory) || focusCategory === 'Forma Sonata' || focusCategory === 'Forma Sonata per Concerto') {
+      setOpenSonataForm(true);
+    } else if (focusCategory === 'Cadenza' || /cadenza/i.test(focusCategory)) {
+      setOpenCadenzaForm(true);
+    } else if (focusCategory === 'Fugato' || /fugato/i.test(focusCategory)) {
+      setOpenFugatoForm(true);
+    } else {
+      // default: do not force-open specific form panels (e.g., for 'Tonalità e Armonia')
+    }
     if (onFocusConsumed) {
       onFocusConsumed();
     }
@@ -3487,7 +3505,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
       <div className="space-y-4">
         {glossaryData.map((category, catIdx) => (
-          <div key={catIdx} className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+          <div key={catIdx} data-gloss-cat={catIdx} className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
             <button
               onClick={() => toggleCategory(catIdx)}
               className={`w-full p-5 flex justify-between items-center transition-all ${
