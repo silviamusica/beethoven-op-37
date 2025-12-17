@@ -2907,13 +2907,13 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           🎼 Forme e Strutture Musicali
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Esplora la teoria musicale del Concerto: dalla storia del genere alle forme classiche (Sonata e Rondò),
+          Teoria musicale del Concerto: dalla storia del genere alle forme classiche (Sonata e Rondò),
           fino alle tecniche compositive come la Cadenza e il Fugato utilizzate da Beethoven nell'Op. 37.
         </p>
       </div>
 
       {/* Approfondimento: Storia del Concerto */}
-      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="mb-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-blue-500/50">
         <button
           onClick={() => setOpenConcertoHistory(!openConcertoHistory)}
           className={`w-full p-5 flex justify-between items-center transition-all ${
@@ -3135,7 +3135,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Approfondimento: la Forma Rondò */}
-      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="mb-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-blue-500/50">
         <button
           onClick={() => setOpenRondoForm(!openRondoForm)}
           className={`w-full p-5 flex justify-between items-center transition-all ${
@@ -3313,7 +3313,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Approfondimento: La Forma Sonata */}
-      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="mb-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-blue-500/50">
         <button
           onClick={() => setOpenSonataForm(!openSonataForm)}
           className={`w-full p-5 flex justify-between items-center transition-all ${
@@ -3401,7 +3401,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Approfondimento: La Cadenza */}
-      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="mb-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-blue-500/50">
         <button
           onClick={() => setOpenCadenzaForm(!openCadenzaForm)}
           className={`w-full p-5 flex justify-between items-center transition-all ${
@@ -3458,7 +3458,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Approfondimento: Il Fugato */}
-      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="mb-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-blue-500/50">
         <button
           onClick={() => setOpenFugatoForm(!openFugatoForm)}
           className={`w-full p-5 flex justify-between items-center transition-all ${
@@ -3528,7 +3528,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
       <div className="space-y-4">
         {glossaryData.map((category, catIdx) => (
-          <div key={catIdx} data-gloss-cat={catIdx} className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+          <div key={catIdx} data-gloss-cat={catIdx} className="ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-emerald-500/50">
             <button
               onClick={() => toggleCategory(catIdx)}
               className={`w-full p-5 flex justify-between items-center transition-all ${
@@ -3589,7 +3589,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Approfondimento: Personaggi Storici e Interpreti */}
-      <div className="mt-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="mt-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-amber-500/50">
         <button
           onClick={() => setOpenPersonaggi(!openPersonaggi)}
           className={`w-full p-5 flex justify-between items-center transition-all ${
