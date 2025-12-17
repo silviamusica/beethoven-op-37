@@ -2227,7 +2227,7 @@ const Tooltip = ({ text, children }) => {
 };
 
 const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
-  const [openMovement, setOpenMovement] = useState(1);
+  const [openMovement, setOpenMovement] = useState(null);
   const [modalContent, setModalContent] = useState(null);
   const [showScore, setShowScore] = useState(false); // show/hide spartito del primo movimento
   
