@@ -1106,29 +1106,33 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         ))}
       </div>
 
-      <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
-        <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
-          <User className="w-5 h-5 text-blue-400 mr-2" />
-          Il carattere di Beethoven
-        </h3>
-        <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
-          <p>
-            <strong className="text-slate-100">Aspetto fisico:</strong> basso e tarchiato, fronte alta e spaziosa,
-            capelli neri e ricci che gli cadevano disordinati sulle spalle. Il suo aspetto variava enormemente:
-            talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivevano come un vulcano umano.
-          </p>
-          <p>
-            <strong className="text-slate-100">Temperamento:</strong> passionale, impulsivo, irascibile ma anche
-            profondamente sentimentale. Poteva passare dalla collera più violenta alla tenerezza più commovente.
-            La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
-          </p>
-          <p>
-            <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era considerato
-            il <em>più grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
-            lasciavano il pubblico letteralmente a bocca aperta: poteva improvvisare per ore su un tema dato,
-            sviluppandolo in modi sempre diversi e sorprendenti. Questa abilità straordinaria spiega perché
-            alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvvisò intere sezioni!
-          </p>
+      <div className="mt-3 p-3 bg-blue-900/20 rounded text-sm text-slate-200 border-l-2 border-blue-500">
+        💡 <strong>Curiosità:</strong>
+
+        <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600 mt-3">
+          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+            <User className="w-5 h-5 text-blue-400 mr-2" />
+            Il carattere di Beethoven
+          </h3>
+          <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+            <p>
+              <strong className="text-slate-100">Aspetto fisico:</strong> basso e tarchiato, fronte alta e spaziosa,
+              capelli neri e ricci che gli cadevano disordinati sulle spalle. Il suo aspetto variava enormemente:
+              talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivevano come un vulcano umano.
+            </p>
+            <p>
+              <strong className="text-slate-100">Temperamento:</strong> passionale, impulsivo, irascibile ma anche
+              profondamente sentimentale. Poteva passare dalla collera più violenta alla tenerezza più commovente.
+              La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
+            </p>
+            <p>
+              <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era considerato
+              il <em>più grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
+              lasciavano il pubblico letteralmente a bocca aperta: poteva improvvisare per ore su un tema dato,
+              sviluppandolo in modi sempre diversi e sorprendenti. Questa abilità straordinaria spiega perché
+              alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvvisò intere sezioni!
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -1866,7 +1870,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             1770-1827: nato a Bonn, protetto da <Tooltip text="Il conte Ferdinand von Waldstein fu il primo grande mecenate di Beethoven, gli offrì borse di studio e lo sostenne nei viaggi a Vienna">Waldstein</Tooltip> e formato da Haydn prima dell'incontro con Mozart; la crisi di Heiligenstadt (1802) segnò l'inizio del suo periodo eroico. Stabilizzatosi a Vienna, affrontò la sordità crescente mentre componeva sinfonie, concerti e sonate che lo consacrarono come genio immortale.
           </p>
           <button
-            onClick={() => openModal('Cronologia: Vita di Ludwig van Beethoven', <BeethovenLifeModal />)}
+            onClick={() => openModal('Cronologia: vita di Ludwig van Beethoven', <BeethovenLifeModal />)}
             className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
           >
             Approfondisci 
