@@ -288,7 +288,7 @@ const quizData = [
   {
     question: "In quali anni Beethoven arrivò a Vienna (prima visita e stabilizzazione definitiva)?",
     options: [
-      "1789 (prima volta) e 1792 (stabile)",
+      "1787 (prima volta) e 1792 (stabile)",
       "1792 (solo)",
       "1796 (solo)",
       "1800 (solo)"
