@@ -74,15 +74,15 @@ const movementsData = [
     isTable: true,
     hasModal: true,
     tableData: [
-      { sezione: "ESPOSIZIONE (batt. 1-227)", sottosezione: "TUTTI 1 (batt. 1-111)", battute: "1-111", descrizione: "I Tema: Esposto dagli archi in Do minore con carattere \"marziale\" e \"cadenzato\" (batt. 1-8).<br/>• I Tema (Periodo b): Esposto dai fiati (batt. 9-16).<br/>• II Tema: Carattere \"cantabile\" e \"ornato\" (batt. 50-74).<br/>• Coda (batt. 86-111)", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 1 (batt. 112-227)", battute: "112-227", descrizione: "Ingresso del pianoforte: entra dopo 111 battute con tre potenti scale ascendenti (\"gesto di sfida\").<br/>• I Tema: Riesposto dal pianoforte.<br/>• II Tema: (batt. 164-171).<br/>• Episodio di bravura: cascate di note veloci e un trillo finale complesso che sale di grado tre volte (batt. 219-225)." },
-      { sezione: "SVILUPPO (batt. 227-309)", sottosezione: "TUTTI 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte che segna l'avvio dello sviluppo.<br/>• Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore).<br/>• Elaborazione di elementi tematici in un dialogo serrato con l'orchestra.<br/>• Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
+      { sezione: "ESPOSIZIONE (batt. 1-227)", sottosezione: "TUTTI 1 (batt. 1-111)", battute: "1-111", descrizione: "I Tema: Esposto dagli archi in Do minore con carattere \"marziale\" e \"cadenzato\" (batt. 1-8). • I Tema (Periodo b): Esposto dai fiati (batt. 9-16). • II Tema: Carattere \"cantabile\" e \"ornato\" (batt. 50-74). • Coda (batt. 86-111)", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 1 (batt. 112-227)", battute: "112-227", descrizione: "Ingresso del pianoforte: entra dopo 111 battute con tre potenti scale ascendenti (\"gesto di sfida\"). • I Tema: Riesposto dal pianoforte. • II Tema: (batt. 164-171). • Episodio di bravura: cascate di note veloci e un trillo finale complesso che sale di grado tre volte (batt. 219-225)." },
+      { sezione: "SVILUPPO (batt. 227-309)", sottosezione: "TUTTI 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte che segna l'avvio dello sviluppo. • Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore). • Elaborazione di elementi tematici in un dialogo serrato con l'orchestra. • Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
       { sezione: "RIPRESA (batt. 309-fine)", sottosezione: "TUTTI 3 (batt. 309-316)", battute: "309-316", descrizione: "L'orchestra riprende il I Tema in fortissimo, segnando l'avvio formale della Ripresa.", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339).<br/>• II Tema: Riesposto (batt. 340-355).<br/>• Nuovo episodio di bravura (batt. 364-403)." },
+      { sezione: "", sottosezione: "SOLO 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339). • II Tema: Riesposto (batt. 340-355). • Nuovo episodio di bravura (batt. 364-403)." },
       { sezione: "CODA", sottosezione: "TUTTI 4 (batt. 403-416)", battute: "403-416", descrizione: "Breve transizione orchestrale che riparte dalla testa del tema e si interrompe su un accordo sospeso (\"corona\"), invitando il solista alla cadenza.", rowSpan: 3 },
       { sezione: "", sottosezione: "CADENZA (batt. 416)", battute: "416", descrizione: "Momento di massima \"esibizione\" del solista, dove il pianoforte è completamente solo. Il resto della cadenza (batt. 417-443) disegna un arco ascendente di tensione." },
-      { sezione: "", sottosezione: "TUTTI 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale (elemento y).<br/>• Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
+      { sezione: "", sottosezione: "TUTTI 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale (elemento y). • Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
     ]
   },
   {
@@ -1912,7 +1912,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                     La Beethoven-Haus contesta tale identificazione, sostenendo che l’immagine ritrae un giovane sconosciuto dipinto all’inizio dell’Ottocento, ma la leggenda del bambino prodigio continua a circondare il quadro.
                   </p>
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    Lo sapevi che... <br />Per anni Beethoven credette di essere nato nel 1772 perché il padre Johann van Beethoven aveva modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
+                    Lo sapevi che... <br/>Per anni Beethoven credette di essere nato nel 1772 perché il padre Johann van Beethoven aveva modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
                   </p>
                   <p className="text-sm text-slate-500">
                     Tecnica: olio su tela · Datazione: c. 1783
