@@ -3,29 +3,38 @@ import React from 'react';
 export default function Footer({ setActiveTab }) {
   const scrollToTop = () => {
     const main = document.querySelector('main');
-    if (main) {
+    const doScroll = () => {
       try {
-        main.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch (e) {
-        main.scrollTop = 0;
-      }
-    } else {
-      try {
+        if (main) main.scrollTo({ top: 0, behavior: 'smooth' });
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
       } catch (e) {
-        window.scrollTo(0, 0);
+        try { if (main) main.scrollTop = 0; } catch (e) {}
+        try { window.scrollTo(0, 0); } catch (e) {}
       }
-    }
+    };
+    // call immediately and schedule a couple of retries to override other scroll actions
+    doScroll();
+    setTimeout(doScroll, 120);
+    setTimeout(doScroll, 400);
   };
 
   const goto = (tab) => {
     setActiveTab(tab);
-    setTimeout(scrollToTop, 60);
+    // allow the view to update then ensure top is enforced
+    setTimeout(scrollToTop, 20);
   };
 
   return (
     <footer className="border-t border-slate-700 mt-8">
       <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-300">
+        <div className="flex items-center gap-4 mb-3 sm:mb-0">
+          <div className="flex items-center gap-3">
+            <img src="/Logo%20vlr.png" alt="Logo vlr" className="h-8 w-auto" />
+            <img src="/Logo%20Sip.png" alt="Logo Sip" className="h-8 w-auto" />
+          </div>
+        </div>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => goto('introduzione')}
