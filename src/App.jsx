@@ -2576,21 +2576,28 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus, isMobile }) => {
                   </div>
                 )}
                 
-                {/* PDF Viewer per lo spartito - solo per il primo movimento (collapsible) */}
+                {/* PDF Viewer per lo spartito - desktop only; mobile mostra una nota istruttiva */}
                 {mov.id === 1 && (
-                  !isMobile && (
-                    <div className="mt-4">
-                      <button
-                        onClick={() => setShowScore(s => !s)}
-                        className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold"
-                        aria-expanded={showScore}
-                      >
-                        {showScore ? 'Nascondi spartito' : 'Mostra spartito del Primo Movimento'}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${showScore ? 'rotate-180' : ''}`} />
-                      </button>
-                      {showScore && <PdfScoreViewer />}
-                    </div>
-                  )
+                  <>
+                    {!isMobile ? (
+                      <div className="mt-4">
+                        <button
+                          onClick={() => setShowScore(s => !s)}
+                          className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold"
+                          aria-expanded={showScore}
+                          type="button"
+                        >
+                          {showScore ? 'Nascondi spartito' : 'Mostra spartito del Primo Movimento'}
+                          <ChevronDown className={`w-4 h-4 transition-transform ${showScore ? 'rotate-180' : ''}`} />
+                        </button>
+                        {showScore && <PdfScoreViewer />}
+                      </div>
+                    ) : (
+                      <div className="mt-4 p-3 bg-slate-800 rounded-md border border-slate-700 text-sm text-slate-300">
+                        <p>Per vedere lo spartito del Primo Movimento, apri questa pagina da un computer.</p>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             )}
