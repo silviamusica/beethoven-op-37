@@ -117,7 +117,7 @@ const movementsData = [
 const interpretersData = [
   // 🎹 VERSIONI STORICHE LEGGENDARIE (1933-1973)
   {
-    name: "🎹 Artur Schnabel (Versione Storica Leggendaria)",
+    name: "🎹 Artur Schnabel (versione leggendaria)",
     bio: "Pianista austriaco (1882-1951), considerato uno dei più grandi interpreti beethoveniani",
     conductor: "Malcolm Sargent",
     orchestra: "London Philharmonic",
@@ -140,7 +140,7 @@ const interpretersData = [
   
   // ⚠️ IL CASO GOULD (1959)
   {
-    name: "⚠️ Glenn Gould (Il Caso Gould - L’Alternativa)",
+    name: "⚠️ Glenn Gould (il Caso Gould - l’Alternativa)",
     bio: "Pianista canadese (1932-1982), celebre per le sue interpretazioni non convenzionali",
     conductor: "Leonard Bernstein",
     orchestra: "Columbia Symphony Orchestra",
@@ -152,7 +152,7 @@ const interpretersData = [
   },
 
   {
-    name: "🎹 Wilhelm Kempff (Versione Storica Leggendaria)",
+    name: "🎹 Wilhelm Kempff (versione leggendaria)",
     bio: "Pianista tedesco (1895-1991), uno dei massimi interpreti di Beethoven e Schubert",
     conductor: "Ferdinand Leitner",
     orchestra: "Berliner Philharmoniker",
@@ -187,7 +187,7 @@ const interpretersData = [
 
   // 🎼 STRUMENTI D’EPOCA (Filologico - 1988-2000)
   {
-    name: "🎼 Steven Lubin (Strumenti d’Epoca - Filologico)",
+    name: "🎼 Steven Lubin (strumenti d’epoca - filologico)",
     bio: "Pianista e fortepianista americano, specialista della prassi esecutiva storica",
     conductor: "Christopher Hogwood",
     orchestra: "Academy of Ancient Music",
@@ -208,7 +208,7 @@ const interpretersData = [
     link: "https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB"
   },
   {
-    name: "🎼 Maria João Pires (Strumenti d’Epoca)",
+    name: "🎼 Maria João Pires (strumenti d’Epoca)",
     bio: "Pianista portoghese, celebre per la sua sensibilità interpretativa e il tocco raffinato",
     conductor: "Frans Brüggen",
     orchestra: "Orchestra of the Eighteenth Century",
@@ -868,7 +868,10 @@ const FontiSection = () => {
               Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
             </p>
             <div className="overflow-x-auto mt-6 sm:mt-8">
-          <table className="min-w-full text-sm sm:text-base md:text-lg border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
+              <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+                Scorri a destra per visualizzare tutta la tabella.
+              </p>
+            <table className="min-w-full text-sm sm:text-base md:text-lg border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
             <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide text-sm sm:text-base">
               <tr>
                 <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Tipologia</th>
@@ -1332,6 +1335,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       {/* Tabella cronologica */}
       <div className="overflow-x-auto">
         <h3 className="text-lg font-semibold text-slate-100 mb-4">Cronistoria dei pianoforti di Beethoven</h3>
+        <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+          Scorri a destra per visualizzare tutta la tabella.
+        </p>
         <table className="w-full text-sm text-slate-300 border-collapse">
           <thead>
             <tr className="bg-slate-700 text-slate-100">
@@ -1599,6 +1605,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-2">I mecenati di Beethoven</h3>
         <div className="overflow-x-auto">
+          <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+            Scorri a destra per visualizzare tutta la tabella.
+          </p>
           <table className="w-full text-sm text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
@@ -1738,6 +1747,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         {/* Tabella I 5 Concerti in Prospettiva */}
         <div className="overflow-x-auto">
           <h4 className="text-base font-semibold text-slate-200 mb-3">I 5 Concerti in prospettiva</h4>
+          <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+            Scorri a destra per visualizzare tutta la tabella.
+          </p>
           <table className="w-full text-sm text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
@@ -2520,8 +2532,11 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus, isMobile }) => {
               <div className="p-6 pt-24 bg-slate-900">
                 <p className="text-base text-slate-200 mb-4 pb-4 border-b border-slate-700">{mov.desc}</p>
                 
-                {mov.isTable ? (
+                  {mov.isTable ? (
                   <div className="overflow-x-auto">
+                    <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+                      Scorri a destra per visualizzare tutta la tabella.
+                    </p>
                     <table className="w-full border-collapse text-sm">
                       <thead className="bg-slate-800">
                         <tr>
@@ -2853,12 +2868,15 @@ const InterpretersSection = () => {
       </div>
 
     {/* Tabella riepilogo */}
-    <div className="mt-10 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
-      <div className="bg-slate-700 p-5">
-        <h3 className="text-xl font-semibold text-white">📊 Riepilogo Rapido</h3>
-      </div>
-      <div className="p-5 bg-slate-900 overflow-x-auto">
-        <table className="w-full text-sm border-collapse">
+      <div className="mt-10 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <div className="bg-slate-700 p-5">
+          <h3 className="text-xl font-semibold text-white">📊 Riepilogo Rapido</h3>
+        </div>
+        <div className="p-5 bg-slate-900 overflow-x-auto">
+          <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+            Scorri a destra per visualizzare tutta la tabella.
+          </p>
+          <table className="w-full text-sm border-collapse">
           <thead className="bg-slate-800 text-slate-200 uppercase tracking-wide text-sm">
             <tr>
               <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Interprete</th>
@@ -3151,6 +3169,9 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
               {/* Tabella Storica */}
               <div className="overflow-x-auto">
                 <h4 className="text-base font-semibold text-slate-100 mb-3">Cronologia dello sviluppo</h4>
+                <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+                  Scorri a destra per visualizzare tutta la tabella.
+                </p>
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-slate-700 text-slate-100">
