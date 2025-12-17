@@ -68,7 +68,7 @@ const glossaryData = [
 const movementsData = [
   {
   id: 1,
-  title: "I movimento: allegro con brio",
+  title: "I movimento: Allegro con brio",
     key: "Do minore",
     desc: "Forma sonata con doppia esposizione. Il primo movimento è drammatico ed eroico.",
     isTable: true,
@@ -87,7 +87,7 @@ const movementsData = [
   },
   {
   id: 2,
-  title: "II movimento: largo",
+  title: "II movimento: Largo",
     key: "Mi maggiore",
     desc: "Movimento lirico e contemplativo. La tonalità di Mi maggiore crea un contrasto drammatico con il Do minore del primo movimento.",
     details: [
@@ -100,7 +100,7 @@ const movementsData = [
   },
   {
   id: 3,
-  title: "III movimento: rondò. allegro",
+  title: "III movimento: Rondò. Allegro",
     key: "Do minore → Do maggiore",
     desc: "Rondò brillante che conclude il concerto con energia e virtuosismo. Finale trionfale in Do maggiore.",
     details: [
@@ -2229,6 +2229,7 @@ const Tooltip = ({ text, children }) => {
 const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
   const [openMovement, setOpenMovement] = useState(1);
   const [modalContent, setModalContent] = useState(null);
+  const [showScore, setShowScore] = useState(false); // show/hide spartito del primo movimento
   
   const toggleMovement = (id, event) => {
     const isOpening = openMovement !== id;
@@ -2546,8 +2547,20 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
                   </div>
                 )}
                 
-                {/* PDF Viewer per lo spartito - solo per il primo movimento */}
-                {mov.id === 1 && <PdfScoreViewer />}
+                {/* PDF Viewer per lo spartito - solo per il primo movimento (collapsible) */}
+                {mov.id === 1 && (
+                  <div className="mt-4">
+                    <button
+                      onClick={() => setShowScore(s => !s)}
+                      className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold"
+                      aria-expanded={showScore}
+                    >
+                      {showScore ? 'Nascondi spartito' : 'Mostra spartito del Primo Movimento'}
+                      <ChevronDown className={`w-4 h-4 transition-transform ${showScore ? 'rotate-180' : ''}`} />
+                    </button>
+                    {showScore && <PdfScoreViewer />}
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -3687,7 +3700,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
         </p>
       </div>
 
-      {/* Approfondimento: Personaggi Storici e Interpreti */}
+      {/* Approfondimento: personaggi storici e interpreti */}
       <div className="mt-6 ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-amber-500/50">
         <button
           onClick={() => setOpenPersonaggi(!openPersonaggi)}
@@ -3700,7 +3713,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <User className="w-5 h-5 text-blue-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">👥 Indice Analitico dei Personaggi</h3>
+              <h3 className="text-lg font-semibold">👥 Indice analitico dei personaggi</h3>
               <span className="text-sm opacity-90">Regnanti, mecenati e interpreti</span>
             </div>
           </div>
@@ -4642,6 +4655,7 @@ const App = () => {
   const [glossaryFocus, setGlossaryFocus] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [imageModal, setImageModal] = useState(null);
 
   // Responsive check
   useEffect(() => {
@@ -4650,6 +4664,36 @@ const App = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Rendere cliccabili le immagini nel main per ingrandirle (solo immagini locali /images/)
+  useEffect(() => {
+    const imgs = Array.from(document.querySelectorAll('main img'));
+    const handler = (e) => {
+      const el = e.currentTarget;
+      const src = el.getAttribute('src');
+      if (src && src.startsWith('/images/')) {
+        setImageModal({ src, alt: el.getAttribute('alt') || '' });
+      }
+    };
+
+    imgs.forEach(img => {
+      const src = img.getAttribute('src');
+      if (src && src.startsWith('/images/')) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', handler);
+      }
+    });
+
+    return () => {
+      imgs.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && src.startsWith('/images/')) {
+          img.style.cursor = '';
+          img.removeEventListener('click', handler);
+        }
+      });
+    };
+  }, [activeTab]);
 
   return (
     <ErrorBoundary>
@@ -4676,6 +4720,13 @@ const App = () => {
           {activeTab === 'flashcards' && <FlashcardsSection />}
           {activeTab === 'quiz' && <QuizSection />}
         </main>
+        {imageModal && (
+          <Modal isOpen={imageModal !== null} onClose={() => setImageModal(null)} title={imageModal.alt || 'Immagine'}>
+            <div className="flex justify-center">
+              <img src={imageModal.src} alt={imageModal.alt} className="max-w-full max-h-[80vh] object-contain rounded-lg" />
+            </div>
+          </Modal>
+        )}
       </div>
     </ErrorBoundary>
   );
