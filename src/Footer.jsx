@@ -27,7 +27,7 @@ export default function Footer({ setActiveTab }) {
   };
 
   return (
-    <footer className="border-t border-slate-700 mt-12">
+    <footer className="mt-12">
       <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col items-center text-sm text-slate-300">
         <div className="mb-6 w-full flex justify-center">
           <div className="flex items-center gap-8 justify-center">
