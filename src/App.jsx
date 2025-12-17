@@ -252,7 +252,7 @@ const interpretersData = [
     link: "https://youtu.be/UXGy1bpEAUw?si=dYYxQ1hh4UYHBUFI"
   },
   {
-    name: "Fazil Say",
+    name: "Fazıl Say",
     bio: "Pianista e compositore turco, noto per la sua creatività e il virtuosismo brillante",
     conductor: "Gianandrea Noseda",
     orchestra: "BBC Philharmonic",
@@ -1125,11 +1125,16 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
             </p>
             <p>
-              <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era considerato
-              il <em>più grande improvvisatore dell'epoca</em>. Durante i concerti pubblici, le sue improvvisazioni
-              lasciavano il pubblico letteralmente a bocca aperta: poteva improvvisare per ore su un tema dato,
-              sviluppandolo in modi sempre diversi e sorprendenti. Questa abilità straordinaria spiega perché
-              alla prima del 1803 poté suonare "quasi a memoria" - probabilmente improvvisò intere sezioni!
+              <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven era il
+              <em>più grande improvvisatore dell'epoca</em>.
+            </p>
+            <p>
+              Durante i concerti pubblici le sue improvvisazioni lasciavano il pubblico a bocca aperta. Poteva
+              improvvisare per ore su un tema dato, sviluppandolo in modi originali e sorprendenti.
+            </p>
+            <p>
+              Questa abilità spiega perché, alla prima del 1803, suonò quasi a memoria; probabilmente improvvisò
+              intere sezioni.
             </p>
           </div>
         </div>
@@ -1178,10 +1183,10 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </ul>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
           La prova decisiva è arrivata dall'<strong>analisi paleografica del manoscritto autografo</strong>, che mostra 
-          chiaramente la data <strong>"1803"</strong> e non "1800" come si credeva. Questo colloca la composizione nel 
-          periodo più drammatico della vita di Beethoven: mentre scriveva il <em>Testamento di Heiligenstadt</em> (ottobre 1802), 
-          dove contemplava il suicidio a causa della sordità progressiva, stava componendo uno dei suoi concerti più eroici 
-          e combattivi.
+          chiaramente la data <strong>"1803"</strong> e non "1800" come si credeva. Ciò colloca la composizione nel periodo più drammatico della vita di Beethoven.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Proprio mentre scriveva il <em>Testamento di Heiligenstadt</em> (ottobre 1802), contemplando il suicidio a causa della sordità, stava componendo uno dei suoi concerti più eroici e combattivi.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
           Il concerto nasce quindi tra il <strong>1802 e i primi mesi del 1803</strong>, periodo della transizione dal primo 
@@ -1294,7 +1299,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
           <h3 className="text-lg font-semibold text-slate-100 mb-3">La sordità e il rapporto con lo strumento</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Intorno al 1798 la sordità progressiva cambiò radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martellava" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf fu costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
+          Intorno al 1798 la sordità cambiò radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martellava" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf fu costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
           Paradossalmente, la perdita dell'udito <strong>liberò Beethoven dai limiti fisici dello strumento</strong>: componeva non più per quello che poteva sentire, ma per quello che immaginava. Le ultime sonate richiedono dinamiche, estensioni e sonorità che superavano le possibilità dei pianoforti dell'epoca.
@@ -1309,7 +1314,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           </div>
           <div className="md:w-1/2 flex flex-col justify-center gap-3">
             <p className="text-sm text-slate-300 leading-relaxed">
-              Questi strumenti amplificavano il suono per Beethoven mentre la sordità avanzava: le cornette acustiche di Johann Nepomuk Maelzel (c.1813) funzionavano come protesi che avvicinava all’orecchio, mentre i cunei e i coni di rame venivano appoggiati al pianoforte o tra i denti per trasferire vibrazioni al cranio e al torace.
+              Questi strumenti amplificavano il suono per Beethoven mentre la sordità avanzava: le cornette acustiche di Johann Nepomuk Maelzel (c.1813) funzionavano come protesi che avvicinavano il suono all’orecchio, mentre i cunei e i coni di rame venivano appoggiati al pianoforte o tra i denti per trasferire vibrazioni al cranio e al torace.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               In assenza di udito, quelle vibrazioni corporee rimasero l’unico modo per "sentire" la musica e continuare a suonare e comporre.
@@ -1430,10 +1435,8 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <div className="mb-3">
             <p className="text-sm text-slate-200 leading-relaxed mb-2">
               <strong>Contesto storico e carattere:</strong> l'opera appartiene all'anno dell'invasione, 1809.
-              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) affermò che per i suoi ritmi, i
-              motivi di vittoria e le melodie energiche, questo concerto è «l'apoteosi del concetto militare» nella
-              musica di Beethoven, un'opera che non solo soddisfaceva ma superava le aspettative di un pubblico in
-              attesa di uno stile marziale.
+              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) definì questo concerto «l'apoteosi del concetto militare» in Beethoven.
+              Grazie ai suoi ritmi e alle melodie energiche, l'opera non solo soddisfaceva, ma superava le aspettative di un pubblico che reclamava uno stile marziale.
             </p>
             <p className="text-sm text-slate-200 leading-relaxed mb-2">
               <strong>Dedicatario:</strong> fu pubblicato nel febbraio 1811 con una dedica all'Arciduca Rodolfo, il
@@ -1509,7 +1512,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <li className="flex items-start">
             <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
             <span>
-              <strong>Fazil Say (2001)</strong> → Linguaggio contemporaneo con cluster e ritmi irregolari, 
+              <strong>Fazıl Say (2001)</strong> → Linguaggio contemporaneo con cluster e ritmi irregolari, 
               ma profondamente radicato nel materiale tematico beethoveniano. 
               <a 
                 href="https://youtu.be/a0ixaGeQzME?si=vG4tYv1rpwhCFHk0&t=772" 
@@ -1984,7 +1987,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">Curiosità: il "Concerto 0" (WoO. 4)</h3>
+              <h3 className="text-lg font-semibold">Curiosità: il "Concerto 0" (WoO 4)</h3>
               <span className="text-sm opacity-90">1784 - Beethoven a 14 anni</span>
             </div>
           </div>
@@ -1994,16 +1997,15 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <div className="p-6 pt-24 bg-slate-900">
             <div className="space-y-4 text-sm text-slate-300">
               <p className="text-base text-slate-200">
-                Il <strong>Concerto per pianoforte in Mib maggiore, WoO. 4</strong>, è una delle prime opere di Beethoven, 
+                Il <strong>Concerto per pianoforte in Mib maggiore, WoO 4</strong>, è una delle prime opere di Beethoven, 
                 scritta nel <strong>1784</strong> quando aveva solo <strong>14 anni</strong>. Oggi sopravvive solo la parte per pianoforte solista, 
                 sebbene nel manoscritto vi siano alcune indicazioni per i passaggi orchestrali.
               </p>
 
               <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-blue-500">
                 <p className="text-sm">
-                  Il concerto è talvolta indicato come <strong className="text-slate-200">Concerto per pianoforte n. 0</strong>, 
-                  poiché precedeva tutti gli altri concerti per pianoforte di Beethoven; <strong>viene eseguito raramente</strong>. 
-                  I pianisti Howard Shelley, Ronald Brautigam e Philippos Tsalachouris, così come il musicologo e compositore svizzero 
+                  Talvolta indicato come <strong className="text-slate-200">Concerto n. 0</strong>, precede cronologicamente tutti gli altri concerti per pianoforte di Beethoven; <strong>viene eseguito raramente</strong>.
+                  I pianisti Howard Shelley, Ronald Brautigam e Philippos Tsalachouris, così come il musicologo e compositore svizzero
                   Willy Hess, hanno ciascuno la propria ricostruzione del concerto.
                 </p>
               </div>
@@ -4344,7 +4346,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   </div>
 
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-700">
-                    <h5 className="font-bold text-slate-100 mb-2">SAY, Fazil (1970-)</h5>
+                    <h5 className="font-bold text-slate-100 mb-2">SAY, Fazıl (1970-)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi è:</strong> pianista e compositore turco</li>
                       <li><strong className="text-slate-200">Importanza:</strong> ha scritto una cadenza moderna e controversa per il Terzo Concerto.</li>
