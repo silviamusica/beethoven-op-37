@@ -2595,9 +2595,22 @@ const InterpretersSection = () => {
   const toggleCategory = (category, event) => {
     const isOpening = openCategory !== category;
     setOpenCategory(openCategory === category ? null : category);
-    if (isOpening && event && event.currentTarget) {
+    if (isOpening) {
       setTimeout(() => {
-        event.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const main = document.querySelector('main');
+        if (main) {
+          try {
+            main.scrollTo({ top: 0, behavior: 'smooth' });
+          } catch (e) {
+            main.scrollTop = 0;
+          }
+        } else {
+          try {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } catch (e) {
+            window.scrollTo(0, 0);
+          }
+        }
       }, 100);
     }
   };
@@ -4664,6 +4677,27 @@ const App = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Quando si cambia tab, riportare la vista in cima al nuovo contenuto
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const main = document.querySelector('main');
+      if (main) {
+        try {
+          main.scrollTo({ top: 0, behavior: 'smooth' });
+        } catch (e) {
+          main.scrollTop = 0;
+        }
+      } else {
+        try {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } catch (e) {
+          window.scrollTo(0, 0);
+        }
+      }
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
 
   // Rendere cliccabili le immagini nel main per ingrandirle (solo immagini locali /images/)
   useEffect(() => {
