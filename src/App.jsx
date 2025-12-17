@@ -750,12 +750,13 @@ const FontiSection = () => {
       {/* Immagine di copertina */}
       <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
         <img
-          src="/images/beethoven-sources.png"
-          alt="Manoscritti e documenti di Beethoven"
-          className="w-full h-64 object-contain rounded-lg"
+          src="/images/beethoven-sources.jpg"
+          alt="Miscellanea Fischhof - Minuetto per orchestra in re minore"
+          className="w-full h-64 object-cover rounded-lg"
         />
         <p className="text-xs text-slate-400 mt-3 italic text-center">
-          Esplora le fonti documentarie che testimoniano il processo compositivo di Beethoven per il Concerto Op. 37
+          Miscellanea Fischhof: Minuetto per orchestra in re minore.<br/>
+          <span className="text-slate-500">Schizzo autografo - trascrizione pianistica di Graziano Denini e orchestrazione di Albert Willem Holsbergen</span>
         </p>
       </div>
 
