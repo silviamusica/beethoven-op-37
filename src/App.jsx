@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TableWithHint from './components/TableWithHint';
 import Footer from './Footer';
 import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -1330,7 +1331,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       </div>
 
       {/* Tabella cronologica */}
-      <div className="overflow-x-auto">
+      <TableWithHint className="overflow-x-auto">
         <h3 className="text-lg font-semibold text-slate-100 mb-4">Cronistoria dei pianoforti di Beethoven</h3>
         <table className="w-full text-sm text-slate-300 border-collapse">
           <thead>
@@ -1354,6 +1355,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             ))}
           </tbody>
         </table>
+      </TableWithHint>
         <p className="text-sm text-slate-400 italic mt-4">
           <strong>Nota <br /></strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l’Érard al Kunsthistorisches Museum di Vienna.
         </p>
