@@ -210,9 +210,9 @@ const interpretersData = [
     link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
   },
 
-  // 🎼 STRUMENTI D’EPOCA (Filologico - 1988-2000)
+  // 🎼 STRUMENTI D’epoca (Filologico - 1988-2000)
   {
-    name: "🎼 Steven Lubin (strumenti d’epoca - filologico)",
+    name: "🎼 Steven Lubin (strumenti d’Epoca - filologico)",
     bio: "Pianista e fortepianista americano, specialista della prassi esecutiva storica",
     conductor: "Christopher Hogwood",
     orchestra: "Academy of Ancient Music",
@@ -233,12 +233,12 @@ const interpretersData = [
     link: "https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB"
   },
   {
-    name: "🎼 Maria João Pires (strumenti d’epoca)",
+    name: "🎼 Maria João Pires (strumenti d’Epoca)",
     bio: "Pianista portoghese, celebre per la sua sensibilità interpretativa e il tocco raffinato",
     conductor: "Frans Brüggen",
     orchestra: "Orchestra of the Eighteenth Century",
     year: "2000 (circa)",
-    description: "Esecuzione su strumento d’epoca che unisce la sensibilità poetica di Pires all’approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
+    description: "Esecuzione su strumento d’Epoca che unisce la sensibilità poetica di Pires all’approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
     style: "Filologico, Poetico",
     rating: "⭐⭐⭐⭐⭐",
     link: "https://www.youtube.com/watch?v=hR95EK9fEKo"
