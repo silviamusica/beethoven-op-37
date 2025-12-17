@@ -43,10 +43,10 @@ const glossaryData = [
       { term: "TUTTI", definition: "Termine generico per indicare l'orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare ESPOSIZIONE per le sezioni orchestrali formali." },
       { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall'orchestra. L'unica sezione di vero solo è la Cadenza." },
       { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mib maggiore → Do maggiore)." },
-      { term: "Tema primario", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
-      { term: "Secondo tema", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
+      { term: "Tema primario", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
+      { term: "Secondo tema", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
       { term: "Episodi di bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli." },
-      { term: "Ponte modulante", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Può utilizzare materiale tematico esistente (come nell'Op. 37, dove il tema principale agisce come 'jolly')." },
+      { term: "Ponte modulante", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Può utilizzare materiale tematico esistente (come nell'Op. 37, dove il tema principale agisce come 'jolly')." },
       { term: "Triade", definition: "Accordo di tre note sovrapposte per terze. Il tema primario del primo movimento è basato sulla scansione (arpeggio) della triade di Do minore (Do-Mib-Sol)." },
       { term: "Arpeggio", definition: "Esecuzione delle note di un accordo una dopo l'altra invece che simultaneamente. Gli arpeggi sono fondamentali nel secondo movimento e negli episodi di bravura." },
       { term: "Trillo", definition: "Rapida alternanza tra due note adiacenti." },
@@ -56,7 +56,7 @@ const glossaryData = [
   {
     category: "Tonalità e Armonia",
     items: [
-      { term: "Do minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l'Op. 37 alla Patetica, alla Quinta Sinfonia e all'Eroica. Per Beethoven rappresenta il dramma e la lotta." },
+      { term: "Do minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l'Op. 37 alla Patetica, alla Quinta Sinfonia e all'Eroica. Per Beethoven rappresenta il dramma e la lotta." },
       { term: "Mi maggiore", definition: "Tonalità del secondo movimento (Largo). Estremamente lontana dal Do minore - un salto cromatico audace che crea uno 'shock tonale'. Rappresenta un'oasi lirica e contemplativa." },
       { term: "Mib maggiore", definition: "Tonalità relativa maggiore di Do minore. Usata per il secondo tema del primo movimento." },
       { term: "Do maggiore", definition: "Tonalità parallela maggiore di Do minore. Il terzo movimento conclude in Do maggiore (non nella relativa Mi♭), compiendo il percorso beethoveniano 'dal buio alla luce' - dalla tragedia al trionfo." },
@@ -297,7 +297,7 @@ const quizData = [
     difficulty: "base"
   },
   {
-    question: "Quale concerto di Mozart è il modello principale dell'Op. 37?",
+    question: "Quale concerto di Mozart è il modello principale dell'Op. 37?",
     options: ["K. 466 in Re minore", "K. 467 in Do maggiore", "K. 491 in Do minore", "K. 537 'Coronation'"],
     correct: 2,
     difficulty: "base"
@@ -377,7 +377,7 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quale altro lavoro fu eseguito nella stessa serata della prima dell'Op. 37?",
+    question: "Quale altro lavoro fu eseguito nella stessa serata della prima dell'Op. 37?",
     options: ["La Quinta Sinfonia", "La Seconda Sinfonia", "Il Fidelio", "La Nona Sinfonia"],
     correct: 1,
     difficulty: "intermedio"
@@ -395,7 +395,7 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Chi ha registrato l'Op. 37 con Otto Klemperer nel 1957?",
+    question: "Chi ha registrato l'Op. 37 con Otto Klemperer nel 1957?",
     options: ["Michelangeli", "Kempff", "Arrau", "Barenboim"],
     correct: 2,
     difficulty: "intermedio"
@@ -419,13 +419,13 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quanti flauti sono nell'organico orchestrale dell'Op. 37?",
+    question: "Quanti flauti sono nell'organico orchestrale dell'Op. 37?",
     options: ["1", "2", "3", "4"],
     correct: 1,
     difficulty: "intermedio"
   },
   {
-    question: "In quale tonalità sono i clarinetti dell'Op. 37?",
+    question: "In quale tonalità sono i clarinetti dell'Op. 37?",
     options: ["Do", "Sib", "La", "Mib"],
     correct: 1,
     difficulty: "intermedio"
@@ -474,7 +474,7 @@ const quizData = [
   },
   {
     question: "Quale opera precedente di Beethoven in Do minore è chiamata 'Patetica'?",
-    options: ["Op. 1 n. 3", "Op. 10 n. 1", "Op. 13", "Op. 18 n. 4"],
+    options: ["Op. 1 n. 3", "Op. 10 n. 1", "Op. 13", "Op. 18 n. 4"],
     correct: 2,
     difficulty: "intermedio"
   },
@@ -533,7 +533,7 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quale periodo stilistico di Beethoven inizia con opere come l'Op. 37?",
+    question: "Quale periodo stilistico di Beethoven inizia con opere come l'Op. 37?",
     options: ["Periodo giovanile", "Periodo eroico", "Periodo tardo", "Periodo classico"],
     correct: 1,
     difficulty: "intermedio"
@@ -625,7 +625,7 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
           <div className="flex items-center space-x-2 sm:space-x-3 font-bold text-lg sm:text-xl">
             <Music className="h-6 w-6 text-blue-400" />
             <div>
-              <div className="text-slate-100">Beethoven Op. 37</div>
+              <div className="text-slate-100">Beethoven Op. 37</div>
             </div>
           </div>
 
@@ -860,7 +860,7 @@ const FontiSection = () => {
         {activeTab === 'primarie' && (
           <div className="animate-fadeIn">
             <p className="text-lg text-slate-300 leading-relaxed">
-              Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
+              Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
             </p>
             <div className="overflow-x-auto mt-6 sm:mt-8">
           <table className="min-w-full text-sm sm:text-base md:text-lg border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
@@ -939,14 +939,14 @@ const FontiSection = () => {
         
         <div className="space-y-6 text-sm text-slate-300">
           <div>
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Studi specifici e analisi del concerto Op. 37</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Studi specifici e analisi del concerto Op. 37</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Küthen, Hans-Werner.</strong> <em>Ludwig van Beethoven: Klavierkonzert Nr. 3 in c</em>. Kassel-London-New York: Bärenreiter, 1987. 
                 (Edizione critica con studio sulla datazione e composizione del concerto).
               </li>
               <li className="leading-relaxed">
-                <strong>Osthoff, Wolfgang.</strong> <em>Ludwig van Beethoven: Klavierkonzert Nr. 3 c moll, op. 37</em>. München: Wilhelm Fink, 1965. 
+                <strong>Osthoff, Wolfgang.</strong> <em>Ludwig van Beethoven: Klavierkonzert Nr. 3 c moll, op. 37</em>. München: Wilhelm Fink, 1965. 
                 (Analisi stilistica e collocazione nel periodo eroico).
               </li>
               <li className="leading-relaxed">
@@ -956,19 +956,19 @@ const FontiSection = () => {
               </li>
               <li className="leading-relaxed">
                 <strong>Plantinga, Leon.</strong> <em>Beethoven's Concertos: History, Style, Performance</em>. New York-London: W. W. Norton & Company, 1999, pp. 113-135. 
-                (In particolare il Capitolo 6: "On the Origins of Piano Concerto no. 3 in C minor, Op. 37").
+                (In particolare il Capitolo 6: "On the Origins of Piano Concerto no. 3 in C minor, Op. 37").
               </li>
               <li className="leading-relaxed">
-                <strong>Scalfaro, Anna.</strong> "L'Allegro con brio del Concerto op. 37 di Ludwig van Beethoven: un modello di conversazione". 
+                <strong>Scalfaro, Anna.</strong> "L'Allegro con brio del Concerto op. 37 di Ludwig van Beethoven: un modello di conversazione". 
                 In <em>Musica Docta. Rivista digitale di Pedagogia e Didattica della musica</em>, VI, 2016, pp. 211-237. 
                 (Analisi del primo movimento come dialogo e contesto storico del genere concerto).
               </li>
               <li className="leading-relaxed">
                 <strong>Tovey, Donald Francis.</strong> <em>Essays in Musical Analysis</em>, III: <em>Concertos and Choral Works</em>. London: Oxford University Press, 1936, p. 73. 
-                (Collocazione dell'Op. 37 nella fase eroica beethoveniana).
+                (Collocazione dell'Op. 37 nella fase eroica beethoveniana).
               </li>
               <li className="leading-relaxed">
-                <strong>Yahşi, Fahrettin Eren.</strong> "Thematic Analysis of Op. 37 3. Piano Concerto by L. v. Beethoven: The Third Movement Consisting of the First Movement". 
+                <strong>Yahşi, Fahrettin Eren.</strong> "Thematic Analysis of Op. 37 3. Piano Concerto by L. v. Beethoven: The Third Movement Consisting of the First Movement". 
                 In <em>Arts and Design Studies</em>, Vol. 95, 2021, pp. 8-16.
               </li>
             </ul>
@@ -1035,7 +1035,7 @@ const FontiSection = () => {
               </li>
               <li className="leading-relaxed">
                 <strong>Beethoven, Ludwig van.</strong> <em>Epistolario</em>, I (1783-1807), a cura di Sieghard Brandenburg. Milano: Skira, 1999, pp. 150, 160, 166. 
-                (Lettere agli editori Hoffmeister e Breitkopf &amp; Härtel in cui giudica l'Op. 37 superiore ai primi due concerti).
+                (Lettere agli editori Hoffmeister e Breitkopf &amp; Härtel in cui giudica l'Op. 37 superiore ai primi due concerti).
               </li>
               <li className="leading-relaxed">
                 <em>Ludwig van Beethovens Konversationshefte</em> (Quaderni di Conversazione). Ed. Karl-Heinz Köhler, Grita Herre, et al.
@@ -1142,7 +1142,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
     </div>
   );
 
-  // Contenuto modale: Cronologia Concerto Op. 37
+  // Contenuto modale: Cronologia Concerto Op. 37
   const concertoTimeline = [
     { year: "1796-97", event: "Primi abbozzi tematici. Beethoven inizia a concepire il concerto." },
     { year: "1798", event: "La sordità si manifesta chiaramente. Beethoven si dedica maggiormente alla composizione." },
@@ -1159,10 +1159,10 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div className="mb-4 rounded-lg overflow-hidden">
         <img 
           src="/images/op37-manuscript.jpg" 
-          alt="Manoscritto del Concerto Op. 37"
+          alt="Manoscritto del Concerto Op. 37"
           className="w-full h-44 sm:h-80 object-cover object-top rounded-lg max-h-[55vh]"
         />
-        <p className="text-sm text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
       </div>
 
       <div>
@@ -1229,7 +1229,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       location: "Parigi",
       features: "5 ottave e mezza (FF-c4). Meccanica 'inglese' (più pesante). 4 pedali (liuto, smorzatori, celeste/buff, una corda). Corde triple.",
       period: "Vienna (Ricevuto nel 1803)",
-      notes: "Un dono della ditta Érard legato alla pubblicazione della Sonata Patetica a Parigi. L'estensione extra (fino al Do4) influenzò la Sonata Waldstein (Op. 53) e l'Appassionata (Op. 57). Beethoven trovava la meccanica troppo pesante e nel 1810 lo definì 'inutile' per i danni subiti."
+      notes: "Un dono della ditta Érard legato alla pubblicazione della Sonata Patetica a Parigi. L'estensione extra (fino al Do4) influenzò la Sonata Waldstein (Op. 53) e l'Appassionata (Op. 57). Beethoven trovava la meccanica troppo pesante e nel 1810 lo definì 'inutile' per i danni subiti."
     },
     {
       model: "Streicher (Nannette e Andreas)",
@@ -1243,7 +1243,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       location: "Londra",
       features: "6 ottave (CC-c4). Suono robusto e potente, meccanica inglese pesante. Tripla cordatura. Nomi dei donatori (Kalkbrenner, Moscheles) firmati sulla tavola armonica.",
       period: "Mödling / Vienna (1818 - 1827)",
-      notes: "Un regalo della ditta Broadwood. Arrivò a Vienna dopo un lungo viaggio. Beethoven, ormai sordo, lo 'martellava' così forte da rompere le corde e danneggiarlo. È lo strumento associato alle ultime sonate (es. Hammerklavier Op. 106)."
+      notes: "Un regalo della ditta Broadwood. Arrivò a Vienna dopo un lungo viaggio. Beethoven, ormai sordo, lo 'martellava' così forte da rompere le corde e danneggiarlo. È lo strumento associato alle ultime sonate (es. Hammerklavier Op. 106)."
     },
     {
       model: "Conrad Graf",
@@ -1376,7 +1376,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Triplo Concerto */}
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
-        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul "Triplo Concerto" (Op. 56)</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul "Triplo Concerto" (Op. 56)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
           Nella lettera a Breitkopf & Härtel del 26 agosto 1804, Beethoven offre un gruppo
           di opere (tra cui la Sinfonia Eroica e l'oratorio Cristo sul Monte degli Ulivi) e sottolinea la novità della
@@ -1398,12 +1398,12 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Quarto Concerto */}
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
-        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quarto Concerto (Op. 58)</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quarto Concerto (Op. 58)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
           <strong>Contesto:</strong> Ferdinand Ries racconta che Beethoven gli portò lo spartito del concerto appena
           completato, pretendendo che lo eseguisse in pubblico con soli cinque giorni di preavviso. Ries rifiutò per la
           brevità del tempo, scatenando l'ira di Beethoven, che si rivolse al pianista Friedrich Stein. Stein accettò,
-          ma non riuscendo a padroneggiare il concerto in tempo, finì per suonare invece il Terzo Concerto (Op. 37).
+          ma non riuscendo a padroneggiare il concerto in tempo, finì per suonare invece il Terzo Concerto (Op. 37).
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
           <p className="text-sm text-slate-400 mb-1">Testimonianza riportata da Ferdinand Ries:</p>
@@ -1415,16 +1415,16 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </div>
         <p className="text-sm text-slate-300 italic">
           <strong>Epilogo:</strong> Stein, incapace di preparare il concerto in tempo, finì per eseguire il Terzo
-          Concerto (Op. 37) anziché il Quarto. Beethoven stesso eseguì la prima pubblica del Quarto Concerto solo
+          Concerto (Op. 37) anziché il Quarto. Beethoven stesso eseguì la prima pubblica del Quarto Concerto solo
           il <strong>22 dicembre 1808</strong> all'Akademie al Theater an der Wien, in un concerto maratona che
-          includeva anche la Quinta e la Sesta Sinfonia, la Fantasia Corale Op. 80 e brani della Messa in Do maggiore
-          Op. 86.
+          includeva anche la Quinta e la Sesta Sinfonia, la Fantasia Corale Op. 80 e brani della Messa in Do maggiore
+          Op. 86.
         </p>
       </div>
 
       {/* Quinto Concerto */}
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
-        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quinto Concerto "Imperatore" (Op. 73)</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quinto Concerto "Imperatore" (Op. 73)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
           <strong>Contesto:</strong> questo concerto fu composto nel 1809, l'anno dell'invasione napoleonica. Durante
           il bombardamento e l'occupazione di Vienna (12 maggio - novembre 1809), Beethoven si rifugiò nella casa del
@@ -1441,7 +1441,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <p className="text-sm text-slate-200 leading-relaxed mb-2">
               <strong>Dedicatario:</strong> fu pubblicato nel febbraio 1811 con una dedica all'Arciduca Rodolfo, il
               protettore più importante di Beethoven, al quale il compositore fu legato da profonda gratitudine per
-              tutta la vita. In una lettera successiva all'Arciduca Rodolfo (riferita alla Missa Solemnis Op. 123,
+              tutta la vita. In una lettera successiva all'Arciduca Rodolfo (riferita alla Missa Solemnis Op. 123,
               composta 1819-1823 e anch'essa dedicata a lui), Beethoven scrisse:
             </p>
             <p className="text-sm text-slate-200 leading-relaxed italic">
@@ -1470,7 +1470,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
   const CadenzeModal = () => (
     <div className="space-y-4 text-sm text-slate-300">
       <p className="text-base text-slate-200">
-        Nel <strong>1809</strong>, sei anni dopo la prima esecuzione, Beethoven scrisse tre cadenze per il primo movimento dell'Op. 37, 
+        Nel <strong>1809</strong>, sei anni dopo la prima esecuzione, Beethoven scrisse tre cadenze per il primo movimento dell'Op. 37, 
         catalogate come <strong>WoO 58</strong> (Werke ohne Opuszahl - opere senza numero d'opus).
       </p>
 
@@ -1497,7 +1497,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <p className="mb-3">
           Come osserva <strong>Luca Chiantore</strong>, queste cadenze presentano una <em>"incoerenza stilistica lampante"</em>: 
           nel 1809 Beethoven è nel <strong>periodo medio maturo</strong>, ben oltre lo stile del 1803. 
-          Le cadenze riflettono il linguaggio armonico e pianistico della <em>Sonata Waldstein</em> Op. 53 o dell'<em>Appassionata</em> Op. 57, 
+          Le cadenze riflettono il linguaggio armonico e pianistico della <em>Sonata Waldstein</em> Op. 53 o dell'<em>Appassionata</em> Op. 57, 
           risultando più avanzate del concerto stesso.
         </p>
         <p className="text-sm italic text-slate-400">
@@ -1609,28 +1609,28 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                 <td className="border border-slate-600 p-2">1761-1814</td>
                 <td className="border border-slate-600 p-2">Primo grande mecenate</td>
                 <td className="border border-slate-600 p-2">600 fiorini annui</td>
-                <td className="border border-slate-600 p-2">Sonata Patetica Op. 13, Concerto n. 2 Op. 19, Trii Op. 1</td>
+                <td className="border border-slate-600 p-2">Sonata Patetica Op. 13, Concerto n. 2 Op. 19, Trii Op. 1</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">Arciduca Rodolfo d'Austria</td>
                 <td className="border border-slate-600 p-2">1788-1831</td>
                 <td className="border border-slate-600 p-2">Allievo, fratello dell'imperatore</td>
                 <td className="border border-slate-600 p-2">Rendita vitalizia (dal 1809)</td>
-                <td className="border border-slate-600 p-2">Concerti n. 4 e 5, Sonata Arciduca Op. 97, Les Adieux Op. 81a, Hammerklavier Op. 106, Missa Solemnis Op. 123</td>
+                <td className="border border-slate-600 p-2">Concerti n. 4 e 5, Sonata Arciduca Op. 97, Les Adieux Op. 81a, Hammerklavier Op. 106, Missa Solemnis Op. 123</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">Principe Franz Joseph von Lobkowitz</td>
                 <td className="border border-slate-600 p-2">1772-1816</td>
                 <td className="border border-slate-600 p-2">Possedeva orchestra privata</td>
                 <td className="border border-slate-600 p-2">Contributo rendita 1809</td>
-                <td className="border border-slate-600 p-2">Sinfonia Eroica Op. 55, Triplo Concerto Op. 56, Quartetti Op. 18</td>
+                <td className="border border-slate-600 p-2">Sinfonia Eroica Op. 55, Triplo Concerto Op. 56, Quartetti Op. 18</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">Conte Andrey Razumovsky</td>
                 <td className="border border-slate-600 p-2">1752-1836</td>
                 <td className="border border-slate-600 p-2">Ambasciatore russo</td>
                 <td className="border border-slate-600 p-2">Finanziamento quartetto privato</td>
-                <td className="border border-slate-600 p-2">Quartetti Razumovsky Op. 59</td>
+                <td className="border border-slate-600 p-2">Quartetti Razumovsky Op. 59</td>
               </tr>
               <tr>
                 <td className="border border-slate-600 p-2 font-semibold">Barone Gottfried van Swieten</td>
@@ -1684,7 +1684,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-slate-100 p-8 rounded-2xl shadow-2xl border border-slate-600">
-        <h2 className="text-3xl font-bold mb-6 text-blue-300">Concerto per pianoforte n. 3 in Do minore, Op. 37</h2>
+        <h2 className="text-3xl font-bold mb-6 text-blue-300">Concerto per pianoforte n. 3 in Do minore, Op. 37</h2>
 
         {/* Immagine hero principale */}
         <div className="mb-6 rounded-lg overflow-hidden shadow-2xl">
@@ -1698,13 +1698,13 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
         <div className="mb-5">
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            Il Concerto per pianoforte n. 3 in Do minore, Op. 37 rappresenta l'inizio dei concerti maturi di Beethoven: iniziato nel 1799, fu completato all'inizio del 1803.
+            Il Concerto per pianoforte n. 3 in Do minore, Op. 37 rappresenta l'inizio dei concerti maturi di Beethoven: iniziato nel 1799, fu completato all'inizio del 1803.
           </p>
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
             La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma era sovraccarico: Beethoven eseguì nuovamente la Sinfonia n. 1, presentò per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l'oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l'eccessiva durata dell'Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrisse: «Il concerto è iniziato alle sei, ma è durato così tanto che un paio di brani non sono stati eseguiti».
           </p>
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            Dei cinque concerti per pianoforte scritti da Beethoven, Mozart ne compose venticinque; il compositore considerava i primi due inferiori all'op. 37. Quest'ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
+            Dei cinque concerti per pianoforte scritti da Beethoven, Mozart ne compose venticinque; il compositore considerava i primi due inferiori all'op. 37. Quest'ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
           </p>
         </div>
 
@@ -1802,12 +1802,12 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <p className="text-sm text-slate-300 mb-2">
               Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti: 
               ha bisogno di guadagnare, ma è consapevole che queste opere non rappresentano più il suo attuale 
-              livello di eccellenza. I primi due furono da lui giudicati lavori giovanili ormai superati dal Terzo Concerto (Op. 37).
+              livello di eccellenza. I primi due furono da lui giudicati lavori giovanili ormai superati dal Terzo Concerto (Op. 37).
             </p>
             <p className="text-sm text-slate-400 mb-2">A Franz Anton Hoffmeister (editore a Lipsia), circa 15 dicembre 1800 o 15 gennaio 1801:</p>
             <p className="text-sm text-slate-200 leading-relaxed italic">
-              «Terzo, un concerto per pianoforte [l'Op. 19] che in verità non spaccio per uno dei
-              miei migliori, così come un altro [l'Op. 15] che uscirà qui da Mollo (per informazione ai recensori
+              «Terzo, un concerto per pianoforte [l'Op. 19] che in verità non spaccio per uno dei
+              miei migliori, così come un altro [l'Op. 15] che uscirà qui da Mollo (per informazione ai recensori
               di Lipsia), perché i migliori li tengo ancora per me, finché non farò io stesso un viaggio; tuttavia
               non dovrebbe essere una vergogna per voi stamparlo».
             </p>
@@ -1886,10 +1886,10 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <div className="mb-4 rounded-lg overflow-hidden">
             <img 
               src="/images/beethoven-manuscript-op37.jpg" 
-              alt="Manoscritto del Concerto Op. 37"
+              alt="Manoscritto del Concerto Op. 37"
               className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
-            <p className="text-sm text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
           </div>
 
           <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
@@ -1900,7 +1900,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             1796-1803: abbozzi, Testamento di Heiligenstadt e prima esecuzione al Theater an der Wien con partitura incompleta; il ritorno definitivo a Vienna nel 1792 consolidò la sua vocazione eroica, lettere agli editori e correzioni successive intrecciarono un percorso travagliato fino all'edizione definitiva del 1803.
           </p>
           <button
-            onClick={() => openModal('Cronologia: Concerto n. 3 in Do minore, Op. 37', <ConcertoTimelineModal />)}
+            onClick={() => openModal('Cronologia: Concerto n. 3 in Do minore, Op. 37', <ConcertoTimelineModal />)}
             className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
           >
             Approfondisci 
@@ -3067,7 +3067,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
     <div className="max-w-4xl mx-auto animate-fadeIn">
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-slate-100 mb-2">Glossario Musicale</h2>
-        <p className="text-slate-300">Scopri i termini tecnici del Concerto Op. 37</p>
+        <p className="text-slate-300">Scopri i termini tecnici del Concerto Op. 37</p>
       </div>
 
       {/* Immagine di copertina */}
@@ -3091,7 +3091,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
           Teoria musicale del Concerto: dalla storia del genere alle forme classiche (Sonata e Rondò),
-          fino alle tecniche compositive come la Cadenza e il Fugato utilizzate da Beethoven nell'Op. 37.
+          fino alle tecniche compositive come la Cadenza e il Fugato utilizzate da Beethoven nell'Op. 37.
         </p>
       </div>
 
@@ -3185,8 +3185,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                         • Concerto Solistico
                       </td>
                       <td className="border border-slate-600 p-2">
-                        <strong>Torelli</strong> (Op. 5, 1692)<br/>
-                        <strong>Corelli</strong> (Op. 6)
+                        <strong>Torelli</strong> (Op. 5, 1692)<br/>
+                        <strong>Corelli</strong> (Op. 6)
                       </td>
                       <td className="border border-slate-600 p-2 text-xs">Torelli inventa la distinzione Solo/Tutti</td>
                     </tr>
@@ -3215,7 +3215,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                       <td className="border border-slate-600 p-2 text-slate-200">
                         <strong>Mozart</strong> (K. 466, K. 491)<br/>
                         J.C. Bach<br/>
-                        <strong>Beethoven</strong> (Op. 15, 19, 37)
+                        <strong>Beethoven</strong> (Op. 15, 19, 37)
                       </td>
                       <td className="border border-slate-600 p-2 text-xs">Il solista diventa interlocutore drammatico paritario</td>
                     </tr>
@@ -3227,7 +3227,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                         Solista come eroe
                       </td>
                       <td className="border border-slate-600 p-2">
-                        <strong>Beethoven</strong> (Op. 37, 58, 73)<br/>
+                        <strong>Beethoven</strong> (Op. 37, 58, 73)<br/>
                         Weber, Spohr
                       </td>
                       <td className="border border-slate-600 p-2 text-xs">
@@ -3331,7 +3331,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   </p>
                   <ul className="space-y-1 text-xs ml-2">
                     <li>• <strong>Mozart:</strong> dialogo ideale e cooperazione</li>
-                    <li>• <strong>Beethoven:</strong> l'eroe che si afferma e guida (scale imperiose, Op. 37)</li>
+                    <li>• <strong>Beethoven:</strong> l'eroe che si afferma e guida (scale imperiose, Op. 37)</li>
                     <li>• <strong>Romanticismo:</strong> il virtuoso soprannaturale domina la massa (Paganini)</li>
                   </ul>
                 </div>
@@ -3483,13 +3483,13 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <div className="space-y-3 text-xs">
                     <div className="bg-slate-800/50 p-2 rounded">
                       <p className="font-semibold text-slate-200 mb-1">1. Scherzi sulla struttura</p>
-                      <p>Beethoven gioca con le aspettative. Esempio: nella <em>Sonata op. 10 n. 3</em>, introduce un ritorno 
+                      <p>Beethoven gioca con le aspettative. Esempio: nella <em>Sonata op. 10 n. 3</em>, introduce un ritorno 
                       del refrain in tonalità "sbagliata" prima di correggerla ("falsa ripresa").</p>
                     </div>
                     <div className="bg-slate-800/50 p-2 rounded">
                       <p className="font-semibold text-slate-200 mb-1">2. Espansione della Coda</p>
                       <p>La coda diventa una sezione di grande peso strutturale, con ulteriore sviluppo dei temi e un'ultima 
-                      apparizione del refrain principale. Nella <em>Sonata op. 26</em>, la coda è molto estesa.</p>
+                      apparizione del refrain principale. Nella <em>Sonata op. 26</em>, la coda è molto estesa.</p>
                     </div>
                     <div className="bg-slate-800/50 p-2 rounded">
                       <p className="font-semibold text-slate-200 mb-1">3. Integrazione tematica</p>
@@ -3706,7 +3706,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   tutte le regole formali della fuga vera e propria.
                 </p>
                 <p className="mb-3">
-                  Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale del rondò - 
+                  Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale del rondò - 
                   una scelta audace e innovativa che unisce la brillantezza del finale concertistico con la profondità 
                   del contrappunto bachiano.
                 </p>
@@ -3753,7 +3753,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           📚 Terminologia Musicale
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Dizionario rapido dei termini tecnici, tonalità e armonie utilizzati nell'analisi del Concerto Op. 37.
+          Dizionario rapido dei termini tecnici, tonalità e armonie utilizzati nell'analisi del Concerto Op. 37.
         </p>
       </div>
 
@@ -3819,7 +3819,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           👥 Contesto Storico
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Personaggi storici, mecenati e interpreti legati al Concerto Op. 37 di Beethoven.
+          Personaggi storici, mecenati e interpreti legati al Concerto Op. 37 di Beethoven.
         </p>
       </div>
 
@@ -3876,13 +3876,13 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                         <td className="border border-slate-700 px-3 py-2">1786–1797</td>
                         <td className="border border-slate-700 px-3 py-2">Prussia (Berlino)</td>
                         <td className="border border-slate-700 px-3 py-2"><strong>Mozart</strong>, <strong>Beethoven</strong>, Boccherini</td>
-                        <td className="border border-slate-700 px-3 py-2">Nipote di Federico II. Violoncellista dilettante. Mozart gli dedicò i <em>Quartetti Prussiani</em>, Beethoven le <em>Sonate per violoncello Op. 5</em>.</td>
+                        <td className="border border-slate-700 px-3 py-2">Nipote di Federico II. Violoncellista dilettante. Mozart gli dedicò i <em>Quartetti Prussiani</em>, Beethoven le <em>Sonate per violoncello Op. 5</em>.</td>
                       </tr>
                       <tr className="hover:bg-slate-800/50 transition-colors">
                         <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Luigi Ferdinando di Prussia</strong></td>
                         <td className="border border-slate-700 px-3 py-2">1772–1806</td>
                         <td className="border border-slate-700 px-3 py-2">Prussia</td>
-                        <td className="border border-slate-700 px-3 py-2"><strong>Beethoven</strong> (Dedicatario Op. 37)</td>
+                        <td className="border border-slate-700 px-3 py-2"><strong>Beethoven</strong> (Dedicatario Op. 37)</td>
                         <td className="border border-slate-700 px-3 py-2"><strong>Cugino</strong> di Federico Guglielmo II e nipote di Federico II. Pianista virtuoso e compositore, morì in battaglia.</td>
                       </tr>
                       <tr className="hover:bg-slate-800/50 transition-colors">
@@ -3940,7 +3940,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> barone, banchiere e impresario teatrale austriaco</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> direttore dei teatri imperiali di Vienna (1794-1806)</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> nel 1802 negò a Beethoven l'uso del teatro per il suo concerto, ritardando di un anno la prima dell'Op. 37</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> nel 1802 negò a Beethoven l'uso del teatro per il suo concerto, ritardando di un anno la prima dell'Op. 37</li>
                       <li><strong className="text-slate-200">Note:</strong> descritto come "stupido e rozzo" dalla famiglia Beethoven, nel 1803 accolse il compositore al Theater an der Wien.</li>
                     </ul>
                   </div>
@@ -3993,7 +3993,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista e compositore austriaco</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> rivale amichevole e collega</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> scrisse una cadenza alternativa per l'Op. 37; il suo stile era più decorativo rispetto a quello drammatico di Beethoven</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> scrisse una cadenza alternativa per l'Op. 37; il suo stile era più decorativo rispetto a quello drammatico di Beethoven</li>
                       <li><strong className="text-slate-200">Note:</strong> presente al letto di morte di Beethoven.</li>
                     </ul>
                   </div>
@@ -4014,7 +4014,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> principe boemo e mecenate</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> finanziatore e amico</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> nel suo palazzo avvennero le prime prove dell'Eroica; dedicatario dei Quartetti Op. 18</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> nel suo palazzo avvennero le prime prove dell'Eroica; dedicatario dei Quartetti Op. 18</li>
                       <li><strong className="text-slate-200">Note:</strong> finì in rovina per le enormi spese musicali.</li>
                     </ul>
                   </div>
@@ -4023,7 +4023,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">LUIGI FERDINANDO DI PRUSSIA (1772-1806)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> principe prussiano, pianista e compositore</li>
-                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> <strong>dedicatario del Terzo Concerto Op. 37</strong></li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> <strong>dedicatario del Terzo Concerto Op. 37</strong></li>
                       <li><strong className="text-slate-200">Importanza:</strong> Beethoven lo stimava molto come pianista ("suona non come un re, ma come un artista"); morì eroicamente in battaglia contro i francesi</li>
                       <li><strong className="text-slate-200">Note:</strong> nipote di Federico il Grande.</li>
                     </ul>
@@ -4035,7 +4035,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> compositore austriaco</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> modello assoluto</li>
-                      <li><strong className="text-slate-200">Importanza per Op. 37:</strong> il Concerto in Do minore K. 491 di Mozart è l'ispirazione diretta per l'Op. 37 di Beethoven</li>
+                      <li><strong className="text-slate-200">Importanza per Op. 37:</strong> il Concerto in Do minore K. 491 di Mozart è l'ispirazione diretta per l'Op. 37 di Beethoven</li>
                       <li><strong className="text-slate-200">Note:</strong> Beethoven disse ascoltando il K. 491: "Non riusciremo mai a fare nulla di simile".</li>
                     </ul>
                   </div>
@@ -4066,7 +4066,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">ODESCALCHI, Barbara (Principessa Babette) (1754-1802)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> principessa e mecenate</li>
-                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> dedicataria del Concerto n. 1 Op. 15.</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> dedicataria del Concerto n. 1 Op. 15.</li>
                     </ul>
                   </div>
 
@@ -4076,7 +4076,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> ambasciatore russo a Vienna</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> mecenate</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> committente dei tre quartetti Op. 59 ("Razumovsky").</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> committente dei tre quartetti Op. 59 ("Razumovsky").</li>
                     </ul>
                   </div>
 
@@ -4085,7 +4085,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista e compositore, allievo di Beethoven</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> amico intimo e biografo</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> testimone oculare della prima dell'Op. 37; raccontò i dettagli sulla stesura incompleta della parte solistica.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> testimone oculare della prima dell'Op. 37; raccontò i dettagli sulla stesura incompleta della parte solistica.</li>
                     </ul>
                   </div>
 
@@ -4104,7 +4104,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> impresario teatrale e librettista (Flauto Magico)</li>
                       <li><strong className="text-slate-200">Relazione con Beethoven:</strong> gestore del Theater an der Wien</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> ospitò Beethoven nel teatro durante la composizione dell'Op. 37.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> ospitò Beethoven nel teatro durante la composizione dell'Op. 37.</li>
                     </ul>
                   </div>
 
@@ -4121,7 +4121,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">SEYFRIED, Ignaz von (1776-1841)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra</li>
-                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> voltapagine alla prima dell'Op. 37</li>
+                      <li><strong className="text-slate-200">Relazione con Beethoven:</strong> voltapagine alla prima dell'Op. 37</li>
                       <li><strong className="text-slate-200">Importanza:</strong> tramandò l'aneddoto dei "geroglifici egizi" (pagine vuote) sullo spartito del pianoforte.</li>
                     </ul>
                   </div>
@@ -4194,7 +4194,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">ABBADO, Claudio (1933-2014)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra italiano</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> registrò l'Op. 37 con Martha Argerich (2004), versione di riferimento moderna.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> registrò l'Op. 37 con Martha Argerich (2004), versione di riferimento moderna.</li>
                     </ul>
                   </div>
 
@@ -4203,7 +4203,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">BÖHM, Karl (1894-1981)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> direttore d'orchestra austriaco</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> diresse Maurizio Pollini nell'Op. 37 (1979); simbolo della tradizione classica viennese.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> diresse Maurizio Pollini nell'Op. 37 (1979); simbolo della tradizione classica viennese.</li>
                     </ul>
                   </div>
 
@@ -4254,7 +4254,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <h5 className="font-bold text-slate-100 mb-2">GOULD, Glenn (1932-1982)</h5>
                     <ul className="space-y-1 text-xs">
                       <li><strong className="text-slate-200">Chi era:</strong> pianista canadese</li>
-                      <li><strong className="text-slate-200">Importanza:</strong> interprete eccentrico e geniale, offrì una lettura dell'Op. 37 (1959) asciutta e anti-romantica.</li>
+                      <li><strong className="text-slate-200">Importanza:</strong> interprete eccentrico e geniale, offrì una lettura dell'Op. 37 (1959) asciutta e anti-romantica.</li>
                     </ul>
                   </div>
 
