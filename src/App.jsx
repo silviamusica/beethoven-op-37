@@ -1613,7 +1613,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           re di Westfalia. Questa sicurezza economica permise a Beethoven di comporre senza pressioni finanziarie.
         </p>
         <div className="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-1">
-          <p><strong>Note:</strong></p>
+          <p><strong>Note</strong></p>
           <ul className="list-disc list-inside space-y-1 ml-2">
             <li>Solo davanti all'Arciduca Rodolfo, Beethoven toglieva il cappello in segno di rispetto</li>
             <li>Il rapporto con Lichnowsky si ruppe nel 1806 per una lite violenta</li>
