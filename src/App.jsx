@@ -813,7 +813,7 @@ const FontiSection = () => {
                     </li>
                   </ul>
 
-                  <p className="mt-2 text-xs"><strong>Dimensioni:</strong> circa 6,3 x 14 cm</p>
+                  <p className="mt-2 text-sm"><strong>Dimensioni:</strong> circa 6,3 x 14 cm</p>
                 </div>
 
                 <div className="text-sm text-slate-300">
@@ -863,8 +863,8 @@ const FontiSection = () => {
               Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
             </p>
             <div className="overflow-x-auto mt-6 sm:mt-8">
-          <table className="min-w-full text-xs sm:text-sm md:text-base border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
-            <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide text-xs sm:text-sm">
+          <table className="min-w-full text-sm sm:text-base md:text-lg border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
+            <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide text-sm sm:text-base">
               <tr>
                 <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Tipologia</th>
                 <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Periodo</th>
@@ -872,7 +872,7 @@ const FontiSection = () => {
                 <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Organizzazione</th>
               </tr>
             </thead>
-            <tbody className="bg-slate-900 text-slate-100 text-xs sm:text-sm">
+            <tbody className="bg-slate-900 text-slate-100 text-sm sm:text-base">
               <tr className="odd:bg-slate-800">
                 <td className="px-4 py-3 border border-slate-700 font-semibold text-slate-200">Quaderni di Schizzi</td>
                 <td className="px-4 py-3 border border-slate-700">Dal 1798 in poi</td>
@@ -1322,7 +1322,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       {/* Tabella cronologica */}
       <div className="overflow-x-auto">
         <h3 className="text-lg font-semibold text-slate-100 mb-4">Cronistoria dei pianoforti di Beethoven</h3>
-        <table className="w-full text-xs text-slate-300 border-collapse">
+        <table className="w-full text-sm text-slate-300 border-collapse">
           <thead>
             <tr className="bg-slate-700 text-slate-100">
               <th className="border border-slate-600 p-2 text-left">Modello / Costruttore</th>
@@ -1497,7 +1497,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           Le cadenze riflettono il linguaggio armonico e pianistico della <em>Sonata Waldstein</em> Op. 53 o dell'<em>Appassionata</em> Op. 57, 
           risultando più avanzate del concerto stesso.
         </p>
-        <p className="text-xs italic text-slate-400">
+        <p className="text-sm italic text-slate-400">
           Questo dimostra che Beethoven non considerava la cadenza come parte immutabile del concerto, 
           ma come spazio di libertà espressiva legato al momento dell'esecuzione.
         </p>
@@ -1532,12 +1532,12 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </ul>
       </div>
 
-      <div className="mt-3 p-3 bg-blue-900/20 rounded text-xs text-slate-200 border-l-2 border-blue-500">
+      <div className="mt-3 p-3 bg-blue-900/20 rounded text-sm text-slate-200 border-l-2 border-blue-500">
         💡 <strong>Curiosità:</strong> Clara Schumann fu tra le prime donne a eseguire questo concerto in pubblico (1840), 
         sfidando le convenzioni dell'epoca che scoraggiavano le donne dall'eseguire opere così impegnative.
       </div>
 
-      <p className="text-xs text-slate-400 italic pt-3 border-t border-slate-700">
+      <p className="text-sm text-slate-400 italic pt-3 border-t border-slate-700">
         La tradizione di scrivere cadenze personali per i concerti di Beethoven è viva ancora oggi, 
         dimostrando come questi capolavori continuino a ispirare creatività e dialogo tra epoche.
       </p>
@@ -1553,7 +1553,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           alt="Vienna durante le guerre napoleoniche"
           className="w-full h-64 object-contain rounded-lg"
         />
-        <p className="text-xs text-slate-400 mt-2 italic text-center">Guerra napoleonica. La cattura dei ponti sul Danubio (13/11/1805). Autore sconosciuto.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Guerra napoleonica. La cattura dei ponti sul Danubio (13/11/1805). Autore sconosciuto.</p>
       </div>
 
       <div>
@@ -1590,7 +1590,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-2">I mecenati di Beethoven</h3>
         <div className="overflow-x-auto">
-          <table className="w-full text-xs text-slate-300 border-collapse">
+          <table className="w-full text-sm text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
                 <th className="border border-slate-600 p-2 text-left">Nome</th>
@@ -1648,7 +1648,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <strong>rendita vitalizia di 4.000 fiorini annui</strong> per impedirgli di lasciare Vienna e accettare l'offerta del 
           re di Westfalia. Questa sicurezza economica permise a Beethoven di comporre senza pressioni finanziarie.
         </p>
-        <div className="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-1">
+        <div className="bg-slate-800/50 p-3 rounded text-sm text-slate-300 space-y-1">
           <p><strong>Note</strong></p>
           <ul className="space-y-1 ml-2">
             <li className="flex items-start space-x-2">
@@ -1690,7 +1690,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             alt="Ritratto di Ludwig van Beethoven"
             className="w-full h-52 sm:h-96 object-cover max-h-[60vh]"
           />
-          <p className="text-xs text-slate-400 mt-2 italic text-center">Ritratto di Beethoven. Joseph Willibrord Mähler (1804-5).</p>
+          <p className="text-sm text-slate-400 mt-2 italic text-center">Ritratto di Beethoven. Joseph Willibrord Mähler (1804-5).</p>
         </div>
 
         <div className="mb-5">
@@ -1729,7 +1729,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         {/* Tabella I 5 Concerti in Prospettiva */}
         <div className="overflow-x-auto">
           <h4 className="text-base font-semibold text-slate-200 mb-3">I 5 Concerti in prospettiva</h4>
-          <table className="w-full text-xs text-slate-300 border-collapse">
+          <table className="w-full text-sm text-slate-300 border-collapse">
             <thead>
               <tr className="bg-slate-700 text-slate-100">
                 <th className="border border-slate-600 p-2 text-left">N.</th>
@@ -1792,7 +1792,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               alt="Theater an der Wien nel 1803"
               className="w-full h-48 sm:h-72 object-cover rounded-lg max-h-[55vh]"
             />
-            <p className="text-xs text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d'epoca.</p>
+            <p className="text-sm text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d'epoca.</p>
           </div>
 
           <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-600 shadow-lg mb-4">
@@ -1829,7 +1829,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               alt="Vienna nel 1800"
               className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
-            <p className="text-xs text-slate-400 mt-1 italic text-center">Vienna alla fine del XVIII secolo.</p>
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Vienna alla fine del XVIII secolo.</p>
           </div>
 
           <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
@@ -1858,7 +1858,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               alt="Beethoven al lavoro"
               className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
-            <p className="text-xs text-slate-400 mt-1 italic text-center">Ritratto di Beethoven. Joseph Karl Stieler (1820).</p>
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Ritratto di Beethoven. Joseph Karl Stieler (1820).</p>
           </div>
 
           <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
@@ -1886,7 +1886,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
               alt="Manoscritto del Concerto Op. 37"
               className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
-            <p className="text-xs text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
           </div>
 
           <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
@@ -1940,31 +1940,31 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setActiveTab('analysis')}
-            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
             → Analisi movimenti
           </button>
           <button
             onClick={() => setActiveTab('glossary')}
-            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
             → Glossario termini
           </button>
           <button
             onClick={() => setActiveTab('interpreters')}
-            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
             → Interpretazioni storiche
           </button>
           <button
             onClick={() => setActiveTab('quiz')}
-            className="text-xs px-3 py-1.5 bg-slate-700 border border-blue-700 text-blue-400 rounded hover:bg-slate-600 transition-colors font-medium"
+            className="text-sm px-3 py-2 bg-slate-700 border border-blue-700 text-blue-400 rounded hover:bg-slate-600 transition-colors font-medium"
           >
             → Mettiti alla prova
           </button>
           <button
             onClick={() => setActiveTab('fonti')}
-            className="text-xs px-3 py-1.5 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
           >
             → Fonti documentarie
           </button>
@@ -2063,7 +2063,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                   href="http://youtube.com/watch?v=0c5dWB2gFLY"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold transition-colors"
+                  className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-sm font-semibold transition-colors"
                 >
                   <PlayCircle className="w-4 h-4" />
                   Ascolta su YouTube
@@ -2407,7 +2407,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
               className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-            <p className="absolute bottom-4 left-4 text-xs text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
+            <p className="absolute bottom-4 left-4 text-sm text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
               Frontespizio della prima edizione del concerto
             </p>
           </div>
@@ -2691,13 +2691,13 @@ const InterpretersSection = () => {
           <div>
             <h3 className="text-xl font-semibold text-white mb-1">{interpreter.name}</h3>
             {interpreter.bio && (
-              <p className="text-slate-300 text-xs italic mb-2">{interpreter.bio}</p>
+              <p className="text-slate-300 text-sm italic mb-2">{interpreter.bio}</p>
             )}
             <p className="text-white/90 text-sm flex items-center">
               <PlayCircle className="w-4 h-4 mr-1.5" />
               {interpreter.conductor}
             </p>
-            <p className="text-white/80 text-xs mt-0.5">{interpreter.orchestra}</p>
+            <p className="text-white/80 text-sm mt-0.5">{interpreter.orchestra}</p>
           </div>
           <div className="bg-slate-800 text-blue-400 px-3 py-1 rounded-full font-semibold text-sm">
             {interpreter.year}
@@ -2707,15 +2707,15 @@ const InterpretersSection = () => {
 
       <div className="p-5 bg-slate-900">
         <div className="mb-3 flex items-center justify-between flex-wrap gap-2">
-          <span className="inline-block bg-slate-800/50 text-slate-200 px-3 py-1 rounded-full text-xs font-medium">
+          <span className="inline-block bg-slate-800/50 text-slate-200 px-3 py-1 rounded-full text-sm font-medium">
             Stile: {interpreter.style}
           </span>
-          {interpreter.link && (
+            {interpreter.link && (
             <a
               href={interpreter.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold transition-colors"
+              className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-sm font-semibold transition-colors"
             >
               <PlayCircle className="w-4 h-4" />
               Ascolta su YouTube
@@ -2769,7 +2769,7 @@ const InterpretersSection = () => {
               className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-            <p className="absolute bottom-4 left-4 text-xs text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
+            <p className="absolute bottom-4 left-4 text-sm text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
               Krystian Zimerman con i Wiener Philharmoniker
             </p>
           </div>
@@ -2864,7 +2864,7 @@ const InterpretersSection = () => {
       </div>
       <div className="p-5 bg-slate-900 overflow-x-auto">
         <table className="w-full text-sm border-collapse">
-          <thead className="bg-slate-800 text-slate-200 uppercase tracking-wide text-xs">
+          <thead className="bg-slate-800 text-slate-200 uppercase tracking-wide text-sm">
             <tr>
               <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Interprete</th>
               <th className="border border-slate-700 px-3 py-2 text-left font-semibold">Direttore</th>
@@ -3075,7 +3075,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           alt="Beethoven dirige un'orchestra nonostante la sordità"
           className="w-full h-64 object-contain rounded-lg"
         />
-        <p className="text-xs text-slate-400 mt-3 italic text-center">
+        <p className="text-sm text-slate-400 mt-3 italic text-center">
           Ludwig van Beethoven dirige un'orchestra nonostante la sordità.<br/>
           <span className="text-slate-500">Scuola francese, XIX secolo - da "Le leggende dell'arte: Musicisti" (Parigi, ca. 1890)</span>
         </p>
@@ -3124,11 +3124,11 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <ul className="space-y-2 ml-2">
                   <li className="flex items-start space-x-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                    <span className="text-xs text-slate-200">Dal latino <em>concertare</em> = <strong>combattere, gareggiare</strong></span>
+                    <span className="text-sm text-slate-200">Dal latino <em>concertare</em> = <strong>combattere, gareggiare</strong></span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                    <span className="text-xs text-slate-200">Dall'italiano <em>concertare</em> = <strong>accordarsi, agire insieme</strong></span>
+                    <span className="text-sm text-slate-200">Dall'italiano <em>concertare</em> = <strong>accordarsi, agire insieme</strong></span>
                   </li>
                 </ul>
                 <p className="mt-3 text-slate-200">
@@ -3140,23 +3140,23 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
               {/* Tre Fasi */}
               <div className="grid md:grid-cols-3 gap-3">
                 <div className="bg-slate-800 p-3 rounded border-l-2 border-blue-500">
-                  <h5 className="font-semibold text-slate-200 text-xs mb-1">1. Polarità (Barocco)</h5>
-                  <p className="text-xs">Netta distinzione tra Solo e Tutti</p>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-1">1. Polarità (Barocco)</h5>
+                  <p className="text-sm">Netta distinzione tra Solo e Tutti</p>
                 </div>
                 <div className="bg-slate-800 p-3 rounded border-l-2 border-blue-500">
-                  <h5 className="font-semibold text-slate-200 text-xs mb-1">2. Reciprocità (Classico)</h5>
-                  <p className="text-xs">Dialogo drammatico paritario</p>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-1">2. Reciprocità (Classico)</h5>
+                  <p className="text-sm">Dialogo drammatico paritario</p>
                 </div>
                 <div className="bg-slate-800 p-3 rounded border-l-2 border-orange-500">
-                  <h5 className="font-semibold text-slate-200 text-xs mb-1">3. Diffusività (Romantico)</h5>
-                  <p className="text-xs">Fusione sinfonica o lotta eroica</p>
+                  <h5 className="font-semibold text-slate-200 text-sm mb-1">3. Diffusività (Romantico)</h5>
+                  <p className="text-sm">Fusione sinfonica o lotta eroica</p>
                 </div>
               </div>
 
               {/* Tabella Storica */}
               <div className="overflow-x-auto">
                 <h4 className="text-base font-semibold text-slate-100 mb-3">Cronologia dello sviluppo</h4>
-                <table className="w-full text-xs border-collapse">
+                <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-slate-700 text-slate-100">
                       <th className="border border-slate-600 p-2 text-left">Periodo</th>
@@ -3173,7 +3173,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                         Unione di voci e strumenti
                       </td>
                       <td className="border border-slate-600 p-2">A. & G. Gabrieli (1587)<br/>Viadana, Schütz</td>
-                      <td className="border border-slate-600 p-2 text-xs">"Concerto" = eseguire insieme, contesto sacro</td>
+                      <td className="border border-slate-600 p-2 text-sm">"Concerto" = eseguire insieme, contesto sacro</td>
                     </tr>
                     <tr className="bg-slate-800/50">
                       <td className="border border-slate-600 p-2 font-semibold">Fine XVII (Barocco)</td>
