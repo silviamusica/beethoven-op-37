@@ -634,7 +634,9 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
             {tabs.map(tab => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => handleTabClick(tab.id)}
+                aria-current={activeTab === tab.id ? 'page' : undefined}
                 className={`flex items-center space-x-2 px-3 sm:px-4 py-2 rounded-lg transition-all ${
                   activeTab === tab.id
                     ? 'bg-slate-700 text-white'
@@ -664,7 +666,9 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
               {tabs.map(tab => (
                 <button
                   key={tab.id}
+                  type="button"
                   onClick={() => handleTabClick(tab.id)}
+                  aria-current={activeTab === tab.id ? 'page' : undefined}
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left ${
                     activeTab === tab.id
                       ? 'bg-slate-700 text-white'
@@ -2156,9 +2160,18 @@ const PdfScoreViewer = () => {
 
 // Componente Modal
 const Modal = ({ isOpen, onClose, title, children }) => {
+  const closeBtnRef = React.useRef(null);
+  const dialogRef = React.useRef(null);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      // focus close button when modal opens
+      setTimeout(() => {
+        try {
+          closeBtnRef.current?.focus();
+        } catch (e) {}
+      }, 50);
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -2170,14 +2183,16 @@ const Modal = ({ isOpen, onClose, title, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div className="fixed inset-0 z-50 overflow-y-auto" aria-hidden={!isOpen}>
       <div className="fixed inset-0 bg-black/70 transition-opacity" onClick={onClose} />
       <div className="flex min-h-full items-center justify-center p-4">
-        <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-600">
+        <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={title || 'Dialog'} className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-600">
           <div className="sticky top-0 z-10 bg-slate-700 px-6 py-4 border-b border-slate-600 flex justify-between items-center">
             <h2 className="text-2xl font-bold text-white">{title}</h2>
             <button
+              ref={closeBtnRef}
               onClick={onClose}
+              aria-label="Chiudi dialog"
               className="text-slate-400 hover:text-white text-3xl font-bold leading-none transition-colors"
             >
               ×
