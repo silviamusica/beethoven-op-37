@@ -31,8 +31,12 @@ export default function Footer({ setActiveTab }) {
       <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col items-center text-sm text-slate-300">
         <div className="mb-6 w-full flex justify-center">
           <div className="flex items-center gap-8 justify-center">
-            <img src="/Logo%20vlr.png" alt="Logo vlr" className="h-16 w-auto" />
-            <img src="/Logo%20Sip.png" alt="Logo Sip" className="h-16 w-auto" />
+            <a href="https://www.vitolore.com" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+              <img src="/Logo%20vlr.png" alt="Logo vlr" className="h-18 w-auto" />
+            </a>
+            <a href="https://www.sognandoilpiano.it" target="_blank" rel="noopener noreferrer" className="transform transition-transform hover:scale-110">
+              <img src="/Logo%20Sip.png" alt="Logo Sip" className="h-18 w-auto" />
+            </a>
           </div>
         </div>
         <div className="w-full">
