@@ -38,32 +38,19 @@ class ErrorBoundary extends React.Component {
 
 const glossaryData = [
   {
-    category: "Forme Musicali",
-    items: [
-      { term: "Forma Sonata", definition: "Struttura musicale in tre sezioni principali: esposizione (presentazione dei temi), sviluppo (elaborazione dei temi) e Ripresa (ritorno dei temi). Nel concerto classico si alterna tra TUTTI (orchestra) e SOLO (solista + orchestra)." },
-      { term: "Rondò", definition: "Forma musicale basata sull'alternanza di un tema principale (esposizione) con episodi contrastanti. Schema tipico: A-B-A-C-A. Nel concerto, il tema principale si scambia velocemente tra Solo e Tutti in un rapido 'botta e risposta'." },
-      { term: "Cadenza", definition: "Sezione virtuosistica per il solista, tradizionalmente improvvisata. Nel Concerto n.3, Beethoven scrisse la propria cadenza (inizialmente improvvisata). È un'area 'protetta' per mostrare il virtuosismo del solista." },
-      { term: "Fugato", definition: "Passaggio in stile contrappuntistico dove il tema viene imitato tra le voci. Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale - scelta audace e innovativa." },
-      { term: "Doppia Esposizione", definition: "Nel primo movimento del concerto classico: prima l'orchestra presenta i temi (ESPOSIZIONE 1), poi il solista li riespone con l'orchestra (SOLO 1), spesso con variazioni e abbellimenti." }
-    ]
-  },
-  {
     category: "Terminologia Tecnica",
     items: [
-      { term: "ESPOSIZIONE (R1, R2, etc.)", definition: "Nella teoria Hepokoski-Darcy: sezione orchestrale che ritorna ciclicamente. Nel primo movimento: R1 (batt. 1-111, esposizione orchestrale), R2 (batt. 227-249, transizione), R4 (batt. 403-416), R5/CODA (batt. 481-507, dove innovativamente il piano continua a suonare)." },
       { term: "TUTTI", definition: "Termine generico per indicare l'orchestra completa che suona insieme (vs SOLO). Nella teoria del concerto classico, meglio usare ESPOSIZIONE per le sezioni orchestrali formali." },
       { term: "SOLO", definition: "Sezione in cui il pianoforte è protagonista, accompagnato dall'orchestra. L'unica sezione di vero solo è la Cadenza." },
       { term: "Modulazione", definition: "Passaggio da una tonalità all'altra. Nel concerto, è essenziale per il virtuosismo: le figure difficili devono essere eseguibili in diverse tonalità (es. Do minore → Mib maggiore → Do maggiore)." },
-      { term: "Tema Primario (P)", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
-      { term: "Secondo Tema (S)", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
-      { term: "Episodi di Bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli. Nel primo movimento del SOLO 1, il trillo finale (prima della transizione allo sviluppo) rappresenta il culmine agognato." },
-      { term: "Transizione (TR)", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Nella teoria Hepokoski-Darcy, la transizione può utilizzare materiale tematico esistente (come nell'Op. 37, dove il tema P agisce come 'jolly')." },
-      { term: "Elemento Z", definition: "Materiale di chiusura alla fine dell'esposizione orchestrale (batt. 86-111). Ha carattere ritmico e percussivo, preparando l'entrata drammatica del solista." },
+      { term: "Tema primario", definition: "Il tema principale di un movimento. Nell'Op. 37, il tema primario è la scansione ascendente della triade di Do minore con ritmo puntato e carattere marziale." },
+      { term: "Secondo tema", definition: "Tema contrastante, solitamente in tonalità relativa. Nell'Op. 37: profilo melodico ornato in Mib maggiore, dolce e carezzevole, esposto da clarinetto e violini." },
+      { term: "Episodi di bravura", definition: "Passaggi virtuosistici con cascate di note, arpeggi, scale e trilli." },
+      { term: "Ponte modulante", definition: "Passaggio che collega il primo tema al secondo tema, con funzione di modulazione. Può utilizzare materiale tematico esistente (come nell'Op. 37, dove il tema principale agisce come 'jolly')." },
       { term: "Triade", definition: "Accordo di tre note sovrapposte per terze. Il tema primario del primo movimento è basato sulla scansione (arpeggio) della triade di Do minore (Do-Mib-Sol)." },
       { term: "Arpeggio", definition: "Esecuzione delle note di un accordo una dopo l'altra invece che simultaneamente. Gli arpeggi sono fondamentali nel secondo movimento e negli episodi di bravura." },
-      { term: "Trillo", definition: "Rapida alternanza tra due note adiacenti. Il trillo finale dell'episodio di bravura nel SOLO 1 rappresenta il culmine virtuosistico dell'esposizione." },
-      { term: "Punto Coronato", definition: "Simbolo che indica di prolungare una nota a piacere. Nella preparazione della cadenza (fine SOLO 3, prima di batt. 417), segnala la sospensione armonica prima dell'improvvisazione solistica." },
-      { term: "Rotation (Rotazione)", definition: "Concetto di ripetizione ciclica dei materiali tematici in diverse sezioni del movimento, tipico dell'analisi dei concerti secondo Hepokoski-Darcy." }
+      { term: "Trillo", definition: "Rapida alternanza tra due note adiacenti." },
+      { term: "Punto coronato", definition: "Simbolo che indica di prolungare una nota a piacere. Nella preparazione della cadenza (fine SOLO 3, prima di batt. 417), segnala la sospensione armonica prima dell'improvvisazione solistica." }
     ]
   },
   {
@@ -87,12 +74,12 @@ const movementsData = [
     isTable: true,
     hasModal: true,
     tableData: [
-      { sezione: "ESPOSIZIONE", sottosezione: "TUTTI 1", battute: "1-111", descrizione: "I Tema in Do minore (carattere marziale, cadenzato, incisivo). Transizione con scomposizione del tema. II Tema (batt. 50-74, carattere cantabile, dolce, melodioso). Sezione conclusiva (batt. 86-111) con elemento z e chiusura drammatica", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 1", battute: "112-227", descrizione: "Ingresso con tre potenti scale ascendenti come gesto di sfida. Il pianoforte espone e analizza il I Tema. II Tema (batt. 164-171) in Mi bemolle maggiore. Elemento z (batt. 186-199). Episodio di bravura (batt. 199-226) con cascate di note veloci e trillo finale" },
+      { sezione: "ESPOSIZIONE", sottosezione: "TUTTI 1", battute: "1-111", descrizione: "I Tema in Do minore (carattere marziale, cadenzato, incisivo). Transizione con scomposizione del tema. II Tema (batt. 50-74, carattere cantabile, dolce, melodioso). Sezione conclusiva (batt. 86-111) con chiusura drammatica", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 1", battute: "112-227", descrizione: "Ingresso con tre potenti scale ascendenti come gesto di sfida. Il pianoforte espone e analizza il I Tema. II Tema (batt. 164-171) in Mi bemolle maggiore. Episodio di bravura (batt. 199-226) con cascate di note veloci e trillo finale" },
       { sezione: "SVILUPPO", sottosezione: "TUTTI 2", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte. Ripresa di un elemento conclusivo del Tutti 1 con nuova funzione introduttiva", rowSpan: 2 },
       { sezione: "", sottosezione: "SOLO 2", battute: "250-309", descrizione: "Apertura con tre scale ascendenti (dominante di Sol minore). Elaborazione della testa del tema (elemento x) e della cellula ritmica (elemento y). Atmosfera di rarefazione timbrica (dialogo tra pianoforte e fiati, sonorità evanescenti)" },
       { sezione: "RIPRESA", sottosezione: "TUTTI 3", battute: "309-316", descrizione: "Ripresa del I Tema in fortissimo (segna l'avvio formale della Ripresa)", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 3", battute: "317-403", descrizione: "Scomposizione del I Tema e dell'elemento x. II Tema (batt. 340-355) ripreso nella tonalità d'impianto. Elemento z (batt. 363-375) ed episodio di bravura finale" },
+      { sezione: "", sottosezione: "SOLO 3", battute: "317-403", descrizione: "Scomposizione del I Tema e dell'elemento x. II Tema (batt. 340-355) ripreso nella tonalità d'impianto. Episodio di bravura finale" },
       { sezione: "CODA", sottosezione: "TUTTI 4", battute: "403-416", descrizione: "Riparte dalla testa del tema (x) e si interrompe su un accordo sospeso (corona) per invitare il solista", rowSpan: 3 },
       { sezione: "", sottosezione: "CADENZA", battute: "417-480", descrizione: "Sezione in cui il solista è realmente solo (esibizione), con rielaborazione virtuosistica dei temi principali" },
       { sezione: "", sottosezione: "TUTTI 5", battute: "481-507", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani. Scansione della cellula ritmica y, crescendo rapido e accordi finali" }
@@ -594,7 +581,7 @@ const quizData = [
     explanation: "Il passaggio da Do minore (I movimento) a Mi maggiore (II movimento) rappresenta un salto cromatico di terza, una scelta tonale audace per l'epoca che Beethoven usa per creare un effetto di 'shock' e contrasto luminoso dopo l'oscurità del primo movimento."
   },
   {
-    question: "Cosa rappresenta il Esposizione 4 (R4) finale secondo Hepokoski-Darcy?",
+    question: "Cosa rappresenta il Esposizione 4 (R4) finale?",
     options: [
       "Una ripetizione identica del Esposizione 1",
       "Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I",
@@ -2226,8 +2213,11 @@ const AnalysisSection = () => {
               <div className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-help tooltip tooltip-start" data-tooltip="I. Allegro con brio - II. Largo - III. Rondò. Allegro">
                 <span className="text-blue-300 font-semibold">3 Movimenti</span>
               </div>
-              <div className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-help tooltip" data-tooltip="Struttura: esposizione, sviluppo e ripresa dei temi">
-                <span className="text-blue-300 font-semibold">Forma Sonata</span>
+              <div 
+                className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-900/50 transition-colors"
+                onClick={() => { setActiveTab('glossary'); setTimeout(() => setOpenSonataForm(true), 100); }}
+              >
+                <span className="text-blue-300 font-semibold">Forma Sonata →</span>
               </div>
               <div className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-help tooltip" data-tooltip="Tonalità principale. Relativa minore di Mi♭ maggiore">
                 <span className="text-blue-300 font-semibold">Do minore</span>
@@ -2809,6 +2799,8 @@ const GlossarySection = () => {
   const [openConcertoHistory, setOpenConcertoHistory] = useState(false);
   const [openRondoForm, setOpenRondoForm] = useState(false);
   const [openSonataForm, setOpenSonataForm] = useState(false);
+  const [openCadenzaForm, setOpenCadenzaForm] = useState(false);
+  const [openFugatoForm, setOpenFugatoForm] = useState(false);
   const [openPersonaggi, setOpenPersonaggi] = useState(false);
 
   const toggleCategory = (category, event) => {
@@ -3012,7 +3004,7 @@ const GlossarySection = () => {
                 <div className="bg-slate-800/50 p-3 rounded">
                   <h5 className="font-semibold text-slate-200 text-sm mb-2">2. Classico: forma-Sonata e Doppia Esposizione</h5>
                   <p className="text-xs mb-2">
-                    Mozart e Beethoven assorbono la <strong>Forma-Sonata</strong> (Hepokoski-Darcy).
+                    Mozart e Beethoven assorbono la <strong>Forma-Sonata</strong>.
                   </p>
                   <ul className="space-y-1 text-xs list-disc list-inside ml-2">
                     <li>L'orchestra apre con quasi-esposizione completa (Esposizione 1), ma resta in tonica</li>
@@ -3304,94 +3296,126 @@ const GlossarySection = () => {
                 </div>
               </div>
 
-              {/* Tabella Struttura */}
-              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
-                <h4 className="text-base font-semibold text-slate-200 mb-3">Tabella riassuntiva della struttura</h4>
-                <p className="text-xs mb-3">
-                  Integra la terminologia classica con le funzioni formali della <em>Sonata Theory</em> (Hepokoski & Darcy):
-                </p>
-                
-                <div className="overflow-x-auto">
-                  <table className="w-full text-xs border-collapse">
-                    <thead className="bg-slate-700 text-white">
-                      <tr>
-                        <th className="border border-slate-600 p-2 text-left">Sezione</th>
-                        <th className="border border-slate-600 p-2 text-left">Sottosezione / Funzione</th>
-                        <th className="border border-slate-600 p-2 text-left">Caratteristiche Principali</th>
-                        <th className="border border-slate-600 p-2 text-left">Tonalità</th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-slate-900/50">
-                      <tr>
-                        <td className="border border-slate-600 p-2 italic">(Introduzione)</td>
-                        <td className="border border-slate-600 p-2 italic">(Opzionale)</td>
-                        <td className="border border-slate-600 p-2">Prepara l'inizio del movimento, spesso con tempo lento</td>
-                        <td className="border border-slate-600 p-2">Varia (spesso instabile)</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-bold" rowSpan="4">ESPOSIZIONE</td>
-                        <td className="border border-slate-600 p-2 font-semibold">Primo Tema (P)</td>
-                        <td className="border border-slate-600 p-2">Tema principale. Struttura stabile ("tight-knit"), stabilisce l'identità del brano</td>
-                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-semibold">Transizione (TR)</td>
-                        <td className="border border-slate-600 p-2">Sezione di energia crescente che destabilizza la tonica. Conduce alla <strong>Medial Caesura (MC)</strong>, una pausa retorica che divide l'esposizione in due parti</td>
-                        <td className="border border-slate-600 p-2">Modulante (verso V o III)</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-semibold">Secondo Tema (S)</td>
-                        <td className="border border-slate-600 p-2">Tema secondario, spesso più lirico e "loose" (libero). Il suo compito è confermare la nuova tonalità fino alla cadenza EEC</td>
-                        <td className="border border-slate-600 p-2 font-bold">Dominante (V)</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-semibold">Coda/Chiusura (C)</td>
-                        <td className="border border-slate-600 p-2">Conferma la conclusione della sezione dopo la cadenza risolutiva</td>
-                        <td className="border border-slate-600 p-2">Nuova tonalità</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-slate-600 p-2 font-bold" rowSpan="2">SVILUPPO</td>
-                        <td className="border border-slate-600 p-2 font-semibold">Elaborazione</td>
-                        <td className="border border-slate-600 p-2">Frammentazione dei temi, sequenze armoniche, instabilità, assenza di cadenze forti di riposo</td>
-                        <td className="border border-slate-600 p-2 font-bold">Varie (Modulante)</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-slate-600 p-2 font-semibold">Retransizione</td>
-                        <td className="border border-slate-600 p-2">Prepara il ritorno del tema principale, spesso insistendo sulla Dominante ("standing on the dominant")</td>
-                        <td className="border border-slate-600 p-2">Dominante della tonalità d'impianto</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-bold" rowSpan="3">RIPRESA</td>
-                        <td className="border border-slate-600 p-2 font-semibold">Primo Tema (P)</td>
-                        <td className="border border-slate-600 p-2">Ritorno del tema principale come nell'esposizione</td>
-                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-semibold">Transizione (TR)</td>
-                        <td className="border border-slate-600 p-2">Viene modificata per <em>non</em> modulare e rimanere nella tonalità di casa</td>
-                        <td className="border border-slate-600 p-2">Rimane verso la Tonica</td>
-                      </tr>
-                      <tr className="bg-slate-800/30">
-                        <td className="border border-slate-600 p-2 font-semibold">Secondo Tema (S)</td>
-                        <td className="border border-slate-600 p-2">Riproposto, ma trasposto nella tonalità d'impianto per risolvere il conflitto (raggiungimento della ESC - Essential Structural Closure)</td>
-                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
-                      </tr>
-                      <tr>
-                        <td className="border border-slate-600 p-2 italic">(Coda)</td>
-                        <td className="border border-slate-600 p-2 italic">(Opzionale)</td>
-                        <td className="border border-slate-600 p-2">Sezione conclusiva finale, talvolta estesa (specie in Beethoven) per affermare definitivamente la fine</td>
-                        <td className="border border-slate-600 p-2 font-bold">Tonica (I)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
               <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
                 <p className="text-xs">
                   <strong className="text-slate-200">Nota teorica:</strong> Il Concerto per pianoforte n. 3 di Beethoven 
                   utilizza la <strong>Forma di Sonata per Concerto</strong>, una variante che prevede la doppia esposizione 
                   (prima l'orchestra, poi il solista) e l'integrazione della cadenza virtuosistica prima della coda finale.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Approfondimento: La Cadenza */}
+      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <button
+          onClick={() => setOpenCadenzaForm(!openCadenzaForm)}
+          className={`w-full p-5 flex justify-between items-center transition-all ${
+            openCadenzaForm
+              ? 'sticky top-20 z-10 bg-slate-700 text-white'
+              : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <Music className="w-5 h-5 text-blue-400" />
+            <div className="text-left">
+              <h3 className="text-lg font-semibold">🎹 La Cadenza</h3>
+              <span className="text-sm opacity-90">Improvvisazione virtuosistica del solista</span>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 transition-transform ${openCadenzaForm ? 'rotate-180' : ''}`} />
+        </button>
+        {openCadenzaForm && (
+          <div className="p-6 pt-24 bg-slate-900">
+            <div className="space-y-5 text-sm text-slate-300">
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-blue-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Definizione e funzione</h4>
+                <p className="mb-3">
+                  La <strong>cadenza</strong> è una sezione virtuosistica per il solista, tradizionalmente improvvisata, 
+                  che si colloca tipicamente alla fine del primo movimento, poco prima della coda orchestrale finale.
+                </p>
+                <p className="mb-3">
+                  Nel Concerto n. 3, Beethoven scrisse la propria cadenza (inizialmente improvvisata nelle prime esecuzioni). 
+                  È un'area 'protetta' in cui il solista può mostrare il proprio virtuosismo tecnico ed espressivo, 
+                  elaborando i temi principali del movimento.
+                </p>
+              </div>
+
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Caratteristiche</h4>
+                <ul className="space-y-2 list-disc list-inside text-sm">
+                  <li>L'orchestra si ferma su un <strong>punto coronato</strong> (accordo di dominante sospeso)</li>
+                  <li>Il solista improvvisa liberamente, senza accompagnamento</li>
+                  <li>Elabora i temi principali del movimento con passaggi virtuosistici</li>
+                  <li>Conclude con un trillo sulla dominante, segnalando il ritorno dell'orchestra</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
+                <p className="text-xs">
+                  <strong className="text-slate-200">Nota storica:</strong> Beethoven fu tra i primi compositori a scrivere 
+                  le proprie cadenze, invece di lasciarle all'improvvisazione del solista. Questa scelta riflette il desiderio 
+                  di controllo totale sulla forma e il contenuto drammatico del concerto.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Approfondimento: Il Fugato */}
+      <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+        <button
+          onClick={() => setOpenFugatoForm(!openFugatoForm)}
+          className={`w-full p-5 flex justify-between items-center transition-all ${
+            openFugatoForm
+              ? 'sticky top-20 z-10 bg-slate-700 text-white'
+              : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+          }`}
+        >
+          <div className="flex items-center space-x-3">
+            <Music className="w-5 h-5 text-blue-400" />
+            <div className="text-left">
+              <h3 className="text-lg font-semibold">🎼 Il Fugato</h3>
+              <span className="text-sm opacity-90">Tecnica contrappuntistica imitativa</span>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 transition-transform ${openFugatoForm ? 'rotate-180' : ''}`} />
+        </button>
+        {openFugatoForm && (
+          <div className="p-6 pt-24 bg-slate-900">
+            <div className="space-y-5 text-sm text-slate-300">
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-blue-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Definizione</h4>
+                <p className="mb-3">
+                  Il <strong>fugato</strong> è un passaggio musicale scritto in stile contrappuntistico, dove un tema 
+                  viene <strong>imitato tra le voci</strong> diverse, come in una fuga, ma senza seguire rigorosamente 
+                  tutte le regole formali della fuga vera e propria.
+                </p>
+                <p className="mb-3">
+                  Nel terzo movimento dell'Op. 37, Beethoven inserisce un elaborato fugato sul tema principale del rondò - 
+                  una scelta audace e innovativa che unisce la brillantezza del finale concertistico con la profondità 
+                  del contrappunto bachiano.
+                </p>
+              </div>
+
+              <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Caratteristiche nel terzo movimento</h4>
+                <ul className="space-y-2 list-disc list-inside text-sm">
+                  <li>Il tema principale viene trattato in <strong>imitazione stretta</strong></li>
+                  <li>Le voci entrano successivamente, creando una texture densa e complessa</li>
+                  <li>Dimostra la padronanza di Beethoven sia dello stile galante che del contrappunto severo</li>
+                  <li>Crea un contrasto drammatico con le sezioni più leggere e virtuosistiche</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
+                <p className="text-xs">
+                  <strong className="text-slate-200">Nota stilistica:</strong> L'uso del fugato in un finale di concerto 
+                  è raro nel periodo classico. Beethoven dimostra qui la sua ambizione di elevare il concerto oltre il puro 
+                  intrattenimento virtuosistico, fondendo brillantezza e profondità intellettuale.
                 </p>
               </div>
             </div>
