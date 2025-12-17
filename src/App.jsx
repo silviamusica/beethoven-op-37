@@ -1912,7 +1912,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                     La Beethoven-Haus contesta tale identificazione, sostenendo che l’immagine ritrae un giovane sconosciuto dipinto all’inizio dell’Ottocento, ma la leggenda del bambino prodigio continua a circondare il quadro.
                   </p>
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    Per anni Beethoven credette di essere nato nel 1772 perché il padre Johann van Beethoven aveva modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
+                    Lo sapevi che... <br />Per anni Beethoven credette di essere nato nel 1772 perché il padre Johann van Beethoven aveva modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
                   </p>
                   <p className="text-sm text-slate-500">
                     Tecnica: olio su tela · Datazione: c. 1783
