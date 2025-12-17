@@ -1,6 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
+import TableWithHint from './components/TableWithHint';
 import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
@@ -901,8 +902,8 @@ const FontiSection = () => {
               <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
                 Scorri a destra per visualizzare tutta la tabella.
               </p>
-            <table className="min-w-full text-sm sm:text-base md:text-lg border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
-            <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide text-sm sm:text-base">
+              <table className="min-w-full text-sm sm:text-base md:text-lg border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
+                <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide text-sm sm:text-base">
               <tr>
                 <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Tipologia</th>
                 <th className="px-4 py-3 text-left font-semibold border border-blue-700/30">Periodo</th>
@@ -936,7 +937,7 @@ const FontiSection = () => {
                 <td className="px-4 py-3 border border-slate-700">Annotazioni personali, citazioni.</td>
               </tr>
             </tbody>
-          </table>
+              </table>
             </div>
 
             <div className="bg-slate-800 p-8 mt-8 rounded-3xl shadow-2xl border border-slate-700">
@@ -3891,8 +3892,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <span className="text-3xl mr-3">👑</span>
                   REGNANTI E MECENATI (DA BACH A BEETHOVEN)
                 </h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-xs border-collapse">
+                <TableWithHint className="overflow-x-auto">
+                  <table className="min-w-[720px] w-full text-xs border-collapse">
                     <thead className="bg-slate-800 text-white uppercase tracking-wide text-xs sm:text-sm">
                       <tr>
                         <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Sovrano / Nobile</th>
@@ -3961,7 +3962,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                       </tr>
                     </tbody>
                   </table>
-                </div>
+                </TableWithHint>
               </div>
 
               {/* PERSONAGGI STORICI - EPOCA DI BEETHOVEN */}
