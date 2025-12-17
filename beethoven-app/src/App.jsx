@@ -233,7 +233,7 @@ const interpretersData = [
     link: "https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB"
   },
   {
-    name: "🎼 Maria João Pires (strumenti d’Epoca)",
+    name: "🎼 Maria João Pires (strumenti d’epoca)",
     bio: "Pianista portoghese, celebre per la sua sensibilità interpretativa e il tocco raffinato",
     conductor: "Frans Brüggen",
     orchestra: "Orchestra of the Eighteenth Century",
