@@ -2275,7 +2275,7 @@ const Tooltip = ({ text, children }) => {
   );
 };
 
-const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
+const AnalysisSection = ({ setActiveTab, setGlossaryFocus, isMobile }) => {
   const [openMovement, setOpenMovement] = useState(null);
   const [modalContent, setModalContent] = useState(null);
   const [showScore, setShowScore] = useState(false); // show/hide spartito del primo movimento
@@ -2396,13 +2396,15 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
                 </p>
               </li>
             </ul>
-            <button
-              onClick={() => setActiveTab('glossary')}
-              className="mt-3 text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
-            >
-              Approfondisci
-              <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <p className="mt-3 text-sm text-slate-300">
+              Puoi approfondire questi concetti nella pagina{' '}
+              <button
+                onClick={() => setActiveTab('glossary')}
+                className="text-blue-400 hover:text-blue-300 font-semibold underline"
+              >
+                Glossario
+              </button>
+            </p>
           </div>
           <div className="relative h-80 md:h-auto min-h-80">
             <img 
@@ -2596,17 +2598,19 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
                 
                 {/* PDF Viewer per lo spartito - solo per il primo movimento (collapsible) */}
                 {mov.id === 1 && (
-                  <div className="mt-4">
-                    <button
-                      onClick={() => setShowScore(s => !s)}
-                      className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold"
-                      aria-expanded={showScore}
-                    >
-                      {showScore ? 'Nascondi spartito' : 'Mostra spartito del Primo Movimento'}
-                      <ChevronDown className={`w-4 h-4 transition-transform ${showScore ? 'rotate-180' : ''}`} />
-                    </button>
-                    {showScore && <PdfScoreViewer />}
-                  </div>
+                  !isMobile && (
+                    <div className="mt-4">
+                      <button
+                        onClick={() => setShowScore(s => !s)}
+                        className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-semibold"
+                        aria-expanded={showScore}
+                      >
+                        {showScore ? 'Nascondi spartito' : 'Mostra spartito del Primo Movimento'}
+                        <ChevronDown className={`w-4 h-4 transition-transform ${showScore ? 'rotate-180' : ''}`} />
+                      </button>
+                      {showScore && <PdfScoreViewer />}
+                    </div>
+                  )
                 )}
               </div>
             )}
@@ -4852,12 +4856,18 @@ const App = () => {
           isMobileMenuOpen={isMobileMenuOpen}
         />
         <main className="max-w-5xl mx-auto px-4 py-12 pb-16">
+          {/* Mobile-only hint: visible on small screens when hamburger menu is present */}
+          {isMobile && activeTab === 'introduzione' && (
+            <div className="max-w-5xl mx-auto px-4 py-2 mb-4 text-sm text-slate-300 bg-slate-800 rounded-lg border border-slate-700">
+              Puoi navigare fra le varie pagine cliccando sul simbolo in alto a destra.
+            </div>
+          )}
           {activeTab === 'introduzione' && (
             <IntroduzioneSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} />
           )}
           {activeTab === 'fonti' && <FontiSection />}
           {activeTab === 'analysis' && (
-            <AnalysisSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} />
+            <AnalysisSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} isMobile={isMobile} />
           )}
           {activeTab === 'interpreters' && <InterpretersSection />}
           {activeTab === 'glossary' && (

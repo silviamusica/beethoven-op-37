@@ -6,8 +6,6 @@ export default function Footer({ setActiveTab }) {
   return (
     <footer className="border-t border-slate-700 mt-8">
       <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-300">
-        <div className="mb-3 sm:mb-0 text-slate-400">© {year} — Progetto Beethoven</div>
-
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setActiveTab('introduzione')}
