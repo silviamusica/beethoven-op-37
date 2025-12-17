@@ -130,6 +130,7 @@ const interpretersData = [
   // 🎹 VERSIONI STORICHE LEGGENDARIE (1933-1973)
   {
     name: "🎹 Artur Schnabel (Versione Storica Leggendaria)",
+    bio: "Pianista austriaco (1882-1951), considerato uno dei più grandi interpreti beethoveniani",
     conductor: "Malcolm Sargent",
     orchestra: "London Philharmonic",
     year: "1933",
@@ -140,6 +141,7 @@ const interpretersData = [
   },
   {
     name: "Claudio Arrau",
+    bio: "Pianista cileno (1903-1991), maestro del repertorio romantico e beethoveniano",
     conductor: "Otto Klemperer",
     orchestra: "Philharmonia Orchestra",
     year: "1957",
@@ -151,6 +153,7 @@ const interpretersData = [
   // ⚠️ IL CASO GOULD (1959)
   {
     name: "⚠️ Glenn Gould (Il Caso Gould - L'Alternativa)",
+    bio: "Pianista canadese (1932-1982), celebre per le sue interpretazioni non convenzionali",
     conductor: "Leonard Bernstein",
     orchestra: "Columbia Symphony Orchestra",
     year: "1959",
@@ -162,6 +165,7 @@ const interpretersData = [
 
   {
     name: "🎹 Wilhelm Kempff (Versione Storica Leggendaria)",
+    bio: "Pianista tedesco (1895-1991), uno dei massimi interpreti di Beethoven e Schubert",
     conductor: "Ferdinand Leitner",
     orchestra: "Berliner Philharmoniker",
     year: "1961",
@@ -172,6 +176,7 @@ const interpretersData = [
   },
   {
     name: "Artur Rubinstein",
+    bio: "Pianista polacco-americano (1887-1982), leggenda del pianoforte del XX secolo",
     conductor: "Bernard Haitink",
     orchestra: "Concertgebouw Orchestra",
     year: "1973",
@@ -183,6 +188,7 @@ const interpretersData = [
   // INTERPRETAZIONI MODERNE (1979-2012)
   {
     name: "Arturo Benedetti Michelangeli",
+    bio: "Pianista italiano (1920-1995), rinomato per la perfezione tecnica e il suono cristallino",
     conductor: "Carlo Maria Giulini",
     orchestra: "Wiener Symphoniker",
     year: "1979 (circa)",
@@ -191,31 +197,43 @@ const interpretersData = [
     link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
   },
 
-  // 🎼 STRUMENTI D'EPOCA (Filologico - 1988)
+  // 🎼 STRUMENTI D'EPOCA (Filologico - 1988-2000)
   {
     name: "🎼 Steven Lubin (Strumenti d'Epoca - Filologico)",
+    bio: "Pianista e fortepianista americano, specialista della prassi esecutiva storica",
     conductor: "Christopher Hogwood",
     orchestra: "Academy of Ancient Music",
     year: "1988",
     description: "Fortepiano (copia Johann Fritz 1818 ca.). Fondamentale per capire il suono che Beethoven aveva nelle orecchie. L'orchestra è più leggera, il pianoforte più percussivo e secco, i bassi 'gracchiano' deliziosamente. Cambia la percezione del pezzo.",
-    style: "Filologico (Antico)",
+    style: "Filologico",
     rating: "⭐⭐⭐⭐½",
     link: "https://www.youtube.com/watch?v=SiokgMpfyQw"
   },
-
   {
     name: "Krystian Zimerman",
+    bio: "Pianista polacco, vincitore del Concorso Chopin 1975, noto per l'eccellenza tecnica",
     conductor: "Leonard Bernstein",
     orchestra: "Wiener Philharmoniker",
     year: "1989",
     description: "Registrazione live leggendaria dal Musikverein di Vienna. Zimerman unisce precisione tecnica cristallina a grande intensità emotiva. Bernstein dirige con energia travolgente e profondità interpretativa. Un incontro straordinario tra due giganti che crea una performance elettrizzante e profondamente musicale.",
     style: "Elettrizzante, preciso, emotivo",
-    link: "https://www.youtube.com/watch?v=VCC6KR7-7eI"
+    link: "https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB"
+  },
+  {
+    name: "🎼 Maria João Pires (Strumenti d'Epoca)",
+    bio: "Pianista portoghese, celebre per la sua sensibilità interpretativa e il tocco raffinato",
+    conductor: "Frans Brüggen",
+    orchestra: "Orchestra of the Eighteenth Century",
+    year: "2000 (circa)",
+    description: "Esecuzione su strumento d'epoca che unisce la sensibilità poetica di Pires all'approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
+    style: "Filologico, Poetico",
+    rating: "⭐⭐⭐⭐⭐",
+    link: "https://www.youtube.com/watch?v=hR95EK9fEKo"
   },
 
-  // 🔥 LA REFERENZA MODERNA (2004)
+  // 🔥 LA REFERENZA MODERNA (2004-2005)
   {
-    name: "🔥 Martha Argerich (La Referenza Moderna)",
+    name: "🔥 Martha Argerich (La referenza moderna)",
     conductor: "Claudio Abbado",
     orchestra: "Mahler Chamber Orchestra",
     year: "2004 (Live a Ferrara)",
@@ -224,9 +242,21 @@ const interpretersData = [
     rating: "⭐⭐⭐⭐⭐",
     link: "https://www.youtube.com/watch?v=AC4u-sBN3OI"
   },
+  {
+    name: "Alfred Brendel",
+    bio: "Pianista austriaco (1931-), uno dei massimi interpreti beethoveniani del XX secolo",
+    conductor: "Claudio Abbado",
+    orchestra: "Lucerne Festival Orchestra",
+    year: "2005",
+    description: "Registrazione dal Lucerne Festival che cattura la maturità interpretativa di Brendel al culmine della sua carriera. La sua lettura è profondamente intellettuale ma mai fredda, con un equilibrio perfetto tra rigore formale e slancio espressivo. Abbado accompagna con la consueta sensibilità, creando un dialogo di altissimo livello musicale.",
+    style: "Intellettuale, equilibrato, maturo",
+    rating: "⭐⭐⭐⭐⭐",
+    link: "https://www.youtube.com/watch?v=8LuqVBUZN_4"
+  },
 
   {
     name: "Daniel Barenboim",
+    bio: "Pianista e direttore argentino-israeliano, intellettuale musicale di fama mondiale",
     conductor: "Antonio Pappano / Zubin Mehta",
     orchestra: "Orchestra di Santa Cecilia (2007) / Israel Philharmonic (2012)",
     year: "2007, 2012",
@@ -236,6 +266,7 @@ const interpretersData = [
   },
   {
     name: "Fazil Say",
+    bio: "Pianista e compositore turco, noto per la sua creatività e il virtuosismo brillante",
     conductor: "Gianandrea Noseda",
     orchestra: "BBC Philharmonic",
     year: "2011",
@@ -248,6 +279,7 @@ const interpretersData = [
   // 🎵 GIOVANI TALENTI CONTEMPORANEI (2019)
   {
     name: "🎵 Jan Lisiecki (Giovane Talento Contemporaneo)",
+    bio: "Giovane pianista canadese di origine polacca, acclamato per la sua musicalità matura",
     conductor: "(Dirige dalla tastiera)",
     orchestra: "Academy of St Martin in the Fields",
     year: "2019",
@@ -2092,7 +2124,15 @@ const AnalysisSection = () => {
   const [openMovement, setOpenMovement] = useState(1);
   const [modalContent, setModalContent] = useState(null);
   
-  const toggleMovement = (id) => setOpenMovement(openMovement === id ? null : id);
+  const toggleMovement = (id, event) => {
+    const isOpening = openMovement !== id;
+    setOpenMovement(openMovement === id ? null : id);
+    if (isOpening && event && event.currentTarget) {
+      setTimeout(() => {
+        event.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
   
   const openModal = (title, content) => {
     setModalContent({ title, content });
@@ -2172,43 +2212,133 @@ const AnalysisSection = () => {
 
   return (
     <div className="space-y-6 animate-fadeIn">
-      <div className="bg-slate-800 p-6 rounded-lg shadow border border-slate-700">
-        <h3 className="text-xl font-semibold text-slate-100 mb-5 flex items-center">
-          <Music className="w-5 h-5 text-blue-400 mr-2" />
+      {/* Sezione Hero con immagine principale */}
+      <div className="mb-12 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <div className="grid md:grid-cols-2 gap-0">
+          <div className="p-8 md:p-10 flex flex-col justify-center">
+            <h2 className="text-3xl font-bold text-slate-100 mb-4">Analisi Musicale</h2>
+            <p className="text-slate-300 leading-relaxed mb-6">
+              Un viaggio attraverso la struttura formale del Concerto n. 3. 
+              Scopri l'architettura sonora, i temi, le modulazioni e le innovazioni 
+              che rendono questo capolavoro un punto di svolta nella storia della musica.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <div className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-help tooltip tooltip-start" data-tooltip="I. Allegro con brio - II. Largo - III. Rondò. Allegro">
+                <span className="text-blue-300 font-semibold">3 Movimenti</span>
+              </div>
+              <div className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-help tooltip" data-tooltip="Struttura: esposizione, sviluppo e ripresa dei temi">
+                <span className="text-blue-300 font-semibold">Forma Sonata</span>
+              </div>
+              <div className="bg-blue-900/30 border border-blue-700/50 px-4 py-2 rounded-lg cursor-help tooltip" data-tooltip="Tonalità principale. Relativa minore di Mi♭ maggiore">
+                <span className="text-blue-300 font-semibold">Do minore</span>
+              </div>
+            </div>
+          </div>
+          <div className="relative h-80 md:h-auto min-h-[320px]">
+            <img 
+              src="/images/beethoven-analysis.jpg" 
+              alt="Frontespizio della prima edizione del Concerto n. 3"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+            <p className="absolute bottom-4 left-4 text-xs text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
+              Frontespizio della prima edizione del concerto
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Organico orchestrale con visual migliorato */}
+      <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <h3 className="text-2xl font-bold text-slate-100 mb-6 flex items-center">
+          <Music className="w-6 h-6 mr-3 text-blue-400" />
           Organico Orchestrale
         </h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-3">
-            <h4 className="text-base font-semibold text-slate-200 mb-2">Legni</h4>
-            <ul className="space-y-1.5 text-sm text-slate-300">
-              <li>• 2 Flauti</li>
-              <li>• 2 Oboi</li>
-              <li>• 2 Clarinetti in Sib</li>
-              <li>• 2 Fagotti</li>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-slate-900 p-5 rounded-lg border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
+            <h4 className="text-base font-semibold text-slate-200 mb-3 flex items-center">
+              <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+              Legni
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                2 Flauti
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                2 Oboi
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                2 Clarinetti in Sib
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                2 Fagotti
+              </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h4 className="text-base font-semibold text-slate-200 mb-2">Ottoni e Percussioni</h4>
-            <ul className="space-y-1.5 text-sm text-slate-300">
-              <li>• 2 Corni in Mib, Mi e Do</li>
-              <li>• 2 Trombe in Do (Mib nel III movimento)</li>
-              <li>• Timpani</li>
+          <div className="bg-slate-900 p-5 rounded-lg border-l-4 border-amber-500 hover:shadow-lg transition-shadow">
+            <h4 className="text-base font-semibold text-slate-200 mb-3 flex items-center">
+              <div className="w-2 h-2 bg-amber-400 rounded-full mr-2"></div>
+              Ottoni
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-start">
+                <span className="text-amber-400 mr-2">•</span>
+                2 Corni in Mib, Mi e Do
+              </li>
+              <li className="flex items-start">
+                <span className="text-amber-400 mr-2">•</span>
+                2 Trombe in Do
+              </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h4 className="text-base font-semibold text-slate-200 mb-2">Archi</h4>
-            <ul className="space-y-1.5 text-sm text-slate-300">
-              <li>• Violini I e II</li>
-              <li>• Viole</li>
-              <li>• Violoncelli</li>
-              <li>• Contrabbassi</li>
+          <div className="bg-slate-900 p-5 rounded-lg border-l-4 border-purple-500 hover:shadow-lg transition-shadow">
+            <h4 className="text-base font-semibold text-slate-200 mb-3 flex items-center">
+              <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+              Percussioni
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-start">
+                <span className="text-purple-400 mr-2">•</span>
+                Timpani
+              </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h4 className="text-base font-semibold text-slate-200 mb-2">Solista</h4>
-            <ul className="space-y-1.5 text-sm text-slate-300">
-              <li>• Pianoforte</li>
+          <div className="bg-slate-900 p-5 rounded-lg border-l-4 border-green-500 hover:shadow-lg transition-shadow">
+            <h4 className="text-base font-semibold text-slate-200 mb-3 flex items-center">
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+              Archi
+            </h4>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">•</span>
+                Violini I e II
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">•</span>
+                Viole
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">•</span>
+                Violoncelli
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-2">•</span>
+                Contrabbassi
+              </li>
             </ul>
+          </div>
+        </div>
+        <div className="mt-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-5 border border-blue-700/30">
+          <div className="flex items-start">
+            <Music className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+            <div>
+              <h4 className="text-lg font-semibold text-slate-200 mb-1">Solista</h4>
+              <p className="text-sm text-slate-300">Pianoforte</p>
+            </div>
           </div>
         </div>
       </div>
@@ -2324,76 +2454,204 @@ const AnalysisSection = () => {
   );
 };
 
-const InterpretersSection = () => (
-  <div className="max-w-4xl mx-auto animate-fadeIn">
-    <div className="mb-8">
-      <h2 className="text-2xl font-bold text-slate-100 mb-2">Interpreti Storici</h2>
-      <p className="text-slate-300">Le grandi registrazioni che hanno segnato la storia dell'interpretazione</p>
-    </div>
+const InterpretersSection = () => {
+  const [openCategory, setOpenCategory] = useState(null);
 
-    <div className="grid gap-6">
-      {interpretersData.map((interpreter, idx) => (
-        <div key={idx} className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
-          <div className="bg-slate-700 p-5">
-            <div className="flex justify-between items-start flex-wrap gap-3">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-1">{interpreter.name}</h3>
-                <p className="text-white/90 text-sm flex items-center">
-                  <PlayCircle className="w-4 h-4 mr-1.5" />
-                  {interpreter.conductor}
-                </p>
-                <p className="text-white/80 text-xs mt-0.5">{interpreter.orchestra}</p>
-              </div>
-              <div className="bg-slate-800 text-blue-400 px-3 py-1 rounded-full font-semibold text-sm">
-                {interpreter.year}
-              </div>
-            </div>
-          </div>
+  const toggleCategory = (category, event) => {
+    const isOpening = openCategory !== category;
+    setOpenCategory(openCategory === category ? null : category);
+    if (isOpening && event && event.currentTarget) {
+      setTimeout(() => {
+        event.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
 
-          <div className="p-5 bg-slate-900">
-            <div className="mb-3 flex items-center justify-between flex-wrap gap-2">
-              <span className="inline-block bg-slate-800/50 text-slate-200 px-3 py-1 rounded-full text-xs font-medium">
-                Stile: {interpreter.style}
-              </span>
-              {interpreter.link && (
-                <a
-                  href={interpreter.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold transition-colors"
-                >
-                  <PlayCircle className="w-4 h-4" />
-                  Ascolta su YouTube
-                </a>
-              )}
-            </div>
-            {interpreter.rating && (
-              <div className="mb-3 text-yellow-400 text-sm font-semibold">
-                {interpreter.rating}
-              </div>
+  // Suddivisione interpreti per categoria
+  const historicalInterpreters = interpretersData.filter(int => 
+    ['1933', '1957', '1959', '1961', '1973', '1979 (circa)'].includes(int.year)
+  );
+  
+  const fortepianoInterpreters = interpretersData.filter(int => 
+    ['1988', '2000 (circa)'].includes(int.year)
+  );
+  
+  const contemporaryInterpreters = interpretersData.filter(int => 
+    ['1989', '2004 (Live a Ferrara)', '2005', '2007, 2012', '2011', '2019'].includes(int.year)
+  );
+
+  const renderInterpreterCard = (interpreter, idx) => (
+    <div key={idx} className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
+      <div className="bg-slate-700 p-5">
+        <div className="flex justify-between items-start flex-wrap gap-3">
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-1">{interpreter.name}</h3>
+            {interpreter.bio && (
+              <p className="text-slate-300 text-xs italic mb-2">{interpreter.bio}</p>
             )}
-            <p className="text-slate-300 text-sm leading-relaxed">
-              {interpreter.cadenzaLink ? (
-                <>
-                  {interpreter.description.split('a min. 12:51 del video')[0]}
-                  <a 
-                    href={interpreter.cadenzaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-slate-200 underline font-semibold"
-                  >
-                    a min. 12:51 del video
-                  </a>
-                  {interpreter.description.split('a min. 12:51 del video')[1]}
-                </>
-              ) : (
-                interpreter.description
-              )}
+            <p className="text-white/90 text-sm flex items-center">
+              <PlayCircle className="w-4 h-4 mr-1.5" />
+              {interpreter.conductor}
+            </p>
+            <p className="text-white/80 text-xs mt-0.5">{interpreter.orchestra}</p>
+          </div>
+          <div className="bg-slate-800 text-blue-400 px-3 py-1 rounded-full font-semibold text-sm">
+            {interpreter.year}
+          </div>
+        </div>
+      </div>
+
+      <div className="p-5 bg-slate-900">
+        <div className="mb-3 flex items-center justify-between flex-wrap gap-2">
+          <span className="inline-block bg-slate-800/50 text-slate-200 px-3 py-1 rounded-full text-xs font-medium">
+            Stile: {interpreter.style}
+          </span>
+          {interpreter.link && (
+            <a
+              href={interpreter.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-xs font-semibold transition-colors"
+            >
+              <PlayCircle className="w-4 h-4" />
+              Ascolta su YouTube
+            </a>
+          )}
+        </div>
+        {interpreter.rating && (
+          <div className="mb-3 text-yellow-400 text-sm font-semibold">
+            {interpreter.rating}
+          </div>
+        )}
+        <p className="text-slate-300 text-sm leading-relaxed">
+          {interpreter.cadenzaLink ? (
+            <>
+              {interpreter.description.split('a min. 12:51 del video')[0]}
+              <a 
+                href={interpreter.cadenzaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-slate-200 underline font-semibold"
+              >
+                a min. 12:51 del video
+              </a>
+              {interpreter.description.split('a min. 12:51 del video')[1]}
+            </>
+          ) : (
+            interpreter.description
+          )}
+        </p>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="max-w-4xl mx-auto animate-fadeIn">
+      {/* Header con immagine */}
+      <div className="mb-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <div className="grid md:grid-cols-2 gap-0">
+          <div className="p-8 md:p-10 flex flex-col justify-center">
+            <h2 className="text-3xl font-bold text-slate-100 mb-4">Interpretazioni del Concerto</h2>
+            <p className="text-slate-300 leading-relaxed">
+              Un viaggio attraverso le grandi registrazioni che hanno segnato la storia dell'interpretazione, 
+              dalle leggendarie incisioni storiche alle esecuzioni filologiche su fortepiano, 
+              fino alle performance contemporanee di riferimento.
+            </p>
+          </div>
+          <div className="relative h-80 md:h-auto min-h-[320px]">
+            <img 
+              src="/images/interpreters-hero.jpg" 
+              alt="Grandi interpreti del Concerto n. 3"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+            <p className="absolute bottom-4 left-4 text-xs text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
+              Krystian Zimerman con i Wiener Philharmoniker
             </p>
           </div>
         </div>
-      ))}
-    </div>
+      </div>
+
+      {/* Interpretazioni Storiche */}
+      <div className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+        <button
+          onClick={(e) => toggleCategory('historical', e)}
+          className="w-full p-6 flex items-center justify-between hover:bg-slate-700 transition-colors"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-amber-900/30 rounded-lg flex items-center justify-center">
+              <Music className="w-6 h-6 text-amber-400" />
+            </div>
+            <div className="text-left">
+              <h3 className="text-xl font-bold text-white">Interpretazioni Storiche (1933-1979)</h3>
+              <p className="text-slate-400 text-sm">Le registrazioni leggendarie del XX secolo</p>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 text-slate-400 transition-transform ${openCategory === 'historical' ? 'rotate-180' : ''}`} />
+        </button>
+        
+        {openCategory === 'historical' && (
+          <div className="p-6 pt-0 bg-slate-900">
+            <div className="grid gap-6 mt-6">
+              {historicalInterpreters.map((interpreter, idx) => renderInterpreterCard(interpreter, idx))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Interpretazioni con Fortepiano */}
+      <div className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+        <button
+          onClick={(e) => toggleCategory('fortepiano', e)}
+          className="w-full p-6 flex items-center justify-between hover:bg-slate-700 transition-colors"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center">
+              <Music className="w-6 h-6 text-blue-400" />
+            </div>
+            <div className="text-left">
+              <h3 className="text-xl font-bold text-white">Interpretazioni con Fortepiano (1988-2000)</h3>
+              <p className="text-slate-400 text-sm">Approccio filologico su strumenti d'epoca</p>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 text-slate-400 transition-transform ${openCategory === 'fortepiano' ? 'rotate-180' : ''}`} />
+        </button>
+        
+        {openCategory === 'fortepiano' && (
+          <div className="p-6 pt-0 bg-slate-900">
+            <div className="grid gap-6 mt-6">
+              {fortepianoInterpreters.map((interpreter, idx) => renderInterpreterCard(interpreter, idx))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Interpretazioni Contemporanee */}
+      <div className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+        <button
+          onClick={(e) => toggleCategory('contemporary', e)}
+          className="w-full p-6 flex items-center justify-between hover:bg-slate-700 transition-colors"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center">
+              <Music className="w-6 h-6 text-green-400" />
+            </div>
+            <div className="text-left">
+              <h3 className="text-xl font-bold text-white">Interpretazioni Contemporanee (1989-2019)</h3>
+              <p className="text-slate-400 text-sm">Le registrazioni moderne di riferimento</p>
+            </div>
+          </div>
+          <ChevronDown className={`w-6 h-6 text-slate-400 transition-transform ${openCategory === 'contemporary' ? 'rotate-180' : ''}`} />
+        </button>
+        
+        {openCategory === 'contemporary' && (
+          <div className="p-6 pt-0 bg-slate-900">
+            <div className="grid gap-6 mt-6">
+              {contemporaryInterpreters.map((interpreter, idx) => renderInterpreterCard(interpreter, idx))}
+            </div>
+          </div>
+        )}
+      </div>
 
     {/* Tabella Riepilogo */}
     <div className="mt-10 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
@@ -2413,24 +2671,6 @@ const InterpretersSection = () => (
           </thead>
           <tbody className="text-slate-300">
             <tr className="hover:bg-slate-800/50 transition-colors">
-              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Kempff</strong></td>
-              <td className="border border-slate-700 px-3 py-2">Leitner</td>
-              <td className="border border-slate-700 px-3 py-2">1961</td>
-              <td className="border border-slate-700 px-3 py-2">Poetico, Classico</td>
-              <td className="border border-slate-700 px-3 py-2 text-center">
-                <a href="https://www.youtube.com/watch?v=3aNkl7wdWyQ" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
-              </td>
-            </tr>
-            <tr className="hover:bg-slate-800/50 transition-colors">
-              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Argerich</strong></td>
-              <td className="border border-slate-700 px-3 py-2">Abbado</td>
-              <td className="border border-slate-700 px-3 py-2">2004</td>
-              <td className="border border-slate-700 px-3 py-2">Fuoco, Energia</td>
-              <td className="border border-slate-700 px-3 py-2 text-center">
-                <a href="https://www.youtube.com/watch?v=AC4u-sBN3OI" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
-              </td>
-            </tr>
-            <tr className="hover:bg-slate-800/50 transition-colors">
               <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Schnabel</strong></td>
               <td className="border border-slate-700 px-3 py-2">Sargent</td>
               <td className="border border-slate-700 px-3 py-2">1933</td>
@@ -2440,12 +2680,12 @@ const InterpretersSection = () => (
               </td>
             </tr>
             <tr className="hover:bg-slate-800/50 transition-colors">
-              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Lubin</strong></td>
-              <td className="border border-slate-700 px-3 py-2">Hogwood</td>
-              <td className="border border-slate-700 px-3 py-2">1988</td>
-              <td className="border border-slate-700 px-3 py-2">Filologico (Antico)</td>
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Arrau</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Klemperer</td>
+              <td className="border border-slate-700 px-3 py-2">1957</td>
+              <td className="border border-slate-700 px-3 py-2">Monumentale</td>
               <td className="border border-slate-700 px-3 py-2 text-center">
-                <a href="https://www.youtube.com/watch?v=SiokgMpfyQw" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+                <a href="https://youtu.be/iLzjlH9_a6M?si=Wk5cyeFfsx3880nA" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
               </td>
             </tr>
             <tr className="hover:bg-slate-800/50 transition-colors">
@@ -2458,10 +2698,100 @@ const InterpretersSection = () => (
               </td>
             </tr>
             <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Kempff</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Leitner</td>
+              <td className="border border-slate-700 px-3 py-2">1961</td>
+              <td className="border border-slate-700 px-3 py-2">Poetico, Classico</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=3aNkl7wdWyQ" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Rubinstein</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Haitink</td>
+              <td className="border border-slate-700 px-3 py-2">1973</td>
+              <td className="border border-slate-700 px-3 py-2">Nobile</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://youtu.be/44a2kZ72RzY?si=7dcdXf7FipvyYkQ1" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Michelangeli</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Giulini</td>
+              <td className="border border-slate-700 px-3 py-2">1979</td>
+              <td className="border border-slate-700 px-3 py-2">Cristallino</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Lubin</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Hogwood</td>
+              <td className="border border-slate-700 px-3 py-2">1988</td>
+              <td className="border border-slate-700 px-3 py-2">Filologico</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=SiokgMpfyQw" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Zimerman</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Bernstein</td>
+              <td className="border border-slate-700 px-3 py-2">1989</td>
+              <td className="border border-slate-700 px-3 py-2">Virtuosistico</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Pires</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Brüggen</td>
+              <td className="border border-slate-700 px-3 py-2">2000</td>
+              <td className="border border-slate-700 px-3 py-2">Filologico, Poetico</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=hR95EK9fEKo" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Argerich</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Abbado</td>
+              <td className="border border-slate-700 px-3 py-2">2004</td>
+              <td className="border border-slate-700 px-3 py-2">Focoso</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=AC4u-sBN3OI" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Brendel</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Abbado</td>
+              <td className="border border-slate-700 px-3 py-2">2005</td>
+              <td className="border border-slate-700 px-3 py-2">Intellettuale</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://www.youtube.com/watch?v=8LuqVBUZN_4" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Barenboim</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Pappano/Mehta</td>
+              <td className="border border-slate-700 px-3 py-2">2007</td>
+              <td className="border border-slate-700 px-3 py-2">Profondo</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://youtu.be/UXGy1bpEAUw?si=dYYxQ1hh4UYHBUFI" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
+              <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Say</strong></td>
+              <td className="border border-slate-700 px-3 py-2">Noseda</td>
+              <td className="border border-slate-700 px-3 py-2">2011</td>
+              <td className="border border-slate-700 px-3 py-2">Creativo</td>
+              <td className="border border-slate-700 px-3 py-2 text-center">
+                <a href="https://youtu.be/a0ixaGeQzME?si=FIa82djieyaktNdb" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
+              </td>
+            </tr>
+            <tr className="hover:bg-slate-800/50 transition-colors">
               <td className="border border-slate-700 px-3 py-2"><strong className="text-slate-100">Lisiecki</strong></td>
               <td className="border border-slate-700 px-3 py-2">(Dir. piano)</td>
               <td className="border border-slate-700 px-3 py-2">2019</td>
-              <td className="border border-slate-700 px-3 py-2">Fresco, Moderno</td>
+              <td className="border border-slate-700 px-3 py-2">Fresco</td>
               <td className="border border-slate-700 px-3 py-2 text-center">
                 <a href="https://www.youtube.com/watch?v=MX5XENd0SeM" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Link</a>
               </td>
@@ -2471,7 +2801,8 @@ const InterpretersSection = () => (
       </div>
     </div>
   </div>
-);
+  );
+};
 
 const GlossarySection = () => {
   const [openCategory, setOpenCategory] = useState(null);
@@ -2480,8 +2811,14 @@ const GlossarySection = () => {
   const [openSonataForm, setOpenSonataForm] = useState(false);
   const [openPersonaggi, setOpenPersonaggi] = useState(false);
 
-  const toggleCategory = (category) => {
+  const toggleCategory = (category, event) => {
+    const isOpening = openCategory !== category;
     setOpenCategory(openCategory === category ? null : category);
+    if (isOpening && event && event.currentTarget) {
+      setTimeout(() => {
+        event.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
   };
 
   return (

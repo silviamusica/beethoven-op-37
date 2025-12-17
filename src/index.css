@@ -35,4 +35,41 @@
       opacity: 1;
     }
   }
+
+  /* Tooltip styles */
+  .tooltip {
+    position: relative;
+  }
+
+  .tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background-color: rgba(15, 23, 42, 0.95);
+    color: #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    white-space: normal;
+    max-width: 250px;
+    width: max-content;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 50;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .tooltip:hover::after {
+    opacity: 1;
+  }
+
+  .tooltip-start::after {
+    left: 0;
+    transform: translateX(0) translateY(-8px);
+  }
 }
