@@ -698,17 +698,35 @@ const FontiSection = () => {
         <ul className="space-y-3 text-slate-200">
           <li><strong>Concezione ed evoluzione:</strong> Fino al <strong>1798</strong> circa, Beethoven usava fogli sciolti o piccoli fascicoli raccolti in portafogli. Dal 1798 passò a quaderni rilegati, custoditi fino alla morte come memoria del proprio sviluppo artistico.</li>
           <li><strong>Tipologie:</strong>
-            <ul className="mt-2 space-y-2 pl-5 list-disc">
-              <li><strong>Quaderni da scrivania:</strong> formato grande, scrittura a inchiostro, usati a casa per elaborazioni sistematiche.</li>
-              <li><strong>Quaderni tascabili:</strong> formato piccolo, scrittura a matita. Portati durante le passeggiate per fissare idee improvvise. Beethoven diceva: "Non oso uscire senza il mio stendardo".</li>
+            <ul className="mt-2 space-y-2 ml-4">
+              <li className="flex items-start space-x-2">
+                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-slate-200"><strong>Quaderni da scrivania:</strong> formato grande, scrittura a inchiostro, usati a casa per elaborazioni sistematiche.</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-slate-200"><strong>Quaderni tascabili:</strong> formato piccolo, scrittura a matita. Portati durante le passeggiate per fissare idee improvvise. Beethoven diceva: "Non oso uscire senza il mio stendardo".</span>
+              </li>
             </ul>
           </li>
           <li><strong>Organizzazione interna:</strong>
-            <ul className="mt-2 space-y-2 pl-5 list-disc">
-              <li><strong>Concept sketches:</strong> idee iniziali per definire il carattere di un&apos;opera.</li>
-              <li><strong>Continuity drafts:</strong> bozze lunghe su un singolo rigo per l&apos;andamento complessivo.</li>
-              <li><strong>Varianti:</strong> alternative per brevi passaggi.</li>
-              <li><strong>Piani di movimento:</strong> sinossi per opere in più movimenti.</li>
+            <ul className="mt-2 space-y-2 ml-4">
+              <li className="flex items-start space-x-2">
+                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-slate-200"><strong>Concept sketches:</strong> idee iniziali per definire il carattere di un&apos;opera.</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-slate-200"><strong>Continuity drafts:</strong> bozze lunghe su un singolo rigo per l&apos;andamento complessivo.</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-slate-200"><strong>Varianti:</strong> alternative per brevi passaggi.</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-slate-200"><strong>Piani di movimento:</strong> sinossi per opere in più movimenti.</span>
+              </li>
             </ul>
           </li>
         </ul>
@@ -768,16 +786,31 @@ const FontiSection = () => {
                 <div className="bg-slate-900/50 p-3 rounded-md border border-slate-700">
                   <p className="font-semibold">Dettagli</p>
                   <p className="mt-2"><strong>Recto (lato visibile nell'immagine):</strong></p>
-                  <ul className="list-disc list-inside text-xs mt-1 space-y-1">
-                    <li>Due battute di musica in Sol minore per tastiera di pianoforte</li>
-                    <li>Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</li>
+                  <ul className="space-y-1 ml-2">
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Due battute di musica in Sol minore per tastiera di pianoforte</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</span>
+                    </li>
                   </ul>
 
                   <p className="mt-2"><strong>Verso</strong></p>
-                  <ul className="list-disc list-inside text-xs mt-1 space-y-1">
-                    <li>Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</li>
-                    <li>Due battute e mezza di figura arpeggiata in Mi bemolle minore</li>
-                    <li>Parziale terzo pentagramma musicale</li>
+                  <ul className="space-y-1 ml-2">
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Due battute e mezza di figura arpeggiata in Mi bemolle minore</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Parziale terzo pentagramma musicale</span>
+                    </li>
                   </ul>
 
                   <p className="mt-2 text-xs"><strong>Dimensioni:</strong> circa 6,3 x 14 cm</p>
@@ -1130,14 +1163,14 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           Per decenni, la datazione del Terzo Concerto è stata oggetto di dibattito tra i musicologi. 
           Due ipotesi principali si sono confrontate:
         </p>
-        <ul className="list-disc list-inside space-y-2 text-sm text-slate-300 mb-3 ml-2">
-          <li>
-            <strong>Ipotesi Küthen:</strong> composizione principale 1799-1800, destinata a un'accademia prevista 
-            per aprile 1800 (mai realizzata).
+        <ul className="space-y-2 ml-2">
+          <li className="flex items-start space-x-2">
+            <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+            <span className="text-sm text-slate-300"><strong>Ipotesi Küthen:</strong> composizione principale 1799-1800, destinata a un'accademia prevista per aprile 1800 (mai realizzata).</span>
           </li>
-          <li>
-            <strong>Ipotesi Plantinga:</strong> composizione principale estate 1802 - primi mesi 1803, in parallelo 
-            alla crisi di Heiligenstadt.
+          <li className="flex items-start space-x-2">
+            <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+            <span className="text-sm text-slate-300"><strong>Ipotesi Plantinga:</strong> composizione principale estate 1802 - primi mesi 1803, in parallelo alla crisi di Heiligenstadt.</span>
           </li>
         </ul>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
@@ -1309,7 +1342,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           </tbody>
         </table>
         <p className="text-xs text-slate-400 italic mt-4">
-          <strong>Nota:</strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l'Érard al Kunsthistorisches Museum di Vienna.
+          <strong>Nota <br /></strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l'Érard al Kunsthistorisches Museum di Vienna.
         </p>
       </div>
     </div>
@@ -1614,10 +1647,19 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </p>
         <div className="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-1">
           <p><strong>Note</strong></p>
-          <ul className="list-disc list-inside space-y-1 ml-2">
-            <li>Solo davanti all'Arciduca Rodolfo, Beethoven toglieva il cappello in segno di rispetto</li>
-            <li>Il rapporto con Lichnowsky si ruppe nel 1806 per una lite violenta</li>
-            <li>Il palazzo di Razumovsky bruciò nel 1814 e causò la rovina economica del conte</li>
+          <ul className="space-y-1 ml-2">
+            <li className="flex items-start space-x-2">
+              <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+              <span>Solo davanti all'Arciduca Rodolfo, Beethoven toglieva il cappello in segno di rispetto</span>
+            </li>
+            <li className="flex items-start space-x-2">
+              <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+              <span>Il rapporto con Lichnowsky si ruppe nel 1806 per una lite violenta</span>
+            </li>
+            <li className="flex items-start space-x-2">
+              <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+              <span>Il palazzo di Razumovsky bruciò nel 1814 e causò la rovina economica del conte</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -1939,7 +1981,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">📖 Curiosità: il "Concerto 0" (WoO. 4)</h3>
+              <h3 className="text-lg font-semibold">Curiosità: il "Concerto 0" (WoO. 4)</h3>
               <span className="text-sm opacity-90">1784 - Beethoven a 14 anni</span>
             </div>
           </div>
@@ -3063,7 +3105,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5 text-orange-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">📖 Che cos'è il Concerto? Storia ed evoluzione del genere</h3>
+              <h3 className="text-lg font-semibold">Che cos'è il Concerto? Storia ed evoluzione del genere</h3>
               <span className="text-sm opacity-90">Dal Barocco al Novecento</span>
             </div>
           </div>
@@ -3078,9 +3120,15 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 <p className="mb-3">
                   Il termine <strong>"Concerto"</strong> possiede un'etimologia doppia e apparentemente contraddittoria:
                 </p>
-                <ul className="space-y-2 list-disc list-inside text-xs">
-                  <li>Dal latino <em>concertare</em> = <strong>combattere, gareggiare</strong></li>
-                  <li>Dall'italiano <em>concertare</em> = <strong>accordarsi, agire insieme</strong></li>
+                <ul className="space-y-2 ml-2">
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-xs text-slate-200">Dal latino <em>concertare</em> = <strong>combattere, gareggiare</strong></span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-xs text-slate-200">Dall'italiano <em>concertare</em> = <strong>accordarsi, agire insieme</strong></span>
+                  </li>
                 </ul>
                 <p className="mt-3 text-slate-200">
                   Il concerto è basato sulla <strong>relazione tra due entità</strong>: un solista (o piccolo gruppo) 
@@ -3236,10 +3284,19 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <p className="text-xs mb-2">
                     Mozart e Beethoven assorbono la <strong>Forma-Sonata</strong>.
                   </p>
-                  <ul className="space-y-1 text-xs list-disc list-inside ml-2">
-                    <li>L'orchestra apre con quasi-esposizione completa (Esposizione 1), ma resta in tonica</li>
-                    <li>Il solista ri-espone (Solo 1), modulando alla tonalità secondaria</li>
-                    <li>Mozart trasforma la polarità barocca in <strong>dialogo paritario</strong></li>
+                  <ul className="space-y-1 ml-2">
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">L'orchestra apre con quasi-esposizione completa (Esposizione 1), ma resta in tonica</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Il solista ri-espone (Solo 1), modulando alla tonalità secondaria</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Mozart trasforma la polarità barocca in <strong>dialogo paritario</strong></span>
+                    </li>
                   </ul>
                 </div>
 
@@ -3248,10 +3305,19 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   <p className="text-xs mb-2">
                     Mendelssohn e Liszt considerano il lungo Tutti iniziale "arcaico e ridondante":
                   </p>
-                  <ul className="space-y-1 text-xs list-disc list-inside ml-2">
-                    <li>Il concerto inizia subito con il solista</li>
-                    <li>Fine della doppia esposizione</li>
-                    <li><strong>Biforcazione:</strong> concerto virtuosistico (Paganini) vs sinfonico (Brahms)</li>
+                  <ul className="space-y-1 ml-2">
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Il concerto inizia subito con il solista</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200">Fine della doppia esposizione</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                      <span className="text-xs text-slate-200"><strong>Biforcazione:</strong> concerto virtuosistico (Paganini) vs sinfonico (Brahms)</span>
+                    </li>
                   </ul>
                 </div>
 
@@ -3575,11 +3641,23 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
               <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
                 <h4 className="text-base font-semibold text-slate-200 mb-3">Caratteristiche</h4>
-                <ul className="space-y-2 list-disc list-inside text-sm">
-                  <li>L'orchestra si ferma su un <strong>punto coronato</strong> (accordo di dominante sospeso)</li>
-                  <li>Il solista improvvisa liberamente, senza accompagnamento</li>
-                  <li>Elabora i temi principali del movimento con passaggi virtuosistici</li>
-                  <li>Conclude con un trillo sulla dominante, segnalando il ritorno dell'orchestra</li>
+                <ul className="space-y-2 ml-2">
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">L'orchestra si ferma su un <strong>punto coronato</strong> (accordo di dominante sospeso)</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Il solista improvvisa liberamente, senza accompagnamento</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Elabora i temi principali del movimento con passaggi virtuosistici</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Conclude con un trillo sulla dominante, segnalando il ritorno dell'orchestra</span>
+                  </li>
                 </ul>
               </div>
 
@@ -3633,11 +3711,23 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
               <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-amber-500">
                 <h4 className="text-base font-semibold text-slate-200 mb-3">Caratteristiche nel terzo movimento</h4>
-                <ul className="space-y-2 list-disc list-inside text-sm">
-                  <li>Il tema principale viene trattato in <strong>imitazione stretta</strong></li>
-                  <li>Le voci entrano successivamente, creando una texture densa e complessa</li>
-                  <li>Dimostra la padronanza di Beethoven sia dello stile galante che del contrappunto severo</li>
-                  <li>Crea un contrasto drammatico con le sezioni più leggere e virtuosistiche</li>
+                <ul className="space-y-2 ml-2">
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Il tema principale viene trattato in <strong>imitazione stretta</strong></span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Le voci entrano successivamente, creando una texture densa e complessa</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Dimostra la padronanza di Beethoven sia dello stile galante che del contrappunto severo</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+                    <span className="text-sm text-slate-200">Crea un contrasto drammatico con le sezioni più leggere e virtuosistiche</span>
+                  </li>
                 </ul>
               </div>
 
