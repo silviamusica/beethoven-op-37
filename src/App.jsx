@@ -641,7 +641,7 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
                 }`}
               >
                 <tab.icon className="h-4 w-4" />
-                <span className="text-xs sm:text-sm font-medium">{tab.label}</span>
+                <span className="text-sm sm:text-base font-medium">{tab.label}</span>
               </button>
             ))}
           </div>
@@ -671,7 +671,7 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
                   }`}
                 >
                   <tab.icon className="h-4 w-4" />
-                  <span className="text-xs sm:text-sm font-medium">{tab.label}</span>
+                  <span className="text-sm sm:text-base font-medium">{tab.label}</span>
                 </button>
               ))}
             </div>
@@ -773,15 +773,15 @@ const FontiSection = () => {
         <img
           src="/images/beethoven-sources.jpg"
           alt="Miscellanea Fischhof - Minuetto per orchestra in re minore"
-          className="w-full h-auto object-contain rounded-lg"
+          className="w-full h-40 sm:h-auto object-cover rounded-lg max-h-[50vh]"
         />
-        <p className="text-xs text-slate-400 mt-2 italic text-left">Frammento autografo di Ludwig van Beethoven — donato da Joseph Fischhof a Catherine Watts, 18/8/1847.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-left">Frammento autografo di Ludwig van Beethoven — donato da Joseph Fischhof a Catherine Watts, 18/8/1847.</p>
         <div className="mt-3 text-left">
           <button
             onClick={() => openFontiModal('Identificazione del manoscritto', (
               <div className="space-y-4 text-sm text-slate-300">
                 <h4 className="text-base font-semibold text-slate-100 text-center">Identificazione del manoscritto</h4>
-                <div className="text-xs text-slate-400 italic text-center">Frammento autografo di Ludwig van Beethoven, donato a Catherine Watts dal Professor Joseph Fischhof di Vienna il 18 agosto 1847.</div>
+                <div className="text-sm text-slate-400 italic text-center">Frammento autografo di Ludwig van Beethoven, donato a Catherine Watts dal Professor Joseph Fischhof di Vienna il 18 agosto 1847.</div>
 
                 <div className="bg-slate-900/50 p-3 rounded-md border border-slate-700">
                   <p className="font-semibold">Dettagli</p>
@@ -789,11 +789,11 @@ const FontiSection = () => {
                   <ul className="space-y-1 ml-2">
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                      <span className="text-xs text-slate-200">Due battute di musica in Sol minore per tastiera di pianoforte</span>
+                      <span className="text-sm text-slate-200">Due battute di musica in Sol minore per tastiera di pianoforte</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                      <span className="text-xs text-slate-200">Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</span>
+                      <span className="text-sm text-slate-200">Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</span>
                     </li>
                   </ul>
 
@@ -801,22 +801,22 @@ const FontiSection = () => {
                   <ul className="space-y-1 ml-2">
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                      <span className="text-xs text-slate-200">Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</span>
+                      <span className="text-sm text-slate-200">Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                      <span className="text-xs text-slate-200">Due battute e mezza di figura arpeggiata in Mi bemolle minore</span>
+                      <span className="text-sm text-slate-200">Due battute e mezza di figura arpeggiata in Mi bemolle minore</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                      <span className="text-xs text-slate-200">Parziale terzo pentagramma musicale</span>
+                      <span className="text-sm text-slate-200">Parziale terzo pentagramma musicale</span>
                     </li>
                   </ul>
 
                   <p className="mt-2 text-xs"><strong>Dimensioni:</strong> circa 6,3 x 14 cm</p>
                 </div>
 
-                <div className="text-xs text-slate-300">
+                <div className="text-sm text-slate-300">
                   <p className="font-semibold">Provenienza</p>
                   <p className="mt-1">Joseph Fischhof (1804-1857), pianista e professore al Conservatorio di Vienna, fu un importante collezionista di partiture e manoscritti beethoveniani. Il frammento testimonia la circolazione di manoscritti fra collezionisti e studiosi nell'Ottocento.</p>
                 </div>
@@ -939,7 +939,7 @@ const FontiSection = () => {
         
         <div className="space-y-6 text-sm text-slate-300">
           <div>
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Studi Specifici e Analisi del Concerto Op. 37</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Studi specifici e analisi del concerto Op. 37</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Küthen, Hans-Werner.</strong> <em>Ludwig van Beethoven: Klavierkonzert Nr. 3 in c</em>. Kassel-London-New York: Bärenreiter, 1987. 
@@ -975,7 +975,7 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Teoria della Forma e del Concerto</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Teoria della forma e del concerto</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Hepokoski, James e Darcy, Warren.</strong> <em>Elements of Sonata Theory: Norms, Types, and Deformations in the Late-Eighteenth-Century Sonata</em>. 
@@ -995,7 +995,7 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Prassi Esecutiva, Improvvisazione e Strumenti</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Prassi esecutiva, improvvisazione e strumenti</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Chiantore, Luca.</strong> <em>Beethoven al pianoforte: Improvvisazione, composizione e ricerca sonora negli esercizi tecnici</em>. 
@@ -1009,7 +1009,7 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Biografie e Contesto Storico</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Biografie e contesto storico</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Solomon, Maynard.</strong> <em>Beethoven</em>. New York: Schirmer Books, 1977 (ed. riv. 1998).
@@ -1028,7 +1028,7 @@ const FontiSection = () => {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold text-slate-200 mb-3">Fonti Epistolari e Documentarie</h4>
+            <h4 className="text-base font-semibold text-slate-200 mb-3">Fonti epistolari e documentarie</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
                 <strong>Beethoven, Ludwig van.</strong> <em>Beethoven's Letters</em>. Ed. Emily Anderson. 3 voll. London: Macmillan, 1961 (o edizioni successive).
@@ -1091,9 +1091,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/beethoven-life-timeline.jpg" 
           alt="Ludwig van Beethoven - Cronologia della vita"
-          className="w-full h-64 object-contain rounded-lg"
+          className="w-full h-40 sm:h-64 object-cover rounded-lg max-h-[50vh]"
         />
-        <p className="text-xs text-slate-400 mt-2 italic text-center">Epitaffio e rappresentazione volto.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Epitaffio e rappresentazione volto.</p>
       </div>
 
       <div className="space-y-2.5">
@@ -1155,9 +1155,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/op37-manuscript.jpg" 
           alt="Manoscritto del Concerto Op. 37"
-          className="w-full h-80 object-contain object-top rounded-lg"
+          className="w-full h-44 sm:h-80 object-cover object-top rounded-lg max-h-[55vh]"
         />
-        <p className="text-xs text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
       </div>
 
       <div>
@@ -1256,9 +1256,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/fortepiano-evolution.jpg" 
           alt="Evoluzione del pianoforte"
-          className="w-full h-80 object-contain rounded-lg"
+          className="w-full h-44 sm:h-80 object-cover rounded-lg max-h-[55vh]"
         />
-        <p className="text-xs text-slate-400 mt-2 italic text-center">Famiglia Mozart. Johann Nepomuk della Croce.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Famiglia Mozart. Johann Nepomuk della Croce.</p>
       </div>
 
       {/* Introduzione */}
@@ -1344,7 +1344,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             ))}
           </tbody>
         </table>
-        <p className="text-xs text-slate-400 italic mt-4">
+        <p className="text-sm text-slate-400 italic mt-4">
           <strong>Nota <br /></strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l'Érard al Kunsthistorisches Museum di Vienna.
         </p>
       </div>
@@ -1359,9 +1359,9 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/beethoven-letters-manuscripts.jpg" 
           alt="Lettere e manoscritti di Beethoven"
-          className="w-full h-64 object-contain rounded-lg"
+          className="w-full h-40 sm:h-64 object-cover rounded-lg max-h-[50vh]"
         />
-        <p className="text-xs text-slate-400 mt-2 italic text-center">Corrispondenza di Beethoven con gli editori.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Corrispondenza di Beethoven con gli editori.</p>
       </div>
 
       <p className="text-sm text-slate-300 leading-relaxed">
@@ -1378,7 +1378,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           combinazione strumentale del Triplo Concerto per incentivarne la pubblicazione.
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
-          <p className="text-xs text-slate-400 mb-1">A Breitkopf & Härtel, 26 agosto 1804:</p>
+          <p className="text-sm text-slate-400 mb-1">A Breitkopf & Härtel, 26 agosto 1804:</p>
           <p className="text-sm text-slate-200 leading-relaxed">
             «Le dirò in breve quello che posso darLe: il mio Oratorio, una nuova grande Sinfonia, un "Concertante"
             per violino, violoncello, pianoforte e orchestra; tre sonate per piano. [...] Riguardo agli altri
@@ -1401,7 +1401,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           ma non riuscendo a padroneggiare il concerto in tempo, finì per suonare invece il Terzo Concerto (Op. 37).
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
-          <p className="text-xs text-slate-400 mb-1">Testimonianza riportata da Ferdinand Ries:</p>
+          <p className="text-sm text-slate-400 mb-1">Testimonianza riportata da Ferdinand Ries:</p>
           <p className="text-sm text-slate-200 leading-relaxed">
             «Un giorno B. mi portò il 4° concerto, dicendo: "Sabato prossimo lo suonerete a teatro". Rimanevano
             cinque giorni. Per mia sfortuna, risposi che restava troppo poco tempo per imparare a suonare bene il
@@ -1451,7 +1451,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             </p>
           </div>
           <div className="bg-slate-800 p-3 rounded">
-            <p className="text-xs text-slate-400 mb-1">Nota nel catalogo di Lenz:</p>
+            <p className="text-sm text-slate-400 mb-1">Nota nel catalogo di Lenz:</p>
             <p className="text-sm text-slate-200 leading-relaxed">
               Wilhelm von Lenz descrisse l'opera con questa celebre definizione: «L'orgoglio del pianoforte
               in quanto strumento da concerto».
@@ -1476,15 +1476,15 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <div className="space-y-3">
           <div>
             <p className="font-semibold text-slate-100">WoO 58 n. 1 - Breve e classica</p>
-            <p className="text-xs text-slate-400">70 battute → Stile più contenuto, vicino all'estetica del 1803</p>
+            <p className="text-sm text-slate-400">70 battute → Stile più contenuto, vicino all'estetica del 1803</p>
           </div>
           <div>
             <p className="font-semibold text-slate-100">WoO 58 n. 2 - Moderata</p>
-            <p className="text-xs text-slate-400">90 battute → Equilibrio tra concisione e sviluppo tematico</p>
+            <p className="text-sm text-slate-400">90 battute → Equilibrio tra concisione e sviluppo tematico</p>
           </div>
           <div>
             <p className="font-semibold text-slate-100">WoO 58 n. 3 - Espansa</p>
-            <p className="text-xs text-slate-400">130 battute → Quasi un secondo sviluppo, la più virtuosistica</p>
+            <p className="text-sm text-slate-400">130 battute → Quasi un secondo sviluppo, la più virtuosistica</p>
           </div>
         </div>
       </div>
@@ -1688,7 +1688,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <img 
             src="/images/beethoven-portrait-hero.jpg" 
             alt="Ritratto di Ludwig van Beethoven"
-            className="w-full h-96 object-contain"
+            className="w-full h-52 sm:h-96 object-cover max-h-[60vh]"
           />
           <p className="text-xs text-slate-400 mt-2 italic text-center">Ritratto di Beethoven. Joseph Willibrord Mähler (1804-5).</p>
         </div>
@@ -1790,7 +1790,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/theater-an-der-wien-1803.jpg" 
               alt="Theater an der Wien nel 1803"
-              className="w-full h-72 object-contain rounded-lg"
+              className="w-full h-48 sm:h-72 object-cover rounded-lg max-h-[55vh]"
             />
             <p className="text-xs text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d'epoca.</p>
           </div>
@@ -1827,7 +1827,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/vienna-1800-cityscape.jpg" 
               alt="Vienna nel 1800"
-              className="w-full h-48 object-contain rounded"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Vienna alla fine del XVIII secolo.</p>
           </div>
@@ -1856,7 +1856,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/beethoven-working-portrait.jpg" 
               alt="Beethoven al lavoro"
-              className="w-full h-48 object-contain rounded"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Ritratto di Beethoven. Joseph Karl Stieler (1820).</p>
           </div>
@@ -1884,7 +1884,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/beethoven-manuscript-op37.jpg" 
               alt="Manoscritto del Concerto Op. 37"
-              className="w-full h-48 object-contain rounded"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
           </div>
@@ -1912,7 +1912,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/erard-fortepiano-1803.jpg" 
               alt="Fortepiano Érard del 1803"
-              className="w-full h-48 object-contain rounded"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Fortepiano Érard, inizi XIX secolo.</p>
           </div>
@@ -2031,7 +2031,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                   <img
                     src="/images/beethoven-young-contested.jpg"
                     alt="Ritratto contestato del giovane Beethoven"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="md:w-2/3 space-y-2 text-sm text-slate-300">
