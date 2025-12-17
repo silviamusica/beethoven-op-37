@@ -74,15 +74,15 @@ const movementsData = [
     isTable: true,
     hasModal: true,
     tableData: [
-      { sezione: "ESPOSIZIONE", sottosezione: "TUTTI 1", battute: "1-111", descrizione: "I Tema in Do minore (carattere marziale, cadenzato, incisivo). Transizione con scomposizione del tema. II Tema (batt. 50-74, carattere cantabile, dolce, melodioso). Sezione conclusiva (batt. 86-111) con chiusura drammatica", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 1", battute: "112-227", descrizione: "Ingresso con tre potenti scale ascendenti come gesto di sfida. Il pianoforte espone e analizza il I Tema. II Tema (batt. 164-171) in Mi bemolle maggiore. Episodio di bravura (batt. 199-226) con cascate di note veloci e trillo finale" },
-      { sezione: "SVILUPPO", sottosezione: "TUTTI 2", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte. Ripresa di un elemento conclusivo del Tutti 1 con nuova funzione introduttiva", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 2", battute: "250-309", descrizione: "Apertura con tre scale ascendenti (dominante di Sol minore). Elaborazione della testa del tema (elemento x) e della cellula ritmica (elemento y). Atmosfera di rarefazione timbrica (dialogo tra pianoforte e fiati, sonorità evanescenti)" },
-      { sezione: "RIPRESA", sottosezione: "TUTTI 3", battute: "309-316", descrizione: "Ripresa del I Tema in fortissimo (segna l'avvio formale della Ripresa)", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 3", battute: "317-403", descrizione: "Scomposizione del I Tema e dell'elemento x. II Tema (batt. 340-355) ripreso nella tonalità d'impianto. Episodio di bravura finale" },
-      { sezione: "CODA", sottosezione: "TUTTI 4", battute: "403-416", descrizione: "Riparte dalla testa del tema (x) e si interrompe su un accordo sospeso (corona) per invitare il solista", rowSpan: 3 },
-      { sezione: "", sottosezione: "CADENZA", battute: "417-480", descrizione: "Sezione in cui il solista è realmente solo (esibizione), con rielaborazione virtuosistica dei temi principali" },
-      { sezione: "", sottosezione: "TUTTI 5", battute: "481-507", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani. Scansione della cellula ritmica y, crescendo rapido e accordi finali" }
+      { sezione: "ESPOSIZIONE (batt. 1-227)", sottosezione: "TUTTI 1 (batt. 1-111)", battute: "1-111", descrizione: "I Tema: Esposto dagli archi in Do minore con carattere \"marziale\" e \"cadenzato\" (batt. 1-8).<br/>• I Tema (Periodo b): Esposto dai fiati (batt. 9-16).<br/>• II Tema: Carattere \"cantabile\" e \"ornato\" (batt. 50-74).<br/>• Coda (batt. 86-111)", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 1 (batt. 112-227)", battute: "112-227", descrizione: "Ingresso del pianoforte: entra dopo 111 battute con tre potenti scale ascendenti (\"gesto di sfida\").<br/>• I Tema: Riesposto dal pianoforte.<br/>• II Tema: (batt. 164-171).<br/>• Episodio di bravura: cascate di note veloci e un trillo finale complesso che sale di grado tre volte (batt. 219-225)." },
+      { sezione: "SVILUPPO (batt. 227-309)", sottosezione: "TUTTI 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte che segna l'avvio dello sviluppo.<br/>• Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore).<br/>• Elaborazione di elementi tematici in un dialogo serrato con l'orchestra.<br/>• Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
+      { sezione: "RIPRESA (batt. 309-fine)", sottosezione: "TUTTI 3 (batt. 309-316)", battute: "309-316", descrizione: "L'orchestra riprende il I Tema in fortissimo, segnando l'avvio formale della Ripresa.", rowSpan: 2 },
+      { sezione: "", sottosezione: "SOLO 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339).<br/>• II Tema: Riesposto (batt. 340-355).<br/>• Nuovo episodio di bravura (batt. 364-403)." },
+      { sezione: "CODA", sottosezione: "TUTTI 4 (batt. 403-416)", battute: "403-416", descrizione: "Breve transizione orchestrale che riparte dalla testa del tema e si interrompe su un accordo sospeso (\"corona\"), invitando il solista alla cadenza.", rowSpan: 3 },
+      { sezione: "", sottosezione: "CADENZA (batt. 416)", battute: "416", descrizione: "Momento di massima \"esibizione\" del solista, dove il pianoforte è completamente solo. Il resto della cadenza (batt. 417-443) disegna un arco ascendente di tensione." },
+      { sezione: "", sottosezione: "TUTTI 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale (elemento y).<br/>• Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
     ]
   },
   {
@@ -2903,9 +2903,9 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       {/* Immagine di copertina */}
       <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
         <img
-          src="/images/beethoven-conducting-orchestra.jpg"
+          src="/images/beethoven-conducting-orchestra.png"
           alt="Beethoven dirige un'orchestra nonostante la sordità"
-          className="w-full h-64 object-cover rounded-lg"
+          className="w-full h-64 object-contain rounded-lg"
         />
         <p className="text-xs text-slate-400 mt-3 italic text-center">
           Ludwig van Beethoven dirige un'orchestra nonostante la sordità.<br/>
@@ -4347,9 +4347,9 @@ const QuizSection = () => {
         {/* Immagine di copertina */}
         <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
           <img
-            src="/images/beethoven-quiz-portrait.jpg"
+            src="/images/beethoven-quiz-portrait.png"
             alt="Ludwig van Beethoven - Ritratto per il quiz"
-            className="w-full h-64 object-cover rounded-lg"
+            className="w-full h-64 object-contain rounded-lg"
           />
           <p className="text-xs text-slate-400 mt-3 italic text-center">
             Testa la tua conoscenza sul Concerto per pianoforte n. 3 in Do minore, Op. 37
