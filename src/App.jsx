@@ -754,10 +754,33 @@ const FontiSection = () => {
           alt="Miscellanea Fischhof - Minuetto per orchestra in re minore"
           className="w-full h-64 object-cover rounded-lg"
         />
-        <p className="text-xs text-slate-400 mt-3 italic text-center">
-          Miscellanea Fischhof: Minuetto per orchestra in re minore.<br/>
-          <span className="text-slate-500">Schizzo autografo</span>
-        </p>
+        <div className="text-sm text-slate-300 mt-3 space-y-3">
+          <h4 className="text-base font-semibold text-slate-100 text-center">Identificazione del manoscritto</h4>
+          <div className="text-xs text-slate-400 italic text-center">Frammento autografo di Ludwig van Beethoven, donato a Catherine Watts dal Professor Joseph Fischhof di Vienna il 18 agosto 1847.</div>
+
+          <div className="bg-slate-900/50 p-3 rounded-md border border-slate-700">
+            <p className="font-semibold">Dettagli</p>
+            <p className="mt-2"><strong>Recto (lato visibile nell'immagine):</strong></p>
+            <ul className="list-disc list-inside text-xs mt-1 space-y-1">
+              <li>Due battute di musica in Sol minore per tastiera di pianoforte</li>
+              <li>Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</li>
+            </ul>
+
+            <p className="mt-2"><strong>Verso:</strong></p>
+            <ul className="list-disc list-inside text-xs mt-1 space-y-1">
+              <li>Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</li>
+              <li>Due battute e mezza di figura arpeggiata in Mi bemolle minore</li>
+              <li>Parziale terzo pentagramma musicale</li>
+            </ul>
+
+            <p className="mt-2 text-xs"><strong>Dimensioni:</strong> circa 6,3 x 14 cm (2,5 x 5,5 pollici)</p>
+          </div>
+
+          <div className="text-xs text-slate-300">
+            <p className="font-semibold">Provenienza</p>
+            <p className="mt-1">Joseph Fischhof (1804-1857), pianista e professore al Conservatorio di Vienna, fu un importante collezionista di partiture e manoscritti beethoveniani. Il frammento testimonia la circolazione di manoscritti fra collezionisti e studiosi nell'Ottocento.</p>
+          </div>
+        </div>
       </div>
 
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl border border-slate-600/50">
