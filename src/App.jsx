@@ -2596,22 +2596,26 @@ const InterpretersSection = () => {
     const isOpening = openCategory !== category;
     setOpenCategory(openCategory === category ? null : category);
     if (isOpening) {
+      // Dopo che il contenuto si espande, scrolla il wrapper della categoria in cima.
       setTimeout(() => {
+        try {
+          const el = document.querySelector(`[data-category="${category}"]`);
+          if (el && typeof el.scrollIntoView === 'function') {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+          }
+        } catch (e) {
+          // fallthrough
+        }
+
+        // fallback generico
         const main = document.querySelector('main');
         if (main) {
-          try {
-            main.scrollTo({ top: 0, behavior: 'smooth' });
-          } catch (e) {
-            main.scrollTop = 0;
-          }
+          try { main.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { main.scrollTop = 0; }
         } else {
-          try {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          } catch (e) {
-            window.scrollTo(0, 0);
-          }
+          try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0,0); }
         }
-      }, 100);
+      }, 120);
     }
   };
 
@@ -2721,7 +2725,7 @@ const InterpretersSection = () => {
       </div>
 
       {/* Interpretazioni Storiche */}
-      <div className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+      <div data-category="historical" className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
         <button
           onClick={(e) => toggleCategory('historical', e)}
           className="w-full p-6 flex items-center justify-between hover:bg-slate-700 transition-colors"
@@ -2748,7 +2752,7 @@ const InterpretersSection = () => {
       </div>
 
       {/* Interpretazioni con Fortepiano */}
-      <div className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+      <div data-category="fortepiano" className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
         <button
           onClick={(e) => toggleCategory('fortepiano', e)}
           className="w-full p-6 flex items-center justify-between hover:bg-slate-700 transition-colors"
@@ -2775,7 +2779,7 @@ const InterpretersSection = () => {
       </div>
 
       {/* Interpretazioni Contemporanee */}
-      <div className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+      <div data-category="contemporary" className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
         <button
           onClick={(e) => toggleCategory('contemporary', e)}
           className="w-full p-6 flex items-center justify-between hover:bg-slate-700 transition-colors"
