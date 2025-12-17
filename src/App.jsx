@@ -82,7 +82,7 @@ const movementsData = [
       { sezione: "", sottosezione: "SOLO 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339). • II Tema: Riesposto (batt. 340-355). • Nuovo episodio di bravura (batt. 364-403)." },
       { sezione: "CODA", sottosezione: "TUTTI 4 (batt. 403-416)", battute: "403-416", descrizione: "Breve transizione orchestrale che riparte dalla testa del tema e si interrompe su un accordo sospeso (\"corona\"), invitando il solista alla cadenza.", rowSpan: 3 },
       { sezione: "", sottosezione: "CADENZA (batt. 416)", battute: "416", descrizione: "Momento di massima \"esibizione\" del solista, dove il pianoforte è completamente solo. Il resto della cadenza (batt. 417-443) disegna un arco ascendente di tensione." },
-      { sezione: "", sottosezione: "TUTTI 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale (elemento y). • Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
+      { sezione: "", sottosezione: "TUTTI 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale. • Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
     ]
   },
   {
