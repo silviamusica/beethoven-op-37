@@ -2140,7 +2140,7 @@ const Tooltip = ({ text, children }) => {
   );
 };
 
-const AnalysisSection = () => {
+const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
   const [openMovement, setOpenMovement] = useState(1);
   const [modalContent, setModalContent] = useState(null);
   
@@ -2264,8 +2264,8 @@ const AnalysisSection = () => {
             </ul>
             <button
               onClick={() => {
-                setGlossaryFocus('Tonalità e Armonia');
                 setActiveTab('glossary');
+                setGlossaryFocus('Tonalità e Armonia');
               }}
               className="mt-3 text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
             >
@@ -4506,7 +4506,9 @@ const App = () => {
             <IntroduzioneSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} />
           )}
           {activeTab === 'fonti' && <FontiSection />}
-          {activeTab === 'analysis' && <AnalysisSection />}
+          {activeTab === 'analysis' && (
+            <AnalysisSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} />
+          )}
           {activeTab === 'interpreters' && <InterpretersSection />}
           {activeTab === 'glossary' && (
             <GlossarySection focusCategory={glossaryFocus} onFocusConsumed={() => setGlossaryFocus(null)} />
