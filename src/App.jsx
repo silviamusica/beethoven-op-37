@@ -4344,6 +4344,18 @@ const QuizSection = () => {
           <p className="text-slate-400">Seleziona il livello più adatto alla tua preparazione</p>
         </div>
 
+        {/* Immagine di copertina */}
+        <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
+          <img
+            src="/images/beethoven-quiz-portrait.jpg"
+            alt="Ludwig van Beethoven - Ritratto per il quiz"
+            className="w-full h-64 object-cover rounded-lg"
+          />
+          <p className="text-xs text-slate-400 mt-3 italic text-center">
+            Testa la tua conoscenza sul Concerto per pianoforte n. 3 in Do minore, Op. 37
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6">
           {/* BASE */}
           <button
