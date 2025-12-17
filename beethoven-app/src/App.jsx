@@ -210,9 +210,9 @@ const interpretersData = [
     link: "https://youtu.be/rnXpoCoCBk0?si=bpaPZrPIzFczt5F_"
   },
 
-  // 🎼 STRUMENTI D’epoca (Filologico - 1988-2000)
+  // 🎼 Strumenti d'epoca (Filologico - 1988-2000)
   {
-    name: "🎼 Steven Lubin (strumenti d’Epoca - filologico)",
+    name: "🎼 Steven Lubin (strumenti d’epoca - filologico)",
     bio: "Pianista e fortepianista americano, specialista della prassi esecutiva storica",
     conductor: "Christopher Hogwood",
     orchestra: "Academy of Ancient Music",
@@ -233,12 +233,12 @@ const interpretersData = [
     link: "https://youtu.be/TAhZkggFL2w?si=BR_EQis6QbeYVMhB"
   },
   {
-    name: "🎼 Maria João Pires (strumenti d’Epoca)",
+    name: "🎼 Maria João Pires (strumenti d’epoca)",
     bio: "Pianista portoghese, celebre per la sua sensibilità interpretativa e il tocco raffinato",
     conductor: "Frans Brüggen",
     orchestra: "Orchestra of the Eighteenth Century",
     year: "2000 (circa)",
-    description: "Esecuzione su strumento d’Epoca che unisce la sensibilità poetica di Pires all’approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
+    description: "Esecuzione su strumento d’epoca che unisce la sensibilità poetica di Pires all’approccio filologico di Brüggen. Un equilibrio straordinario tra autenticità storica e profondità espressiva, dove il fortepiano rivela sfumature timbriche e dinamiche impossibili sul pianoforte moderno.",
     style: "Filologico, Poetico",
     rating: "⭐⭐⭐⭐⭐",
     link: "https://www.youtube.com/watch?v=hR95EK9fEKo"
@@ -2789,7 +2789,7 @@ const InterpretersSection = () => {
       <div className="mb-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
         <div className="grid md:grid-cols-2 gap-0">
           <div className="p-8 md:p-10 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-slate-100 mb-4">Interpretazioni del Concerto</h2>
+            <h2 className="text-3xl font-bold text-slate-100 mb-4">Interpretazioni del concerto</h2>
             <p className="text-slate-300 leading-relaxed">
               Un viaggio attraverso le grandi registrazioni che hanno segnato la storia dell’interpretazione, 
               dalle leggendarie incisioni storiche alle esecuzioni filologiche su fortepiano, 
@@ -3142,7 +3142,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5 text-orange-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">Che cos’è il Concerto? Storia ed evoluzione del genere</h3>
+              <h3 className="text-lg font-semibold">Che cos'è il concerto? Storia ed evoluzione del genere</h3>
               <span className="text-sm opacity-90">Dal Barocco al Novecento</span>
             </div>
           </div>
@@ -3391,7 +3391,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <Music className="w-5 h-5 text-blue-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">🎵 La Forma Rondò</h3>
+              <h3 className="text-lg font-semibold">🎵 La forma rondò</h3>
               <span className="text-sm opacity-90">Struttura e utilizzo nei concerti classici</span>
             </div>
           </div>
@@ -3569,7 +3569,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <Music className="w-5 h-5 text-blue-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">🎼 La Forma Sonata</h3>
+              <h3 className="text-lg font-semibold">🎼 La forma sonata</h3>
               <span className="text-sm opacity-90">Schema del primo movimento (Esposizione-Sviluppo-Ripresa)</span>
             </div>
           </div>
@@ -3657,7 +3657,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <Music className="w-5 h-5 text-blue-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">🎹 La Cadenza</h3>
+              <h3 className="text-lg font-semibold">🎹 La cadenza</h3>
               <span className="text-sm opacity-90">Improvvisazione virtuosistica del solista</span>
             </div>
           </div>
@@ -3726,7 +3726,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           <div className="flex items-center space-x-3">
             <Music className="w-5 h-5 text-blue-400" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">🎼 Il Fugato</h3>
+              <h3 className="text-lg font-semibold">🎼 Il fugato</h3>
               <span className="text-sm opacity-90">Tecnica contrappuntistica imitativa</span>
             </div>
           </div>
