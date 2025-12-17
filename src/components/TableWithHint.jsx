@@ -20,7 +20,7 @@ export default function TableWithHint({ children, className = '' }) {
         }
         const isSmall = window.matchMedia('(max-width: 767px)').matches;
         setShowHint(isSmall && table.scrollWidth > table.clientWidth + 2);
-      } catch (e) {
+      } catch {
         // fail silently
         setShowHint(false);
       }

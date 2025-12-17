@@ -1,18 +1,22 @@
 import React from 'react';
 
+const safeScrollTo = (target, options = { top: 0, behavior: 'smooth' }) => {
+  if (!target) return;
+  if (typeof target.scrollTo === 'function') {
+    target.scrollTo(options);
+  } else if ('scrollTop' in target && typeof options.top === 'number') {
+    target.scrollTop = options.top;
+  }
+};
+
 export default function Footer({ setActiveTab }) {
   const scrollToTop = () => {
     const main = document.querySelector('main');
     const doScroll = () => {
-      try {
-        if (main) main.scrollTo({ top: 0, behavior: 'smooth' });
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      } catch (e) {
-        try { if (main) main.scrollTop = 0; } catch (e) {}
-        try { window.scrollTo(0, 0); } catch (e) {}
-      }
+      safeScrollTo(main);
+      safeScrollTo(window);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     };
     // call immediately and schedule a couple of retries to override other scroll actions
     doScroll();

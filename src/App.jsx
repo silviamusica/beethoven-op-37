@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
 import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
@@ -18,7 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Puoi loggare l’errore qui se vuoi
+    console.error(error, errorInfo);
   }
 
   render() {
@@ -36,6 +37,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+const safeScrollTo = (target, options = { top: 0, behavior: 'smooth' }) => {
+  if (!target) return;
+  if (typeof target.scrollTo === 'function') {
+    target.scrollTo(options);
+  } else if ('scrollTop' in target && typeof options.top === 'number') {
+    target.scrollTop = options.top;
+  }
+};
 
 const glossaryData = [
   {
@@ -112,6 +122,21 @@ const movementsData = [
       "Carattere: energico, quasi sfrenato, con elementi di danza e umorismo beethoveniano"
     ]
   }
+];
+
+const flashcardsData = [
+  {
+    q: 'A chi fu dedicato il Concerto in Do minore, Op. 37?',
+    a: 'Al Principe Luigi Ferdinando di Prussia',
+  },
+  {
+    q: 'In quale tonalità si apre il Concerto?',
+    a: 'Do minore',
+  },
+  {
+    q: 'Quale struttura forma il primo movimento?',
+    a: 'La forma di Sonata per Concerto con doppia esposizione',
+  },
 ];
 
 const interpretersData = [
@@ -614,6 +639,11 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
+    setTimeout(() => {
+      const main = document.querySelector('main');
+      safeScrollTo(main);
+      safeScrollTo(window);
+    }, 20);
     if (isMobile && isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
@@ -1065,7 +1095,7 @@ const FontiSection = () => {
   );
 };
 
-const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
+const IntroduzioneSection = () => {
   const [openConcerto0, setOpenConcerto0] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
@@ -2176,17 +2206,19 @@ const Modal = ({ isOpen, onClose, title, children }) => {
   const dialogRef = React.useRef(null);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      // focus close button when modal opens
-      setTimeout(() => {
-        try {
-          closeBtnRef.current?.focus();
-        } catch (e) {}
-      }, 50);
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+        // focus close button when modal opens
+        setTimeout(() => {
+          try {
+            closeBtnRef.current?.focus();
+          } catch {
+            // focus might not be ready yet
+          }
+        }, 50);
+      } else {
+        document.body.style.overflow = 'unset';
+      }
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -2222,11 +2254,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 // Componente Tooltip
 const Tooltip = ({ text, children }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-  
-  useEffect(() => {
-    setIsTouchDevice('ontouchstart' in window);
-  }, []);
+  const [isTouchDevice] = useState(() => typeof window !== 'undefined' && 'ontouchstart' in window);
   
   const handleInteraction = (e) => {
     if (isTouchDevice) {
@@ -2267,7 +2295,7 @@ const Tooltip = ({ text, children }) => {
   );
 };
 
-const AnalysisSection = ({ setActiveTab, setGlossaryFocus, isMobile }) => {
+const AnalysisSection = ({ setActiveTab, isMobile }) => {
   const [openMovement, setOpenMovement] = useState(null);
   const [modalContent, setModalContent] = useState(null);
   const [showScore, setShowScore] = useState(false); // show/hide spartito del primo movimento
@@ -2645,7 +2673,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus, isMobile }) => {
 const InterpretersSection = () => {
   const [openCategory, setOpenCategory] = useState(null);
 
-  const toggleCategory = (category, event) => {
+  const toggleCategory = (category) => {
     const isOpening = openCategory !== category;
     setOpenCategory(openCategory === category ? null : category);
     if (isOpening) {
@@ -2659,23 +2687,19 @@ const InterpretersSection = () => {
             const nav = document.querySelector('nav');
             const headerOffset = nav ? (nav.getBoundingClientRect().height + 24) : 140;
             const targetY = window.scrollY + rect.top - headerOffset;
-            try {
-              window.scrollTo({ top: Math.max(0, Math.floor(targetY)), behavior: 'smooth' });
-            } catch (e) {
-              window.scrollTo(Math.max(0, Math.floor(targetY)), 0);
-            }
+            safeScrollTo(window, { top: Math.max(0, Math.floor(targetY)), behavior: 'smooth' });
             return;
           }
-        } catch (e) {
+        } catch {
           // fallthrough
         }
 
         // fallback generico: scroll to top
         const main = document.querySelector('main');
         if (main) {
-          try { main.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { main.scrollTop = 0; }
+          safeScrollTo(main);
         } else {
-          try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0,0); }
+          safeScrollTo(window);
         }
       }, 120);
     }
@@ -3034,12 +3058,13 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
     if (!focusCategory) return;
     const targetIdx = glossaryData.findIndex((cat) => cat.category === focusCategory);
     if (targetIdx >= 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setOpenCategory(targetIdx);
     }
     // scroll the category into view centered vertically
     if (targetIdx >= 0) {
       setTimeout(() => {
-        const el = document.querySelector(`[data-gloss-cat=\"${targetIdx}\"]`);
+      const el = document.querySelector(`[data-gloss-cat="${targetIdx}"]`);
         if (el && el.scrollIntoView) {
           el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -4807,17 +4832,9 @@ const App = () => {
     const timer = setTimeout(() => {
       const main = document.querySelector('main');
       if (main) {
-        try {
-          main.scrollTo({ top: 0, behavior: 'smooth' });
-        } catch (e) {
-          main.scrollTop = 0;
-        }
+        safeScrollTo(main);
       } else {
-        try {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } catch (e) {
-          window.scrollTo(0, 0);
-        }
+        safeScrollTo(window);
       }
     }, 50);
     return () => clearTimeout(timer);
@@ -4877,12 +4894,10 @@ const App = () => {
               </button>
             </div>
           )}
-          {activeTab === 'introduzione' && (
-            <IntroduzioneSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} />
-          )}
+          {activeTab === 'introduzione' && <IntroduzioneSection />}
           {activeTab === 'fonti' && <FontiSection />}
           {activeTab === 'analysis' && (
-            <AnalysisSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} isMobile={isMobile} />
+            <AnalysisSection setActiveTab={setActiveTab} isMobile={isMobile} />
           )}
           {activeTab === 'interpreters' && <InterpretersSection />}
           {activeTab === 'glossary' && (
