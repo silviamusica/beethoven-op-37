@@ -2900,6 +2900,18 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
         <p className="text-slate-300">Scopri i termini tecnici del Concerto Op. 37</p>
       </div>
 
+      {/* Banner Sezione Forme Musicali */}
+      <div className="mb-6 bg-gradient-to-r from-blue-900/40 to-purple-900/40 p-5 rounded-lg border-2 border-blue-600/50">
+        <h3 className="text-xl font-bold text-blue-100 flex items-center gap-3 mb-2">
+          <Music className="w-6 h-6" />
+          🎼 Forme e Strutture Musicali
+        </h3>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Esplora la teoria musicale del Concerto: dalla storia del genere alle forme classiche (Sonata e Rondò),
+          fino alle tecniche compositive come la Cadenza e il Fugato utilizzate da Beethoven nell'Op. 37.
+        </p>
+      </div>
+
       {/* Approfondimento: Storia del Concerto */}
       <div className="mb-6 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
         <button
@@ -3503,6 +3515,17 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
         )}
       </div>
 
+      {/* Banner Sezione Termini */}
+      <div className="my-8 bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-5 rounded-lg border-2 border-emerald-600/50">
+        <h3 className="text-xl font-bold text-emerald-100 flex items-center gap-3 mb-2">
+          <Library className="w-6 h-6" />
+          📚 Terminologia Musicale
+        </h3>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Dizionario rapido dei termini tecnici, tonalità e armonie utilizzati nell'analisi del Concerto Op. 37.
+        </p>
+      </div>
+
       <div className="space-y-4">
         {glossaryData.map((category, catIdx) => (
           <div key={catIdx} data-gloss-cat={catIdx} className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
@@ -3552,6 +3575,17 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
             )}
           </div>
         ))}
+      </div>
+
+      {/* Banner Sezione Personaggi */}
+      <div className="my-8 bg-gradient-to-r from-amber-900/40 to-orange-900/40 p-5 rounded-lg border-2 border-amber-600/50">
+        <h3 className="text-xl font-bold text-amber-100 flex items-center gap-3 mb-2">
+          <User className="w-6 h-6" />
+          👥 Contesto Storico
+        </h3>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Personaggi storici, mecenati e interpreti legati al Concerto Op. 37 di Beethoven.
+        </p>
       </div>
 
       {/* Approfondimento: Personaggi Storici e Interpreti */}
