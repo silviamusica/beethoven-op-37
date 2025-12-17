@@ -2600,15 +2600,24 @@ const InterpretersSection = () => {
       setTimeout(() => {
         try {
           const el = document.querySelector(`[data-category="${category}"]`);
-          if (el && typeof el.scrollIntoView === 'function') {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            // Cerca la nav per calcolare un offset adeguato; se non trovata, usa fallback 140px
+            const nav = document.querySelector('nav');
+            const headerOffset = nav ? (nav.getBoundingClientRect().height + 24) : 140;
+            const targetY = window.scrollY + rect.top - headerOffset;
+            try {
+              window.scrollTo({ top: Math.max(0, Math.floor(targetY)), behavior: 'smooth' });
+            } catch (e) {
+              window.scrollTo(Math.max(0, Math.floor(targetY)), 0);
+            }
             return;
           }
         } catch (e) {
           // fallthrough
         }
 
-        // fallback generico
+        // fallback generico: scroll to top
         const main = document.querySelector('main');
         if (main) {
           try { main.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { main.scrollTop = 0; }
