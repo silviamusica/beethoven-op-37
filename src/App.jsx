@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Footer from './Footer';
 import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
@@ -1544,6 +1545,42 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         La tradizione di scrivere cadenze personali per i concerti di Beethoven è viva ancora oggi, 
         dimostrando come questi capolavori continuino a ispirare creatività e dialogo tra epoche.
       </p>
+      {/* Link rapidi - spostato qui: Esplora l'app */}
+      <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
+        <h3 className="text-sm font-semibold text-slate-300 mb-3">🔗 Esplora l’app</h3>
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setActiveTab('analysis')}
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            → Analisi movimenti
+          </button>
+          <button
+            onClick={() => setActiveTab('glossary')}
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            → Glossario termini
+          </button>
+          <button
+            onClick={() => setActiveTab('interpreters')}
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            → Interpretazioni storiche
+          </button>
+          <button
+            onClick={() => setActiveTab('quiz')}
+            className="text-sm px-3 py-2 bg-slate-700 border border-blue-700 text-blue-400 rounded hover:bg-slate-600 transition-colors font-medium"
+          >
+            → Mettiti alla prova
+          </button>
+          <button
+            onClick={() => setActiveTab('fonti')}
+            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
+          >
+            → Fonti documentarie
+          </button>
+        </div>
+      </div>
     </div>
   );
 
@@ -1937,42 +1974,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         </div>
       </div>
 
-      {/* Link rapidi */}
-      <div className="bg-slate-800 p-4 rounded-lg border border-slate-700">
-        <h3 className="text-sm font-semibold text-slate-300 mb-3">🔗 Esplora l’app</h3>
-        <div className="flex flex-wrap gap-2">
-          <button
-            onClick={() => setActiveTab('analysis')}
-            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-          >
-            → Analisi movimenti
-          </button>
-          <button
-            onClick={() => setActiveTab('glossary')}
-            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-          >
-            → Glossario termini
-          </button>
-          <button
-            onClick={() => setActiveTab('interpreters')}
-            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-          >
-            → Interpretazioni storiche
-          </button>
-          <button
-            onClick={() => setActiveTab('quiz')}
-            className="text-sm px-3 py-2 bg-slate-700 border border-blue-700 text-blue-400 rounded hover:bg-slate-600 transition-colors font-medium"
-          >
-            → Mettiti alla prova
-          </button>
-          <button
-            onClick={() => setActiveTab('fonti')}
-            className="text-sm px-3 py-2 bg-slate-800 border border-blue-600 text-blue-400 rounded hover:bg-slate-700/50 transition-colors font-medium"
-          >
-            → Fonti documentarie
-          </button>
-        </div>
-      </div>
+      
 
       {/* Curiosità: Concerto 0 - Espandibile */}
       <div className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
@@ -4864,6 +4866,7 @@ const App = () => {
           {activeTab === 'flashcards' && <FlashcardsSection />}
           {activeTab === 'quiz' && <QuizSection />}
         </main>
+        <Footer setActiveTab={setActiveTab} />
         {imageModal && (
           <Modal isOpen={imageModal !== null} onClose={() => setImageModal(null)} title={imageModal.alt || 'Immagine'}>
             <div className="flex justify-center">
