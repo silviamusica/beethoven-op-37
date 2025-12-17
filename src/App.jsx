@@ -684,6 +684,7 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
 
 const FontiSection = () => {
   const [openSource, setOpenSource] = useState(1);
+  const [activeTab, setActiveTab] = useState('primarie');
   const toggleSource = (id) => setOpenSource(openSource === id ? null : id);
 
   const fonti = [
@@ -746,12 +747,52 @@ const FontiSection = () => {
 
   return (
     <div className="space-y-8 animate-fadeIn">
+      {/* Immagine di copertina */}
+      <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
+        <img
+          src="/images/beethoven-sources.png"
+          alt="Manoscritti e documenti di Beethoven"
+          className="w-full h-64 object-contain rounded-lg"
+        />
+        <p className="text-xs text-slate-400 mt-3 italic text-center">
+          Esplora le fonti documentarie che testimoniano il processo compositivo di Beethoven per il Concerto Op. 37
+        </p>
+      </div>
+
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl border border-slate-600/50">
         <h2 className="text-4xl font-bold mb-6 text-slate-200">Fonti documentarie</h2>
-        <p className="text-lg text-slate-300 leading-relaxed">
-          Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
-        </p>
-        <div className="overflow-x-auto mt-6 sm:mt-8">
+
+        {/* Tab Navigation */}
+        <div className="flex gap-2 mb-6 border-b border-slate-600">
+          <button
+            onClick={() => setActiveTab('primarie')}
+            className={`px-6 py-3 font-semibold transition-all rounded-t-lg ${
+              activeTab === 'primarie'
+                ? 'bg-slate-700 text-white border-b-2 border-blue-400'
+                : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
+            }`}
+          >
+            📜 Fonti Primarie
+          </button>
+          <button
+            onClick={() => setActiveTab('bibliografia')}
+            className={`px-6 py-3 font-semibold transition-all rounded-t-lg ${
+              activeTab === 'bibliografia'
+                ? 'bg-slate-700 text-white border-b-2 border-blue-400'
+                : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
+            }`}
+          >
+            📚 Bibliografia
+          </button>
+        </div>
+
+        {/* Tab Content - Fonti Primarie */}
+        {activeTab === 'primarie' && (
+          <div className="animate-fadeIn">
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
+            </p>
+            <div className="overflow-x-auto mt-6 sm:mt-8">
           <table className="min-w-full text-xs sm:text-sm md:text-base border border-slate-300 rounded-xl md:rounded-2xl overflow-hidden">
             <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide text-xs sm:text-sm">
               <tr>
@@ -788,40 +829,43 @@ const FontiSection = () => {
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-
-      <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
-        <h3 className="text-2xl font-semibold text-slate-100 mb-4">Approfondisci ogni supporto</h3>
-        <p className="text-slate-300 leading-relaxed mb-6">
-          Le schede seguenti si aprono con un tocco e permettono di esplorare ruolo, contenuti e casi studio per ciascuna tipologia di documento.
-        </p>
-        <div className="space-y-4">
-          {fonti.map(fonte => (
-            <div key={fonte.id} className="rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
-              <button
-                onClick={() => toggleSource(fonte.id)}
-                className={`w-full flex justify-between items-center px-5 py-4 text-left transition-all ${
-                  openSource === fonte.id
-                    ? 'bg-slate-700 text-white font-semibold'
-                    : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
-                }`}
-              >
-                <span className="text-lg font-semibold">{fonte.title}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform ${openSource === fonte.id ? 'rotate-180' : ''}`} />
-              </button>
-              {openSource === fonte.id && (
-                <div className="px-5 pb-5 pt-4 text-sm leading-relaxed bg-slate-900 text-slate-200 border-t border-slate-700">
-                  {fonte.content}
-                </div>
-              )}
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Bibliografia */}
-      <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
+            <div className="bg-slate-800 p-8 mt-8 rounded-3xl shadow-2xl border border-slate-700">
+              <h3 className="text-2xl font-semibold text-slate-100 mb-4">Approfondisci ogni supporto</h3>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                Le schede seguenti si aprono con un tocco e permettono di esplorare ruolo, contenuti e casi studio per ciascuna tipologia di documento.
+              </p>
+              <div className="space-y-4">
+                {fonti.map(fonte => (
+                  <div key={fonte.id} className="rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
+                    <button
+                      onClick={() => toggleSource(fonte.id)}
+                      className={`w-full flex justify-between items-center px-5 py-4 text-left transition-all ${
+                        openSource === fonte.id
+                          ? 'bg-slate-700 text-white font-semibold'
+                          : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+                      }`}
+                    >
+                      <span className="text-lg font-semibold">{fonte.title}</span>
+                      <ChevronDown className={`w-5 h-5 transition-transform ${openSource === fonte.id ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openSource === fonte.id && (
+                      <div className="px-5 pb-5 pt-4 text-sm leading-relaxed bg-slate-900 text-slate-200 border-t border-slate-700">
+                        {fonte.content}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Tab Content - Bibliografia */}
+        {activeTab === 'bibliografia' && (
+          <div className="animate-fadeIn">
+            <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
         <h3 className="text-2xl font-semibold text-slate-100 mb-6">📚 Bibliografia</h3>
         
         <div className="space-y-6 text-sm text-slate-300">
@@ -922,18 +966,18 @@ const FontiSection = () => {
               </li>
               <li className="leading-relaxed">
                 <strong>Beethoven, Ludwig van.</strong> <em>Epistolario</em>, I (1783-1807), a cura di Sieghard Brandenburg. Milano: Skira, 1999, pp. 150, 160, 166. 
-                (Lettere agli editori Hoffmeister e 
-                <Tooltip text="Casa editrice musicale storica con sede a Lipsia, fondata nel 1719, ancora attiva">
-                  <span className="text-blue-300 underline decoration-dotted cursor-help">Breitkopf &amp; Härtel</span>
-                </Tooltip> in cui giudica l'Op. 37 superiore ai primi due concerti).
+                (Lettere agli editori Hoffmeister e Breitkopf &amp; Härtel in cui giudica l'Op. 37 superiore ai primi due concerti).
               </li>
               <li className="leading-relaxed">
-                <em>Ludwig van Beethovens Konversationshefte</em> (Quaderni di Conversazione). Ed. Karl-Heinz Köhler, Grita Herre, et al. 
+                <em>Ludwig van Beethovens Konversationshefte</em> (Quaderni di Conversazione). Ed. Karl-Heinz Köhler, Grita Herre, et al.
                 Leipzig: Deutscher Verlag für Musik. (Riferimenti sparsi nelle biografie citate).
               </li>
             </ul>
           </div>
         </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -2903,7 +2947,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       {/* Immagine di copertina */}
       <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
         <img
-          src="/images/beethoven-conducting-orchestra.png"
+          src="/images/beethoven-conducting-orchestra.jpg"
           alt="Beethoven dirige un'orchestra nonostante la sordità"
           className="w-full h-64 object-contain rounded-lg"
         />
