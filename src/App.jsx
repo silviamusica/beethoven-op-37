@@ -2429,7 +2429,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
                             <td className="border border-slate-600 p-3 text-slate-300 align-top whitespace-nowrap">
                               {row.battute}
                             </td>
-                            <td className="border border-slate-600 p-3 text-slate-300">
+                            <td className="border border-slate-600 p-3 text-slate-300 whitespace-pre-line">
                               {row.descrizione}
                             </td>
                           </tr>
