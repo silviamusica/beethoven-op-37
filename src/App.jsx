@@ -95,7 +95,7 @@ const movementsData = [
       "Innovazione tecnica: uso pionieristico del pedale di risonanza del pianoforte Érard nel secondo movimento",
       "Struttura: forma tripartita (A-B-A) con sezione centrale più agitata",
       "Orchestrazione: dialogo cameristico tra pianoforte e fagotti, oboi e archi",
-      "Tonalità: mi maggiore - scelta audace, una terza cromatica distante da Do minore"
+      "Tonalità: Mi maggiore - scelta audace, una terza cromatica distante da Do minore"
     ]
   },
   {
@@ -939,7 +939,7 @@ const FontiSection = () => {
   );
 };
 
-const IntroduzioneSection = ({ setActiveTab }) => {
+const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
   const [openConcerto0, setOpenConcerto0] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
@@ -1888,7 +1888,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
               </div>
 
               <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-blue-500">
-                <p className="text-xs text-slate-200">
+                <p className="text-sm text-slate-200">
                   <strong>Nota storica:</strong> Beethoven molto probabilmente compose questo concerto nel 1784, quando era ancora a Bonn. 
                   In questo periodo, Mozart non aveva ancora composto le sue Sinfonie n. 39, 40 e 41.  
                 
@@ -1904,7 +1904,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                   />
                 </div>
                 <div className="md:w-2/3 space-y-2 text-sm text-slate-300">
-                  <p className="text-xs text-slate-400 uppercase tracking-wide">Ritratto contestato del tredicenne Beethoven</p>
+                  <p className="text-sm text-slate-400 uppercase tracking-wide">Ritratto contestato del tredicenne Beethoven</p>
                   <p>
                     Anonimo pittore di Bonn, olio su tela intorno al 1783: il museo definisce l’opera come il primo ritratto autentico di Beethoven, raffigurando un tredicenne già attivo come organista, strumentista e compositore per la corte di Bonn.
                   </p>
@@ -1914,7 +1914,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                   <p className="text-sm text-slate-300 leading-relaxed">
                     Per anni Beethoven credette di essere nato nel 1772 perché il padre Johann van Beethoven aveva modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
                   </p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-sm text-slate-500">
                     Tecnica: olio su tela · Datazione: c. 1783
                   </p>
                 </div>
@@ -1925,7 +1925,7 @@ const IntroduzioneSection = ({ setActiveTab }) => {
                   <span className="mr-2">🎵</span>
                   Ascolta l'esecuzione
                 </h4>
-                <p className="text-xs text-slate-300 mb-3">
+                <p className="text-sm text-slate-300 mb-3">
                   Berlin Chamber Orchestra diretta da Peter Gülke, con Eva Ander al pianoforte
                 </p>
                 <a
@@ -2264,9 +2264,8 @@ const AnalysisSection = () => {
             </ul>
             <button
               onClick={() => {
+                setGlossaryFocus('Tonalità e Armonia');
                 setActiveTab('glossary');
-                setOpenSonataForm(true);
-                setOpenRondoForm(true);
               }}
               className="mt-3 text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
             >
@@ -2844,7 +2843,7 @@ const InterpretersSection = () => {
   );
 };
 
-const GlossarySection = () => {
+const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
   const [openCategory, setOpenCategory] = useState(null);
   const [openConcertoHistory, setOpenConcertoHistory] = useState(false);
   const [openRondoForm, setOpenRondoForm] = useState(false);
@@ -2852,6 +2851,19 @@ const GlossarySection = () => {
   const [openCadenzaForm, setOpenCadenzaForm] = useState(false);
   const [openFugatoForm, setOpenFugatoForm] = useState(false);
   const [openPersonaggi, setOpenPersonaggi] = useState(false);
+
+  useEffect(() => {
+    if (!focusCategory) return;
+    const targetIdx = glossaryData.findIndex((cat) => cat.category === focusCategory);
+    if (targetIdx >= 0) {
+      setOpenCategory(targetIdx);
+    }
+    setOpenSonataForm(true);
+    setOpenRondoForm(true);
+    if (onFocusConsumed) {
+      onFocusConsumed();
+    }
+  }, [focusCategory, onFocusConsumed]);
 
   const toggleCategory = (category, event) => {
     const isOpening = openCategory !== category;
@@ -4467,6 +4479,7 @@ const QuizSection = () => {
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('introduzione');
+  const [glossaryFocus, setGlossaryFocus] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -4489,11 +4502,15 @@ const App = () => {
           isMobileMenuOpen={isMobileMenuOpen}
         />
         <main className="max-w-5xl mx-auto px-4 py-12 pb-16">
-          {activeTab === 'introduzione' && <IntroduzioneSection setActiveTab={setActiveTab} />}
+          {activeTab === 'introduzione' && (
+            <IntroduzioneSection setActiveTab={setActiveTab} setGlossaryFocus={setGlossaryFocus} />
+          )}
           {activeTab === 'fonti' && <FontiSection />}
           {activeTab === 'analysis' && <AnalysisSection />}
           {activeTab === 'interpreters' && <InterpretersSection />}
-          {activeTab === 'glossary' && <GlossarySection />}
+          {activeTab === 'glossary' && (
+            <GlossarySection focusCategory={glossaryFocus} onFocusConsumed={() => setGlossaryFocus(null)} />
+          )}
           {activeTab === 'flashcards' && <FlashcardsSection />}
           {activeTab === 'quiz' && <QuizSection />}
         </main>
