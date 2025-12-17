@@ -2264,9 +2264,9 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
             </ul>
             <button
               onClick={() => {
-                setActiveTab('glossary');
-                setGlossaryFocus('Tonalità e Armonia');
-              }}
+                  setActiveTab('glossary');
+                  setGlossaryFocus('Rondò');
+                }}
               className="mt-3 text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
             >
               Approfondisci
