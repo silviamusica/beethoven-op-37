@@ -756,7 +756,7 @@ const FontiSection = () => {
         />
         <p className="text-xs text-slate-400 mt-3 italic text-center">
           Miscellanea Fischhof: Minuetto per orchestra in re minore.<br/>
-          <span className="text-slate-500">Schizzo autografo - trascrizione pianistica di Graziano Denini e orchestrazione di Albert Willem Holsbergen</span>
+          <span className="text-slate-500">Schizzo autografo</span>
         </p>
       </div>
 
