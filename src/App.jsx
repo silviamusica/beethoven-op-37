@@ -56,10 +56,10 @@ const glossaryData = [
   {
     category: "Tonalità e Armonia",
     items: [
-      { term: "Do Minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l'Op. 37 alla Patetica, alla Quinta Sinfonia e all'Eroica. Per Beethoven rappresenta il dramma e la lotta." },
-      { term: "Mi Maggiore", definition: "Tonalità del secondo movimento (Largo). Estremamente lontana dal Do minore - un salto cromatico audace che crea uno 'shock tonale'. Rappresenta un'oasi lirica e contemplativa." },
-      { term: "Mib Maggiore", definition: "Tonalità relativa maggiore di Do minore. Usata per il secondo tema del primo movimento." },
-      { term: "Do Maggiore", definition: "Tonalità parallela maggiore di Do minore. Il terzo movimento conclude in Do maggiore (non nella relativa Mi♭), compiendo il percorso beethoveniano 'dal buio alla luce' - dalla tragedia al trionfo." },
+      { term: "Do minore", definition: "La tonalità 'eroica' di Beethoven: tempesta, resistenza, eroismo. Collega l'Op. 37 alla Patetica, alla Quinta Sinfonia e all'Eroica. Per Beethoven rappresenta il dramma e la lotta." },
+      { term: "Mi maggiore", definition: "Tonalità del secondo movimento (Largo). Estremamente lontana dal Do minore - un salto cromatico audace che crea uno 'shock tonale'. Rappresenta un'oasi lirica e contemplativa." },
+      { term: "Mib maggiore", definition: "Tonalità relativa maggiore di Do minore. Usata per il secondo tema del primo movimento." },
+      { term: "Do maggiore", definition: "Tonalità parallela maggiore di Do minore. Il terzo movimento conclude in Do maggiore (non nella relativa Mi♭), compiendo il percorso beethoveniano 'dal buio alla luce' - dalla tragedia al trionfo." },
       { term: "Terza Cromatica", definition: "Intervallo tra Do minore e Mi maggiore - una distanza tonale molto remota che rende il secondo movimento un contrasto drammatico e sorprendente." }
     ]
   }
@@ -67,27 +67,27 @@ const glossaryData = [
 
 const movementsData = [
   {
-    id: 1,
-    title: "I Movimento: Allegro con brio",
+  id: 1,
+  title: "I movimento: allegro con brio",
     key: "Do minore",
     desc: "Forma sonata con doppia esposizione. Il primo movimento è drammatico ed eroico.",
     isTable: true,
     hasModal: true,
     tableData: [
-      { sezione: "ESPOSIZIONE (batt. 1-227)", sottosezione: "TUTTI 1 (batt. 1-111)", battute: "1-111", descrizione: "I Tema: esposto dagli archi in Do minore con carattere \"marziale\" e \"cadenzato\" (batt. 1-8).\n• I Tema (Periodo b): esposto dai fiati (batt. 9-16).\n• II Tema: carattere \"cantabile\" e \"ornato\" (batt. 50-74).\n• Coda (batt. 86-111)", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 1 (batt. 112-227)", battute: "112-227", descrizione: "Ingresso del pianoforte: entra dopo 111 battute con tre potenti scale ascendenti (\"gesto di sfida\").\n• I Tema: riesposto dal pianoforte.\n• II Tema: (batt. 164-171).\n• Episodio di bravura: cascate di note veloci e un trillo finale complesso che sale di grado tre volte (batt. 219-225)." },
-      { sezione: "SVILUPPO (batt. 227-309)", sottosezione: "TUTTI 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte che segna l'avvio dello sviluppo.\n• Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore).\n• Elaborazione di elementi tematici in un dialogo serrato con l'orchestra.\n• Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
-      { sezione: "RIPRESA (batt. 309-fine)", sottosezione: "TUTTI 3 (batt. 309-316)", battute: "309-316", descrizione: "L'orchestra riprende il I Tema in fortissimo, segnando l'avvio formale della Ripresa.", rowSpan: 2 },
-      { sezione: "", sottosezione: "SOLO 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339).\n• II Tema: riesposto (batt. 340-355).\n• Nuovo episodio di bravura (batt. 364-403)." },
-      { sezione: "CODA", sottosezione: "TUTTI 4 (batt. 403-416)", battute: "403-416", descrizione: "Breve transizione orchestrale che riparte dalla testa del tema e si interrompe su un accordo sospeso (\"corona\"), invitando il solista alla cadenza.", rowSpan: 3 },
-      { sezione: "", sottosezione: "CADENZA (batt. 416)", battute: "416", descrizione: "Momento di massima \"esibizione\" del solista, dove il pianoforte è completamente solo.\nIl resto della cadenza (batt. 417-443) disegna un arco ascendente di tensione." },
-      { sezione: "", sottosezione: "TUTTI 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale.\n• Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
+      { sezione: "Esposizione (batt. 1-227)", sottosezione: "Tutti 1 (batt. 1-111)", battute: "1-111", descrizione: "I Tema: esposto dagli archi in Do minore con carattere \"marziale\" e \"cadenzato\" (batt. 1-8).\n• I Tema (Periodo b): esposto dai fiati (batt. 9-16).\n• II Tema: carattere \"cantabile\" e \"ornato\" (batt. 50-74).\n• Coda (batt. 86-111)", rowSpan: 2 },
+      { sezione: "", sottosezione: "Solo 1 (batt. 112-227)", battute: "112-227", descrizione: "Ingresso del pianoforte: entra dopo 111 battute con tre potenti scale ascendenti (\"gesto di sfida\").\n• I Tema: riesposto dal pianoforte.\n• II Tema: (batt. 164-171).\n• Episodio di bravura: cascate di note veloci e un trillo finale complesso che sale di grado tre volte (batt. 219-225)." },
+      { sezione: "Sviluppo (batt. 227-309)", sottosezione: "Tutti 2 (batt. 227-249)", battute: "227-249", descrizione: "Ingresso potente dell'orchestra in forte che segna l'avvio dello sviluppo.\n• Ripresa di un elemento melodico-ritmico della chiusura del Tutti 1, ora con funzione introduttiva.", rowSpan: 2 },
+      { sezione: "", sottosezione: "Solo 2 (batt. 250-309)", battute: "250-309", descrizione: "Il pianoforte apre nuovamente con tre scale ascendenti (in Re maggiore, dominante di Sol minore).\n• Elaborazione di elementi tematici in un dialogo serrato con l'orchestra.\n• Presenta anche il \"secondo tema nella parte dello sviluppo\" (batt. 284-287)." },
+      { sezione: "Ripresa (batt. 309-fine)", sottosezione: "Tutti 3 (batt. 309-316)", battute: "309-316", descrizione: "L'orchestra riprende il I Tema in fortissimo, segnando l'avvio formale della Ripresa.", rowSpan: 2 },
+      { sezione: "", sottosezione: "Solo 3 (batt. 317-403)", battute: "317-403", descrizione: "Il pianoforte ricompone il percorso discorsivo: scomposizione del I Tema (batt. 317-339).\n• II Tema: riesposto (batt. 340-355).\n• Nuovo episodio di bravura (batt. 364-403)." },
+      { sezione: "Coda", sottosezione: "Tutti 4 (batt. 403-416)", battute: "403-416", descrizione: "Breve transizione orchestrale che riparte dalla testa del tema e si interrompe su un accordo sospeso (\"corona\"), invitando il solista alla cadenza.", rowSpan: 3 },
+      { sezione: "", sottosezione: "Cadenza (batt. 416)", battute: "416", descrizione: "Momento di massima \"esibizione\" del solista, dove il pianoforte è completamente solo.\nIl resto della cadenza (batt. 417-443) disegna un arco ascendente di tensione." },
+      { sezione: "", sottosezione: "Tutti 5 (batt. 417-443)", battute: "417-443", descrizione: "Innovazione timbrica: il pianoforte continua a suonare accompagnato dai timpani, che scandiscono il ritmo marziale.\n• Crescendo finale e chiusura con scale ascendenti del pianoforte e accordi dell'orchestra." }
     ]
   },
   {
-    id: 2,
-    title: "II Movimento: Largo",
+  id: 2,
+  title: "II movimento: largo",
     key: "Mi maggiore",
     desc: "Movimento lirico e contemplativo. La tonalità di Mi maggiore crea un contrasto drammatico con il Do minore del primo movimento.",
     details: [
@@ -99,8 +99,8 @@ const movementsData = [
     ]
   },
   {
-    id: 3,
-    title: "III Movimento: Rondò. Allegro",
+  id: 3,
+  title: "III movimento: rondò. allegro",
     key: "Do minore → Do maggiore",
     desc: "Rondò brillante che conclude il concerto con energia e virtuosismo. Finale trionfale in Do maggiore.",
     details: [
@@ -437,7 +437,7 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Cosa caratterizza il carattere del primo tema (P)?",
+    question: "Cosa caratterizza il carattere del primo tema?",
     options: ["Dolce e cantabile", "Marziale con ritmo puntato", "Virtuosistico", "Lirico"],
     correct: 1,
     difficulty: "intermedio"
@@ -683,14 +683,17 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
 };
 
 const FontiSection = () => {
-  const [openSource, setOpenSource] = useState(1);
+  const [openSource, setOpenSource] = useState(null);
   const [activeTab, setActiveTab] = useState('primarie');
+  const [fontiModal, setFontiModal] = useState(null);
+  const openFontiModal = (title, content) => setFontiModal({ title, content });
+  const closeFontiModal = () => setFontiModal(null);
   const toggleSource = (id) => setOpenSource(openSource === id ? null : id);
 
   const fonti = [
     {
       id: 1,
-      title: "Quaderni di Schizzi (Skizzenbücher)",
+      title: "Quaderni di schizzi (Skizzenbücher)",
       content: (
         <ul className="space-y-3 text-slate-200">
           <li><strong>Concezione ed evoluzione:</strong> Fino al <strong>1798</strong> circa, Beethoven usava fogli sciolti o piccoli fascicoli raccolti in portafogli. Dal 1798 passò a quaderni rilegati, custoditi fino alla morte come memoria del proprio sviluppo artistico.</li>
@@ -713,19 +716,19 @@ const FontiSection = () => {
     },
     {
       id: 2,
-      title: "Fogli Sciolti e Miscellanee (Kafka, Fischhof)",
+      title: "Fogli sciolti e miscellanee (Kafka, Fischhof)",
       content: (
         <ul className="space-y-3 text-slate-200">
           <li><strong>Concezione:</strong> prima del 1798 o parallelamente ai quaderni, Beethoven usava fogli singoli per scopi specifici.</li>
           <li><strong>Funzione:</strong> area privilegiata per <strong>sperimentazione tecnica e pianistica</strong>.</li>
-          <li><strong>Contenuto:</strong> ricerche di Luca Chiantore mostrano esercizi tecnici (<em>Klavierübungen</em>): formule ripetitive, modulazioni, diteggiature nuove, suoni sperimentali.</li>
+          <li><strong>Contenuto:</strong> ricerche di Luca Chiantore mostrano esercizi tecnici (<em>Klavierübungen</em>). Formule ripetitive, modulazioni, diteggiature nuove, suoni sperimentali.</li>
           <li><strong>Partiture orchestrali:</strong> per opere sinfoniche abbozzava partiture su più righi, cosa difficile nei quaderni di schizzi.</li>
         </ul>
       )
     },
     {
       id: 3,
-      title: "Quaderni di Conversazione (Konversationshefte)",
+      title: "Quaderni di conversazione (Konversationshefte)",
       content: (
         <ul className="space-y-3 text-slate-200">
           <li><strong>Uso:</strong> introdotti verso il <strong>1818</strong> quando la sordità era grave. Gli interlocutori scrivevano domande/riposte, Beethoven rispondeva a voce.</li>
@@ -735,7 +738,7 @@ const FontiSection = () => {
     },
     {
       id: 4,
-      title: "Diari (Tagebuch) e \"Concetti\" (Konzept)",
+      title: "Diari (Tagebuch) e \"concetti\" (Konzept)",
       content: (
         <ul className="space-y-3 text-slate-200">
           <li><strong>Tagebuch:</strong> diario (1812-1818) per introspezione, preghiere, citazioni filosofiche, riflessioni personali.</li>
@@ -752,34 +755,45 @@ const FontiSection = () => {
         <img
           src="/images/beethoven-sources.jpg"
           alt="Miscellanea Fischhof - Minuetto per orchestra in re minore"
-          className="w-full h-64 object-cover rounded-lg"
+          className="w-full h-auto object-contain rounded-lg"
         />
-        <div className="text-sm text-slate-300 mt-3 space-y-3">
-          <h4 className="text-base font-semibold text-slate-100 text-center">Identificazione del manoscritto</h4>
-          <div className="text-xs text-slate-400 italic text-center">Frammento autografo di Ludwig van Beethoven, donato a Catherine Watts dal Professor Joseph Fischhof di Vienna il 18 agosto 1847.</div>
+        <p className="text-xs text-slate-400 mt-2 italic text-left">Frammento autografo di Ludwig van Beethoven — donato da Joseph Fischhof a Catherine Watts, 18/8/1847.</p>
+        <div className="mt-3 text-left">
+          <button
+            onClick={() => openFontiModal('Identificazione del manoscritto', (
+              <div className="space-y-4 text-sm text-slate-300">
+                <h4 className="text-base font-semibold text-slate-100 text-center">Identificazione del manoscritto</h4>
+                <div className="text-xs text-slate-400 italic text-center">Frammento autografo di Ludwig van Beethoven, donato a Catherine Watts dal Professor Joseph Fischhof di Vienna il 18 agosto 1847.</div>
 
-          <div className="bg-slate-900/50 p-3 rounded-md border border-slate-700">
-            <p className="font-semibold">Dettagli</p>
-            <p className="mt-2"><strong>Recto (lato visibile nell'immagine):</strong></p>
-            <ul className="list-disc list-inside text-xs mt-1 space-y-1">
-              <li>Due battute di musica in Sol minore per tastiera di pianoforte</li>
-              <li>Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</li>
-            </ul>
+                <div className="bg-slate-900/50 p-3 rounded-md border border-slate-700">
+                  <p className="font-semibold">Dettagli</p>
+                  <p className="mt-2"><strong>Recto (lato visibile nell'immagine):</strong></p>
+                  <ul className="list-disc list-inside text-xs mt-1 space-y-1">
+                    <li>Due battute di musica in Sol minore per tastiera di pianoforte</li>
+                    <li>Iscrizione ottocentesca: “Écriture de Beethoven faite à moi du Prof. Fischhof de Vienna, 18/8/1847 / Catherine Watts”</li>
+                  </ul>
 
-            <p className="mt-2"><strong>Verso:</strong></p>
-            <ul className="list-disc list-inside text-xs mt-1 space-y-1">
-              <li>Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</li>
-              <li>Due battute e mezza di figura arpeggiata in Mi bemolle minore</li>
-              <li>Parziale terzo pentagramma musicale</li>
-            </ul>
+                  <p className="mt-2"><strong>Verso</strong></p>
+                  <ul className="list-disc list-inside text-xs mt-1 space-y-1">
+                    <li>Sistema doppio in chiave di basso, tonalità di Mi bemolle maggiore</li>
+                    <li>Due battute e mezza di figura arpeggiata in Mi bemolle minore</li>
+                    <li>Parziale terzo pentagramma musicale</li>
+                  </ul>
 
-            <p className="mt-2 text-xs"><strong>Dimensioni:</strong> circa 6,3 x 14 cm (2,5 x 5,5 pollici)</p>
-          </div>
+                  <p className="mt-2 text-xs"><strong>Dimensioni:</strong> circa 6,3 x 14 cm</p>
+                </div>
 
-          <div className="text-xs text-slate-300">
-            <p className="font-semibold">Provenienza</p>
-            <p className="mt-1">Joseph Fischhof (1804-1857), pianista e professore al Conservatorio di Vienna, fu un importante collezionista di partiture e manoscritti beethoveniani. Il frammento testimonia la circolazione di manoscritti fra collezionisti e studiosi nell'Ottocento.</p>
-          </div>
+                <div className="text-xs text-slate-300">
+                  <p className="font-semibold">Provenienza</p>
+                  <p className="mt-1">Joseph Fischhof (1804-1857), pianista e professore al Conservatorio di Vienna, fu un importante collezionista di partiture e manoscritti beethoveniani. Il frammento testimonia la circolazione di manoscritti fra collezionisti e studiosi nell'Ottocento.</p>
+                </div>
+              </div>
+            ))}
+            className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
+          >
+            Approfondisci
+            <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
       </div>
 
@@ -890,7 +904,6 @@ const FontiSection = () => {
         {activeTab === 'bibliografia' && (
           <div className="animate-fadeIn">
             <div className="bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
-        <h3 className="text-2xl font-semibold text-slate-100 mb-6">📚 Bibliografia</h3>
         
         <div className="space-y-6 text-sm text-slate-300">
           <div>
@@ -1002,6 +1015,11 @@ const FontiSection = () => {
             </div>
           </div>
         )}
+        {fontiModal && (
+          <Modal isOpen={fontiModal !== null} onClose={closeFontiModal} title={fontiModal?.title}>
+            {fontiModal?.content}
+          </Modal>
+        )}
       </div>
     </div>
   );
@@ -1101,7 +1119,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/op37-manuscript.jpg" 
           alt="Manoscritto del Concerto Op. 37"
-          className="w-full h-80 object-cover object-top rounded-lg"
+          className="w-full h-80 object-contain object-top rounded-lg"
         />
         <p className="text-xs text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
       </div>
@@ -1202,14 +1220,14 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/fortepiano-evolution.jpg" 
           alt="Evoluzione del pianoforte"
-          className="w-full h-80 object-cover rounded-lg"
+          className="w-full h-80 object-contain rounded-lg"
         />
         <p className="text-xs text-slate-400 mt-2 italic text-center">Famiglia Mozart. Johann Nepomuk della Croce.</p>
       </div>
 
       {/* Introduzione */}
       <div>
-        <h3 className="text-xl font-bold text-slate-100 mb-4">L'EVOLUZIONE DELLO STRUMENTO E DEL COMPOSITORE</h3>
+        <h3 className="text-xl font-bold text-slate-100 mb-4">L'evoluzione dello strumento e del compositore</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
           La carriera di Beethoven (1770-1827) coincide con un momento rivoluzionario nella storia del pianoforte: la <strong>trasformazione dal fortepiano classico al pianoforte romantico moderno</strong>. In soli quarant'anni, lo strumento passò da 5 ottave (FF-f³) a oltre 6 ottave e mezza, da corde doppie a quadruple, da meccaniche leggere a azioni pesanti e potenti.
         </p>
@@ -1222,7 +1240,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Tre scuole di costruzione */}
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
-        <h3 className="text-lg font-semibold text-slate-100 mb-3">TRE SCUOLE DI COSTRUZIONE</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-3">Tre scuole di costruzione</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
           Nel periodo di Beethoven esistevano <strong>tre scuole principali</strong> di costruzione pianistica:
         </p>
@@ -1238,7 +1256,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* La sordità */}
         <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
-          <h3 className="text-lg font-semibold text-slate-100 mb-3">LA SORDITÀ E IL RAPPORTO CON LO STRUMENTO</h3>
+          <h3 className="text-lg font-semibold text-slate-100 mb-3">La sordità e il rapporto con lo strumento</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
           Intorno al 1798 la sordità progressiva cambiò radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martellava" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf fu costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
         </p>
@@ -1267,7 +1285,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
 
       {/* Tabella cronologica */}
       <div className="overflow-x-auto">
-        <h3 className="text-lg font-semibold text-slate-100 mb-4">CRONISTORIA DEI PIANOFORTI DI BEETHOVEN</h3>
+        <h3 className="text-lg font-semibold text-slate-100 mb-4">Cronistoria dei pianoforti di Beethoven</h3>
         <table className="w-full text-xs text-slate-300 border-collapse">
           <thead>
             <tr className="bg-slate-700 text-slate-100">
@@ -1305,7 +1323,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/beethoven-letters-manuscripts.jpg" 
           alt="Lettere e manoscritti di Beethoven"
-          className="w-full h-64 object-cover rounded-lg"
+          className="w-full h-64 object-contain rounded-lg"
         />
         <p className="text-xs text-slate-400 mt-2 italic text-center">Corrispondenza di Beethoven con gli editori.</p>
       </div>
@@ -1497,7 +1515,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
         <img 
           src="/images/napoleonic-wars-vienna.jpg" 
           alt="Vienna durante le guerre napoleoniche"
-          className="w-full h-64 object-cover rounded-lg"
+          className="w-full h-64 object-contain rounded-lg"
         />
         <p className="text-xs text-slate-400 mt-2 italic text-center">Guerra napoleonica. La cattura dei ponti sul Danubio (13/11/1805). Autore sconosciuto.</p>
       </div>
@@ -1625,7 +1643,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
           <img 
             src="/images/beethoven-portrait-hero.jpg" 
             alt="Ritratto di Ludwig van Beethoven"
-            className="w-full h-96 object-cover"
+            className="w-full h-96 object-contain"
           />
           <p className="text-xs text-slate-400 mt-2 italic text-center">Ritratto di Beethoven. Joseph Willibrord Mähler (1804-5).</p>
         </div>
@@ -1727,7 +1745,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/theater-an-der-wien-1803.jpg" 
               alt="Theater an der Wien nel 1803"
-              className="w-full h-72 object-cover rounded-lg"
+              className="w-full h-72 object-contain rounded-lg"
             />
             <p className="text-xs text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d'epoca.</p>
           </div>
@@ -1764,7 +1782,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/vienna-1800-cityscape.jpg" 
               alt="Vienna nel 1800"
-              className="w-full h-48 object-cover rounded"
+              className="w-full h-48 object-contain rounded"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Vienna alla fine del XVIII secolo.</p>
           </div>
@@ -1793,7 +1811,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/beethoven-working-portrait.jpg" 
               alt="Beethoven al lavoro"
-              className="w-full h-48 object-cover rounded"
+              className="w-full h-48 object-contain rounded"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Ritratto di Beethoven. Joseph Karl Stieler (1820).</p>
           </div>
@@ -1821,7 +1839,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/beethoven-manuscript-op37.jpg" 
               alt="Manoscritto del Concerto Op. 37"
-              className="w-full h-48 object-cover rounded"
+              className="w-full h-48 object-contain rounded"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
           </div>
@@ -1849,7 +1867,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/erard-fortepiano-1803.jpg" 
               alt="Fortepiano Érard del 1803"
-              className="w-full h-48 object-cover rounded"
+              className="w-full h-48 object-contain rounded"
             />
             <p className="text-xs text-slate-400 mt-1 italic text-center">Fortepiano Érard, inizi XIX secolo.</p>
           </div>
@@ -1968,7 +1986,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
                   <img
                     src="/images/beethoven-young-contested.jpg"
                     alt="Ritratto contestato del giovane Beethoven"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="md:w-2/3 space-y-2 text-sm text-slate-300">
@@ -2342,7 +2360,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
             <img 
               src="/images/beethoven-analysis.jpg" 
               alt="Frontespizio della prima edizione del Concerto n. 3"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
             <p className="absolute bottom-4 left-4 text-xs text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
@@ -2666,7 +2684,7 @@ const InterpretersSection = () => {
             <img 
               src="/images/interpreters-hero.jpg" 
               alt="Grandi interpreti del Concerto n. 3"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
             <p className="absolute bottom-4 left-4 text-xs text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
@@ -4417,11 +4435,8 @@ const QuizSection = () => {
           <img
             src="/images/beethoven-quiz-portrait.png"
             alt="Ludwig van Beethoven - Ritratto per il quiz"
-            className="w-full h-64 object-contain rounded-lg"
+            className="w-full h-auto object-contain rounded-lg"
           />
-          <p className="text-xs text-slate-400 mt-3 italic text-center">
-            Testa la tua conoscenza sul Concerto per pianoforte n. 3 in Do minore, Op. 37
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
