@@ -696,7 +696,7 @@ const FontiSection = () => {
       title: "Quaderni di schizzi (Skizzenbücher)",
       content: (
         <ul className="space-y-3 text-slate-200">
-          <li><strong>Concezione ed evoluzione:</strong> Fino al <strong>1798</strong> circa, Beethoven usava fogli sciolti o piccoli fascicoli raccolti in portafogli. Dal 1798 passò a quaderni rilegati, custoditi fino alla morte come memoria del proprio sviluppo artistico.</li>
+          <li><strong>Concezione ed evoluzione:</strong> fino al <strong>1798</strong> circa, Beethoven usava fogli sciolti o piccoli fascicoli raccolti in portafogli. Dal 1798 passò a quaderni rilegati, custoditi fino alla morte come memoria del proprio sviluppo artistico.</li>
           <li><strong>Tipologie:</strong>
             <ul className="mt-2 space-y-2 ml-4">
               <li className="flex items-start space-x-2">
@@ -831,7 +831,6 @@ const FontiSection = () => {
       </div>
 
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-4 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl border border-slate-600/50">
-        <h2 className="text-4xl font-bold mb-6 text-slate-200">Fonti documentarie</h2>
 
         {/* Tab Navigation */}
         <div className="flex gap-2 mb-6 border-b border-slate-600">
@@ -1699,7 +1698,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
             Il Concerto per pianoforte n. 3 in Do minore, Op. 37 rappresenta l'inizio dei concerti maturi di Beethoven: iniziato nel 1799, fu completato all'inizio del 1803.
           </p>
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma era sovraccarico: Beethoven eseguì nuovamente la Sinfonia n. 1, presentò per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l'oratorio <Tooltip text="Composizione sacra per voci e orchestra"><span className="text-blue-300 underline decoration-dotted cursor-help">Cristo sul Monte degli Ulivi</span></Tooltip>. <Tooltip text="Allievo e biografo di Beethoven, raccontò l'eccessiva durata dell'Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrisse: «Il concerto è iniziato alle sei, ma è durato così tanto che un paio di brani non sono stati eseguiti».
+            La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma era sovraccarico: Beethoven eseguì nuovamente la Sinfonia n. 1, presentò per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l'oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l'eccessiva durata dell'Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrisse: «Il concerto è iniziato alle sei, ma è durato così tanto che un paio di brani non sono stati eseguiti».
           </p>
           <p className="text-sm text-slate-300 mb-4 leading-relaxed">
             Dei cinque concerti per pianoforte scritti da Beethoven, Mozart ne compose venticinque; il compositore considerava i primi due inferiori all'op. 37. Quest'ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
@@ -2309,23 +2308,22 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
             (Do-Mib-Sol...). Questo tema definisce il carattere "eroico" e severo.
           </p>
           <p>
-            Dopo una transizione che collassa in minore, appare il <strong>Secondo Tema in Mib maggiore</strong> — 
-            una <strong>modulazione insolita</strong> per un Esposizione 1, che normalmente resta in tonica. 
-            Questa "finta" mozartiana crea <strong>instabilità già nella prima esposizione</strong>. 
+            Dopo una transizione appare il <strong>Secondo Tema in Mib maggiore</strong>, 
+            una <strong>modulazione insolita</strong> per un'esposizione 1 che normalmente resta in tonica. 
             Il tema è più lirico e cantabile, affidato a violini e clarinetti.
           </p>
           <p>
-            Il Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
+            L'Esposizione si chiude con una sezione cadenzale forte che crea grande aspettativa per l'ingresso del solista.
           </p>
         </div>
       </div>
 
       <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
-        <h4 className="text-base font-semibold text-slate-200 mb-3">Solo 1 (Esposizione del pianoforte)</h4>
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Solo 1 (esposizione del pianoforte)</h4>
         <div className="space-y-2">
           <p>
             <strong className="text-slate-200">L'Entrata:</strong> il pianoforte entra con <strong>tre potenti scale ascendenti</strong> 
-            in <em>fortissimo</em> (do-do-do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un'entrata dolce 
+            in <em>fortissimo</em> (Do-Do-Do), un gesto di "sfida" che afferma la sua autorità di protagonista. Non è un'entrata dolce 
             o preparatoria, ma un'<strong>affermazione di potenza</strong>.
           </p>
           <p>
@@ -2338,8 +2336,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
       <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
         <h4 className="text-base font-semibold text-slate-200 mb-3">Sviluppo e Ripresa</h4>
         <p>
-          Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. Nella ripresa, c'è un momento essenziale 
-          dopo la Cadenza (il momento di improvvisazione solistica).
+          Lo sviluppo elabora i temi con grande <strong>tensione drammatica</strong>. La Ripresa ripropone il materiale ascoltato durante l'esposizione, ulteriormente arricchito.
         </p>
       </div>
 
@@ -2347,12 +2344,12 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
         <h4 className="text-base font-semibold text-slate-200 mb-3">La Coda (innovazione fondamentale)</h4>
         <div className="space-y-2">
           <p>
-            Tradizionalmente, dopo la cadenza, l'orchestra chiudeva il movimento da sola. Qui, invece, <strong>Beethoven fa rientrare 
+            Tradizionalmente, dopo la cadenza, l'orchestra chiudeva il movimento da sola; qui, invece, <strong>Beethoven fa rientrare 
             il pianoforte</strong>.
           </p>
           <p>
             Il <strong>trillo finale della cadenza</strong> non risolve in un <em>tutti</em> trionfale, ma viene "soffocato" 
-            (choked back) in un <em>pianissimo</em> misterioso. Il pianoforte continua a suonare <strong>arpeggi vibranti</strong> mentre 
+             in un <em>pianissimo</em> misterioso. Il pianoforte continua a suonare <strong>arpeggi vibranti</strong> mentre 
             i timpani scandiscono il ritmo del tema principale, creando un effetto di <strong>tensione e mistero</strong> prima dell'esplosione finale.
           </p>
           <p className="text-slate-100 font-semibold">
@@ -2584,7 +2581,7 @@ const AnalysisSection = ({ setActiveTab, setGlossaryFocus }) => {
                 {mov.hasModal && (
                   <div className="mt-6 pt-4 border-t border-slate-700">
                     <button
-                      onClick={() => openModal('Analisi Dettagliata del Primo Movimento', <AnalisiPrimoMovimentoModal />)}
+                      onClick={() => openModal('Analisi Dettagliata del Primo movimento', <AnalisiPrimoMovimentoModal />)}
                       className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
                     >
                       Approfondisci
@@ -2779,7 +2776,7 @@ const InterpretersSection = () => {
         </div>
       </div>
 
-      {/* Interpretazioni Storiche */}
+      {/* Interpretazioni storiche */}
       <div data-category="historical" className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
         <button
           onClick={(e) => toggleCategory('historical', e)}
@@ -2790,7 +2787,7 @@ const InterpretersSection = () => {
               <Music className="w-6 h-6 text-amber-400" />
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-bold text-white">Interpretazioni Storiche (1933-1979)</h3>
+              <h3 className="text-xl font-bold text-white">Interpretazioni storiche (1933-1979)</h3>
               <p className="text-slate-400 text-sm">Le registrazioni leggendarie del XX secolo</p>
             </div>
           </div>
@@ -2806,7 +2803,7 @@ const InterpretersSection = () => {
         )}
       </div>
 
-      {/* Interpretazioni con Fortepiano */}
+      {/* Interpretazioni con fortepiano */}
       <div data-category="fortepiano" className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
         <button
           onClick={(e) => toggleCategory('fortepiano', e)}
@@ -2817,7 +2814,7 @@ const InterpretersSection = () => {
               <Music className="w-6 h-6 text-blue-400" />
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-bold text-white">Interpretazioni con Fortepiano (1988-2000)</h3>
+              <h3 className="text-xl font-bold text-white">Interpretazioni con fortepiano (1988-2000)</h3>
               <p className="text-slate-400 text-sm">Approccio filologico su strumenti d'epoca</p>
             </div>
           </div>
@@ -2833,7 +2830,7 @@ const InterpretersSection = () => {
         )}
       </div>
 
-      {/* Interpretazioni Contemporanee */}
+      {/* Interpretazioni contemporanee */}
       <div data-category="contemporary" className="mb-6 bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
         <button
           onClick={(e) => toggleCategory('contemporary', e)}
@@ -2844,7 +2841,7 @@ const InterpretersSection = () => {
               <Music className="w-6 h-6 text-green-400" />
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-bold text-white">Interpretazioni Contemporanee (1989-2019)</h3>
+              <h3 className="text-xl font-bold text-white">Interpretazioni contemporanee (1989-2019)</h3>
               <p className="text-slate-400 text-sm">Le registrazioni moderne di riferimento</p>
             </div>
           </div>
@@ -2860,7 +2857,7 @@ const InterpretersSection = () => {
         )}
       </div>
 
-    {/* Tabella Riepilogo */}
+    {/* Tabella riepilogo */}
     <div className="mt-10 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
       <div className="bg-slate-700 p-5">
         <h3 className="text-xl font-semibold text-white">📊 Riepilogo Rapido</h3>
@@ -3085,8 +3082,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Banner Sezione Forme Musicali */}
-      <div className="mb-6 bg-gradient-to-r from-blue-900/40 to-purple-900/40 p-5 rounded-lg border-2 border-blue-600/50">
-        <h3 className="text-xl font-bold text-blue-100 flex items-center gap-3 mb-2">
+      <div className="mb-6 bg-slate-900/70 p-5 rounded-2xl border border-slate-700 shadow-sm">
+        <h3 className="text-xl font-bold text-slate-100 flex items-center gap-3 mb-2">
           <Music className="w-6 h-6" />
           🎼 Forme e Strutture Musicali
         </h3>
@@ -3455,7 +3452,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
                       <span><strong>Interazione Solo-Tutti:</strong> Il solista espone il refrain, poi ripreso o completato 
-                      dall'orchestra. Mozart espande il refrain iniziale trasformandolo in un esposizione orchestrale</span>
+                      dall'orchestra. Mozart espande il refrain iniziale trasformandolo in un'esposizione orchestrale</span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-3 h-3 text-amber-400 mr-2 shrink-0 mt-0.5" />
@@ -3480,7 +3477,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                 </p>
                 
                 <div className="bg-slate-900/50 p-3 rounded">
-                  <h5 className="text-sm font-semibold text-red-200 mb-2">Elementi distintivi:</h5>
+                  <h5 className="text-sm font-semibold text-red-200 mb-2">Elementi distintivi</h5>
                   <div className="space-y-3 text-xs">
                     <div className="bg-slate-800/50 p-2 rounded">
                       <p className="font-semibold text-slate-200 mb-1">1. Scherzi sulla struttura</p>
@@ -3508,7 +3505,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
                 <div className="bg-red-900/20 p-3 rounded mt-3 border-l-2 border-red-500">
                   <p className="text-xs">
-                    <strong className="text-red-200">Sintesi:</strong> Mentre nel classicismo il rondò era apprezzato per 
+                    <strong className="text-red-200">Sintesi <br /></strong> Mentre nel classicismo il rondò era apprezzato per 
                     la sua simmetria e carattere brillante, con Beethoven (e nei concerti maturi di Mozart) la forma divenne 
                     un veicolo per <strong>complesse elaborazioni motiviche e drammatiche</strong>, fondendosi sempre più con 
                     la logica dialettica della forma sonata (Sonata-Rondò).
@@ -3637,7 +3634,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
                   che si colloca tipicamente alla fine del primo movimento, poco prima della coda orchestrale finale.
                 </p>
                 <p className="mb-3">
-                  Nel Concerto n. 3, Beethoven scrisse la propria cadenza (inizialmente improvvisata nelle prime esecuzioni). 
+                  Nel Concerto n. 3, Beethoven scrisse 3 cadenze, nel 1809. 
                   È un'area 'protetta' in cui il solista può mostrare il proprio virtuosismo tecnico ed espressivo, 
                   elaborando i temi principali del movimento.
                 </p>
@@ -3748,8 +3745,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Banner Sezione Termini */}
-      <div className="my-8 bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-5 rounded-lg border-2 border-emerald-600/50">
-        <h3 className="text-xl font-bold text-emerald-100 flex items-center gap-3 mb-2">
+      <div className="my-8 bg-slate-900/70 p-5 rounded-2xl border border-slate-700 shadow-sm">
+        <h3 className="text-xl font-bold text-slate-100 flex items-center gap-3 mb-2">
           <Library className="w-6 h-6" />
           📚 Terminologia Musicale
         </h3>
@@ -3760,13 +3757,17 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
       <div className="space-y-4">
         {glossaryData.map((category, catIdx) => (
-          <div key={catIdx} data-gloss-cat={catIdx} className="ml-4 md:ml-8 bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700 border-l-4 border-l-emerald-500/50">
+          <div
+            key={catIdx}
+            data-gloss-cat={catIdx}
+            className="ml-4 md:ml-8 bg-slate-900/70 rounded-2xl border border-slate-700/70 border-l-4 border-l-emerald-500/50 shadow-sm overflow-hidden"
+          >
             <button
               onClick={() => toggleCategory(catIdx)}
-              className={`w-full p-5 flex justify-between items-center transition-all ${
+              className={`w-full p-5 flex justify-between items-center transition-all rounded-2xl border ${
                 openCategory === catIdx
-                  ? 'sticky top-20 z-10 bg-slate-700 text-white'
-                  : 'bg-slate-800 text-slate-100 hover:bg-slate-900'
+                  ? 'sticky top-20 z-10 border-blue-500 bg-slate-900 text-slate-50 shadow-lg'
+                  : 'border-slate-700/60 bg-slate-900/60 text-slate-100 hover:bg-slate-900/90'
               }`}
             >
               <div className="flex items-center space-x-3">
@@ -3810,8 +3811,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
       </div>
 
       {/* Banner Sezione Personaggi */}
-      <div className="my-8 bg-gradient-to-r from-amber-900/40 to-orange-900/40 p-5 rounded-lg border-2 border-amber-600/50">
-        <h3 className="text-xl font-bold text-amber-100 flex items-center gap-3 mb-2">
+      <div className="my-8 bg-slate-900/70 p-5 rounded-2xl border border-slate-700 shadow-sm">
+        <h3 className="text-xl font-bold text-slate-100 flex items-center gap-3 mb-2">
           <User className="w-6 h-6" />
           👥 Contesto Storico
         </h3>
@@ -3844,14 +3845,14 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
             <div className="space-y-6 text-sm text-slate-300">
               
               {/* TABELLA REGNANTI */}
-              <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-10 rounded-3xl shadow-2xl border border-slate-600/50">
-                <h4 className="text-xl font-bold text-slate-200 mb-6 flex items-center">
+              <div className="bg-slate-900/80 text-white p-10 rounded-3xl shadow-2xl border border-slate-600/50">
+                <h4 className="text-xl font-bold text-slate-100 mb-6 flex items-center">
                   <span className="text-3xl mr-3">👑</span>
                   REGNANTI E MECENATI (DA BACH A BEETHOVEN)
                 </h4>
                 <div className="overflow-x-auto">
                   <table className="w-full text-xs border-collapse">
-                    <thead className="bg-gradient-to-r from-slate-800 to-slate-700 text-white uppercase tracking-wide">
+                    <thead className="bg-slate-800 text-white uppercase tracking-wide text-xs sm:text-sm">
                       <tr>
                         <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Sovrano / Nobile</th>
                         <th className="border border-slate-600 px-3 py-2 text-left font-semibold">Periodo Regno/Vita</th>
@@ -4757,7 +4758,7 @@ const QuizSection = () => {
                 onClick={handleNext}
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all flex items-center space-x-2 shadow-lg"
               >
-                <span>{currentQuestion < shuffledQuestions.length - 1 ? 'Prossima Domanda' : 'Vedi Risultato'}</span>
+                <span>{currentQuestion < shuffledQuestions.length - 1 ? 'Prossima domanda' : 'Vedi Risultato'}</span>
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
