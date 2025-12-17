@@ -1107,7 +1107,7 @@ const IntroduzioneSection = ({ setActiveTab, setGlossaryFocus }) => {
       </div>
 
       <div className="mt-3 p-3 bg-blue-900/20 rounded text-sm text-slate-200 border-l-2 border-blue-500">
-        💡 <strong>Curiosità:</strong>
+        💡 <strong>Curiosità</strong>
 
         <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600 mt-3">
           <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
