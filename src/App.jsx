@@ -2900,6 +2900,19 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
         <p className="text-slate-300">Scopri i termini tecnici del Concerto Op. 37</p>
       </div>
 
+      {/* Immagine di copertina */}
+      <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
+        <img
+          src="/images/beethoven-conducting-orchestra.jpg"
+          alt="Beethoven dirige un'orchestra nonostante la sordità"
+          className="w-full h-64 object-cover rounded-lg"
+        />
+        <p className="text-xs text-slate-400 mt-3 italic text-center">
+          Ludwig van Beethoven dirige un'orchestra nonostante la sordità.<br/>
+          <span className="text-slate-500">Scuola francese, XIX secolo - da "Le leggende dell'arte: Musicisti" (Parigi, ca. 1890)</span>
+        </p>
+      </div>
+
       {/* Banner Sezione Forme Musicali */}
       <div className="mb-6 bg-gradient-to-r from-blue-900/40 to-purple-900/40 p-5 rounded-lg border-2 border-blue-600/50">
         <h3 className="text-xl font-bold text-blue-100 flex items-center gap-3 mb-2">
