@@ -3159,7 +3159,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
     <div className="max-w-4xl mx-auto animate-fadeIn">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-slate-100 mb-2">Glossario musicale</h2>
-          <p className="text-slate-300">Un elenco dei termini tecnici del Concerto Op. 37 CON UNA breve spiegazione.</p>
+          <p className="text-slate-300">Un elenco dei termini tecnici del Concerto Op. 37 con una breve spiegazione.</p>
         </div>
 
       {/* Immagine di copertina */}
