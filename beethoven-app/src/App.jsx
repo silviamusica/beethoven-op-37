@@ -4453,27 +4453,25 @@ const ImparaSection = () => {
           <div className="flex gap-3">
             <button
               onClick={() => setActiveSubTab('memorizza')}
-              className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+              className={`flex-1 px-4 sm:px-6 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 activeSubTab === 'memorizza'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
               }`}
             >
-              <Brain className="w-5 h-5" />
-              Memorizza
-              <span className="text-xs opacity-75">(Flashcard)</span>
+              <Brain className="w-5 h-5 shrink-0" />
+              <span className="text-sm sm:text-base">Memorizza</span>
             </button>
             <button
               onClick={() => setActiveSubTab('quiz')}
-              className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+              className={`flex-1 px-4 sm:px-6 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 activeSubTab === 'quiz'
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
               }`}
             >
-              <GraduationCap className="w-5 h-5" />
-              Mettiti alla prova
-              <span className="text-xs opacity-75">(Quiz)</span>
+              <GraduationCap className="w-5 h-5 shrink-0" />
+              <span className="text-sm sm:text-base">Quiz</span>
             </button>
           </div>
         </div>
