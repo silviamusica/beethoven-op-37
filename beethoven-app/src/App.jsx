@@ -1217,10 +1217,6 @@ const FontiSection = () => {
             <h4 className="text-base font-semibold text-slate-200 mb-3">Teoria della forma e del concerto</h4>
             <ul className="space-y-2 pl-5">
               <li className="leading-relaxed">
-                <strong>Hepokoski, James e Darcy, Warren.</strong> <em>Elements of Sonata Theory: Norms, Types, and Deformations in the Late-Eighteenth-Century Sonata</em>. 
-                Oxford: Oxford University Press, 2006. (Fonte principale per la definizione di "Forma di Sonata per Concerto").
-              </li>
-              <li className="leading-relaxed">
                 <strong>Keefe, Simon P. (a cura di).</strong> <em>The Cambridge Companion to the Concerto</em>. Cambridge: Cambridge University Press, 2005.
               </li>
               <li className="leading-relaxed">
@@ -1725,6 +1721,62 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
     </div>
   );
 
+  const TestamentoModal = () => (
+    <div className="space-y-4 text-sm leading-relaxed text-slate-200" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+      <p className="font-semibold text-lg">Testamento di Heiligenstadt</p>
+      <p className="italic">6 ottobre 1802</p>
+      <p>Per i miei fratelli Carl e [Johann] Beethoven</p>
+      <p>
+        O voi uomini che mi stimate o mi definite astioso, scontroso o addirittura misantropo, come mi fate torto! Voi non
+        conoscete la causa segreta che mi fa apparire a voi così. Il mio cuore e il mio animo, fin dall’infanzia, erano inclini al
+        delicato sentimento della benevolenza e sono sempre stato disposto a compiere azioni generose. Considerate però, che da sei
+        anni mi ha colpito un grave malanno peggiorato per colpa di medici incompetenti. Di anno in anno le mie speranze di guarire
+        sono state gradualmente frustrate, ed alla fine sono stato costretto ad accettare la prospettiva di una malattia cronica (la
+        cui guarigione richiederà forse degli anni o sarà del tutto impossibile). Pur essendo dotato di un temperamento ardente, vivace,
+        e anzi sensibile alle attrattive della società, sono stato presto obbligato ad appartarmi, a trascorrere la mia vita in solitudine.
+        E se talvolta ho deciso di non dare peso alla mia infermità, ahimè, con quanta crudeltà sono stato allora ricacciato indietro dalla
+        triste, rinnovata esperienza della debolezza del mio udito. Tuttavia non mi riusciva di dire alla gente: “Parlate più forte, gridate,
+        perché sono sordo”.
+      </p>
+      <p>
+        Come potevo, ahimè, confessare la debolezza di un senso, che in me dovrebbe essere più raffinato che negli altri uomini e che in me
+        raggiungeva un tempo un grado di perfezione massima, un grado tale di perfezione quale pochi nella mia professione sicuramente posseggono,
+        o hanno mai posseduto – No, non posso farlo; perdonatemi perciò se talora mi vedrete stare in disparte dalla vostra compagnia, che invece
+        un tempo mi era caro ricercare. La mia sventura mi fa doppiamente soffrire perché mi porta ad essere frainteso. Per me non può esservi
+        sollievo nella compagnia degli uomini, non possono esservi conversazioni elevate né confidenze reciproche. Costretto a vivere completamente
+        solo, posso entrare furtivamente in società solo quando lo richiedono le necessità più impellenti; debbo vivere come un proscritto. Se sto
+        in compagnia vengo sopraffatto da un’ansietà cocente, dalla paura di correre il rischio che si noti il mio stato – E così è stato anche in questi
+        sei mesi che ho trascorso in campagna. Invitandomi a risparmiare il più possibile il mio udito, quell’assennata persona del mio medico ha più o
+        meno incoraggiato la mia attuale disposizione naturale, sebbene talvolta, sedotto dal desiderio di compagnia, mi sia lasciato tentare a ricercarla.
+        Ma quale umiliazione ho provato quando qualcuno, vicino a me, udiva il suono di un flauto in lontananza e io non udivo niente, o udiva il canto
+        di un pastore e io ancora nulla udivo – Tali esperienze mi hanno portato sull’orlo della disperazione e poco è mancato che non ponessi fine alla mia
+        vita – La mia arte, soltanto essa mi ha trattenuto. Ah, mi sembrava impossibile abbandonare questo mondo, prima di avere creato tutte quelle opere
+        che sentivo l’imperioso bisogno di comporre; e così ho trascinato avanti questa misera esistenza – davvero misera, dal momento che il mio fisico tanto
+        sensibile può, da un istante all’altro, precipitarmi dalle migliori condizioni di spirito nella più angosciosa disperazione – Pazienza – mi dicono
+        che questa è la virtù che adesso debbo scegliermi come guida; e adesso io la posseggo.
+      </p>
+      <p>
+        Duratura deve essere, io spero, la mia risoluzione di resistere fino alla fine, finché alle Parche inesorabili piacerà spezzare il filo; forse il mio
+        stato migliorerà, forse no, ad ogni modo io, ora sono rassegnato – Dio Onnipotente, che mi guardi fino in fondo all’anima, che vedi nel mio cuore e
+        sai che esso è colmo di amore per l’umanità e del desiderio di bene operare. O uomini, se un giorno leggerete queste mie parole, ricordate che mi avete
+        fatto torto; e l’infelice tragga conforto dal pensiero di aver trovato un altro infelice che, nonostante tutti gli ostacoli imposti dalla natura, ha fatto
+        quanto era in suo potere per elevarsi al rango degli artisti nobili e degli uomini degni. – E voi fratelli miei, Carl e [Johann], dopo la mia morte,
+        se il Prof. Schmidt sarà ancora in vita, pregatelo a mio nome di fare una descrizione della mia infermità e allegate al suo documento questo mio scritto,
+        in modo che, almeno dopo la mia morte, il mondo e io possiamo riconciliarci, per quanto è possibile – Nello stesso tempo vi dichiaro qui tutti e due eredi del mio
+        piccolo patrimonio (se posso chiamarlo così) – Dividetelo giustamente, andate d’accordo e aiutatevi reciprocamente. Il male che mi avete fatto, voi lo sapete, è stato
+        perdonato da lungo tempo. Ringrazio ancora in maniera particolare te, fratello Carl, per l’affetto che mi hai dimostrato in questi ultimi anni. Il mio augurio è che
+        la vostra vita sia più serena e più scevra da preoccupazioni della mia. Raccomandate ai vostri figli di essere virtuosi; perché soltanto la virtù può rendere felici, non certo
+        il denaro. Parlo per esperienza. E’ stata la virtù che mi ha sostenuto nella sofferenza. Io debbo ad essa, oltre che alla mia arte, se non ho messo fine alla mia vita con un suicidio –
+        State bene e amatevi – Ringrazio tutti i miei amici, in particolare il principe Lichnowsky e il professor Schmidt. Vorrei che gli strumenti del principe L[ichnowsky] venissero custoditi da uno di voi,
+        purché ciò non conduca ad un litigio fra voi. Qualora essi possano servire ad uno scopo più proficuo, vendeteli pure; quanto sarò lieto se potrò esservi utile anche nella tomba – Ebbene questo è tutto –
+        Con gioia vado incontro alla Morte – se essa venisse prima che io abbia avuto la possibilità di sviluppare tutte le mie qualità artistiche, allora, malgrado la durezza del mio destino, giungerebbe troppo presto; e indubbiamente mi piacerebbe ritardarne la venuta – Sarei però contento anche così; non mi libererebbe essa da uno stato di sofferenza senza fine? Vieni dunque Morte, quando tu vuoi, io ti verrò incontro coraggiosamente – Addio, non dimenticatemi del tutto, dopo la mia morte. Io merito di essere ricordato da voi, perché nella mia vita ho spesso pensato a voi, e ho cercato di rendervi felici – Siate felici –
+      </p>
+      <p>Ludwig van Beethoven</p>
+      <p className="italic">Per i miei fratelli Carl e [Johann]</p>
+      <p className="text-xs text-slate-500">Da leggere dopo la mia morte –</p>
+    </div>
+  );
+
 
   // Modale Cadenze
   const CadenzeModal = () => (
@@ -1977,18 +2029,31 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
               <p>
                 Mentre contempla il <Tooltip text="Il pensiero di togliersi la vita per sottrarsi al dolore e alla disperazione che descrive nel Testamento di Heiligenstadt.">suicidio</Tooltip>, compone una musica eroica e combattiva, lasciando traccia di quel tormento nel <Tooltip text="Lettera rivolta a se stesso che descrive la sofferenza, ma anche la decisione di non abbandonare la musica.">Testamento di Heiligenstadt</Tooltip>.
               </p>
-              <div className="lg:hidden">
-                <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60">
-                  <img
-                    src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
-                    alt="Prima pagina del Testamento di Heiligenstadt"
-                    className="w-full h-64 object-cover"
-                  />
-                  <p className="text-sm text-slate-100 italic text-center p-3 bg-slate-900/70 backdrop-blur-sm absolute inset-x-0 bottom-0">
-                    Prima pagina del Testamento di Heiligenstadt.
-                  </p>
-                </div>
+            <div className="lg:hidden">
+              <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60">
+                <img
+                  src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
+                  alt="Prima pagina del Testamento di Heiligenstadt"
+                  className="w-full h-64 object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
+                  className="absolute inset-x-0 bottom-0 px-3 py-3 flex flex-col items-center gap-1 text-sm italic text-slate-100 text-center bg-slate-900/70 backdrop-blur-sm"
+                >
+                  <span>Testamento di Heiligenstadt:</span>
+                  <span className="text-blue-200 font-semibold underline decoration-dotted">Leggi il testo completo</span>
+                </button>
               </div>
+              <div className="mt-4 flex justify-center">
+                <button
+                  onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
+                  className="text-sm font-semibold text-blue-200 underline decoration-dotted hover:text-white transition"
+                >
+                  Leggi il testo completo
+                </button>
+              </div>
+            </div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mt-6">
                 Prima esecuzione
               </h3>
@@ -2007,18 +2072,31 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
             
             </div>
           </div>
-          <div className="hidden lg:block rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60 self-start">
-            <div className="relative">
-              <img
-                src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
-                alt="Prima pagina del Testamento di Heiligenstadt"
-                className="w-full h-[420px] object-cover"
-              />
-              <p className="text-sm text-slate-100 italic text-center p-3 bg-slate-900/70 backdrop-blur-sm absolute inset-x-0 bottom-0">
-                Prima pagina del Testamento di Heiligenstadt.
-              </p>
-            </div>
+        <div className="hidden lg:block rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60 self-start">
+          <div className="relative">
+            <img
+              src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
+              alt="Prima pagina del Testamento di Heiligenstadt"
+              className="w-full h-[420px] object-cover"
+            />
+            <button
+              type="button"
+              onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
+              className="absolute inset-x-0 bottom-0 px-3 py-3 flex flex-col items-center gap-1 text-sm italic text-slate-100 text-center bg-slate-900/70 backdrop-blur-sm"
+            >
+              <span>Testamento di Heiligenstadt:</span>
+              <span className="text-blue-200 font-semibold underline decoration-dotted">Leggi il testo completo</span>
+            </button>
           </div>
+          <div className="px-4 py-3">
+            <button
+              onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
+              className="w-full text-center text-sm font-semibold text-blue-200 underline decoration-dotted hover:text-white transition"
+            >
+              Leggi il testo completo
+            </button>
+          </div>
+        </div>
         </div>
 
         {/* Informazioni essenziali inline */}
@@ -2041,7 +2119,7 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
             <p><strong>Movimenti:</strong> Allegro con brio • Largo • Rondò</p>
           </div>
         </div>
-        <p className="text-sm text-slate-300 mb-6">
+        <p className="text-sm text-slate-300 mb-4">
           Dei cinque concerti per pianoforte, composti fra il 1795 e il 1810, Beethoven considera i primi due inferiori al Terzo; quest’ultimo segna il passaggio dallo stile classico allo stile eroico, con una maggiore drammaticità, sperimentazione ed espressività.
         </p>
 
@@ -2115,7 +2193,7 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
             </tbody>
           </table>
         </div>
-        <div className="mt-4 pt-3 border-t border-slate-700">
+        <div className="mt-4 pt-3">
           <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-600 shadow-lg mb-4">
             <p className="text-sm text-slate-300 mb-2">
               Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti:
@@ -2354,6 +2432,19 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
                   Ascolta su YouTube
                 </a>
               </div>
+              <div className="mt-4 text-center">
+                <button
+                  onClick={() =>
+                    openModal(
+                      'Testamento di Heiligenstadt',
+                      <TestamentoModal />
+                    )
+                  }
+                  className="w-full text-sm font-semibold text-white bg-blue-600/90 rounded-full py-2 shadow-lg hover:bg-blue-500 transition"
+                >
+                  Leggi il testo completo
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -2500,7 +2591,13 @@ const Modal = ({ isOpen, onClose, title, children }) => {
     <div className="fixed inset-0 z-50 overflow-y-auto" aria-hidden={!isOpen}>
       <div className="fixed inset-0 bg-black/70 transition-opacity" onClick={onClose} />
       <div className="flex min-h-full items-center justify-center p-4">
-        <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={title || 'Dialog'} className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-600">
+        <div
+          ref={dialogRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label={title || 'Dialog'}
+          className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-slate-600"
+        >
           <div className="sticky top-0 z-10 bg-slate-700 px-6 py-4 border-b border-slate-600 flex justify-between items-center">
             <h2 className="text-2xl font-bold text-white">{title}</h2>
             <button
@@ -2512,9 +2609,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
               ×
             </button>
           </div>
-          <div className="p-6 text-slate-300">
-            {children}
-          </div>
+          <div className="p-6 text-slate-300">{children}</div>
         </div>
       </div>
     </div>
@@ -5098,8 +5193,6 @@ const App = () => {
   const [glossaryFocus, setGlossaryFocus] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [imageModal, setImageModal] = useState(null);
-
   // Responsive check
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -5137,36 +5230,6 @@ const App = () => {
       }
     }, 80);
   };
-
-  // Rendere cliccabili le immagini nel main per ingrandirle (solo immagini locali /images/)
-  useEffect(() => {
-    const imgs = Array.from(document.querySelectorAll('main img'));
-    const handler = (e) => {
-      const el = e.currentTarget;
-      const src = el.getAttribute('src');
-      if (src && src.startsWith('/images/')) {
-        setImageModal({ src, alt: el.getAttribute('alt') || '' });
-      }
-    };
-
-    imgs.forEach(img => {
-      const src = img.getAttribute('src');
-      if (src && src.startsWith('/images/')) {
-        img.style.cursor = 'zoom-in';
-        img.addEventListener('click', handler);
-      }
-    });
-
-    return () => {
-      imgs.forEach(img => {
-        const src = img.getAttribute('src');
-        if (src && src.startsWith('/images/')) {
-          img.style.cursor = '';
-          img.removeEventListener('click', handler);
-        }
-      });
-    };
-  }, [activeTab]);
 
   // Swipe handlers solo su mobile
   const swipeHandlers = useSwipeable({
@@ -5246,13 +5309,6 @@ const App = () => {
           {activeTab === 'impara' && <ImparaSection />}
         </main>
         <Footer setActiveTab={setActiveTab} />
-        {imageModal && (
-          <Modal isOpen={imageModal !== null} onClose={() => setImageModal(null)} title={imageModal.alt || 'Immagine'}>
-            <div className="flex justify-center">
-              <img src={imageModal.src} alt={imageModal.alt} className="max-w-full max-h-[80vh] object-contain rounded-lg" />
-            </div>
-          </Modal>
-        )}
       </div>
     </ErrorBoundary>
   );
