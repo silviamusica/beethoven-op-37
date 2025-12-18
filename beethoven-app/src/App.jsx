@@ -1095,7 +1095,7 @@ const FontiSection = () => {
   );
 };
 
-const IntroduzioneSection = () => {
+const IntroduzioneSection = ({ onNavigateToFonti }) => {
   const [openConcerto0, setOpenConcerto0] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
@@ -1105,6 +1105,13 @@ const IntroduzioneSection = () => {
 
   const closeModal = () => {
     setModalContent(null);
+  };
+
+  const handleFontiNavigation = () => {
+    closeModal();
+    if (onNavigateToFonti) {
+      onNavigateToFonti();
+    }
   };
 
   // Contenuto modale: Cronologia vita Beethoven
@@ -1411,8 +1418,15 @@ const IntroduzioneSection = () => {
       </div>
 
       <p className="text-sm text-slate-300 leading-relaxed">
-        La lettere di Beethoven sono documenti primari essenziali per ricostruire la sua vita e il suo processo creativo; per fortuna,
-        ne abbiamo conservate una considerevole quantità. Puoi approfondire nella sezione <button onClick={() => { closeModal(); setActiveTab('sources'); }} className="text-blue-300 underline decoration-dotted hover:text-blue-200">Fonti</button>.
+        Le lettere di Beethoven sono documenti primari essenziali per ricostruire la sua vita e il suo processo creativo: ne abbiamo
+        conservate una considerevole quantità. Puoi approfondire nella sezione{' '}
+        <button
+          type="button"
+          className="text-blue-300 underline decoration-dotted hover:text-blue-200"
+          onClick={handleFontiNavigation}
+        >
+          Fonti
+        </button>.
       </p>
 
       {/* Triplo Concerto */}
@@ -1734,11 +1748,8 @@ const IntroduzioneSection = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-slate-100 p-8 rounded-2xl shadow-2xl border border-slate-600">
         <h2 className="text-center text-3xl font-[family:'Cinzel',serif] font-bold tracking-[0.2em] mb-8 text-blue-300 leading-tight">
-          Concerto per pianoforte n. 3
-          <span className="hidden lg:inline-block">
-            <br />
-          </span>
-          in Do minore, Op. 37
+          Concerto per pianoforte n. 3 <br /> 
+          in Do minore, Op. 37
         </h2>
 
         {/* Immagine hero principale */}
@@ -4797,6 +4808,23 @@ const App = () => {
     return () => clearTimeout(timer);
   }, [activeTab]);
 
+  const navigateToFonti = () => {
+    setActiveTab('fonti');
+    setTimeout(() => {
+      const target = document.getElementById('fonti');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        const main = document.querySelector('main');
+        if (main) {
+          safeScrollTo(main);
+        } else {
+          safeScrollTo(window);
+        }
+      }
+    }, 80);
+  };
+
   // Rendere cliccabili le immagini nel main per ingrandirle (solo immagini locali /images/)
   useEffect(() => {
     const imgs = Array.from(document.querySelectorAll('main img'));
@@ -4841,7 +4869,7 @@ const App = () => {
           {/* Mobile-only hint: visible on small screens when hamburger menu is present */}
           {isMobile && activeTab === 'introduzione' && (
             <div className="max-w-5xl mx-auto px-4 py-2 mb-4 text-sm text-slate-300 bg-slate-800 rounded-lg border border-slate-700 flex items-center">
-              <span>Puoi navigare fra le varie pagine cliccando sull'icona</span>
+              <span>Puoi navigare fra le varie pagine cliccando sull'icona in alto a destra</span>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Apri menu"
@@ -4851,7 +4879,9 @@ const App = () => {
               </button>
             </div>
           )}
-          {activeTab === 'introduzione' && <IntroduzioneSection />}
+          {activeTab === 'introduzione' && (
+            <IntroduzioneSection onNavigateToFonti={navigateToFonti} />
+          )}
           {activeTab === 'fonti' && <FontiSection />}
           {activeTab === 'analysis' && (
             <AnalysisSection setActiveTab={setActiveTab} isMobile={isMobile} />
