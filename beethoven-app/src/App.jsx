@@ -802,7 +802,7 @@ const FontiSection = () => {
   ];
 
   return (
-    <div className="space-y-8 animate-fadeIn">
+    <div id="fonti" className="space-y-8 animate-fadeIn">
       {/* Immagine di copertina */}
       <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
         <img
@@ -810,7 +810,7 @@ const FontiSection = () => {
           alt="Miscellanea Fischhof - Minuetto per orchestra in re minore"
           className="w-full h-40 sm:h-auto object-cover rounded-lg max-h-[50vh]"
         />
-        <p className="text-sm text-slate-400 mt-2 italic text-left">Frammento autografo di Ludwig van Beethoven — donato da Joseph Fischhof a Catherine Watts, 18/8/1847.</p>
+        <p className="text-sm text-slate-400 mt-2 italic text-left">Frammento autografo di Ludwig van Beethoven, donato da Joseph Fischhof a Catherine Watts, 18/8/1847.</p>
         <div className="mt-3 text-left">
           <button
             onClick={() => openFontiModal('Identificazione del manoscritto', (
@@ -1129,7 +1129,7 @@ const IntroduzioneSection = () => {
         <img 
           src="/images/beethoven-life-timeline.jpg" 
           alt="Ludwig van Beethoven - Cronologia della vita"
-          className="w-full h-40 sm:h-64 object-cover rounded-lg max-h-[50vh]"
+          className="w-full h-auto object-contain rounded-lg"
         />
         <p className="text-sm text-slate-400 mt-2 italic text-center">Epitaffio e rappresentazione volto.</p>
       </div>
@@ -1154,24 +1154,24 @@ const IntroduzioneSection = () => {
           <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
             <p>
               <strong className="text-slate-100">Aspetto fisico:</strong> basso e tarchiato, fronte alta e spaziosa,
-              capelli neri e ricci che gli cadevano disordinati sulle spalle. Il suo aspetto variava enormemente:
-              talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivevano come un vulcano umano.
+              capelli neri e ricci che gli cadono disordinati sulle spalle. Il suo aspetto varia enormemente:
+              talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivono come un vulcano umano.
             </p>
             <p>
               <strong className="text-slate-100">Temperamento:</strong> passionale, impulsivo, irascibile ma anche
-              profondamente sentimentale. Poteva passare dalla collera più violenta alla tenerezza più commovente.
-              La sua personalità era così intensa che intimoriva anche i nobili che lo proteggevano.
+              profondamente sentimentale. Può passare dalla collera più violenta alla tenerezza più commovente.
+              La sua personalità è così intensa che intimorisce anche i nobili che lo proteggono.
             </p>
             <p>
-              <strong className="text-slate-100">L’improvvisatore leggendario:</strong> Beethoven era il
-              <em>più grande improvvisatore dell’epoca</em>.
+              <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven è il
+              <em>più grande improvvisatore dell'epoca</em>.
             </p>
             <p>
-              Durante i concerti pubblici le sue improvvisazioni lasciavano il pubblico a bocca aperta. Poteva
+              Durante i concerti pubblici le sue improvvisazioni lasciano il pubblico a bocca aperta. Può
               improvvisare per ore su un tema dato, sviluppandolo in modi originali e sorprendenti.
             </p>
             <p>
-              Questa abilità spiega perché, alla prima del 1803, suonò quasi a memoria; probabilmente improvvisò
+              Questa abilità spiega perché, alla prima del 1803, suona quasi a memoria; probabilmente improvvisa
               intere sezioni.
             </p>
           </div>
@@ -1206,8 +1206,8 @@ const IntroduzioneSection = () => {
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-3">La controversia sulla datazione</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Per decenni, la datazione del Terzo Concerto è stata oggetto di dibattito tra i musicologi. 
-          Due ipotesi principali si sono confrontate:
+          Da decenni, la datazione del Terzo Concerto è oggetto di dibattito tra i musicologi. 
+          Due ipotesi principali si confrontano:
         </p>
         <ul className="space-y-2 ml-2">
           <li className="flex items-start space-x-2">
@@ -1220,15 +1220,15 @@ const IntroduzioneSection = () => {
           </li>
         </ul>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          La prova decisiva è arrivata dall'<strong>analisi paleografica del manoscritto autografo</strong>, che mostra 
-          chiaramente la data <strong>"1803"</strong> e non "1800" come si credeva. Ciò colloca la composizione nel periodo più drammatico della vita di Beethoven.
+          La prova decisiva arriva dall'<strong>analisi paleografica del manoscritto autografo</strong>, che mostra
+          chiaramente la data <strong>"1803"</strong> e non "1800" come si crede. Ciò colloca la composizione nel periodo più drammatico della vita di Beethoven.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Proprio mentre scriveva il <em>Testamento di Heiligenstadt</em> (ottobre 1802), contemplando il suicidio a causa della sordità, stava componendo uno dei suoi concerti più eroici e combattivi.
+          Proprio mentre scrive il <em>Testamento di Heiligenstadt</em> (ottobre 1802), contemplando il suicidio a causa della sordità, compone uno dei suoi concerti più eroici e combattivi.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Il concerto nasce quindi tra il <strong>1802 e i primi mesi del 1803</strong>, periodo della transizione dal primo 
-          stile al periodo eroico. È l’opera che segna il <strong>passaggio definitivo da Mozart a Beethoven</strong>.
+          Il concerto nasce quindi tra il <strong>1802 e i primi mesi del 1803</strong>, periodo della transizione dal primo
+          stile al periodo eroico. È l'opera che segna il <strong>passaggio definitivo da Mozart a Beethoven</strong>.
         </p>
       </div>
 
@@ -1308,12 +1308,12 @@ const IntroduzioneSection = () => {
       <div>
         <h3 className="text-xl font-bold text-slate-100 mb-4">L’evoluzione dello strumento e del compositore</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          La carriera di Beethoven (1770-1827) coincide con un momento rivoluzionario nella storia del pianoforte: la <strong>trasformazione dal fortepiano classico al pianoforte romantico moderno</strong>. In soli quarant’anni, lo strumento passò da 5 ottave (FF-f³) a oltre 6 ottave e mezza, da corde doppie a quadruple, da meccaniche leggere a azioni pesanti e potenti.
+          La carriera di Beethoven (1770-1827) coincide con un momento rivoluzionario nella storia del pianoforte: la <strong>trasformazione dal fortepiano classico al pianoforte romantico moderno</strong>. In soli quarant'anni, lo strumento passa da 5 ottave (FF-f³) a oltre 6 ottave e mezza, da corde doppie a quadruple, da meccaniche leggere a azioni pesanti e potenti.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Beethoven non fu solo testimone di questa evoluzione: <strong>la influenzò attivamente</strong> e <strong>ne fu influenzato profondamente</strong>. Ogni nuovo strumento che riceveva o acquistava apriva nuove possibilità compositive. L’estensione del pianoforte Érard (1803) gli permise di scrivere la Waldstein e l’Appassionata; la potenza del <Tooltip text="Il pianoforte Broadwood 1818 era un dono inglese dal suono potente, fondamentale per le ultime opere di Beethoven">
+          Beethoven non è solo testimone di questa evoluzione: <strong>la influenza attivamente</strong> e <strong>ne è influenzato profondamente</strong>. Ogni nuovo strumento che riceve o acquista apre nuove possibilità compositive. L'estensione del pianoforte Érard (1803) gli permette di scrivere la Waldstein e l'Appassionata; la potenza del <Tooltip text="Il pianoforte Broadwood 1818 è un dono inglese dal suono potente, fondamentale per le ultime opere di Beethoven">
             <span className="text-blue-300 underline decoration-dotted cursor-help">Broadwood (1818)</span>
-          </Tooltip> accompagnò la nascita della monumentale Hammerklavier.
+          </Tooltip> accompagna la nascita della monumentale Hammerklavier.
         </p>
       </div>
 
@@ -1329,7 +1329,7 @@ const IntroduzioneSection = () => {
           <li><strong>3. Scuola francese</strong> (Érard): innovazioni meccaniche (doppio scappamento), estensione ampliata, 4 pedali</li>
         </ol>
         <p className="text-sm text-slate-300 leading-relaxed mt-3">
-          Beethoven <strong>sperimentò tutte e tre</strong>, cercando sempre lo strumento ideale che potesse "cantare" e sostenere il suono come desiderava.
+          Beethoven <strong>sperimenta tutte e tre</strong>, cercando sempre lo strumento ideale che possa "cantare" e sostenere il suono come desidera.
         </p>
       </div>
 
@@ -1337,10 +1337,10 @@ const IntroduzioneSection = () => {
         <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
           <h3 className="text-lg font-semibold text-slate-100 mb-3">La sordità e il rapporto con lo strumento</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Intorno al 1798 la sordità cambiò radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martellava" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf fu costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
+          Intorno al 1798 la sordità cambia radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martella" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf viene costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Paradossalmente, la perdita dell’udito <strong>liberò Beethoven dai limiti fisici dello strumento</strong>: componeva non più per quello che poteva sentire, ma per quello che immaginava. Le ultime sonate richiedono dinamiche, estensioni e sonorità che superavano le possibilità dei pianoforti dell’epoca.
+          Paradossalmente, la perdita dell'udito <strong>libera Beethoven dai limiti fisici dello strumento</strong>: compone non più per quello che può sentire, ma per quello che immagina. Le ultime sonate richiedono dinamiche, estensioni e sonorità che superano le possibilità dei pianoforti dell'epoca.
         </p>
         <div className="mb-4 flex flex-col gap-4 md:flex-row">
           <div className="md:w-1/2 rounded-lg border border-slate-600 overflow-hidden">
@@ -1352,10 +1352,10 @@ const IntroduzioneSection = () => {
           </div>
           <div className="md:w-1/2 flex flex-col justify-center gap-3">
             <p className="text-sm text-slate-300 leading-relaxed">
-              Questi strumenti amplificavano il suono per Beethoven mentre la sordità avanzava: le cornette acustiche di Johann Nepomuk Maelzel (c.1813) funzionavano come protesi che avvicinavano il suono all’orecchio, mentre i cunei e i coni di rame venivano appoggiati al pianoforte o tra i denti per trasferire vibrazioni al cranio e al torace.
+              Questi strumenti amplificano il suono per Beethoven mentre la sordità avanza: le cornette acustiche di Johann Nepomuk Maelzel (c.1813) funzionano come protesi che avvicinano il suono all'orecchio, mentre i cunei e i coni di rame vengono appoggiati al pianoforte o tra i denti per trasferire vibrazioni al cranio e al torace.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
-              In assenza di udito, quelle vibrazioni corporee rimasero l’unico modo per "sentire" la musica e continuare a suonare e comporre.
+              In assenza di udito, quelle vibrazioni corporee rimangono l'unico modo per "sentire" la musica e continuare a suonare e comporre.
             </p>
           </div>
         </div>
@@ -1412,7 +1412,7 @@ const IntroduzioneSection = () => {
 
       <p className="text-sm text-slate-300 leading-relaxed">
         La lettere di Beethoven sono documenti primari essenziali per ricostruire la sua vita e il suo processo creativo; per fortuna,
-        ne abbiamo conservate una considerevole quantità. Puoi approfondire nella sezione <a href="#fonti" className="text-blue-300 underline decoration-dotted">Fonti</a>.
+        ne abbiamo conservate una considerevole quantità. Puoi approfondire nella sezione <button onClick={() => { closeModal(); setActiveTab('sources'); }} className="text-blue-300 underline decoration-dotted hover:text-blue-200">Fonti</button>.
       </p>
 
       {/* Triplo Concerto */}
@@ -1432,11 +1432,10 @@ const IntroduzioneSection = () => {
           </p>
         </div>
         <p className="text-sm text-slate-300 italic">
-          <strong>Nota:</strong> il Triplo Concerto, un “concertante” per violino, violoncello, pianoforte e orchestra che
-          rilegge la tradizione del concerto solista in forma dialettica, non ebbe successo né all’epoca né oggi: la
-          strumentazione insolita lo rese difficile da promuovere e la sua sperimentazione armonica e formale non
-          incontrò i gusti dei contemporanei, e Beethoven pareva consapevole di questa natura più innovativa che
-          “commerciale”.
+          <strong>Nota:</strong> il Triplo Concerto, un "concertante" per violino, violoncello, pianoforte e orchestra che
+          rilegge la tradizione del concerto solista in forma di dialogo, non ha successo né all'epoca né oggi: la
+          strumentazione insolita lo rende difficile da promuovere e il suo carattere sperimentale non
+          incontra i gusti dei contemporanei.
         </p>
       </div>
 
@@ -1444,10 +1443,10 @@ const IntroduzioneSection = () => {
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quarto Concerto (Op. 58)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
-          <strong>Contesto:</strong> Ferdinand Ries racconta che Beethoven gli portò lo spartito del concerto appena
-          completato, pretendendo che lo eseguisse in pubblico con soli cinque giorni di preavviso. Ries rifiutò per la
-          brevità del tempo, scatenando l’ira di Beethoven, che si rivolse al pianista Friedrich Stein. Stein accettò,
-          ma non riuscendo a padroneggiare il concerto in tempo, finì per suonare invece il Terzo Concerto (Op. 37).
+          Ferdinand Ries racconta che Beethoven gli porta lo spartito del concerto appena
+          completato, pretendendo che lo esegua in pubblico con soli cinque giorni di preavviso. Ries rifiuta per la
+          brevità del tempo, scatenando l’ira di Beethoven, che si rivolge al pianista Friedrich Stein. Stein accetta,
+          ma non riuscendo a padroneggiare il concerto in tempo, finisce per suonare invece il Terzo Concerto (Op. 37).
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
           <p className="text-sm text-slate-400 mb-1">Testimonianza riportata da Ferdinand Ries:</p>
@@ -1458,10 +1457,10 @@ const IntroduzioneSection = () => {
           </p>
         </div>
         <p className="text-sm text-slate-300 italic">
-          <strong>Epilogo:</strong> Stein, incapace di preparare il concerto in tempo, finì per eseguire il Terzo
-          Concerto (Op. 37) anziché il Quarto. Beethoven stesso eseguì la prima pubblica del Quarto Concerto solo
+          Stein, incapace di preparare il concerto in tempo, finisce per eseguire il Terzo
+          Concerto (Op. 37) anziché il Quarto. Beethoven stesso esegue la prima pubblica del Quarto Concerto solo
           il <strong>22 dicembre 1808</strong> all’Akademie al Theater an der Wien, in un concerto maratona che
-          includeva anche la Quinta e la Sesta Sinfonia, la Fantasia Corale Op. 80 e brani della Messa in Do maggiore
+          include anche la Quinta e la Sesta Sinfonia, la Fantasia Corale Op. 80 e brani della Messa in Do maggiore
           Op. 86.
         </p>
       </div>
@@ -1470,17 +1469,17 @@ const IntroduzioneSection = () => {
       <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quinto Concerto "Imperatore" (Op. 73)</h3>
         <p className="text-sm text-slate-300 mb-3 italic">
-          <strong>Contesto:</strong> questo concerto fu composto nel 1809, l’anno dell’invasione napoleonica. Durante
-          il bombardamento e l’occupazione di Vienna (12 maggio - novembre 1809), Beethoven si rifugiò nella casa del
+          Questo concerto si compone nel 1809, l’anno dell’invasione napoleonica: durante
+          il bombardamento e l’occupazione di Vienna (12 maggio - novembre 1809), Beethoven si rifugia nella casa del
           fratello Caspar Carl; le lettere e gli appunti di questo periodo riflettono la profonda angoscia per le
-          condizioni esterne, descrivendo la sua vita come una «morte» rispetto all’immortalità artistica a cui aspirava.
+          condizioni esterne e descrivono la sua vita come una «morte» rispetto all’immortalità artistica a cui aspira.
         </p>
         <div className="bg-slate-900/50 p-3 rounded border-l-4 border-amber-500">
           <div className="mb-3">
-            <p className="text-sm text-slate-200 leading-relaxed mb-2">
-              <strong>Contesto storico e carattere:</strong> l’opera appartiene all’anno dell’invasione, 1809.
-              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) definì questo concerto «l’apoteosi del concetto militare» in Beethoven.
-              Grazie ai suoi ritmi e alle melodie energiche, l’opera non solo soddisfaceva, ma superava le aspettative di un pubblico che reclamava uno stile marziale.
+              <p className="text-sm text-slate-200 leading-relaxed mb-2">
+              L’opera appartiene all’anno dell’invasione, il 1809.
+              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) definisce questo concerto «l’apoteosi del concetto militare» in Beethoven.
+              Grazie ai suoi ritmi e alle melodie energiche, l’opera non solo gratifica, ma supera le aspettative del pubblico.
             </p>
             <p className="text-sm text-slate-200 leading-relaxed mb-2">
               <strong>Dedicatario:</strong> fu pubblicato nel febbraio 1811 con una dedica all’Arciduca Rodolfo, il
@@ -1493,12 +1492,14 @@ const IntroduzioneSection = () => {
               diffondere i raggi della divinità tra il genere umano».
             </p>
             <p className="text-sm text-slate-300 leading-relaxed mt-2">
-              Queste parole rivelano l’importanza spirituale che Beethoven attribuiva al rapporto con il suo allievo
+              Queste parole rivelano l'importanza spirituale che Beethoven attribuisce al rapporto con il suo allievo
               e mecenate.
             </p>
           </div>
           <div className="bg-slate-800 p-3 rounded">
-            <p className="text-sm text-slate-400 mb-1">Nota nel catalogo di Lenz:</p>
+          <p className="text-sm text-slate-400 mb-1">
+            Nota nel catalogo di Lenz, il critico musicale Wilhelm von Lenz,:
+          </p>
             <p className="text-sm text-slate-200 leading-relaxed">
               Wilhelm von Lenz descrisse l’opera con questa celebre definizione: «L’orgoglio del pianoforte
               in quanto strumento da concerto».
@@ -1545,8 +1546,8 @@ const IntroduzioneSection = () => {
           risultando più avanzate del concerto stesso.
         </p>
         <p className="text-sm italic text-slate-400">
-          Questo dimostra che Beethoven non considerava la cadenza come parte immutabile del concerto, 
-          ma come spazio di libertà espressiva legato al momento dell’esecuzione.
+          Questo dimostra che Beethoven non considera la cadenza come parte immutabile del concerto,
+          ma come spazio di libertà espressiva legato al momento dell'esecuzione.
         </p>
       </div>
 
@@ -1585,8 +1586,8 @@ const IntroduzioneSection = () => {
       </div>
 
       <p className="text-sm text-slate-400 italic pt-3 border-t border-slate-700">
-        La tradizione di scrivere cadenze personali per i concerti di Beethoven è viva ancora oggi, 
-        dimostrando come questi capolavori continuino a ispirare creatività e dialogo tra epoche.
+        La tradizione di scrivere cadenze personali per i concerti di Beethoven è viva ancora oggi,
+        dimostrando come questi capolavori continuano a ispirare creatività e dialogo tra epoche.
       </p>
       
     </div>
@@ -1607,14 +1608,14 @@ const IntroduzioneSection = () => {
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Le guerre napoleoniche (1792-1815)</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          L’Europa è sconvolta dalle <strong>guerre napoleoniche</strong>. La <strong>Rivoluzione francese</strong> (1789) 
-          aveva rovesciato l’ordine monarchico, proclamando libertà, uguaglianza e fraternità. <strong>Napoleone Bonaparte</strong> emerge 
+          L'Europa è sconvolta dalle <strong>guerre napoleoniche</strong>. La <strong>Rivoluzione francese</strong> (1787)
+          ha rovesciato l'ordine monarchico, proclamando libertà, uguaglianza e fraternità. <strong>Napoleone Bonaparte</strong> emerge
           come generale nel 1796 e diventa primo console nel 1799, poi imperatore nel 1804.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Beethoven inizialmente ammira Napoleone come simbolo degli ideali repubblicani, ma si disillude quando questi si 
-          autoincoronerà imperatore. Nel <strong>1809</strong>, Napoleone conquista Vienna (12 maggio), causando devastazione 
-          e carestia; il periodo rivoluzionario influenza profondamente lo stile di Beethoven: uno "stile grandioso" 
+          Beethoven inizialmente ammira Napoleone come simbolo degli ideali repubblicani, ma si disillude quando questi si
+          autoincorona imperatore. Nel <strong>1809</strong>, Napoleone conquista Vienna (12 maggio), causando devastazione
+          e carestia; il periodo rivoluzionario influenza profondamente lo stile di Beethoven: uno "stile grandioso"
           post-rivoluzionario francese si fonde con la tradizione classica viennese.
         </p>
       </div>
@@ -1622,16 +1623,16 @@ const IntroduzioneSection = () => {
       <div>
         <h3 className="text-lg font-semibold text-slate-100 mb-2">Vienna: la capitale musicale d’Europa</h3>
         <p className="text-sm text-slate-300 leading-relaxed mb-3">
-          Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d’Europa: 
-          nella città viveva <strong>Haydn</strong> ed era stata la casa di <strong>Mozart</strong>. L’imperatore{' '}
-          <Tooltip text="Francesco II d’Asburgo (1768-1835): ultimo imperatore del Sacro Romano Impero (1792-1806), primo imperatore d’Austria come Francesco I (1804-1835). Violinista dilettante, incarnava il gusto musicale della corte viennese.">
+          Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d'Europa:
+          nella città vive <strong>Haydn</strong> ed è stata la casa di <strong>Mozart</strong>. L'imperatore{' '}
+          <Tooltip text="Francesco II d'Asburgo (1768-1835): ultimo imperatore del Sacro Romano Impero (1792-1806), primo imperatore d'Austria come Francesco I (1804-1835). Violinista dilettante, incarna il gusto musicale della corte viennese.">
             <span className="text-blue-300 underline decoration-dotted cursor-help">Francesco II</span>
           </Tooltip>{' '}
-          suonava il violino, e l’aristocrazia viennese considerava un dovere e un onore finanziare musicisti e concerti.
+          suona il violino, e l'aristocrazia viennese considera un dovere e un onore finanziare musicisti e concerti.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Il sistema del <strong>mecenatismo</strong> permetteva ai compositori di vivere grazie al sostegno economico della nobiltà, 
-          che garantiva stipendi, commissioni di opere e ospitalità nei propri palazzi.
+          Il sistema del <strong>mecenatismo</strong> permette ai compositori di vivere grazie al sostegno economico della nobiltà,
+          che garantisce stipendi, commissioni di opere e ospitalità nei propri palazzi.
         </p>
       </div>
 
@@ -1754,7 +1755,7 @@ const IntroduzioneSection = () => {
             Il Terzo Concerto per pianoforte in Do minore, Op. 37 rappresenta il momento in cui Beethoven emerge dall’ombra di Mozart e comincia a splendere di luce propria.
           </p>
           <p>
-            Il suo fuoco nasce dalla cenere di un momento di fragilità estrema, tra il 1802 e i primi mesi del 1803: Beethoven si trova a <Tooltip text="Villaggio vicino a Vienna dove, su consiglio del medico Franz Wegeler, Beethoven cercò riposo e cure per la sordità che lo tormentava.">Heiligenstadt</Tooltip>, in piena crisi esistenziale per la sordità che avanza e per la sua solitudine.
+            Il suo fuoco nasce dalla cenere di un momento di fragilità estrema, tra il 1802 e i primi mesi del 1803: Beethoven si trova a <Tooltip text="Villaggio vicino a Vienna dove, su consiglio del medico Franz Wegeler, Beethoven cerca riposo e cure per la sordità che lo tormenta.">Heiligenstadt</Tooltip>, in piena crisi esistenziale per la sordità che avanza e per la sua solitudine.
           </p>
         </div>
 
@@ -1905,8 +1906,8 @@ const IntroduzioneSection = () => {
         <div className="mt-4 pt-3 border-t border-slate-700">
           <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-600 shadow-lg mb-4">
             <p className="text-sm text-slate-300 mb-2">
-              Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti: 
-              ha bisogno di guadagnare, ma è consapevole che queste opere non rappresentano più il suo attuale 
+              Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti:
+              ha bisogno di guadagnare, ma è consapevole che queste opere non rappresentano più il suo attuale
               livello.
             </p>
             <p className="text-sm text-slate-400 mb-2">A Franz Anton Hoffmeister (editore a Lipsia), circa 15 dicembre 1800 o 15 gennaio 1801:</p>
@@ -1945,8 +1946,8 @@ const IntroduzioneSection = () => {
             Contesto storico
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            Vienna 1792: Beethoven era già stato in città nel 1789 per studiare con Mozart, ma dovette tornare rapidamente a Bonn per seguire la madre ammalata. Tornato nel 1792, trovò una capitale musicale dominata da Haydn e ancora segnata dalla memoria di Mozart, scomparso solo l’anno prima.
-            Le guerre napoleoniche (1792-1815) sconvolgono l’Europa.
+            Vienna 1792: Beethoven è già stato in città nel 1787 per studiare con Mozart, ma deve tornare rapidamente a Bonn per seguire la madre ammalata. Tornato nel 1792, trova una capitale musicale dominata da Haydn e ancora segnata dalla memoria di Mozart, scomparso solo l'anno prima.
+            Le guerre napoleoniche (1792-1815) stanno sconvolgendo l'Europa.
           </p>
           <button
             onClick={() => openModal('Contesto Geopolitico', <ContestoGeopoliticoModal />)}
@@ -1974,7 +1975,7 @@ const IntroduzioneSection = () => {
             Vita di Beethoven
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            1770-1827: nato a Bonn, protetto da <Tooltip text="Il conte Ferdinand von Waldstein fu il primo grande mecenate di Beethoven, gli offrì borse di studio e lo sostenne nei viaggi a Vienna">Waldstein</Tooltip> e formato da Haydn prima dell’incontro con Mozart; la crisi di Heiligenstadt (1802) segnò l’inizio del suo periodo eroico. Stabilizzatosi a Vienna, affrontò la sordità crescente mentre componeva sinfonie, concerti e sonate che lo consacrarono come genio immortale.
+            1770-1827: nato a Bonn, protetto da <Tooltip text="Il conte Ferdinand von Waldstein è il primo grande mecenate di Beethoven, gli offre borse di studio e lo sostiene nei viaggi a Vienna">Waldstein</Tooltip> e formato da Haydn; la crisi di Heiligenstadt (1802) segna l'inizio del suo periodo eroico. Stabilitosi a Vienna, affronta la sordità crescente mentre compone sinfonie, concerti e sonate che lo consacrano come genio immortale.
           </p>
           <button
             onClick={() => openModal('Cronologia: vita di Ludwig van Beethoven', <BeethovenLifeModal />)}
@@ -2002,7 +2003,7 @@ const IntroduzioneSection = () => {
             Genesi del Concerto
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            1796-1803: abbozzi, Testamento di Heiligenstadt e prima esecuzione al Theater an der Wien con partitura incompleta; il ritorno definitivo a Vienna nel 1792 consolidò la sua vocazione eroica, lettere agli editori e correzioni successive intrecciarono un percorso travagliato fino all’edizione definitiva del 1803.
+            1796-1803: abbozzi, Testamento di Heiligenstadt e prima esecuzione al Theater an der Wien con partitura incompleta; il ritorno definitivo a Vienna nel 1792 consolida la sua vocazione eroica, lettere agli editori e correzioni successive intrecciano un percorso travagliato fino all'edizione definitiva del 1803.
           </p>
           <button
             onClick={() => openModal('Cronologia: Concerto n. 3 in Do minore, Op. 37', <ConcertoTimelineModal />)}
@@ -2030,7 +2031,7 @@ const IntroduzioneSection = () => {
             I pianoforti di Beethoven
           </h3>
           <p className="text-sm text-slate-300 mb-4">
-            Stein, Graf ed Érard guidarono l’evoluzione degli strumenti di Beethoven. L’Érard del 1803 con i suoi quattro pedali ampliò le possibilità dinamiche e timbriche, aiutando il compositore a scrivere le opere del periodo eroico.
+            Stein, Graf ed Érard guidano l'evoluzione degli strumenti di Beethoven. L'Érard del 1803 con i suoi quattro pedali amplia le possibilità dinamiche e timbriche, aiutando il compositore a scrivere le opere del periodo eroico.
           </p>
           <button
             onClick={() => openModal('I Pianoforti di Beethoven', <PianofortiModal />)}
@@ -2109,13 +2110,13 @@ const IntroduzioneSection = () => {
                 <div className="md:w-2/3 space-y-2 text-sm text-slate-300">
                   <p className="text-sm text-slate-400 uppercase tracking-wide">Ritratto contestato del tredicenne Beethoven</p>
                   <p>
-                    Anonimo pittore di Bonn, olio su tela intorno al 1783: il museo definisce l’opera come il primo ritratto autentico di Beethoven, raffigurando un tredicenne già attivo come organista, strumentista e compositore per la corte di Bonn.
+                    Anonimo pittore di Bonn, olio su tela intorno al 1783: il museo definisce l'opera come il primo ritratto autentico di Beethoven, raffigurando un tredicenne già attivo come organista, strumentista e compositore per la corte di Bonn.
                   </p>
                   <p>
-                    La Beethoven-Haus contesta tale identificazione, sostenendo che l’immagine ritrae un giovane sconosciuto dipinto all’inizio dell’Ottocento, ma la leggenda del bambino prodigio continua a circondare il quadro.
+                    La Beethoven-Haus contesta tale identificazione, sostenendo che l'immagine ritrae un giovane sconosciuto dipinto all'inizio dell'Ottocento, ma la leggenda del bambino prodigio continua a circondare il quadro.
                   </p>
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    Lo sapevi che... <br/>Per anni Beethoven credette di essere nato nel 1772 perché il padre Johann van Beethoven aveva modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
+                    Lo sapevi che... <br/>Per anni Beethoven crede di essere nato nel 1772 perché il padre Johann van Beethoven ha modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
                   </p>
                   <p className="text-sm text-slate-500">
                     Tecnica: olio su tela · Datazione: c. 1783
@@ -2848,8 +2849,8 @@ const InterpretersSection = () => {
           <div className="p-8 md:p-10 flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-slate-100 mb-4">Interpretazioni del concerto</h2>
             <p className="text-slate-300 leading-relaxed">
-              Un viaggio attraverso le grandi registrazioni che hanno segnato la storia dell’interpretazione, 
-              dalle leggendarie incisioni storiche alle esecuzioni filologiche su fortepiano, 
+              Un viaggio attraverso le grandi registrazioni che hanno segnato la storia dell'interpretazione:
+              dalle leggendarie incisioni storiche alle esecuzioni filologiche su fortepiano,
               fino alle performance contemporanee di riferimento.
             </p>
           </div>
@@ -2861,7 +2862,7 @@ const InterpretersSection = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
             <p className="absolute bottom-4 left-4 text-sm text-slate-400 italic bg-slate-900/60 px-3 py-1 rounded">
-              Krystian Zimerman con i Wiener Philharmoniker
+              Krystian Zimerman con i Wiener Philharmoniker, diretti da Leonard Bernstein (1989)
             </p>
           </div>
         </div>
@@ -3156,10 +3157,10 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
   return (
     <div className="max-w-4xl mx-auto animate-fadeIn">
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-slate-100 mb-2">Glossario musicale</h2>
-        <p className="text-slate-300">Scopri i termini tecnici del Concerto Op. 37</p>
-      </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-slate-100 mb-2">Glossario musicale</h2>
+          <p className="text-slate-300">Un elenco dei termini tecnici del Concerto Op. 37 CON UNA breve spiegazione.</p>
+        </div>
 
       {/* Immagine di copertina */}
       <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
@@ -3601,9 +3602,9 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
                 <div className="bg-red-900/20 p-3 rounded mt-3 border-l-2 border-red-500">
                   <p className="text-xs">
-                    <strong className="text-red-200">Sintesi <br /></strong> Mentre nel classicismo il rondò era apprezzato per 
-                    la sua simmetria e carattere brillante, con Beethoven (e nei concerti maturi di Mozart) la forma divenne 
-                    un veicolo per <strong>complesse elaborazioni motiviche e drammatiche</strong>, fondendosi sempre più con 
+                    <strong className="text-red-200">Sintesi <br /></strong> Mentre nel classicismo il rondò è apprezzato per
+                    la sua simmetria e carattere brillante, con Beethoven (e nei concerti maturi di Mozart) la forma diventa
+                    un veicolo per <strong>complesse elaborazioni motiviche e drammatiche</strong>, fondendosi sempre più con
                     la logica dialettica della forma sonata (Sonata-Rondò).
                   </p>
                 </div>
@@ -3760,8 +3761,8 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 
               <div className="bg-blue-900/20 p-3 rounded border-l-2 border-blue-500">
                 <p className="text-xs">
-                  <strong className="text-slate-200">Nota storica:</strong> Beethoven fu tra i primi compositori a scrivere 
-                  le proprie cadenze, invece di lasciarle all’improvvisazione del solista. Questa scelta riflette il desiderio 
+                  <strong className="text-slate-200">Nota storica:</strong> Beethoven è tra i primi compositori a scrivere
+                  le proprie cadenze, invece di lasciarle all'improvvisazione del solista. Questa scelta riflette il desiderio
                   di controllo totale sulla forma e il contenuto drammatico del concerto.
                 </p>
               </div>
@@ -3847,7 +3848,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
           Terminologia musicale
         </h3>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Dizionario rapido dei termini tecnici, tonalità e armonie utilizzati nell’analisi del Concerto Op. 37.
+          Un elenco dei termini tecnici, tonalità e armonie utilizzati nell’analisi del Concerto Op. 37, accompagnato da una breve spiegazione.
         </p>
       </div>
 
@@ -4559,7 +4560,6 @@ const QuizSection = () => {
       <div className="max-w-4xl mx-auto animate-fadeIn">
         <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-slate-100 mb-3">Metti alla prova la tua memoria</h2>
-          <p className="text-slate-400">Seleziona il livello più adatto alla tua preparazione</p>
         </div>
 
         {/* Immagine di copertina */}
