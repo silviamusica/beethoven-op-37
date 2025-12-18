@@ -127,19 +127,59 @@ const movementsData = [
   }
 ];
 
+// Flashcards generate automaticamente dai dati del quiz
 const flashcardsData = [
-  {
-    q: 'A chi fu dedicato il Concerto in Do minore, Op. 37?',
-    a: 'Al Principe Luigi Ferdinando di Prussia',
-  },
-  {
-    q: 'In quale tonalità si apre il Concerto?',
-    a: 'Do minore',
-  },
-  {
-    q: 'Quale struttura forma il primo movimento?',
-    a: 'La forma di Sonata per Concerto con doppia esposizione',
-  },
+  // BASE
+  { q: 'In quale anno avvenne la prima esecuzione assoluta?', a: '1803', difficulty: 'base' },
+  { q: 'In quali anni Beethoven arrivò a Vienna (prima visita e stabilizzazione definitiva)?', a: '1787 (prima volta) e 1792 (stabile)', difficulty: 'base' },
+  { q: 'Quale concerto di Mozart è il modello principale dell\'Op. 37?', a: 'K. 491 in Do minore', difficulty: 'base' },
+  { q: 'In quale tonalità finisce il terzo movimento?', a: 'Do maggiore', difficulty: 'base' },
+  { q: 'A chi fu dedicato il concerto?', a: 'Principe Luigi Ferdinando di Prussia', difficulty: 'base' },
+  { q: 'In quale teatro avvenne la prima esecuzione?', a: 'Theater an der Wien', difficulty: 'base' },
+  { q: 'In quale tonalità è il secondo movimento?', a: 'Mi maggiore', difficulty: 'base' },
+  { q: 'Quante cadenze sono scritte da Beethoven per il primo movimento?', a: 'Tre', difficulty: 'base' },
+  { q: 'Quale editore pubblicò per primo il concerto?', a: 'Bureau des Arts et d\'Industrie', difficulty: 'base' },
+  { q: 'In che anno fu pubblicato il concerto?', a: '1806', difficulty: 'base' },
+
+  // INTERMEDIO
+  { q: 'Chi era il direttore durante la prima, che vide "geroglifici egizi" invece della partitura?', a: 'Ignaz von Seyfried', difficulty: 'intermedio' },
+  { q: 'Come entra il pianoforte nel primo movimento?', a: 'Con tre scale ascendenti fortissimo in doppie ottave', difficulty: 'intermedio' },
+  { q: 'Qual è l\'innovazione tecnica che Beethoven sfruttò nel secondo movimento?', a: 'Uso pionieristico del pedale di risonanza', difficulty: 'intermedio' },
+  { q: 'Cosa scrisse Beethoven nel Testamento di Heiligenstadt?', a: 'La disperazione per la sordità', difficulty: 'intermedio' },
+  { q: 'Quale elemento inusuale compare nel terzo movimento?', a: 'Un fugato elaborato', difficulty: 'intermedio' },
+  { q: 'Quale altro lavoro fu eseguito nella stessa serata della prima dell\'Op. 37?', a: 'La Seconda Sinfonia', difficulty: 'intermedio' },
+  { q: 'Come cambia il ruolo del solista rispetto ai concerti mozartiani?', a: 'Si oppone all\'orchestra invece di dialogare', difficulty: 'intermedio' },
+  { q: 'Quale strumento espone il secondo tema nel primo movimento?', a: 'Clarinetto e violini', difficulty: 'intermedio' },
+  { q: 'Chi ha registrato l\'Op. 37 con Otto Klemperer nel 1957?', a: 'Arrau', difficulty: 'intermedio' },
+  { q: 'Quale interprete è famoso per l\'approccio "cristallino e apollineo"?', a: 'Michelangeli', difficulty: 'intermedio' },
+  { q: 'Chi suonò con l\'Orchestra della RAI di Torino nel 1962?', a: 'Kempff', difficulty: 'intermedio' },
+  { q: 'Quale interprete usa un approccio "intimista e cantabile"?', a: 'Kempff', difficulty: 'intermedio' },
+  { q: 'Quanti flauti sono nell\'organico orchestrale dell\'Op. 37?', a: '2', difficulty: 'intermedio' },
+  { q: 'In quale tonalità sono i clarinetti dell\'Op. 37?', a: 'Si♭', difficulty: 'intermedio' },
+  { q: 'Quale pianoforte possedette Beethoven dal 1803?', a: 'Érard', difficulty: 'intermedio' },
+  { q: 'Cosa caratterizza il carattere del primo tema?', a: 'Marziale con ritmo puntato', difficulty: 'intermedio' },
+  { q: 'Come finisce la cadenza del primo movimento?', a: 'Con passaggio dolce e liquido', difficulty: 'intermedio' },
+  { q: 'Quando Napoleone entrò a Vienna?', a: '1809', difficulty: 'intermedio' },
+  { q: 'Chi invitò Beethoven a Vienna nel 1792?', a: 'Conte Waldstein', difficulty: 'intermedio' },
+  { q: 'Qual è la forma del primo movimento?', a: 'Forma sonata con doppia esposizione', difficulty: 'intermedio' },
+  { q: 'Qual è il carattere principale del Do minore beethoveniano?', a: 'Eroico e tempestoso', difficulty: 'intermedio' },
+  { q: 'Quale opera precedente di Beethoven in Do minore è chiamata "Patetica"?', a: 'Op. 13', difficulty: 'intermedio' },
+  { q: 'Che cosa caratterizza l\'ingresso del solista nel primo movimento?', a: 'Tre scale ascendenti fortissimo', difficulty: 'intermedio' },
+  { q: 'Quante battute dura circa l\'esposizione orchestrale (ESPOSIZIONE 1)?', a: '111 battute', difficulty: 'intermedio' },
+  { q: 'La distanza tonale tra primo e secondo movimento (Do minore - Mi maggiore) è chiamata:', a: 'Terza cromatica', difficulty: 'intermedio' },
+  { q: 'Quale innovazione compare nella coda finale del primo movimento?', a: 'Il piano continua durante il TUTTI', difficulty: 'intermedio' },
+  { q: 'Nel secondo movimento, quali strumenti dialogano principalmente con il pianoforte?', a: 'Fagotti e legni', difficulty: 'intermedio' },
+  { q: 'Il terzo movimento è in forma:', a: 'Rondò', difficulty: 'intermedio' },
+  { q: 'Cosa disse Beethoven del concerto K. 491 di Mozart?', a: '"Non saremo mai in grado di fare qualcosa di simile"', difficulty: 'intermedio' },
+  { q: 'In quale documento Beethoven scrisse della sua disperazione per la sordità?', a: 'Testamento di Heiligenstadt', difficulty: 'intermedio' },
+  { q: 'Quale altra grande opera Beethoven completò nello stesso anno del concerto (1802)?', a: 'Seconda Sinfonia', difficulty: 'intermedio' },
+  { q: 'Quale periodo stilistico di Beethoven inizia con opere come l\'Op. 37?', a: 'Periodo eroico', difficulty: 'intermedio' },
+  { q: 'Quale caratteristica distingue il pianoforte Érard che Beethoven ricevette nel 1803?', a: 'Aveva il pedale di risonanza innovativo', difficulty: 'intermedio' },
+  { q: 'In che anno iniziò a manifestarsi la sordità di Beethoven?', a: '1796-98', difficulty: 'intermedio' },
+
+  // AVANZATO
+  { q: 'Quale relazione tonale crea lo "shock" tra primo e secondo movimento?', a: 'Salto cromatico di terza (Do minore → Mi maggiore)', difficulty: 'avanzato' },
+  { q: 'Cosa rappresenta il Esposizione 4 (R4) finale?', a: 'Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I', difficulty: 'avanzato' }
 ];
 
 const interpretersData = [
@@ -4393,24 +4433,98 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
 };
 
 const FlashcardsSection = () => {
+  const [selectedDifficulty, setSelectedDifficulty] = useState('tutti');
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
+  // Filtra le flashcard in base alla difficoltà selezionata
+  const filteredCards = selectedDifficulty === 'tutti'
+    ? flashcardsData
+    : flashcardsData.filter(card => card.difficulty === selectedDifficulty);
+
   const nextCard = () => {
     setIsFlipped(false);
-    setTimeout(() => setCurrentCard((prev) => (prev + 1) % flashcardsData.length), 300);
+    setTimeout(() => setCurrentCard((prev) => (prev + 1) % filteredCards.length), 300);
   };
 
   const prevCard = () => {
     setIsFlipped(false);
-    setTimeout(() => setCurrentCard((prev) => (prev - 1 + flashcardsData.length) % flashcardsData.length), 300);
+    setTimeout(() => setCurrentCard((prev) => (prev - 1 + filteredCards.length) % filteredCards.length), 300);
+  };
+
+  const handleDifficultyChange = (difficulty) => {
+    setSelectedDifficulty(difficulty);
+    setCurrentCard(0);
+    setIsFlipped(false);
+  };
+
+  const getDifficultyColor = (difficulty) => {
+    switch(difficulty) {
+      case 'base': return 'text-blue-400';
+      case 'intermedio': return 'text-yellow-400';
+      case 'avanzato': return 'text-red-400';
+      default: return 'text-slate-400';
+    }
+  };
+
+  const getDifficultyBadge = (difficulty) => {
+    switch(difficulty) {
+      case 'base': return '🔵 BASE';
+      case 'intermedio': return '🟡 INTERMEDIO';
+      case 'avanzato': return '🔴 AVANZATO';
+      default: return '';
+    }
   };
 
   return (
     <div className="max-w-3xl mx-auto py-8 animate-fadeIn">
-      <div className="text-center mb-10">
+      <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-slate-100 mb-3">Memorizzazione Attiva</h2>
-        <p className="text-slate-300 text-lg">Clicca sulla carta per rivelare la risposta</p>
+        <p className="text-slate-300 text-lg mb-6">Clicca sulla carta per rivelare la risposta</p>
+
+        {/* Filtri difficoltà */}
+        <div className="flex flex-wrap justify-center gap-3 mb-4">
+          <button
+            onClick={() => handleDifficultyChange('tutti')}
+            className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              selectedDifficulty === 'tutti'
+                ? 'bg-slate-700 text-white shadow-lg'
+                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+            }`}
+          >
+            Tutte ({flashcardsData.length})
+          </button>
+          <button
+            onClick={() => handleDifficultyChange('base')}
+            className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              selectedDifficulty === 'base'
+                ? 'bg-blue-700 text-white shadow-lg'
+                : 'bg-slate-800 text-blue-300 hover:bg-blue-900'
+            }`}
+          >
+            🔵 Base ({flashcardsData.filter(c => c.difficulty === 'base').length})
+          </button>
+          <button
+            onClick={() => handleDifficultyChange('intermedio')}
+            className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              selectedDifficulty === 'intermedio'
+                ? 'bg-yellow-700 text-white shadow-lg'
+                : 'bg-slate-800 text-yellow-300 hover:bg-yellow-900'
+            }`}
+          >
+            🟡 Intermedio ({flashcardsData.filter(c => c.difficulty === 'intermedio').length})
+          </button>
+          <button
+            onClick={() => handleDifficultyChange('avanzato')}
+            className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              selectedDifficulty === 'avanzato'
+                ? 'bg-red-700 text-white shadow-lg'
+                : 'bg-slate-800 text-red-300 hover:bg-red-900'
+            }`}
+          >
+            🔴 Avanzato ({flashcardsData.filter(c => c.difficulty === 'avanzato').length})
+          </button>
+        </div>
       </div>
 
       <div
@@ -4434,39 +4548,65 @@ const FlashcardsSection = () => {
             <div className="bg-amber-500/20 p-4 rounded-full mb-6">
               <HelpCircle className="w-16 h-16 text-amber-400" />
             </div>
-            <p className="text-2xl font-semibold text-center text-white leading-relaxed">
-              {flashcardsData[currentCard].q}
+            <p className="text-2xl font-semibold text-center text-white leading-relaxed px-4">
+              {filteredCards[currentCard].q}
             </p>
-            <span className="absolute bottom-6 text-amber-400 text-sm font-mono bg-slate-800/50 px-4 py-2 rounded-full">
-              Carta {currentCard + 1} / {flashcardsData.length}
-            </span>
+            <div className="absolute bottom-6 flex items-center gap-3">
+              <span className={`text-sm font-semibold px-3 py-1 rounded-full bg-slate-800/70 ${getDifficultyColor(filteredCards[currentCard].difficulty)}`}>
+                {getDifficultyBadge(filteredCards[currentCard].difficulty)}
+              </span>
+              <span className="text-amber-400 text-sm font-mono bg-slate-800/50 px-4 py-2 rounded-full">
+                {currentCard + 1} / {filteredCards.length}
+              </span>
+            </div>
           </div>
 
           {/* Back */}
           <div
-            className="absolute w-full h-full bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-10 flex flex-col justify-center items-center shadow-2xl border-4 border-slate-6000"
+            className="absolute w-full h-full bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-10 flex flex-col justify-center items-center shadow-2xl border-4 border-slate-600"
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
           >
-            <div className="bg-blue-100 p-4 rounded-full mb-6">
-              <CheckCircle className="w-16 h-16 text-blue-600" />
+            <div className="bg-blue-500/20 p-4 rounded-full mb-6">
+              <CheckCircle className="w-16 h-16 text-blue-400" />
             </div>
-            <p className="text-xl text-center text-slate-100 leading-relaxed font-medium">
-              {flashcardsData[currentCard].a}
+            <p className="text-xl text-center text-slate-100 leading-relaxed font-medium px-4">
+              {filteredCards[currentCard].a}
             </p>
           </div>
         </div>
       </div>
 
       <div className="flex justify-center items-center space-x-6 mt-10">
-        <button onClick={prevCard} className="p-4 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all hover:scale-110 shadow-lg">
+        <button
+          onClick={prevCard}
+          className="p-4 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all hover:scale-110 shadow-lg"
+          aria-label="Carta precedente"
+        >
           <ChevronLeft className="w-7 h-7" />
         </button>
-        <button onClick={() => setIsFlipped(!isFlipped)} className="px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg transition-all hover:scale-105 shadow-xl">
+        <button
+          onClick={() => setIsFlipped(!isFlipped)}
+          className="px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg transition-all hover:scale-105 shadow-xl"
+        >
           Gira Carta
         </button>
-        <button onClick={nextCard} className="p-4 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all hover:scale-110 shadow-lg">
+        <button
+          onClick={nextCard}
+          className="p-4 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all hover:scale-110 shadow-lg"
+          aria-label="Carta successiva"
+        >
           <ChevronRight className="w-7 h-7" />
         </button>
+      </div>
+
+      {/* Progress bar */}
+      <div className="mt-8 max-w-md mx-auto">
+        <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+          <div
+            className="bg-amber-500 h-2 rounded-full transition-all duration-300"
+            style={{ width: `${((currentCard + 1) / filteredCards.length) * 100}%` }}
+          ></div>
+        </div>
       </div>
     </div>
   );
