@@ -395,22 +395,8 @@ const flashcardsData = [
     a: '1796-98',
     difficulty: 'intermedio',
     details: 'I primi sintomi della sordità apparvero intorno al 1796-98, quando Beethoven aveva circa 26-28 anni. Inizialmente erano acufeni e difficoltà a sentire le frequenze alte, che progressivamente peggiorarono fino alla sordità quasi totale negli ultimi anni di vita.'
-  },
-
-  // AVANZATO
-  {
-    q: 'Quale relazione tonale crea lo "shock" tra primo e secondo movimento?',
-    a: 'Salto cromatico di terza (Do minore → Mi maggiore)',
-    difficulty: 'avanzato',
-    details: 'Il passaggio da Do minore (primo movimento) a Mi maggiore (secondo movimento) rappresenta un salto di terza maggiore cromatica. Questa relazione tonale era straordinariamente audace per il 1803. La norma classica prevedeva movimenti in tonalità vicine (relativa maggiore/minore, dominante, sottodominante). Questo "shock" armonico crea un effetto visionario, quasi come aprire una porta su un mondo completamente diverso. La scelta riflette l\'ambizione di Beethoven di espandere i confini formali e tonali del concerto classico.'
-  },
-  {
-    q: 'Cosa rappresenta il Esposizione 4 (R4) finale?',
-    a: 'Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I',
-    difficulty: 'avanzato',
-    details: 'Nell\'analisi formale del primo movimento, la quarta ripresa (R4) nella coda finale mostra una deformazione della norma classica. Invece di una chiara risoluzione sulla tonica (Do minore), Beethoven introduce una risoluzione armonica ambigua su V7/iv (dominante settima del quarto grado). Questa ambiguità armonica crea tensione e instabilità persino nel momento conclusivo, riflettendo il carattere inquieto e rivoluzionario dell\'opera. È un esempio della tendenza beethoveniana a problematizzare le convenzioni formali.'
   }
-];
+].sort(() => Math.random() - 0.5); // Randomizza le flashcard
 
 const interpretersData = [
   // 🎹 VERSIONI STORICHE LEGGENDARIE (1933-1973)
@@ -4718,100 +4704,24 @@ const ImparaSection = () => {
 };
 
 const FlashcardsSection = () => {
-  const [selectedDifficulty, setSelectedDifficulty] = useState('tutti');
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Filtra le flashcard in base alla difficoltà selezionata
-  const filteredCards = selectedDifficulty === 'tutti'
-    ? flashcardsData
-    : flashcardsData.filter(card => card.difficulty === selectedDifficulty);
-
   const nextCard = () => {
     setIsFlipped(false);
     setIsExpanded(false);
-    setTimeout(() => setCurrentCard((prev) => (prev + 1) % filteredCards.length), 300);
+    setTimeout(() => setCurrentCard((prev) => (prev + 1) % flashcardsData.length), 300);
   };
 
   const prevCard = () => {
     setIsFlipped(false);
     setIsExpanded(false);
-    setTimeout(() => setCurrentCard((prev) => (prev - 1 + filteredCards.length) % filteredCards.length), 300);
-  };
-
-  const handleDifficultyChange = (difficulty) => {
-    setSelectedDifficulty(difficulty);
-    setCurrentCard(0);
-    setIsFlipped(false);
-    setIsExpanded(false);
-  };
-
-  const getDifficultyColor = (difficulty) => {
-    switch(difficulty) {
-      case 'base': return 'text-blue-400';
-      case 'intermedio': return 'text-yellow-400';
-      case 'avanzato': return 'text-red-400';
-      default: return 'text-slate-400';
-    }
-  };
-
-  const getDifficultyBadge = (difficulty) => {
-    switch(difficulty) {
-      case 'base': return '🔵 BASE';
-      case 'intermedio': return '🟡 INTERMEDIO';
-      case 'avanzato': return '🔴 AVANZATO';
-      default: return '';
-    }
+    setTimeout(() => setCurrentCard((prev) => (prev - 1 + flashcardsData.length) % flashcardsData.length), 300);
   };
 
   return (
     <div className="max-w-3xl mx-auto animate-fadeIn">
-      <div className="text-center mb-8">
-        {/* Filtri difficoltà */}
-        <div className="flex flex-wrap justify-center gap-3 mb-4">
-          <button
-            onClick={() => handleDifficultyChange('tutti')}
-            className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              selectedDifficulty === 'tutti'
-                ? 'bg-slate-700 text-white shadow-lg'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-            }`}
-          >
-            Tutte ({flashcardsData.length})
-          </button>
-          <button
-            onClick={() => handleDifficultyChange('base')}
-            className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              selectedDifficulty === 'base'
-                ? 'bg-blue-700 text-white shadow-lg'
-                : 'bg-slate-800 text-blue-300 hover:bg-blue-900'
-            }`}
-          >
-            🔵 Base ({flashcardsData.filter(c => c.difficulty === 'base').length})
-          </button>
-          <button
-            onClick={() => handleDifficultyChange('intermedio')}
-            className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              selectedDifficulty === 'intermedio'
-                ? 'bg-yellow-700 text-white shadow-lg'
-                : 'bg-slate-800 text-yellow-300 hover:bg-yellow-900'
-            }`}
-          >
-            🟡 Intermedio ({flashcardsData.filter(c => c.difficulty === 'intermedio').length})
-          </button>
-          <button
-            onClick={() => handleDifficultyChange('avanzato')}
-            className={`px-6 py-2 rounded-full font-semibold transition-all ${
-              selectedDifficulty === 'avanzato'
-                ? 'bg-red-700 text-white shadow-lg'
-                : 'bg-slate-800 text-red-300 hover:bg-red-900'
-            }`}
-          >
-            🔴 Avanzato ({flashcardsData.filter(c => c.difficulty === 'avanzato').length})
-          </button>
-        </div>
-      </div>
 
       <div
         onClick={() => setIsFlipped(!isFlipped)}
@@ -4835,14 +4745,11 @@ const FlashcardsSection = () => {
               <HelpCircle className="w-16 h-16 text-amber-400" />
             </div>
             <p className="text-2xl font-semibold text-center text-white leading-relaxed px-4">
-              {filteredCards[currentCard].q}
+              {flashcardsData[currentCard].q}
             </p>
-            <div className="absolute bottom-6 flex items-center gap-3">
-              <span className={`text-sm font-semibold px-3 py-1 rounded-full bg-slate-800/70 ${getDifficultyColor(filteredCards[currentCard].difficulty)}`}>
-                {getDifficultyBadge(filteredCards[currentCard].difficulty)}
-              </span>
+            <div className="absolute bottom-6">
               <span className="text-amber-400 text-sm font-mono bg-slate-800/50 px-4 py-2 rounded-full">
-                {currentCard + 1} / {filteredCards.length}
+                {currentCard + 1} / {flashcardsData.length}
               </span>
             </div>
           </div>
@@ -4857,10 +4764,10 @@ const FlashcardsSection = () => {
               <CheckCircle className="w-16 h-16 text-blue-400" />
             </div>
             <p className="text-xl text-center text-slate-100 leading-relaxed font-medium px-4 mb-4">
-              {filteredCards[currentCard].a}
+              {flashcardsData[currentCard].a}
             </p>
 
-            {filteredCards[currentCard].details && (
+            {flashcardsData[currentCard].details && (
               <div className="w-full px-4">
                 {!isExpanded ? (
                   <button
@@ -4876,7 +4783,7 @@ const FlashcardsSection = () => {
                 ) : (
                   <div className="space-y-2">
                     <p className="text-sm text-slate-300 leading-relaxed text-left bg-slate-900/50 p-4 rounded-lg border border-slate-600">
-                      {filteredCards[currentCard].details}
+                      {flashcardsData[currentCard].details}
                     </p>
                     <button
                       onClick={(e) => {
