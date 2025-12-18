@@ -241,22 +241,10 @@ const flashcardsData = [
     details: 'Il secondo tema è affidato al clarinetto e ai violini in un delicato dialogo. Questo timbro più morbido crea un contrasto con l\'aggressività del primo tema marziale, seguendo la dialettica drammatica tipica della forma sonata beethoveniana.'
   },
   {
-    q: 'Chi ha registrato l\'Op. 37 con Otto Klemperer nel 1957?',
-    a: 'Arrau',
-    difficulty: 'intermedio',
-    details: 'La registrazione di Claudio Arrau con Otto Klemperer è considerata una delle interpretazioni più monumentali dell\'Op. 37. Arrau apporta un suono pieno e romantico, mentre Klemperer offre un accompagnamento orchestrale maestoso e architettonico.'
-  },
-  {
     q: 'Quale interprete è famoso per l\'approccio "cristallino e apollineo"?',
     a: 'Michelangeli',
     difficulty: 'intermedio',
     details: 'Arturo Benedetti Michelangeli era celebre per la sua tecnica perfetta e il tocco cristallino. Il suo approccio "apollineo" privilegia la chiarezza, la precisione e il controllo, in contrasto con interpretazioni più "dionisiache" ed emotive.'
-  },
-  {
-    q: 'Chi suonò con l\'Orchestra della RAI di Torino nel 1962?',
-    a: 'Kempff',
-    difficulty: 'intermedio',
-    details: 'Wilhelm Kempff registrò l\'Op. 37 con la RAI di Torino nel 1962. La sua interpretazione è caratterizzata da un approccio intimista e poetico, con particolare attenzione al cantabile e alle sfumature dinamiche più sottili.'
   },
   {
     q: 'Quale interprete usa un approccio "intimista e cantabile"?',
@@ -269,12 +257,6 @@ const flashcardsData = [
     a: '2',
     difficulty: 'intermedio',
     details: 'L\'organico include 2 flauti, 2 oboi, 2 clarinetti in Si♭, 2 fagotti, 2 corni in Do, 2 trombe in Do, timpani e archi. È un organico classico, non ancora espanso come nelle sinfonie successive di Beethoven.'
-  },
-  {
-    q: 'In quale tonalità sono i clarinetti dell\'Op. 37?',
-    a: 'Si♭',
-    difficulty: 'intermedio',
-    details: 'I clarinetti in Si♭ erano gli strumenti standard per musica in tonalità con pochi bemolli o diesis. Il timbro caldo del clarinetto in Si♭ si adatta perfettamente al carattere lirico del secondo tema.'
   },
   {
     q: 'Quale pianoforte possedette Beethoven dal 1803?',
@@ -683,21 +665,9 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Chi ha registrato l’Op. 37 con Otto Klemperer nel 1957?",
-    options: ["Michelangeli", "Kempff", "Arrau", "Barenboim"],
-    correct: 2,
-    difficulty: "intermedio"
-  },
-  {
     question: "Quale interprete è famoso per l’approccio 'cristallino e apollineo'?",
     options: ["Arrau", "Michelangeli", "Kempff", "Rubinstein"],
     correct: 1,
-    difficulty: "intermedio"
-  },
-  {
-    question: "Chi suonò con l’Orchestra della RAI di Torino nel 1962?",
-    options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
-    correct: 2,
     difficulty: "intermedio"
   },
   {
@@ -709,12 +679,6 @@ const quizData = [
   {
     question: "Quanti flauti sono nell’organico orchestrale dell’Op. 37?",
     options: ["1", "2", "3", "4"],
-    correct: 1,
-    difficulty: "intermedio"
-  },
-  {
-    question: "In quale tonalità sono i clarinetti dell’Op. 37?",
-    options: ["Do", "Sib", "La", "Mib"],
     correct: 1,
     difficulty: "intermedio"
   },
@@ -4668,7 +4632,7 @@ const ImparaSection = () => {
             Metti alla prova la tua conoscenza del Concerto n. 3 attraverso flashcard interattive e quiz a difficoltà crescente.
           </p>
 
-          {/* Sottotab Memorizza / Mettiti alla prova */}
+          {/* Sottotab Memorizza / Quiz */}
           <div className="flex gap-3">
             <button
               onClick={() => setActiveSubTab('memorizza')}
@@ -4694,6 +4658,15 @@ const ImparaSection = () => {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* Immagine hero - sotto il box Impara */}
+      <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
+        <img
+          src="/images/beethoven-quiz-portrait.png"
+          alt="Ludwig van Beethoven"
+          className="w-full h-auto object-contain rounded-lg"
+        />
       </div>
 
       {/* Contenuto della sottosezione */}
@@ -4741,17 +4714,12 @@ const FlashcardsSection = () => {
             className="absolute w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-10 flex flex-col justify-center items-center shadow-2xl border-2 border-slate-600/50"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            <div className="bg-amber-500/20 p-4 rounded-full mb-6">
-              <HelpCircle className="w-16 h-16 text-amber-400" />
+            <div className="bg-amber-500/20 p-2 rounded-full mb-4">
+              <HelpCircle className="w-7 h-7 text-amber-400" />
             </div>
             <p className="text-2xl font-semibold text-center text-white leading-relaxed px-4">
               {flashcardsData[currentCard].q}
             </p>
-            <div className="absolute bottom-6">
-              <span className="text-amber-400 text-sm font-mono bg-slate-800/50 px-4 py-2 rounded-full">
-                {currentCard + 1} / {flashcardsData.length}
-              </span>
-            </div>
           </div>
 
           {/* Back */}
@@ -4760,8 +4728,8 @@ const FlashcardsSection = () => {
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-blue-500/20 p-4 rounded-full mb-6">
-              <CheckCircle className="w-16 h-16 text-blue-400" />
+            <div className="bg-blue-500/20 p-2 rounded-full mb-4">
+              <CheckCircle className="w-7 h-7 text-blue-400" />
             </div>
             <p className="text-xl text-center text-slate-100 leading-relaxed font-medium px-4 mb-4">
               {flashcardsData[currentCard].a}
@@ -4803,7 +4771,7 @@ const FlashcardsSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center space-x-6 mt-10">
+      <div className="flex justify-center items-center space-x-6 mt-4">
         <button
           onClick={prevCard}
           className="p-4 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-all hover:scale-110 shadow-lg"
@@ -4827,13 +4795,19 @@ const FlashcardsSection = () => {
       </div>
 
       {/* Progress bar */}
-      <div className="mt-8 max-w-md mx-auto">
+      <div className="mt-6 max-w-md mx-auto">
         <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
           <div
             className="bg-amber-500 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${((currentCard + 1) / filteredCards.length) * 100}%` }}
+            style={{ width: `${((currentCard + 1) / flashcardsData.length) * 100}%` }}
           ></div>
         </div>
+      </div>
+
+      <div className="text-center mt-2">
+        <span className="text-amber-400 text-sm font-mono bg-slate-800/50 px-4 py-2 rounded-full">
+          {currentCard + 1} / {flashcardsData.length}
+        </span>
       </div>
     </div>
   );
@@ -4898,11 +4872,11 @@ const QuizSection = () => {
   const getDifficultyBadge = (difficulty) => {
     switch(difficulty) {
       case 'base':
-        return <span className="text-xs px-2 py-1 rounded-full bg-blue-900/50 text-blue-300 border border-blue-700 font-semibold">🔵 BASE</span>;
+        return <span className="text-xs px-2 py-1 rounded-full bg-blue-900/50 text-blue-300 border border-blue-700 font-semibold">🔵 Livello 1</span>;
       case 'intermedio':
-        return <span className="text-xs px-2 py-1 rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700 font-semibold">🟡 INTERMEDIO</span>;
+        return <span className="text-xs px-2 py-1 rounded-full bg-yellow-900/50 text-yellow-300 border border-yellow-700 font-semibold">🟡 Livello 2</span>;
       case 'avanzato':
-        return <span className="text-xs px-2 py-1 rounded-full bg-red-900/50 text-red-300 border border-red-700 font-semibold">🔴 AVANZATO</span>;
+        return <span className="text-xs px-2 py-1 rounded-full bg-red-900/50 text-red-300 border border-red-700 font-semibold">🔴 Livello 3</span>;
       default:
         return null;
     }
@@ -4912,6 +4886,7 @@ const QuizSection = () => {
   if (!selectedDifficulty) {
   const baseCount = quizData.filter(q => q.difficulty === 'base').length;
   const intermedioCount = quizData.filter(q => q.difficulty === 'intermedio').length;
+  const totalCount = baseCount + intermedioCount;
 
     return (
       <div className="max-w-4xl mx-auto animate-fadeIn">
@@ -4919,17 +4894,8 @@ const QuizSection = () => {
         <h2 className="text-3xl font-bold text-slate-100 mb-3">Metti alla prova la tua memoria</h2>
         </div>
 
-        {/* Immagine di copertina */}
-        <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
-          <img
-            src="/images/beethoven-quiz-portrait.png"
-            alt="Ludwig van Beethoven - Ritratto per il quiz"
-            className="w-full h-auto object-contain rounded-lg"
-          />
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* BASE */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          {/* Livello Base */}
           <button
             onClick={() => startQuiz('base')}
             className="bg-slate-800 border-2 border-blue-700 rounded-lg p-8 hover:bg-slate-700 hover:border-blue-500 transition-all group text-left"
@@ -4938,7 +4904,7 @@ const QuizSection = () => {
               <span className="text-4xl">🟢</span>
               <span className="text-sm text-slate-400">{baseCount} domande</span>
             </div>
-            <h3 className="text-2xl font-bold text-blue-300 mb-3">BASE</h3>
+            <h3 className="text-2xl font-bold text-blue-300 mb-3">Livello 1</h3>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
               Domande sui fatti principali: date, luoghi, tonalità, dedica, storia della composizione.
             </p>
@@ -4947,7 +4913,7 @@ const QuizSection = () => {
             </div>
           </button>
 
-          {/* INTERMEDIO */}
+          {/* Livello Intermedio */}
           <button
             onClick={() => startQuiz('intermedio')}
             className="bg-slate-800 border-2 border-yellow-700 rounded-lg p-8 hover:bg-slate-700 hover:border-yellow-500 transition-all group text-left"
@@ -4956,7 +4922,7 @@ const QuizSection = () => {
               <span className="text-4xl">🟡</span>
               <span className="text-sm text-slate-400">{intermedioCount} domande</span>
             </div>
-            <h3 className="text-2xl font-bold text-yellow-300 mb-3">INTERMEDIO</h3>
+            <h3 className="text-2xl font-bold text-yellow-300 mb-3">Livello 2</h3>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
               Domande su tecnica pianistica, interpreti, stile, organico orchestrale, elementi musicali.
             </p>
