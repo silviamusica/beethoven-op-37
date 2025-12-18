@@ -598,31 +598,6 @@ const quizData = [
     explanation: "Il pianoforte Érard del 1803 aveva quattro pedali: sustain, una corda, moderatore e cembalo (quest’ultimo produceva un effetto simile al clavicembalo)."
   },
 
-  // 🔴 AVANZATO - Domande di analisi teorica approfondita
-  {
-    question: "Quale relazione tonale crea lo 'shock' tra primo e secondo movimento?",
-    options: [
-      "Passaggio da tonica a dominante",
-      "Salto cromatico di terza (Do minore → Mi maggiore)",
-      "Modulazione al relativo maggiore",
-      "Passaggio da maggiore a minore"
-    ],
-    correct: 1,
-    difficulty: "avanzato",
-    explanation: "Il passaggio da Do minore (I movimento) a Mi maggiore (II movimento) rappresenta un salto cromatico di terza, una scelta tonale audace per l’epoca che Beethoven usa per creare un effetto di 'shock' e contrasto luminoso dopo l’oscurità del primo movimento."
-  },
-  {
-    question: "Cosa rappresenta il Esposizione 4 (R4) finale?",
-    options: [
-      "Una ripetizione identica del Esposizione 1",
-      "Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I",
-      "L’eliminazione completa dell’orchestra",
-      "Un passaggio al modo maggiore"
-    ],
-    correct: 1,
-    difficulty: "avanzato",
-    explanation: "R4 finale rappresenta una deformazione della norma classica: invece del tutti fortissimo in tonica (I), Beethoven scrive un trillo pianissimo su V7/iv (dominante della sottodominante), creando un’ambiguità tragica e una vittoria incompleta, con il pianoforte che continua solo sotto questo accordo sospeso."
-  }
 ];
 
 // --- COMPONENTI ---
@@ -4563,9 +4538,8 @@ const QuizSection = () => {
 
   // Schermata di selezione difficoltà
   if (!selectedDifficulty) {
-    const baseCount = quizData.filter(q => q.difficulty === 'base').length;
-    const intermedioCount = quizData.filter(q => q.difficulty === 'intermedio').length;
-    const avanzatoCount = quizData.filter(q => q.difficulty === 'avanzato').length;
+  const baseCount = quizData.filter(q => q.difficulty === 'base').length;
+  const intermedioCount = quizData.filter(q => q.difficulty === 'intermedio').length;
 
     return (
       <div className="max-w-4xl mx-auto animate-fadeIn">
@@ -4619,23 +4593,6 @@ const QuizSection = () => {
             </div>
           </button>
 
-          {/* AVANZATO */}
-          <button
-            onClick={() => startQuiz('avanzato')}
-            className="bg-slate-800 border-2 border-red-700 rounded-lg p-8 hover:bg-slate-700 hover:border-red-500 transition-all group text-left"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-4xl">🔴</span>
-              <span className="text-sm text-slate-400">{avanzatoCount} domande</span>
-            </div>
-            <h3 className="text-2xl font-bold text-red-300 mb-3">AVANZATO</h3>
-            <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              Analisi teorica approfondita con terminologia Hepokoski-Darcy, strategie tonali, deformazioni.
-            </p>
-            <div className="flex items-center text-red-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
-              <span>Inizia →</span>
-            </div>
-          </button>
         </div>
       </div>
     );
