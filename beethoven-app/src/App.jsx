@@ -1295,6 +1295,683 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
     }
   };
 
+  // Contenuto modale: Cronologia vita Beethoven
+  const beethovenLifeTimeline = [
+    { year: "1770", event: "Nascita a Bonn (16 dicembre), Germania. Famiglia di musicisti di corte." },
+    { year: "1787", event: "Primo viaggio a Vienna. Forse incontra Mozart. Ritorna a Bonn per la morte della madre." },
+    { year: "1792", event: "Trasferimento definitivo a Vienna. Inizia gli studi con Haydn." },
+    { year: "1795", event: "Primo concerto pubblico a Vienna. Pubblica le prime opere." },
+    { year: "1796-98", event: "Prime manifestazioni della sordità. Inizia il declino dell’udito." },
+    { year: "1800", event: "Prima Sinfonia. Affermazione come compositore oltre che come pianista." },
+    { year: "1802", event: "Testamento di Heiligenstadt. Crisi esistenziale profonda." },
+    { year: "1803-1814", event: "Periodo Eroico: Terza Sinfonia (Eroica), Quinta, Sesta (Pastorale), Fidelio." },
+    { year: "1815-1820", event: "Sordità quasi totale. Uso dei 'quaderni di conversazione'." },
+    { year: "1824", event: "Nona Sinfonia. Trionfo assoluto nonostante la sordità completa." },
+    { year: "1827", event: "Morte a Vienna (26 marzo). Funerale con 20.000 persone." }
+  ];
+
+  const BeethovenLifeModal = () => (
+    <div className="space-y-6">
+      {/* Immagine Beethoven */}
+      <div className="mb-4 rounded-lg overflow-hidden">
+        <img 
+          src="/images/beethoven-life-timeline.jpg" 
+          alt="Ludwig van Beethoven - Cronologia della vita"
+          className="w-full h-auto object-contain rounded-lg"
+        />
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Epitaffio e rappresentazione volto.</p>
+      </div>
+
+      <div className="space-y-2.5">
+        {beethovenLifeTimeline.map((item, idx) => (
+          <div key={idx} className="flex flex-col sm:flex-row sm:items-start p-3 rounded-lg bg-slate-700 border-l-2 border-blue-600 shadow-sm">
+            <span className="font-semibold text-slate-200 text-sm w-28 shrink-0">{item.year}</span>
+            <span className="text-slate-200 text-sm leading-relaxed">{item.event}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-3 p-3 bg-blue-900/20 rounded text-sm text-slate-200 border-l-2 border-blue-500">
+        💡 <strong>Curiosità</strong>
+
+        <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600 mt-3">
+          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+            <User className="w-5 h-5 text-blue-400 mr-2" />
+            Il carattere di Beethoven
+          </h3>
+          <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+            <p>
+              <strong className="text-slate-100">Aspetto fisico:</strong> basso e tarchiato, fronte alta e spaziosa,
+              capelli neri e ricci che gli cadono disordinati sulle spalle. Il suo aspetto varia enormemente:
+              talvolta trasandato, talvolta elegante e ben vestito. I contemporanei lo descrivono come un vulcano umano.
+            </p>
+            <p>
+              <strong className="text-slate-100">Temperamento:</strong> passionale, impulsivo, irascibile ma anche
+              profondamente sentimentale. Può passare dalla collera più violenta alla tenerezza più commovente.
+              La sua personalità è così intensa che intimorisce anche i nobili che lo proteggono.
+            </p>
+            <p>
+              <strong className="text-slate-100">L'improvvisatore leggendario:</strong> Beethoven è il
+              <em>più grande improvvisatore dell'epoca</em>.
+            </p>
+            <p>
+              Durante i concerti pubblici le sue improvvisazioni lasciano il pubblico a bocca aperta. Può
+              improvvisare per ore su un tema dato, sviluppandolo in modi originali e sorprendenti.
+            </p>
+            <p>
+              Questa abilità spiega perché, alla prima del 1803, suona quasi a memoria; probabilmente improvvisa
+              intere sezioni.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Contenuto modale: Cronologia Concerto Op. 37
+  const concertoTimeline = [
+    { year: "1796-97", event: "Primi abbozzi tematici. Beethoven inizia a concepire il concerto." },
+    { year: "1798", event: "La sordità si manifesta chiaramente. Beethoven si dedica maggiormente alla composizione." },
+    { year: "1799-1800", event: "Primi abbozzi sistematici (secondo Küthen: composizione principale in questo periodo)." },
+    { year: "1802", event: "Testamento di Heiligenstadt (ottobre). Secondo Plantinga: estate 1802 - lavoro intenso al concerto." },
+    { year: "1803 (primi mesi)", event: "Completamento definitivo. Analisi paleografica del manoscritto mostra '1803', non '1800' (Plantinga)." },
+    { year: "1803 (5 Aprile)", event: "Prima assoluta al Theater an der Wien. Beethoven solista, Seyfried direttore. Partitura incompleta - Beethoven suona 'a memoria'!" },
+    { year: "1804", event: "Pubblicazione da Bureau des Arts et d’Industrie. Dedica al Principe Luigi Ferdinando di Prussia." }
+  ];
+
+  const ConcertoTimelineModal = () => (
+    <div className="space-y-5">
+      {/* Immagine concerto */}
+      <div className="mb-4 rounded-lg overflow-hidden">
+        <img 
+          src="/images/op37-manuscript.jpg" 
+          alt="Manoscritto del Concerto Op. 37"
+          className="w-full h-44 sm:h-80 object-cover object-top rounded-lg max-h-[55vh]"
+        />
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Manoscritto autografo del Concerto in Do minore Op. 37.</p>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold text-slate-100 mb-3">La controversia sulla datazione</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Da decenni, la datazione del Terzo Concerto è oggetto di dibattito tra i musicologi. 
+          Due ipotesi principali si confrontano:
+        </p>
+        <ul className="space-y-2 ml-2">
+          <li className="flex items-start space-x-2">
+            <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+            <span className="text-sm text-slate-300"><strong>Ipotesi Küthen:</strong> composizione principale 1799-1800, destinata a un’accademia prevista per aprile 1800 (mai realizzata).</span>
+          </li>
+          <li className="flex items-start space-x-2">
+            <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+            <span className="text-sm text-slate-300"><strong>Ipotesi Plantinga:</strong> composizione principale estate 1802 - primi mesi 1803, in parallelo alla crisi di Heiligenstadt.</span>
+          </li>
+        </ul>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          La prova decisiva arriva dall'<strong>analisi paleografica del manoscritto autografo</strong>, che mostra
+          chiaramente la data <strong>"1803"</strong> e non "1800" come si crede. Ciò colloca la composizione nel periodo più drammatico della vita di Beethoven.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Proprio mentre scrive il <em>Testamento di Heiligenstadt</em> (ottobre 1802), contemplando il suicidio a causa della sordità, compone uno dei suoi concerti più eroici e combattivi.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Il concerto nasce quindi tra il <strong>1802 e i primi mesi del 1803</strong>, periodo della transizione dal primo
+          stile al periodo eroico. È l'opera che segna il <strong>passaggio definitivo da Mozart a Beethoven</strong>.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold text-slate-100 mb-3">Cronologia della genesi</h3>
+        <div className="space-y-2.5">
+          {concertoTimeline.map((item, idx) => (
+            <div key={idx} className="flex flex-col sm:flex-row sm:items-start p-3 rounded-lg bg-slate-700 border-l-2 border-blue-600 shadow-sm">
+              <span className="font-semibold text-slate-200 text-sm w-32 shrink-0">{item.year}</span>
+              <span className="text-slate-200 text-sm leading-relaxed">{item.event}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  // Contenuto modale: Pianoforti di Beethoven
+  const pianofortiTimeline = [
+    { 
+      model: "Späth / Stein (Johann Andreas Stein)", 
+      location: "Ratisbona / Augusta (Germania)",
+      features: "Meccanica tedesca/viennese (Prellmechanik). Azione leggera, martelletti coperti (novità di Stein dal 1783).",
+      period: "Bonn (anni 1780) / Augusta (1787)",
+      notes: "A Bonn, Beethoven suonava strumenti Stein di proprietà della contessa Hatzfeldt. Nel 1787 visitò il laboratorio di Stein ad Augusta. È possibile che il conte Waldstein gliene abbia regalato uno a Bonn."
+    },
+    {
+      model: "Anton Walter",
+      location: "Vienna",
+      features: "Meccanica viennese. Leggero, tocco reattivo, smorzatori a ginocchiera (spesso divisi per bassi/acuti). Estensione tipica di 5 ottave (FF-f3).",
+      period: "Vienna (fine anni 1790 - primi 1800)",
+      notes: "Beethoven possedeva un Walter, ma desiderava che fosse modificato (es. aggiunta di una corda). Czerny riferisce che il tocco di Mozart (legato ai Walter) non era adatto ai nuovi fortepiano che Beethoven prediligeva."
+    },
+    {
+      model: "Sébastien Érard (N. 133)",
+      location: "Parigi",
+      features: "5 ottave e mezza (FF-c4). Meccanica 'inglese' (più pesante). 4 pedali (liuto, smorzatori, celeste/buff, una corda). Corde triple.",
+      period: "Vienna (Ricevuto nel 1803)",
+      notes: "Un dono della ditta Érard legato alla pubblicazione della Sonata Patetica a Parigi. L’estensione extra (fino al Do4) influenzò la Sonata Waldstein (Op. 53) e l’Appassionata (Op. 57). Beethoven trovava la meccanica troppo pesante e nel 1810 lo definì 'inutile' per i danni subiti."
+    },
+    {
+      model: "Streicher (Nannette e Andreas)",
+      location: "Vienna",
+      features: "Meccanica viennese perfezionata. Beethoven cercava uno strumento che potesse 'cantare' e sostenere il suono.",
+      period: "Vienna (Vari periodi)",
+      notes: "Beethoven ebbe un rapporto di amicizia e consulenza vitalizia con i coniugi Streicher. Usò e possedette vari loro strumenti. Nel 1796 prese in prestito uno Streicher per un concerto a Presburgo e lo vendette lì invece di restituirlo."
+    },
+    {
+      model: "Thomas Broadwood",
+      location: "Londra",
+      features: "6 ottave (CC-c4). Suono robusto e potente, meccanica inglese pesante. Tripla cordatura. Nomi dei donatori (Kalkbrenner, Moscheles) firmati sulla tavola armonica.",
+      period: "Mödling / Vienna (1818 - 1827)",
+      notes: "Un regalo della ditta Broadwood. Arrivò a Vienna dopo un lungo viaggio. Beethoven, ormai sordo, lo 'martellava' così forte da rompere le corde e danneggiarlo. È lo strumento associato alle ultime sonate (es. Hammerklavier Op. 106)."
+    },
+    {
+      model: "Conrad Graf",
+      location: "Vienna",
+      features: "Estensione estesa (fino al Fa4 o 6 ottave e mezza). Quadrupla cordatura nei trebles per aumentare il volume.",
+      period: "Vienna (c. 1825 - 1827)",
+      notes: "Prestato a Beethoven per i suoi ultimi anni. Per aiutarlo a sentire, fu costruita una cassa di risonanza (o cupola) in legno speciale per convogliare il suono. Si trovava nella Schwarzspanierhaus insieme al Broadwood."
+    }
+  ];
+
+  const PianofortiModal = () => (
+    <div className="space-y-6">
+      {/* Immagine pianoforte */}
+      <div className="mb-4 rounded-lg overflow-hidden">
+        <img 
+          src="/images/fortepiano-evolution.jpg" 
+          alt="Evoluzione del pianoforte"
+          className="w-full h-44 sm:h-80 object-cover rounded-lg max-h-[55vh]"
+        />
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Famiglia Mozart. Johann Nepomuk della Croce.</p>
+      </div>
+
+      {/* Introduzione */}
+      <div>
+        <h3 className="text-xl font-bold text-slate-100 mb-4">L’evoluzione dello strumento e del compositore</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          La carriera di Beethoven (1770-1827) coincide con un momento rivoluzionario nella storia del pianoforte: la <strong>trasformazione dal fortepiano classico al pianoforte romantico moderno</strong>. In soli quarant'anni, lo strumento passa da 5 ottave (FF-f³) a oltre 6 ottave e mezza, da corde doppie a quadruple, da meccaniche leggere a azioni pesanti e potenti.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Beethoven non è solo testimone di questa evoluzione: <strong>la influenza attivamente</strong> e <strong>ne è influenzato profondamente</strong>. Ogni nuovo strumento che riceve o acquista apre nuove possibilità compositive. L'estensione del pianoforte Érard (1803) gli permette di scrivere la Waldstein e l'Appassionata; la potenza del <Tooltip text="Il pianoforte Broadwood 1818 è un dono inglese dal suono potente, fondamentale per le ultime opere di Beethoven">
+            <span className="text-blue-300 underline decoration-dotted cursor-help">Broadwood (1818)</span>
+          </Tooltip> accompagna la nascita della monumentale Hammerklavier.
+        </p>
+      </div>
+
+      {/* Tre scuole di costruzione */}
+      <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
+        <h3 className="text-lg font-semibold text-slate-100 mb-3">Tre scuole di costruzione</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Nel periodo di Beethoven esistevano <strong>tre scuole principali</strong> di costruzione pianistica:
+        </p>
+        <ol className="text-sm text-slate-300 space-y-2 ml-4">
+          <li><strong>1. Scuola viennese</strong> (Walter, Streicher, Graf): meccanica leggera "Prellmechanik", tocco rapido e brillante, suono cristallino ma delicato</li>
+          <li><strong>2. Scuola inglese</strong> (Broadwood): meccanica pesante, suono robusto e cantabile, maggiore resistenza</li>
+          <li><strong>3. Scuola francese</strong> (Érard): innovazioni meccaniche (doppio scappamento), estensione ampliata, 4 pedali</li>
+        </ol>
+        <p className="text-sm text-slate-300 leading-relaxed mt-3">
+          Beethoven <strong>sperimenta tutte e tre</strong>, cercando sempre lo strumento ideale che possa "cantare" e sostenere il suono come desidera.
+        </p>
+      </div>
+
+      {/* La sordità */}
+        <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
+          <h3 className="text-lg font-semibold text-slate-100 mb-3">La sordità e il rapporto con lo strumento</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Intorno al 1798 la sordità cambia radicalmente il rapporto di Beethoven con il pianoforte. Negli ultimi anni, completamente sordo, <strong>"martella" i tasti con tale violenza da rompere corde e danneggiare gli strumenti</strong>. Per il pianoforte Graf viene costruita una speciale cassa di risonanza in legno per convogliare il suono e permettergli di percepire le vibrazioni.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Paradossalmente, la perdita dell'udito <strong>libera Beethoven dai limiti fisici dello strumento</strong>: compone non più per quello che può sentire, ma per quello che immagina. Le ultime sonate richiedono dinamiche, estensioni e sonorità che superano le possibilità dei pianoforti dell'epoca.
+        </p>
+        <div className="mb-4 flex flex-col gap-4 md:flex-row">
+          <div className="md:w-1/2 rounded-lg border border-slate-600 overflow-hidden">
+            <img
+              src="/images/beethoven-forte-pedal-horns.jpg"
+              alt="Strumenti e cornetti usati da Beethoven per captare il suono"
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="md:w-1/2 flex flex-col justify-center gap-3">
+            <p className="text-sm text-slate-300 leading-relaxed">
+              Questi strumenti amplificano il suono per Beethoven mentre la sordità avanza: le cornette acustiche di Johann Nepomuk Maelzel (c.1813) funzionano come protesi che avvicinano il suono all'orecchio, mentre i cunei e i coni di rame vengono appoggiati al pianoforte o tra i denti per trasferire vibrazioni al cranio e al torace.
+            </p>
+            <p className="text-sm text-slate-300 leading-relaxed">
+              In assenza di udito, quelle vibrazioni corporee rimangono l'unico modo per "sentire" la musica e continuare a suonare e comporre.
+            </p>
+          </div>
+        </div>
+      
+      </div>
+
+      {/* Tabella cronologica */}
+      <div className="overflow-x-auto">
+        <h3 className="text-lg font-semibold text-slate-100 mb-4">Cronistoria dei pianoforti di Beethoven</h3>
+        <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+          Scorri a destra per visualizzare tutta la tabella.
+        </p>
+        <table className="w-full text-sm text-slate-300 border-collapse">
+          <thead>
+            <tr className="bg-slate-700 text-slate-100">
+              <th className="border border-slate-600 p-2 text-left">Modello / Costruttore</th>
+              <th className="border border-slate-600 p-2 text-left">Fabbricato a</th>
+              <th className="border border-slate-600 p-2 text-left">Posseduto / Usato</th>
+              <th className="border border-slate-600 p-2 text-left">Caratteristiche</th>
+              <th className="border border-slate-600 p-2 text-left">Storia e Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pianofortiTimeline.map((piano, idx) => (
+              <tr key={idx}>
+                <td className="border border-slate-600 p-2"><strong>{piano.model}</strong></td>
+                <td className="border border-slate-600 p-2">{piano.location}</td>
+                <td className="border border-slate-600 p-2"><strong>{piano.period}</strong></td>
+                <td className="border border-slate-600 p-2">{piano.features}</td>
+                <td className="border border-slate-600 p-2">{piano.notes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="text-sm text-slate-400 italic mt-4">
+          <strong>Nota <br /></strong> Molti di questi strumenti sopravvivono ancora oggi e sono conservati in musei (Beethoven-Haus Bonn, Kunsthistorisches Museum Vienna). Il Broadwood si trova alla National Trust (Inghilterra), l’Érard al Kunsthistorisches Museum di Vienna.
+        </p>
+      </div>
+    </div>
+  );
+
+  // Contenuto modale: Lettere sui Concerti
+  const LettereConcertiModal = () => (
+    <div className="space-y-6">
+      {/* Immagine lettere */}
+      <div className="mb-4 rounded-lg overflow-hidden">
+        <img 
+          src="/images/beethoven-letters-manuscripts.jpg" 
+          alt="Lettere e manoscritti di Beethoven"
+          className="w-full h-40 sm:h-64 object-cover rounded-lg max-h-[50vh]"
+        />
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Corrispondenza di Beethoven con gli editori.</p>
+      </div>
+
+      <p className="text-sm text-slate-300 leading-relaxed">
+        Le lettere di Beethoven sono documenti primari essenziali per ricostruire la sua vita e il suo processo creativo: ne abbiamo
+        conservate una considerevole quantità. Puoi approfondire nella sezione{' '}
+        <button
+          type="button"
+          className="text-blue-300 underline decoration-dotted hover:text-blue-200"
+          onClick={handleFontiNavigation}
+        >
+          Fonti
+        </button>.
+      </p>
+
+      {/* Triplo Concerto */}
+      <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul "Triplo Concerto" (Op. 56)</h3>
+        <p className="text-sm text-slate-300 mb-3 italic">
+          Nella lettera a Breitkopf & Härtel del 26 agosto 1804, Beethoven offre un gruppo
+          di opere (tra cui la Sinfonia Eroica e l’oratorio Cristo sul Monte degli Ulivi) e sottolinea la novità della
+          combinazione strumentale del Triplo Concerto per incentivarne la pubblicazione.
+        </p>
+        <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
+          <p className="text-sm text-slate-400 mb-1">A Breitkopf & Härtel, 26 agosto 1804:</p>
+          <p className="text-sm text-slate-200 leading-relaxed">
+            «Le dirò in breve quello che posso darLe: il mio Oratorio, una nuova grande Sinfonia, un "Concertante"
+            per violino, violoncello, pianoforte e orchestra; tre sonate per piano. [...] Riguardo agli altri
+            lavori non ho altro da aggiungere, benché un "Concertante" con questi tre strumenti sia qualcosa di nuovo».
+          </p>
+        </div>
+        <p className="text-sm text-slate-300 italic">
+          <strong>Nota:</strong> il Triplo Concerto, un "concertante" per violino, violoncello, pianoforte e orchestra che
+          rilegge la tradizione del concerto solista in forma di dialogo, non ha successo né all'epoca né oggi: la
+          strumentazione insolita lo rende difficile da promuovere e il suo carattere sperimentale non
+          incontra i gusti dei contemporanei.
+        </p>
+      </div>
+
+      {/* Quarto Concerto */}
+      <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quarto Concerto (Op. 58)</h3>
+        <p className="text-sm text-slate-300 mb-3 italic">
+          Ferdinand Ries racconta che Beethoven gli porta lo spartito del concerto appena
+          completato, pretendendo che lo esegua in pubblico con soli cinque giorni di preavviso. Ries rifiuta per la
+          brevità del tempo, scatenando l’ira di Beethoven, che si rivolge al pianista Friedrich Stein. Stein accetta,
+          ma non riuscendo a padroneggiare il concerto in tempo, finisce per suonare invece il Terzo Concerto (Op. 37).
+        </p>
+        <div className="bg-slate-900/50 p-3 rounded border-l-4 border-blue-500 mb-2">
+          <p className="text-sm text-slate-400 mb-1">Testimonianza riportata da Ferdinand Ries:</p>
+          <p className="text-sm text-slate-200 leading-relaxed">
+            «Un giorno B. mi portò il 4° concerto, dicendo: "Sabato prossimo lo suonerete a teatro". Rimanevano
+            cinque giorni. Per mia sfortuna, risposi che restava troppo poco tempo per imparare a suonare bene il
+            concerto. B., fâché [arrabbiato], andò a trovare subito il giovane pianista Stein...».
+          </p>
+        </div>
+        <p className="text-sm text-slate-300 italic">
+          Stein, incapace di preparare il concerto in tempo, finisce per eseguire il Terzo
+          Concerto (Op. 37) anziché il Quarto. Beethoven stesso esegue la prima pubblica del Quarto Concerto solo
+          il <strong>22 dicembre 1808</strong> all’Akademie al Theater an der Wien, in un concerto maratona che
+          include anche la Quinta e la Sesta Sinfonia, la Fantasia Corale Op. 80 e brani della Messa in Do maggiore
+          Op. 86.
+        </p>
+      </div>
+
+      {/* Quinto Concerto */}
+      <div className="bg-slate-700/30 p-4 rounded-lg border border-slate-600">
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Sul Quinto Concerto "Imperatore" (Op. 73)</h3>
+        <p className="text-sm text-slate-300 mb-3 italic">
+          Questo concerto si compone nel 1809, l’anno dell’invasione napoleonica: durante
+          il bombardamento e l’occupazione di Vienna (12 maggio - novembre 1809), Beethoven si rifugia nella casa del
+          fratello Caspar Carl; le lettere e gli appunti di questo periodo riflettono la profonda angoscia per le
+          condizioni esterne e descrivono la sua vita come una «morte» rispetto all’immortalità artistica a cui aspira.
+        </p>
+        <div className="bg-slate-900/50 p-3 rounded border-l-4 border-amber-500">
+          <div className="mb-3">
+              <p className="text-sm text-slate-200 leading-relaxed mb-2">
+              L’opera appartiene all’anno dell’invasione, il 1809.
+              Il musicologo Alfred Einstein (1880-1952, cugino di Albert Einstein) definisce questo concerto «l’apoteosi del concetto militare» in Beethoven.
+              Grazie ai suoi ritmi e alle melodie energiche, l’opera non solo gratifica, ma supera le aspettative del pubblico.
+            </p>
+            <p className="text-sm text-slate-200 leading-relaxed mb-2">
+              <strong>Dedicatario:</strong> fu pubblicato nel febbraio 1811 con una dedica all’Arciduca Rodolfo, il
+              protettore più importante di Beethoven, al quale il compositore fu legato da profonda gratitudine per
+              tutta la vita. In una lettera successiva all’Arciduca Rodolfo (riferita alla Missa Solemnis Op. 123,
+              composta 1819-1823 e anch’essa dedicata a lui), Beethoven scrisse:
+            </p>
+            <p className="text-sm text-slate-200 leading-relaxed italic">
+              «Nulla è più sublime che avvicinarsi alla divinità più degli altri mortali, e mediante quel contatto
+              diffondere i raggi della divinità tra il genere umano».
+            </p>
+            <p className="text-sm text-slate-300 leading-relaxed mt-2">
+              Queste parole rivelano l'importanza spirituale che Beethoven attribuisce al rapporto con il suo allievo
+              e mecenate.
+            </p>
+          </div>
+          <div className="bg-slate-800 p-3 rounded">
+          <p className="text-sm text-slate-400 mb-1">
+            Nota nel catalogo di Lenz, il critico musicale Wilhelm von Lenz,:
+          </p>
+            <p className="text-sm text-slate-200 leading-relaxed">
+              Wilhelm von Lenz descrisse l’opera con questa celebre definizione: «L’orgoglio del pianoforte
+              in quanto strumento da concerto».
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const TestamentoModal = () => (
+    <div className="space-y-4 text-sm leading-relaxed text-slate-200" style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+      <p className="font-semibold text-lg">Testamento di Heiligenstadt</p>
+      <p className="italic">6 ottobre 1802</p>
+      <p>Per i miei fratelli Carl e [Johann] Beethoven</p>
+      <p>
+        O voi uomini che mi stimate o mi definite astioso, scontroso o addirittura misantropo, come mi fate torto! Voi non
+        conoscete la causa segreta che mi fa apparire a voi così. Il mio cuore e il mio animo, fin dall’infanzia, erano inclini al
+        delicato sentimento della benevolenza e sono sempre stato disposto a compiere azioni generose. Considerate però, che da sei
+        anni mi ha colpito un grave malanno peggiorato per colpa di medici incompetenti. Di anno in anno le mie speranze di guarire
+        sono state gradualmente frustrate, ed alla fine sono stato costretto ad accettare la prospettiva di una malattia cronica (la
+        cui guarigione richiederà forse degli anni o sarà del tutto impossibile). Pur essendo dotato di un temperamento ardente, vivace,
+        e anzi sensibile alle attrattive della società, sono stato presto obbligato ad appartarmi, a trascorrere la mia vita in solitudine.
+        E se talvolta ho deciso di non dare peso alla mia infermità, ahimè, con quanta crudeltà sono stato allora ricacciato indietro dalla
+        triste, rinnovata esperienza della debolezza del mio udito. Tuttavia non mi riusciva di dire alla gente: “Parlate più forte, gridate,
+        perché sono sordo”.
+      </p>
+      <p>
+        Come potevo, ahimè, confessare la debolezza di un senso, che in me dovrebbe essere più raffinato che negli altri uomini e che in me
+        raggiungeva un tempo un grado di perfezione massima, un grado tale di perfezione quale pochi nella mia professione sicuramente posseggono,
+        o hanno mai posseduto – No, non posso farlo; perdonatemi perciò se talora mi vedrete stare in disparte dalla vostra compagnia, che invece
+        un tempo mi era caro ricercare. La mia sventura mi fa doppiamente soffrire perché mi porta ad essere frainteso. Per me non può esservi
+        sollievo nella compagnia degli uomini, non possono esservi conversazioni elevate né confidenze reciproche. Costretto a vivere completamente
+        solo, posso entrare furtivamente in società solo quando lo richiedono le necessità più impellenti; debbo vivere come un proscritto. Se sto
+        in compagnia vengo sopraffatto da un’ansietà cocente, dalla paura di correre il rischio che si noti il mio stato – E così è stato anche in questi
+        sei mesi che ho trascorso in campagna. Invitandomi a risparmiare il più possibile il mio udito, quell’assennata persona del mio medico ha più o
+        meno incoraggiato la mia attuale disposizione naturale, sebbene talvolta, sedotto dal desiderio di compagnia, mi sia lasciato tentare a ricercarla.
+        Ma quale umiliazione ho provato quando qualcuno, vicino a me, udiva il suono di un flauto in lontananza e io non udivo niente, o udiva il canto
+        di un pastore e io ancora nulla udivo – Tali esperienze mi hanno portato sull’orlo della disperazione e poco è mancato che non ponessi fine alla mia
+        vita – La mia arte, soltanto essa mi ha trattenuto. Ah, mi sembrava impossibile abbandonare questo mondo, prima di avere creato tutte quelle opere
+        che sentivo l’imperioso bisogno di comporre; e così ho trascinato avanti questa misera esistenza – davvero misera, dal momento che il mio fisico tanto
+        sensibile può, da un istante all’altro, precipitarmi dalle migliori condizioni di spirito nella più angosciosa disperazione – Pazienza – mi dicono
+        che questa è la virtù che adesso debbo scegliermi come guida; e adesso io la posseggo.
+      </p>
+      <p>
+        Duratura deve essere, io spero, la mia risoluzione di resistere fino alla fine, finché alle Parche inesorabili piacerà spezzare il filo; forse il mio
+        stato migliorerà, forse no, ad ogni modo io, ora sono rassegnato – Dio Onnipotente, che mi guardi fino in fondo all’anima, che vedi nel mio cuore e
+        sai che esso è colmo di amore per l’umanità e del desiderio di bene operare. O uomini, se un giorno leggerete queste mie parole, ricordate che mi avete
+        fatto torto; e l’infelice tragga conforto dal pensiero di aver trovato un altro infelice che, nonostante tutti gli ostacoli imposti dalla natura, ha fatto
+        quanto era in suo potere per elevarsi al rango degli artisti nobili e degli uomini degni. – E voi fratelli miei, Carl e [Johann], dopo la mia morte,
+        se il Prof. Schmidt sarà ancora in vita, pregatelo a mio nome di fare una descrizione della mia infermità e allegate al suo documento questo mio scritto,
+        in modo che, almeno dopo la mia morte, il mondo e io possiamo riconciliarci, per quanto è possibile – Nello stesso tempo vi dichiaro qui tutti e due eredi del mio
+        piccolo patrimonio (se posso chiamarlo così) – Dividetelo giustamente, andate d’accordo e aiutatevi reciprocamente. Il male che mi avete fatto, voi lo sapete, è stato
+        perdonato da lungo tempo. Ringrazio ancora in maniera particolare te, fratello Carl, per l’affetto che mi hai dimostrato in questi ultimi anni. Il mio augurio è che
+        la vostra vita sia più serena e più scevra da preoccupazioni della mia. Raccomandate ai vostri figli di essere virtuosi; perché soltanto la virtù può rendere felici, non certo
+        il denaro. Parlo per esperienza. E’ stata la virtù che mi ha sostenuto nella sofferenza. Io debbo ad essa, oltre che alla mia arte, se non ho messo fine alla mia vita con un suicidio –
+        State bene e amatevi – Ringrazio tutti i miei amici, in particolare il principe Lichnowsky e il professor Schmidt. Vorrei che gli strumenti del principe L[ichnowsky] venissero custoditi da uno di voi,
+        purché ciò non conduca ad un litigio fra voi. Qualora essi possano servire ad uno scopo più proficuo, vendeteli pure; quanto sarò lieto se potrò esservi utile anche nella tomba – Ebbene questo è tutto –
+        Con gioia vado incontro alla Morte – se essa venisse prima che io abbia avuto la possibilità di sviluppare tutte le mie qualità artistiche, allora, malgrado la durezza del mio destino, giungerebbe troppo presto; e indubbiamente mi piacerebbe ritardarne la venuta – Sarei però contento anche così; non mi libererebbe essa da uno stato di sofferenza senza fine? Vieni dunque Morte, quando tu vuoi, io ti verrò incontro coraggiosamente – Addio, non dimenticatemi del tutto, dopo la mia morte. Io merito di essere ricordato da voi, perché nella mia vita ho spesso pensato a voi, e ho cercato di rendervi felici – Siate felici –
+      </p>
+      <p>Ludwig van Beethoven</p>
+      <p className="italic">Per i miei fratelli Carl e [Johann]</p>
+      <p className="text-xs text-slate-500">Da leggere dopo la mia morte –</p>
+    </div>
+  );
+
+
+  // Modale Cadenze
+  const CadenzeModal = () => (
+    <div className="space-y-4 text-sm text-slate-300">
+      <p className="text-base text-slate-200">
+        Nel <strong>1809</strong>, sei anni dopo la prima esecuzione, Beethoven scrisse tre cadenze per il primo movimento dell’Op. 37, 
+        catalogate come <strong>WoO 58</strong> (Werke ohne Opuszahl - opere senza numero d’opus).
+      </p>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-blue-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Le tre versioni</h4>
+        <div className="space-y-3">
+          <div>
+            <p className="font-semibold text-slate-100">WoO 58 n. 1 - Breve e classica</p>
+            <p className="text-sm text-slate-400">70 battute → Stile più contenuto, vicino all’estetica del 1803</p>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-100">WoO 58 n. 2 - Moderata</p>
+            <p className="text-sm text-slate-400">90 battute → Equilibrio tra concisione e sviluppo tematico</p>
+          </div>
+          <div>
+            <p className="font-semibold text-slate-100">WoO 58 n. 3 - Espansa</p>
+            <p className="text-sm text-slate-400">130 battute → Quasi un secondo sviluppo, la più virtuosistica</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg border-l-4 border-orange-500">
+        <h4 className="text-base font-semibold text-slate-200 mb-2">Il problema stilistico</h4>
+        <p className="mb-3">
+          Come osserva <strong>Luca Chiantore</strong>, queste cadenze presentano una <em>"incoerenza stilistica lampante"</em>: 
+          nel 1809 Beethoven è nel <strong>periodo medio maturo</strong>, ben oltre lo stile del 1803. 
+          Le cadenze riflettono il linguaggio armonico e pianistico della <em>Sonata Waldstein</em> Op. 53 o dell'<em>Appassionata</em> Op. 57, 
+          risultando più avanzate del concerto stesso.
+        </p>
+        <p className="text-sm italic text-slate-400">
+          Questo dimostra che Beethoven non considera la cadenza come parte immutabile del concerto,
+          ma come spazio di libertà espressiva legato al momento dell'esecuzione.
+        </p>
+      </div>
+
+      <div className="bg-slate-900 p-4 rounded-lg">
+        <h4 className="text-base font-semibold text-slate-200 mb-3">Altre cadenze celebri</h4>
+        <ul className="space-y-2">
+          <li className="flex items-start">
+            <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+            <span>
+              <strong>Fazıl Say (2001)</strong> → Linguaggio contemporaneo con cluster e ritmi irregolari, 
+              ma profondamente radicato nel materiale tematico beethoveniano. 
+              <a 
+                href="https://youtu.be/a0ixaGeQzME?si=vG4tYv1rpwhCFHk0&t=772" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-slate-200 underline ml-1"
+              >
+                Ascolta al min. 12:51
+              </a>
+            </span>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+            <span><strong>Johann Nepomuk Hummel</strong> → Contemporanea di Beethoven, stile virtuosistico brillante</span>
+          </li>
+          <li className="flex items-start">
+            <ChevronRight className="w-4 h-4 text-blue-400 mr-2 shrink-0 mt-0.5" />
+            <span><strong>Clara Schumann</strong> → Cadenza romantica del XIX secolo, espressività lirica</span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="mt-3 p-3 bg-blue-900/20 rounded text-sm text-slate-200 border-l-2 border-blue-500">
+        💡 <strong>Curiosità:</strong> Clara Schumann fu tra le prime donne a eseguire questo concerto in pubblico (1840), 
+        sfidando le convenzioni dell’epoca che scoraggiavano le donne dall’eseguire opere così impegnative.
+      </div>
+
+      <p className="text-sm text-slate-400 italic pt-3 border-t border-slate-700">
+        La tradizione di scrivere cadenze personali per i concerti di Beethoven è viva ancora oggi,
+        dimostrando come questi capolavori continuano a ispirare creatività e dialogo tra epoche.
+      </p>
+      
+    </div>
+  );
+
+  const ContestoGeopoliticoModal = () => (
+    <div className="space-y-5">
+      {/* Immagine contesto storico */}
+      <div className="mb-4 rounded-lg overflow-hidden">
+        <img 
+          src="/images/napoleonic-wars-vienna.jpg" 
+          alt="Vienna durante le guerre napoleoniche"
+          className="w-full h-64 object-contain rounded-lg"
+        />
+        <p className="text-sm text-slate-400 mt-2 italic text-center">Guerra napoleonica. La cattura dei ponti sul Danubio (13/11/1805). Autore sconosciuto.</p>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Le guerre napoleoniche (1792-1815)</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          L'Europa è sconvolta dalle <strong>guerre napoleoniche</strong>. La <strong>Rivoluzione francese</strong> (1787)
+          ha rovesciato l'ordine monarchico, proclamando libertà, uguaglianza e fraternità. <strong>Napoleone Bonaparte</strong> emerge
+          come generale nel 1796 e diventa primo console nel 1799, poi imperatore nel 1804.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Beethoven inizialmente ammira Napoleone come simbolo degli ideali repubblicani, ma si disillude quando questi si
+          autoincorona imperatore. Nel <strong>1809</strong>, Napoleone conquista Vienna (12 maggio), causando devastazione
+          e carestia; il periodo rivoluzionario influenza profondamente lo stile di Beethoven: uno "stile grandioso"
+          post-rivoluzionario francese si fonde con la tradizione classica viennese.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">Vienna: la capitale musicale d’Europa</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Quando Beethoven arriva nel novembre 1792, <strong>Vienna</strong> è la capitale musicale indiscussa d'Europa:
+          nella città vive <strong>Haydn</strong> ed è stata la casa di <strong>Mozart</strong>. L'imperatore{' '}
+          <Tooltip text="Francesco II d'Asburgo (1768-1835): ultimo imperatore del Sacro Romano Impero (1792-1806), primo imperatore d'Austria come Francesco I (1804-1835). Violinista dilettante, incarna il gusto musicale della corte viennese.">
+            <span className="text-blue-300 underline decoration-dotted cursor-help">Francesco II</span>
+          </Tooltip>{' '}
+          suona il violino, e l'aristocrazia viennese considera un dovere e un onore finanziare musicisti e concerti.
+        </p>
+        <p className="text-sm text-slate-300 leading-relaxed">
+          Il sistema del <strong>mecenatismo</strong> permette ai compositori di vivere grazie al sostegno economico della nobiltà,
+          che garantisce stipendi, commissioni di opere e ospitalità nei propri palazzi.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">I mecenati di Beethoven</h3>
+        <div className="overflow-x-auto">
+          <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+            Scorri a destra per visualizzare tutta la tabella.
+          </p>
+          <table className="w-full text-sm text-slate-300 border-collapse">
+            <thead>
+              <tr className="bg-slate-700 text-slate-100">
+                <th className="border border-slate-600 p-2 text-left">Nome</th>
+                <th className="border border-slate-600 p-2 text-left">Date</th>
+                <th className="border border-slate-600 p-2 text-left">Ruolo</th>
+                <th className="border border-slate-600 p-2 text-left">Sostegno economico</th>
+                <th className="border border-slate-600 p-2 text-left">Opere dedicate (selezione)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">Principe Karl Alois von Lichnowsky</td>
+                <td className="border border-slate-600 p-2">1761-1814</td>
+                <td className="border border-slate-600 p-2">Primo grande mecenate</td>
+                <td className="border border-slate-600 p-2">600 fiorini annui</td>
+                <td className="border border-slate-600 p-2">Sonata Patetica Op. 13, Concerto n. 2 Op. 19, Trii Op. 1</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">Arciduca Rodolfo d’Austria</td>
+                <td className="border border-slate-600 p-2">1788-1831</td>
+                <td className="border border-slate-600 p-2">Allievo, fratello dell’imperatore</td>
+                <td className="border border-slate-600 p-2">Rendita vitalizia (dal 1809)</td>
+                <td className="border border-slate-600 p-2">Concerti n. 4 e 5, Sonata Arciduca Op. 97, Les Adieux Op. 81a, Hammerklavier Op. 106, Missa Solemnis Op. 123</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">Principe Franz Joseph von Lobkowitz</td>
+                <td className="border border-slate-600 p-2">1772-1816</td>
+                <td className="border border-slate-600 p-2">Possedeva orchestra privata</td>
+                <td className="border border-slate-600 p-2">Contributo rendita 1809</td>
+                <td className="border border-slate-600 p-2">Sinfonia Eroica Op. 55, Triplo Concerto Op. 56, Quartetti Op. 18</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">Conte Andrey Razumovsky</td>
+                <td className="border border-slate-600 p-2">1752-1836</td>
+                <td className="border border-slate-600 p-2">Ambasciatore russo</td>
+                <td className="border border-slate-600 p-2">Finanziamento quartetto privato</td>
+                <td className="border border-slate-600 p-2">Quartetti Razumovsky Op. 59</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">Barone Gottfried van Swieten</td>
+                <td className="border border-slate-600 p-2">1733-1803</td>
+                <td className="border border-slate-600 p-2">Diplomatico, mecenate</td>
+                <td className="border border-slate-600 p-2">Concerti privati domenicali</td>
+                <td className="border border-slate-600 p-2">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold text-slate-100 mb-2">La rendita garantita del 1809</h3>
+        <p className="text-sm text-slate-300 leading-relaxed mb-3">
+          Nel 1809, tre mecenati (Arciduca Rodolfo, Lobkowitz e il Principe Ferdinand Kinsky) garantirono a Beethoven una{' '}
+          <strong>rendita vitalizia di 4.000 fiorini annui</strong> per impedirgli di lasciare Vienna e accettare l’offerta del 
+          re di Westfalia. Questa sicurezza economica permise a Beethoven di comporre senza pressioni finanziarie.
+        </p>
+        <div className="bg-slate-800/50 p-3 rounded text-sm text-slate-300 space-y-1">
+          <p><strong>Note</strong></p>
+          <ul className="space-y-1 ml-2">
+            <li className="flex items-start space-x-2">
+              <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+              <span>Solo davanti all’Arciduca Rodolfo, Beethoven toglieva il cappello in segno di rispetto</span>
+            </li>
+            <li className="flex items-start space-x-2">
+              <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+              <span>Il rapporto con Lichnowsky si ruppe nel 1806 per una lite violenta</span>
+            </li>
+            <li className="flex items-start space-x-2">
+              <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
+              <span>Il palazzo di Razumovsky bruciò nel 1814 e causò la rovina economica del conte</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="space-y-6 animate-fadeIn max-w-4xl mx-auto">
       <Modal 
@@ -1307,31 +1984,26 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-slate-100 p-8 rounded-2xl shadow-2xl border border-slate-600">
-        <h2 className="text-center text-3xl font-[family:'Cinzel',serif] font-bold tracking-[0.2em] mb-3 text-blue-300 leading-tight">
-          Gymnopédie n. 1 <br />
-          (trois gymnopédies)
+        <h2 className="text-center text-3xl font-[family:'Cinzel',serif] font-bold tracking-[0.2em] mb-8 text-blue-300 leading-tight">
+          Concerto per pianoforte n. 3 <br /> 
+          in Do minore, Op. 37
         </h2>
-        <p className="text-center text-lg font-semibold text-blue-200 mb-6">
-          Un esercizio lento e meditativo che anticipa il minimalismo parigino e sospende il tempo tra sogno e rituale.
-        </p>
 
         {/* Immagine hero principale */}
         <div className="mb-6 rounded-lg overflow-hidden shadow-2xl">
           <img 
             src="/images/beethoven-portrait-hero.jpg" 
-            alt="Spartito per pianoforte di fine Ottocento, luce morbida su carta ingiallita"
+            alt="Ritratto di Ludwig van Beethoven"
             className="w-full h-52 sm:h-96 object-cover max-h-[60vh]"
           />
         </div>
 
         <div className="space-y-4 text-sm text-slate-300 leading-relaxed mb-6">
           <p>
-            <Tooltip text="Termine legato a gymnopaedia: festa e danza dell’antica Grecia (Sparta), spesso descritta come danza “nuda” o “disarmata”. Il riferimento in Satie è intenzionalmente ambiguo.">
-              Gymnopédie n. 1
-            </Tooltip> è il primo dei tre pezzi pianistici che Satie completa entro il 2 aprile 1888. La raccolta nasce come tre “danze” lente, con pochi elementi ripetuti e un uso controllato della dissonanza che lega ogni battuta a una sospensione.
+            Il Terzo Concerto per pianoforte in Do minore, Op. 37 rappresenta il momento in cui Beethoven emerge dall’ombra di Mozart e comincia a splendere di luce propria.
           </p>
           <p>
-            Il titolo riprende un termine dell’antichità greca che Satie lascia volutamente indeterminato: accanto alla suggestione di Flaubert e di <Tooltip text="Poesia pubblicata su riviste e legata all’interesse di Satie per la architettura simbolista.">Les Antiques</Tooltip>, in partitura compare l’indicazione <Tooltip text="Indicazione espressiva della n. 1: “lento e doloroso”. Inquadra l’atteggiamento esecutivo (peso, distanza, sobrietà del suono).">Lent et douloureux</Tooltip>, un invito a pronunciare ogni accordo con poesia e distanza.
+            Il suo fuoco nasce dalla cenere di un momento di fragilità estrema, tra il 1802 e i primi mesi del 1803: Beethoven si trova a <Tooltip text="Villaggio vicino a Vienna dove, su consiglio del medico Franz Wegeler, Beethoven cerca riposo e cure per la sordità che lo tormenta.">Heiligenstadt</Tooltip>, in piena crisi esistenziale per la sordità che avanza e per la sua solitudine.
           </p>
         </div>
 
@@ -1339,48 +2011,39 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
           <div className="text-sm text-slate-300 leading-relaxed lg:h-[420px] lg:flex lg:flex-col lg:justify-between lg:pr-6">
             <div className="space-y-4">
               <p>
-                Gymnopédie n. 1 nasce come esperimento di sottrazione: appena tre blocchi armonici, un tempo stabile e una linea melodica sospesa che sembra fluttuare tra gli accordi.
-                Satie compone la pagina a fine marzo 1888, la rifinisce il 2 aprile e in pochi giorni trova spazio nel salotto parigino più intimo.
-              </p>
-              <p>
-                Il titolo rimanda alla Grecia classica, ma Satie non svela l’origine precisa: bastano suggestioni tratte da Flaubert e da <Tooltip text="Poesia pubblicata su riviste e legata all’interesse di Satie per l’architettura simbolista.">Les Antiques</Tooltip>.
-                <Tooltip text="Indicazione espressiva della n. 1: “lento e doloroso”. Inquadra l’atteggiamento esecutivo (peso, distanza, sobrietà del suono).">Lent et douloureux</Tooltip> in partitura invita a una dinamica rarefatta e a un tocco leggerissimo.
+                Mentre contempla il <Tooltip text="Il pensiero di togliersi la vita per sottrarsi al dolore e alla disperazione che descrive nel Testamento di Heiligenstadt.">suicidio</Tooltip>, compone una musica eroica e combattiva, lasciando traccia di quel tormento nel <Tooltip text="Lettera rivolta a se stesso che descrive la sofferenza, ma anche la decisione di non abbandonare la musica.">Testamento di Heiligenstadt</Tooltip>.
               </p>
             <div className="lg:hidden">
               <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60">
                 <img
                   src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
-                  alt="Ritratto fotografico di Erik Satie, atmosfera parigina di fine secolo"
+                  alt="Prima pagina del Testamento di Heiligenstadt"
                   className="w-full h-64 object-cover"
                 />
                 <button
                   type="button"
-                  onClick={() =>
-                    openModal(
-                      'Perché questa pagina musicale è diventata un’icona',
-                      <GymnopedieHighlightModal />
-                    )
-                  }
+                  onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
                   className="absolute inset-x-0 bottom-0 px-3 py-3 flex flex-col items-center gap-1 text-sm italic text-slate-100 text-center bg-slate-900/70 backdrop-blur-sm"
                 >
-                  <span>Gymnopédie n. 1:</span>
+                  <span>Testamento di Heiligenstadt:</span>
                   <span className="text-blue-200 font-semibold underline decoration-dotted">Leggi il testo completo</span>
                 </button>
               </div>
             </div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mt-6">
-                Prima pubblicazione
+                Prima esecuzione
               </h3>
             <p>
-              La Gymnopédie n. 1, insieme alla n. 3, esce nel 1888 sul mensile <em>La Musique des familles</em>; la seconda pagina apparirà soltanto nel 1895, mentre l’edizione completa arriva nel 1898 in un’edizione a tiratura limitata.
+              La prima esecuzione avviene il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma è sovraccarico: Beethoven esegue nuovamente la Sinfonia n. 1, presenta per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l’oratorio Cristo sul Monte degli Ulivi. Ferdinand Ries scrive: «Il concerto inizia alle sei, ma dura così tanto che un paio di brani non vengono eseguiti».
             </p>
             <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
-              <li>Pubblicata con piccolo commento poetico e accostamenti a Les Antiques, la n. 1 e la n. 3 anticipano la via minimalista di Satie.</li>
-              <li>La n. 2 viene pubblicata sette anni dopo, ma le tre pagine vengono poi raccolte insieme in un’unica edizione nel 1898.</li>
-              <li>Debussy orchestra la prima e la terza dopo averle ascoltate da Satie nel 1896 e le porta in sala da concerto nel 1897.</li>
+              <li>Sinfonia n. 1 (riproposta, ~35 minuti)</li>
+              <li>Sinfonia n. 2 (prima assoluta, ~30 minuti)</li>
+              <li>Concerto per pianoforte n. 3 in Do minore, Op. 37 (~40 minuti)</li>
+              <li>Oratorio Cristo sul Monte degli Ulivi (~45 minuti)</li>
             </ul>
             <p className="text-sm text-slate-300">
-              La semplicità tonale e la regolarità ritmica permettono interpretazioni cameristiche, arrangiamenti per ensembles moderni e utilizzi cinematografici ancora oggi.
+              Ries, biografo e allievo di Beethoven, annota che la serata «sarebbe dovuta essere ancora più lunga», ma i tagli imposti dalle circostanze, li obbligarono a eliminare un paio di brani.
             </p>
             
             </div>
@@ -1394,15 +2057,10 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
             />
             <button
               type="button"
-              onClick={() =>
-                openModal(
-                  'Perché questa pagina musicale è diventata un’icona',
-                  <GymnopedieHighlightModal />
-                )
-              }
+              onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
               className="absolute inset-x-0 bottom-0 px-3 py-3 flex flex-col items-center gap-1 text-sm italic text-slate-100 text-center bg-slate-900/70 backdrop-blur-sm"
             >
-              <span>Gymnopédie n. 1:</span>
+              <span>Testamento di Heiligenstadt:</span>
               <span className="text-blue-200 font-semibold underline decoration-dotted">Leggi il testo completo</span>
             </button>
           </div>
@@ -1412,57 +2070,238 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
         {/* Informazioni essenziali inline */}
         <div className="grid md:grid-cols-2 gap-4 my-6 text-sm bg-slate-900/50 p-4 rounded-lg">
           <div className="space-y-1.5">
-            <p><strong>Compositore:</strong> Erik Satie (1866–1925)</p>
-            <p><strong>Composizione:</strong> completata il 2 aprile 1888</p>
+            <p><strong>Compositore:</strong> Ludwig van Beethoven (1770-1827)</p>
+            <p><strong>Composizione:</strong> 1800-1803</p>
+            <p><strong>Prima esecuzione:</strong> 5 aprile 1803, Theater an der Wien</p>
           </div>
           <div className="space-y-1.5">
-            <p><strong>Pubblicazione:</strong> n. 1 e n. 3 (1888), n. 2 (1895), raccolta completa (1898)</p>
             <p>
-              <strong>Tonalità & metro:</strong> 3/4 con rapporto tra D maggiore e D minore e indicazione{' '}
-              <Tooltip text="Indicazione espressiva della n. 1: “lento e doloroso”. Inquadra l’atteggiamento esecutivo (peso, distanza, sobrietà del suono).">
-                Lent et douloureux
+              <strong>Dedicato a:</strong>{' '}
+              <Tooltip text="Principe prussiano e pianista virtuosistico, nipote di Federico il Grande, caduto eroicamente nella battaglia di Saalfeld (1806) contro Napoleone. Appassionato di musica e ammiratore di Beethoven.">
+                <span className="text-blue-400 underline decoration-dotted cursor-help">
+                  Principe Luigi Ferdinando di Prussia
+                </span>
               </Tooltip>
             </p>
+            <p><strong>Tonalità:</strong> Do minore → Do maggiore (finale)</p>
+            <p><strong>Movimenti:</strong> Allegro con brio • Largo • Rondò</p>
           </div>
         </div>
         <p className="text-sm text-slate-300 mb-4">
-          Gymnopédie n. 1 rappresenta una delle prime “paginetta” solo-pianoforte che rinuncia allo sviluppo tematico tradizionale: la bellezza nasce dalla regolarità ritmica, dai pedali lunghi e dalla lentezza sospesa.
-          L’opera anticipa il minimalismo francese e continua a essere proposta in contesti molto diversi, dai recital intimisti ai film e alle installazioni sonore.
+          Dei cinque concerti per pianoforte, composti fra il 1795 e il 1810, Beethoven considera i primi due inferiori al Terzo; quest’ultimo segna il passaggio dallo stile classico allo stile eroico, con una maggiore drammaticità, sperimentazione ed espressività.
         </p>
 
-        <div className="bg-slate-900/60 rounded-3xl p-6 border border-slate-700 shadow-2xl">
+        {/* Tabella I 5 Concerti in Prospettiva */}
+        <div className="overflow-x-auto">
+          {/* Immagine Theater an der Wien */}
           <div className="mb-5 rounded-lg overflow-hidden shadow-2xl">
-            <img
-              src="/images/theater-an-der-wien-1803.jpg"
-              alt="Veduta ottocentesca che richiama l’atmosfera dei salotti parigini di fine Ottocento"
+            <img 
+              src="/images/theater-an-der-wien-1803.jpg" 
+              alt="Theater an der Wien nel 1803"
               className="w-full h-48 sm:h-72 object-cover rounded-lg max-h-[55vh]"
             />
-            <p className="text-sm text-slate-400 mt-2 italic text-center">{gymnopedieTableMeta.caption}</p>
+            <p className="text-sm text-slate-400 mt-2 italic text-center">Veduta del Theater an der Wien dalla Jägergasse, Jakob Alt, c. 1815, incisione acquerellata.</p>
           </div>
-          <h4 className="text-base font-semibold text-slate-200 mb-6">{gymnopedieTableMeta.title}</h4>
-          <div className="grid gap-6 md:grid-cols-2">
-            {gymnopedieTableRows.map((row) => (
-              <div key={row.column1} className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700 hover:border-blue-500 transition-all flex flex-col">
-                <h3 className="text-lg font-semibold text-slate-100 mb-3">{row.column1}</h3>
-                <p className="text-sm text-slate-300 mb-5 leading-relaxed">{row.column2}</p>
-                <button
-                  onClick={() =>
-                    openModal(
-                      row.modalTitle,
-                      <div className="space-y-3 text-sm leading-relaxed text-slate-200">
-                        <p className="font-semibold text-lg">{row.modalTitle}</p>
-                        <p>{row.modalContent}</p>
-                      </div>
-                    )
-                  }
-                  className="mt-auto text-sm text-blue-400 hover:text-slate-100 font-semibold flex items-center justify-between"
-                >
-                  {row.ctaLabel} <ChevronRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            ))}
-          </div>
+          <h4 className="text-base font-semibold text-slate-200 mb-3">I 5 Concerti in prospettiva</h4>
+          <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
+            Scorri a destra per visualizzare tutta la tabella.
+          </p>
+          <table className="w-full text-sm text-slate-300 border-collapse">
+            <thead>
+              <tr className="bg-slate-700 text-slate-100">
+                <th className="border border-slate-600 p-2 text-left">N.</th>
+                <th className="border border-slate-600 p-2 text-left">Op.</th>
+                <th className="border border-slate-600 p-2 text-left">Anno</th>
+                <th className="border border-slate-600 p-2 text-left">Periodo</th>
+                <th className="border border-slate-600 p-2 text-left">Tonalità</th>
+                <th className="border border-slate-600 p-2 text-left">Carattere</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">2</td>
+                <td className="border border-slate-600 p-2">19</td>
+                <td className="border border-slate-600 p-2">1795</td>
+                <td className="border border-slate-600 p-2 text-slate-400">Giovanile</td>
+                <td className="border border-slate-600 p-2">Si♭ maggiore</td>
+                <td className="border border-slate-600 p-2">Giovanile brillante</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">1</td>
+                <td className="border border-slate-600 p-2">15</td>
+                <td className="border border-slate-600 p-2">1800</td>
+                <td className="border border-slate-600 p-2 text-slate-400">Giovanile</td>
+                <td className="border border-slate-600 p-2">Do maggiore</td>
+                <td className="border border-slate-600 p-2">Classico mozartiano</td>
+              </tr>
+              <tr className="bg-blue-900/30">
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">3</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">37</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">1803</td>
+                <td className="border border-slate-600 p-2 font-bold text-orange-400">Eroico</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Do minore</td>
+                <td className="border border-slate-600 p-2 font-bold text-slate-200">Transizione drammatica</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">4</td>
+                <td className="border border-slate-600 p-2">58</td>
+                <td className="border border-slate-600 p-2">1806</td>
+                <td className="border border-slate-600 p-2 text-orange-400">Eroico</td>
+                <td className="border border-slate-600 p-2">Sol maggiore</td>
+                <td className="border border-slate-600 p-2">Poetico rivoluzionario</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-600 p-2 font-semibold">5</td>
+                <td className="border border-slate-600 p-2">73</td>
+                <td className="border border-slate-600 p-2">1810</td>
+                <td className="border border-slate-600 p-2 text-orange-400">Eroico</td>
+                <td className="border border-slate-600 p-2">Mi♭ maggiore</td>
+                <td className="border border-slate-600 p-2">Monumentale imperiale</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <div className="mt-4 pt-3">
+          <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-600 shadow-lg mb-4">
+            <p className="text-sm text-slate-300 mb-2">
+              Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti:
+              ha bisogno di guadagnare, ma è consapevole che queste opere non rappresentano più il suo attuale
+              livello.
+            </p>
+            <p className="text-sm text-slate-400 mb-2">A Franz Anton Hoffmeister (editore a Lipsia), circa 15 dicembre 1800 o 15 gennaio 1801:</p>
+            <p className="text-sm text-slate-200 leading-relaxed italic">
+              «Terzo, un concerto per pianoforte [l’Op. 19] che in verità non spaccio per uno dei
+              miei migliori, così come un altro [l’Op. 15] che uscirà qui da Mollo (per informazione ai recensori
+              di Lipsia), perché i migliori li tengo ancora per me, finché non farò io stesso un viaggio; tuttavia
+              non dovrebbe essere una vergogna per voi stamparlo».
+            </p>
+          </div>
+          <button
+            onClick={() => openModal('Lettere di Beethoven sui Concerti', <LettereConcertiModal />)}
+            className="text-sm text-blue-400 hover:text-slate-200 font-semibold hover:underline"
+          >
+            → Leggi le lettere di Beethoven sui suoi concerti
+          </button>
+        </div>
+      </div>
+
+      {/* Cards compatte narrative con pulsanti Approfondisci */}
+        <div className="grid md:grid-cols-2 gap-4">
+        {/* Card 1: Contesto storico */}
+        <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700 hover:border-blue-500 transition-all min-h-[420px] flex flex-col">
+          {/* Immagine card */}
+          <div className="mb-4 rounded-lg overflow-hidden">
+            <img 
+              src="/images/vienna-1800-cityscape.jpg" 
+              alt="Vienna nel 1800"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
+            />
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Vienna alla fine del XVIII secolo.</p>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+            <BookOpen className="w-5 h-5 text-blue-400 mr-2" />
+            Contesto storico
+          </h3>
+          <p className="text-sm text-slate-300 mb-4">
+            Vienna 1792: Beethoven è già stato in città nel 1787 per studiare con Mozart, ma deve tornare rapidamente a Bonn per seguire la madre ammalata. Tornato nel 1792, trova una capitale musicale dominata da Haydn e ancora segnata dalla memoria di Mozart, scomparso solo l'anno prima.
+            Le guerre napoleoniche (1792-1815) stanno sconvolgendo l'Europa.
+          </p>
+          <button
+            onClick={() => openModal('Contesto Geopolitico', <ContestoGeopoliticoModal />)}
+            className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
+          >
+            Approfondisci 
+            <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
+        {/* Card 2: Cronologia vita Beethoven */}
+        <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700 hover:border-blue-500 transition-all min-h-[420px] flex flex-col">
+          {/* Immagine card */}
+          <div className="mb-4 rounded-lg overflow-hidden">
+            <img 
+              src="/images/beethoven-working-portrait.jpg" 
+              alt="Beethoven al lavoro"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
+            />
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Ritratto di Beethoven. Joseph Karl Stieler (1820).</p>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+            <User className="w-5 h-5 text-blue-400 mr-2" />
+            Vita di Beethoven
+          </h3>
+          <p className="text-sm text-slate-300 mb-4">
+            1770-1827: nato a Bonn, protetto da <Tooltip text="Il conte Ferdinand von Waldstein è il primo grande mecenate di Beethoven, gli offre borse di studio e lo sostiene nei viaggi a Vienna">Waldstein</Tooltip> e formato da Haydn; la crisi di Heiligenstadt (1802) segna l'inizio del suo periodo eroico. Stabilitosi a Vienna, affronta la sordità crescente mentre compone sinfonie, concerti e sonate che lo consacrano come genio immortale.
+          </p>
+          <button
+            onClick={() => openModal('Cronologia: vita di Ludwig van Beethoven', <BeethovenLifeModal />)}
+            className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
+          >
+            Approfondisci 
+            <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
+        {/* Card 3: Cronologia Concerto */}
+        <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700 hover:border-blue-500 transition-all min-h-[420px] flex flex-col">
+          {/* Immagine card */}
+          <div className="mb-4 rounded-lg overflow-hidden">
+            <img 
+              src="/images/beethoven-manuscript-op37.jpg" 
+              alt="Manoscritto del Concerto Op. 37"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
+            />
+            <p className="text-sm text-slate-400 mt-1 italic text-center">Manoscritto autografo del Concerto Op. 37.</p>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+            <Music className="w-5 h-5 text-blue-400 mr-2" />
+            Genesi del Concerto
+          </h3>
+          <p className="text-sm text-slate-300 mb-4">
+            1796-1803: abbozzi, Testamento di Heiligenstadt e prima esecuzione al Theater an der Wien con partitura incompleta; il ritorno definitivo a Vienna nel 1792 consolida la sua vocazione eroica, lettere agli editori e correzioni successive intrecciano un percorso travagliato fino all'edizione definitiva del 1803.
+          </p>
+          <button
+            onClick={() => openModal('Cronologia: Concerto n. 3 in Do minore, Op. 37', <ConcertoTimelineModal />)}
+            className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
+          >
+            Approfondisci 
+            <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
+        {/* Card 4: Pianoforti */}
+        <div className="bg-slate-800 p-5 rounded-lg shadow-lg border border-slate-700 hover:border-blue-500 transition-all min-h-[420px] flex flex-col">
+          {/* Immagine card */}
+          <div className="mb-4 rounded-lg overflow-hidden">
+            <img 
+              src="/images/erard-fortepiano-1803.jpg" 
+              alt="Fortepiano Érard del 1803"
+              className="w-full h-32 sm:h-48 object-cover rounded max-h-[40vh]"
+            />
+            <p className="text-xs text-slate-400 mt-1 italic text-center">Fortepiano Érard, inizi XIX secolo.</p>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center">
+            <Music className="w-5 h-5 text-blue-400 mr-2" />
+            I pianoforti di Beethoven
+          </h3>
+          <p className="text-sm text-slate-300 mb-4">
+            Stein, Graf ed Érard guidano l'evoluzione degli strumenti di Beethoven. L'Érard del 1803 con i suoi quattro pedali amplia le possibilità dinamiche e timbriche, aiutando il compositore a scrivere le opere del periodo eroico.
+          </p>
+          <button
+            onClick={() => openModal('I Pianoforti di Beethoven', <PianofortiModal />)}
+            className="text-sm text-blue-400 hover:text-blue-300 font-semibold flex items-center group"
+          >
+            Approfondisci 
+            <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+
+      
 
       {/* Curiosità: Concerto 0 - Espandibile */}
       <div className="bg-slate-800 rounded-lg shadow overflow-hidden border border-slate-700">
@@ -1477,8 +2316,8 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
           <div className="flex items-center space-x-3">
             <BookOpen className="w-5 h-5" />
             <div className="text-left">
-              <h3 className="text-lg font-semibold">{gymnopedieCuriosity.header}</h3>
-              <span className="text-sm opacity-90">{gymnopedieCuriosity.subheader}</span>
+              <h3 className="text-lg font-semibold">Curiosità: il "Concerto 0" (WoO 4)</h3>
+              <span className="text-sm opacity-90">1784 - Beethoven a 14 anni</span>
             </div>
           </div>
           <ChevronDown className={`w-6 h-6 transition-transform ${openConcerto0 ? 'rotate-180' : ''}`} />
@@ -1486,69 +2325,84 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
         {openConcerto0 && (
           <div className="p-6 pt-24 bg-slate-900">
             <div className="space-y-4 text-sm text-slate-300">
-              <p className="text-base text-slate-200">{gymnopedieCuriosity.summary}</p>
-              <div className="grid gap-4 md:grid-cols-3">
-                {gymnopedieCuriosity.sideNotes.map((note) => (
-                  <div key={note.label} className="bg-slate-900/50 p-4 rounded-lg border border-slate-700 shadow-sm">
-                    <p className="text-xs uppercase tracking-wide text-slate-400 mb-2">{note.label}</p>
-                    <p className="text-sm text-slate-200 leading-relaxed">{note.text}</p>
-                  </div>
-                ))}
+              <p className="text-base text-slate-200">
+                Il <strong>Concerto per pianoforte in Mib maggiore, WoO 4</strong>, è una delle prime opere di Beethoven, 
+                scritta nel <strong>1784</strong> quando aveva solo <strong>14 anni</strong>. Oggi sopravvive solo la parte per pianoforte solista, 
+                sebbene nel manoscritto vi siano alcune indicazioni per i passaggi orchestrali.
+              </p>
+
+              <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-blue-500">
+                <p className="text-sm">
+                  Talvolta indicato come <strong className="text-slate-200">Concerto n. 0</strong>, precede cronologicamente tutti gli altri concerti per pianoforte di Beethoven; <strong>viene eseguito raramente</strong>.
+                  I pianisti Howard Shelley, Ronald Brautigam e Philippos Tsalachouris, così come il musicologo e compositore svizzero
+                  Willy Hess, hanno ciascuno la propria ricostruzione del concerto.
+                </p>
               </div>
+
               <div className="bg-slate-900 p-4 rounded-lg">
                 <h4 className="text-base font-semibold text-slate-100 mb-3">Struttura</h4>
-                <ol className="space-y-1.5 list-decimal list-inside text-sm text-slate-300">
-                  {gymnopedieCuriosity.structure.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
+                <p className="mb-3">L’opera è suddivisa in tre movimenti:</p>
+                <ol className="space-y-1.5 list-decimal list-inside">
+                  <li><strong>Allegro moderato</strong></li>
+                  <li><strong>Larghetto</strong></li>
+                  <li><strong>Rondò - Allegretto</strong></li>
                 </ol>
               </div>
+
+              <div className="bg-slate-900/50 p-4 rounded-lg border-l-2 border-blue-500">
+                <p className="text-sm text-slate-200">
+                  <strong>Nota storica:</strong> Beethoven molto probabilmente compose questo concerto nel 1784, quando era ancora a Bonn. 
+                  In questo periodo, Mozart non aveva ancora composto le sue Sinfonie n. 39, 40 e 41.  
+                
+                </p>
+              </div>
+
               <div className="bg-slate-900/60 p-4 rounded-lg border border-slate-700 flex flex-col md:flex-row gap-4">
                 <div className="md:w-1/3 rounded-lg overflow-hidden border border-slate-600">
                   <img
                     src="/images/beethoven-young-contested.jpg"
-                    alt={gymnopedieCuriosity.media.imageAlt}
+                    alt="Ritratto contestato del giovane Beethoven"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="md:w-2/3 space-y-2 text-sm text-slate-300">
-                  <p className="text-sm text-slate-400 uppercase tracking-wide">Riferimento iconografico</p>
-                  <p>{gymnopedieCuriosity.media.caption}</p>
+                  <p className="text-sm text-slate-400 uppercase tracking-wide">Ritratto contestato del tredicenne Beethoven</p>
+                  <p>
+                    Anonimo pittore di Bonn, olio su tela intorno al 1783: il museo definisce l'opera come il primo ritratto autentico di Beethoven, raffigurando un tredicenne già attivo come organista, strumentista e compositore per la corte di Bonn.
+                  </p>
+                  <p>
+                    La Beethoven-Haus contesta tale identificazione, sostenendo che l'immagine ritrae un giovane sconosciuto dipinto all'inizio dell'Ottocento, ma la leggenda del bambino prodigio continua a circondare il quadro.
+                  </p>
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Lo sapevi che... <br/>Per anni Beethoven crede di essere nato nel 1772 perché il padre Johann van Beethoven ha modificato la sua data di nascita per presentarlo al pubblico come bambino prodigio e guadagnare attenzione dai mecenati.
+                  </p>
+                  <p className="text-sm text-slate-500">
+                    Tecnica: olio su tela · Datazione: c. 1783
+                  </p>
                 </div>
               </div>
-              <div className="bg-slate-800/50 p-4 rounded-lg border border-blue-500/30">
+
+              <div className="bg-slate-800/50 p-4 rounded-lg border border-blue-500/30 mt-4">
                 <h4 className="text-base font-semibold text-slate-100 mb-2 flex items-center">
-                  <span className="mr-2">🎵</span>{gymnopedieCuriosity.audio.title}
+                  <span className="mr-2">🎵</span>
+                  Ascolta l’esecuzione
                 </h4>
-                <p className="text-sm text-slate-300 mb-3">{gymnopedieCuriosity.audio.description}</p>
+                <p className="text-sm text-slate-300 mb-3">
+                  Berlin Chamber Orchestra diretta da Peter Gülke, con Eva Ander al pianoforte
+                </p>
                 <a
-                  href={gymnopedieCuriosity.audio.link}
+                  href="http://youtube.com/watch?v=0c5dWB2gFLY"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-sm font-semibold transition-colors"
                 >
                   <PlayCircle className="w-4 h-4" />
-                  {gymnopedieCuriosity.audio.ctaLabel}
+                  Ascolta su YouTube
                 </a>
               </div>
-              <div className="space-y-1 text-xs text-slate-400">
-                {gymnopedieCuriosity.footnotes.map((note, idx) => (
-                  <p key={idx}>{note}</p>
-                ))}
-              </div>
-            </div>
-            <div className="mt-4 text-center">
-              <button
-                onClick={() => openModal(gymnopedieCuriosity.modal.title, <GymnopedieCuriosityModal />)}
-                className="w-full text-sm font-semibold text-white bg-blue-600/90 rounded-full py-2 shadow-lg hover:bg-blue-500 transition"
-              >
-                {gymnopedieCuriosity.modal.buttonLabel}
-              </button>
             </div>
           </div>
         )}
-      </div>
-
       </div>
     </div>
   );
