@@ -1,5 +1,8 @@
 /* eslint-disable no-irregular-whitespace */
 import React, { useState, useEffect } from 'react';
+import { useSwipeable } from 'react-swipeable';
+// Swipe navigation tra tab principali su mobile
+const TABS = ['introduzione', 'fonti', 'analysis', 'interpreters', 'glossary', 'flashcards', 'quiz'];
 import Footer from './Footer';
 import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -4812,9 +4815,29 @@ const App = () => {
     };
   }, [activeTab]);
 
+  // Swipe handlers solo su mobile
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (isMobile) {
+        const idx = TABS.indexOf(activeTab);
+        if (idx < TABS.length - 1) setActiveTab(TABS[idx + 1]);
+      }
+    },
+    onSwipedRight: () => {
+      if (isMobile) {
+        const idx = TABS.indexOf(activeTab);
+        if (idx > 0) setActiveTab(TABS[idx - 1]);
+      }
+    },
+    trackTouch: true,
+    trackMouse: false,
+    preventScrollOnSwipe: false, // Permette lo scroll verticale
+    delta: 50, // Soglia minima di 50px per attivare lo swipe
+  });
+
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-slate-900 font-sans text-slate-100">
+      <div className="min-h-screen bg-slate-900 font-sans text-slate-100" {...swipeHandlers}>
         <Navigation
           activeTab={activeTab}
           setActiveTab={setActiveTab}
@@ -4826,7 +4849,7 @@ const App = () => {
           {/* Mobile-only hint: visible on small screens when hamburger menu is present */}
           {isMobile && activeTab === 'introduzione' && (
             <div className="max-w-5xl mx-auto px-4 py-2 mb-4 text-sm text-slate-300 bg-slate-800 rounded-lg border border-slate-700 flex items-center">
-              <span>Puoi navigare fra le varie pagine cliccando sull'icona in alto a destra</span>
+              <span>Puoi navigare fra le varie pagine cliccando sull'icona in alto a destra oppure con swipe laterale</span>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Apri menu"
