@@ -1729,7 +1729,7 @@ const IntroduzioneSection = () => {
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-slate-100 p-8 rounded-2xl shadow-2xl border border-slate-600">
-        <h2 className="text-3xl font-bold mb-6 text-blue-300">Concerto per pianoforte n. 3 in Do minore, Op. 37</h2>
+        <h2 className="text-center text-3xl font-[family:'Cinzel',serif] font-bold tracking-[0.2em] mb-8 text-blue-300 leading-tight">Concerto per pianoforte n. 3 in Do minore, Op. 37</h2>
 
         {/* Immagine hero principale */}
         <div className="mb-6 rounded-lg overflow-hidden shadow-2xl">
@@ -1738,23 +1738,71 @@ const IntroduzioneSection = () => {
             alt="Ritratto di Ludwig van Beethoven"
             className="w-full h-52 sm:h-96 object-cover max-h-[60vh]"
           />
-          <p className="text-sm text-slate-400 mt-2 italic text-center">Ritratto di Beethoven. Joseph Willibrord Mähler (1804-5).</p>
         </div>
 
-        <div className="mb-5">
-          <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            Il Concerto per pianoforte n. 3 in Do minore, Op. 37 rappresenta l’inizio dei concerti maturi di Beethoven: iniziato nel 1799, fu completato all’inizio del 1803.
+        <div className="space-y-4 text-sm text-slate-300 leading-relaxed mb-6">
+          <p>
+            Il Terzo Concerto per pianoforte in Do minore, Op. 37 rappresenta il momento in cui Beethoven emerge dall’ombra di Mozart e comincia a splendere di luce propria.
           </p>
-          <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma era sovraccarico: Beethoven eseguì nuovamente la Sinfonia n. 1, presentò per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l’oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l’eccessiva durata dell’Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrisse: «Il concerto è iniziato alle sei, ma è durato così tanto che un paio di brani non sono stati eseguiti».
+          <p>
+            Il suo fuoco nasce dalla cenere di un momento di fragilità estrema, tra il 1802 e i primi mesi del 1803: Beethoven si trova a <Tooltip text="Villaggio vicino a Vienna dove, su consiglio del medico Franz Wegeler, Beethoven cercò riposo e cure per la sordità che lo tormentava.">Heiligenstadt</Tooltip>, in piena crisi esistenziale per la sordità che avanza e per la sua solitudine.
           </p>
-          <p className="text-sm text-slate-300 mb-4 leading-relaxed">
-            Dei cinque concerti per pianoforte scritti da Beethoven, Mozart ne compose venticinque; il compositore considerava i primi due inferiori all’op. 37. Quest’ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
-          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_280px] items-start mb-6">
+          <div className="text-sm text-slate-300 leading-relaxed lg:h-[420px] lg:flex lg:flex-col lg:justify-between lg:pr-6">
+            <div className="space-y-4">
+              <p>
+                Mentre contempla il <Tooltip text="Il pensiero di togliersi la vita per sottrarsi al dolore e alla disperazione che descrive nel Testamento di Heiligenstadt.">suicidio</Tooltip>, compone una musica eroica e combattiva, lasciando traccia di quel tormento nel <Tooltip text="Lettera rivolta a se stesso che descrive la sofferenza, ma anche la decisione di non abbandonare la musica.">Testamento di Heiligenstadt</Tooltip>.
+              </p>
+              <div className="lg:hidden">
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60">
+                  <img
+                    src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
+                    alt="Prima pagina del Testamento di Heiligenstadt"
+                    className="w-full h-64 object-cover"
+                  />
+                  <p className="text-sm text-slate-100 italic text-center p-3 bg-slate-900/70 backdrop-blur-sm absolute inset-x-0 bottom-0">
+                    Prima pagina del Testamento di Heiligenstadt.
+                  </p>
+                </div>
+              </div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mt-6">
+                Prima esecuzione
+              </h3>
+            <p>
+              La prima esecuzione avviene il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma è sovraccarico: Beethoven esegue nuovamente la Sinfonia n. 1, presenta per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l’oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l’eccessiva durata dell’Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrive: «Il concerto inizia alle sei, ma dura così tanto che un paio di brani non vengono eseguiti».
+            </p>
+            <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
+              <li>Sinfonia n. 1 (riproposta, ~35 minuti)</li>
+              <li>Sinfonia n. 2 (prima assoluta, ~30 minuti)</li>
+              <li>Concerto per pianoforte n. 3 in Do minore, Op. 37 (~40 minuti)</li>
+              <li>Oratorio Cristo sul Monte degli Ulivi (~45 minuti)</li>
+            </ul>
+            <p className="text-xs italic text-slate-400">
+              Ries annota che la serata «sarebbe dovuta essere ancora più lunga», ma i tagli imposti dalle circostanze obbligano a eliminare un paio di brani.
+            </p>
+            <p>
+              Quest’ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
+            </p>
+            </div>
+          </div>
+          <div className="hidden lg:block rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60 self-start">
+            <div className="relative">
+              <img
+                src="/images/Beethoven_Heiligenstaedter_Testamento.jpg"
+                alt="Prima pagina del Testamento di Heiligenstadt"
+                className="w-full h-[420px] object-cover"
+              />
+              <p className="text-sm text-slate-100 italic text-center p-3 bg-slate-900/70 backdrop-blur-sm absolute inset-x-0 bottom-0">
+                Prima pagina del Testamento di Heiligenstadt.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Informazioni essenziali inline */}
-        <div className="grid md:grid-cols-2 gap-4 mb-5 text-sm bg-slate-900/50 p-4 rounded-lg">
+        <div className="grid md:grid-cols-2 gap-4 mt-10 mb-10 text-sm bg-slate-900/50 p-4 rounded-lg">
           <div className="space-y-1.5">
             <p><strong>Compositore:</strong> Ludwig van Beethoven (1770-1827)</p>
             <p><strong>Composizione:</strong> 1800-1803</p>
@@ -1773,9 +1821,21 @@ const IntroduzioneSection = () => {
             <p><strong>Movimenti:</strong> Allegro con brio • Largo • Rondò</p>
           </div>
         </div>
+        <p className="text-sm text-slate-300 mb-8">
+          Dei cinque concerti per pianoforte, scritti fra il 1795 e il 1810, Mozart ne compone venticinque; Beethoven considera i primi due inferiori all’op. 37. Quest’ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
+        </p>
 
         {/* Tabella I 5 Concerti in Prospettiva */}
         <div className="overflow-x-auto">
+          {/* Immagine Theater an der Wien */}
+          <div className="mb-5 rounded-lg overflow-hidden shadow-2xl">
+            <img 
+              src="/images/theater-an-der-wien-1803.jpg" 
+              alt="Theater an der Wien nel 1803"
+              className="w-full h-48 sm:h-72 object-cover rounded-lg max-h-[55vh]"
+            />
+            <p className="text-sm text-slate-400 mt-2 italic text-center">Veduta del Theater an der Wien dalla Jägergasse, Jakob Alt, c. 1815, incisione acquerellata.</p>
+          </div>
           <h4 className="text-base font-semibold text-slate-200 mb-3">I 5 Concerti in prospettiva</h4>
           <p className="text-xs italic text-slate-400 mb-3 sm:hidden">
             Scorri a destra per visualizzare tutta la tabella.
@@ -1836,16 +1896,6 @@ const IntroduzioneSection = () => {
           </table>
         </div>
         <div className="mt-4 pt-3 border-t border-slate-700">
-          {/* Immagine Theater an der Wien */}
-          <div className="mb-4 rounded-lg overflow-hidden">
-            <img 
-              src="/images/theater-an-der-wien-1803.jpg" 
-              alt="Theater an der Wien nel 1803"
-              className="w-full h-48 sm:h-72 object-cover rounded-lg max-h-[55vh]"
-            />
-            <p className="text-sm text-slate-400 mt-2 italic text-center">Theater an der Wien, Vienna - Incisione d’epoca.</p>
-          </div>
-
           <div className="bg-slate-800/50 p-6 rounded-3xl border border-slate-600 shadow-lg mb-4">
             <p className="text-sm text-slate-300 mb-2">
               Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti: 
