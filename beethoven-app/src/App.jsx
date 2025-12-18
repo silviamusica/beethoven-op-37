@@ -5220,6 +5220,26 @@ const App = () => {
     trackMouse: false,
     preventScrollOnSwipe: false, // Permette lo scroll verticale
     delta: 50, // Soglia minima di 50px per attivare lo swipe
+    // Previeni swipe su elementi scrollabili orizzontalmente (tabelle)
+    onTouchStartOrOnMouseDown: ({ event }) => {
+      if (event && event.target) {
+        // Trova se l'elemento o uno dei suoi parent ha overflow-x-auto
+        let element = event.target;
+        while (element && element !== document.body) {
+          const styles = window.getComputedStyle(element);
+          if (
+            styles.overflowX === 'auto' ||
+            styles.overflowX === 'scroll' ||
+            element.classList.contains('overflow-x-auto')
+          ) {
+            // Disabilita lo swipe per questo tocco
+            return false;
+          }
+          element = element.parentElement;
+        }
+      }
+      return true;
+    },
   });
 
   return (
