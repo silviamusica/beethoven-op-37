@@ -922,9 +922,15 @@ const FontiSection = () => {
   const [openSource, setOpenSource] = useState(null);
   const [activeTab, setActiveTab] = useState('primarie');
   const [fontiModal, setFontiModal] = useState(null);
+  const sectionRef = React.useRef(null);
   const openFontiModal = (title, content) => setFontiModal({ title, content });
   const closeFontiModal = () => setFontiModal(null);
   const toggleSource = (id) => setOpenSource(openSource === id ? null : id);
+  useEffect(() => {
+    if (openSource !== null && sectionRef.current) {
+      safeScrollTo(sectionRef.current, { behavior: 'smooth', top: 0 });
+    }
+  }, [openSource]);
 
   const fonti = [
     {
@@ -945,7 +951,7 @@ const FontiSection = () => {
             <strong>Tipologie di quaderni</strong>: le fonti distinguono i <strong>quaderni da scrivania</strong> (formato più grande, 16 pentagrammi, uso domestico e scrittura a inchiostro per sviluppare bozze sistematiche) e i <strong>quaderni tascabili</strong> (dal 1815 in poi, con esemplari già nel 1811), piccoli fascicoli di fogli piegati a metà, portati in tasca durante le passeggiate per annotare idee improvvise in matita. Seyfried e altri riferiscono che Beethoven non si separava mai dal suo taccuino e si alzava di notte per non dimenticare spunti improvvisi.
             <ul className="mt-2 space-y-2 ml-6">
               <li className="text-sm text-slate-200">
-                *Nota*: la tradizione dello "stendardo" personale viene da testimonianze che raccontano come Beethoven non uscisse mai senza un taccuino, nemmeno di notte.
+                Nota: la tradizione dello "stendardo" personale viene da testimonianze che raccontano come Beethoven non uscisse mai senza un taccuino, nemmeno di notte.
               </li>
             </ul>
           </li>
@@ -1090,7 +1096,7 @@ const FontiSection = () => {
 
         {/* Tab Content - Fonti Primarie */}
         {activeTab === 'primarie' && (
-          <div className="animate-fadeIn">
+    <div ref={sectionRef} className="animate-fadeIn">
             <p className="text-lg text-slate-300 leading-relaxed">
               Questa tabella riassume i supporti principali utilizzati da Beethoven per l&apos;Op. 37 e, più in generale, per il processo compositivo. I dettagli completi sono disponibili nelle schede di approfondimento immediatamente sotto.
             </p>
@@ -1142,8 +1148,8 @@ const FontiSection = () => {
                 Le schede seguenti si aprono con un tocco e permettono di esplorare ruolo, contenuti e casi studio per ciascuna tipologia di documento.
               </p>
               <div className="space-y-4">
-                {fonti.map(fonte => (
-                  <div key={fonte.id} className="rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
+        {fonti.map(fonte => (
+          <div key={fonte.id} className="rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
                     <button
                       onClick={() => toggleSource(fonte.id)}
                       className={`w-full flex justify-between items-center px-5 py-4 text-left transition-all ${
@@ -4736,15 +4742,6 @@ const ImparaSection = () => {
         </div>
       </div>
 
-      {/* Immagine hero - sotto il box Impara */}
-      <div className="mb-8 bg-slate-800 rounded-lg p-6 border border-slate-700">
-        <img
-          src="/images/beethoven-quiz-portrait.png"
-          alt="Ludwig van Beethoven"
-          className="w-full h-auto object-contain rounded-lg"
-        />
-      </div>
-
       {/* Contenuto della sottosezione */}
       {activeSubTab === 'memorizza' && <FlashcardsSection />}
       {activeSubTab === 'quiz' && <QuizSection />}
@@ -4897,6 +4894,7 @@ const QuizSection = () => {
   const [showResult, setShowResult] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isExplanationExpanded, setIsExplanationExpanded] = useState(false);
+  const [flashcardDetailVisible, setFlashcardDetailVisible] = useState(false);
 
   const startQuiz = (difficulty) => {
     const filtered = quizData.filter(q => q.difficulty === difficulty);
@@ -4915,6 +4913,10 @@ const QuizSection = () => {
       setScore(score + 1);
     }
   };
+
+  useEffect(() => {
+    setFlashcardDetailVisible(false);
+  }, [currentQuestion]);
 
   const handleNext = () => {
     if (currentQuestion < shuffledQuestions.length - 1) {
@@ -5059,6 +5061,7 @@ const QuizSection = () => {
   }
 
   const currentQ = shuffledQuestions[currentQuestion];
+  const flashcardDetail = flashcardsData.find(card => card.q === currentQ?.question)?.details;
 
   return (
     <div className="max-w-3xl mx-auto animate-fadeIn">
@@ -5146,6 +5149,21 @@ const QuizSection = () => {
                   )}
                 </div>
               </div>
+              {flashcardDetail && (
+                <div className="mt-4">
+                  <button
+                    onClick={() => setFlashcardDetailVisible(!flashcardDetailVisible)}
+                    className="text-xs font-semibold text-blue-300 hover:text-blue-200 transition-colors"
+                  >
+                    {flashcardDetailVisible ? 'Nascondi approfondimento flashcard' : 'Approfondisci con la flashcard corrispondente'}
+                  </button>
+                  {flashcardDetailVisible && (
+                    <p className="mt-2 text-sm text-slate-300 leading-relaxed bg-slate-900/60 p-3 rounded-lg border border-slate-700">
+                      {flashcardDetail}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
