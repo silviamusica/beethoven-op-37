@@ -130,56 +130,286 @@ const movementsData = [
 // Flashcards generate automaticamente dai dati del quiz
 const flashcardsData = [
   // BASE
-  { q: 'In quale anno avvenne la prima esecuzione assoluta?', a: '1803', difficulty: 'base' },
-  { q: 'In quali anni Beethoven arrivò a Vienna (prima visita e stabilizzazione definitiva)?', a: '1787 (prima volta) e 1792 (stabile)', difficulty: 'base' },
-  { q: 'Quale concerto di Mozart è il modello principale dell\'Op. 37?', a: 'K. 491 in Do minore', difficulty: 'base' },
-  { q: 'In quale tonalità finisce il terzo movimento?', a: 'Do maggiore', difficulty: 'base' },
-  { q: 'A chi fu dedicato il concerto?', a: 'Principe Luigi Ferdinando di Prussia', difficulty: 'base' },
-  { q: 'In quale teatro avvenne la prima esecuzione?', a: 'Theater an der Wien', difficulty: 'base' },
-  { q: 'In quale tonalità è il secondo movimento?', a: 'Mi maggiore', difficulty: 'base' },
-  { q: 'Quante cadenze sono scritte da Beethoven per il primo movimento?', a: 'Tre', difficulty: 'base' },
-  { q: 'Quale editore pubblicò per primo il concerto?', a: 'Bureau des Arts et d\'Industrie', difficulty: 'base' },
-  { q: 'In che anno fu pubblicato il concerto?', a: '1806', difficulty: 'base' },
+  {
+    q: 'In quale anno avvenne la prima esecuzione assoluta?',
+    a: '1803',
+    difficulty: 'base',
+    details: 'La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien. Beethoven stesso suonò come solista in un concerto che includeva anche la prima della Seconda Sinfonia e l\'oratorio "Cristo sul Monte degli Ulivi".'
+  },
+  {
+    q: 'In quali anni Beethoven arrivò a Vienna (prima visita e stabilizzazione definitiva)?',
+    a: '1787 (prima volta) e 1792 (stabile)',
+    difficulty: 'base',
+    details: 'Beethoven visitò Vienna per la prima volta nel 1787 per studiare con Mozart, ma dovette tornare a Bonn per la malattia della madre. Nel 1792 si stabilì definitivamente a Vienna su invito del Conte Waldstein per studiare con Haydn.'
+  },
+  {
+    q: 'Quale concerto di Mozart è il modello principale dell\'Op. 37?',
+    a: 'K. 491 in Do minore',
+    difficulty: 'base',
+    details: 'Il Concerto K. 491 di Mozart, anch\'esso in Do minore, fu un modello fondamentale per Beethoven. Lo stesso Beethoven affermò: "Non saremo mai in grado di fare qualcosa di simile", riconoscendo la perfezione di quest\'opera mozartiana.'
+  },
+  {
+    q: 'In quale tonalità finisce il terzo movimento?',
+    a: 'Do maggiore',
+    difficulty: 'base',
+    details: 'Il terzo movimento inizia in Do minore ma conclude trionfalmente in Do maggiore, una trasformazione da oscurità a luce tipica dello stile eroico beethoveniano. Questo passaggio rappresenta una vittoria conquistata attraverso la lotta.'
+  },
+  {
+    q: 'A chi fu dedicato il concerto?',
+    a: 'Principe Luigi Ferdinando di Prussia',
+    difficulty: 'base',
+    details: 'Il Principe Luigi Ferdinando di Prussia (1772-1806) era egli stesso un pianista di talento e ammiratore di Beethoven. Morì in battaglia durante le guerre napoleoniche, solo tre anni dopo la pubblicazione del concerto.'
+  },
+  {
+    q: 'In quale teatro avvenne la prima esecuzione?',
+    a: 'Theater an der Wien',
+    difficulty: 'base',
+    details: 'Il Theater an der Wien era uno dei principali teatri viennesi, inaugurato nel 1801. Beethoven ebbe un appartamento nel teatro tra il 1803 e il 1804, dove compose opere come la "Leonore" (prima versione del Fidelio).'
+  },
+  {
+    q: 'In quale tonalità è il secondo movimento?',
+    a: 'Mi maggiore',
+    difficulty: 'base',
+    details: 'Il salto da Do minore a Mi maggiore crea uno "shock" tonale inaspettato. Questa distanza cromatica di terza maggiore era audace per l\'epoca e contribuisce al carattere visionario dell\'opera.'
+  },
+  {
+    q: 'Quante cadenze sono scritte da Beethoven per il primo movimento?',
+    a: 'Tre',
+    difficulty: 'base',
+    details: 'Beethoven scrisse tre cadenze diverse per il primo movimento in momenti diversi della sua vita. Questo era inusuale: i compositori classici lasciavano spesso ai solisti la libertà di improvvisare le cadenze.'
+  },
+  {
+    q: 'Quale editore pubblicò per primo il concerto?',
+    a: 'Bureau des Arts et d\'Industrie',
+    difficulty: 'base',
+    details: 'Il Bureau des Arts et d\'Industrie era una casa editrice viennese fondata nel 1801. Pubblicò molte opere di Beethoven nei primi anni dell\'Ottocento, incluso questo concerto nel 1806.'
+  },
+  {
+    q: 'In che anno fu pubblicato il concerto?',
+    a: '1806',
+    difficulty: 'base',
+    details: 'Nonostante la prima esecuzione del 1803, il concerto fu pubblicato solo nel 1806. Questo ritardo di tre anni era comune all\'epoca, quando Beethoven spesso negoziava a lungo con gli editori per ottenere le migliori condizioni.'
+  },
 
   // INTERMEDIO
-  { q: 'Chi era il direttore durante la prima, che vide "geroglifici egizi" invece della partitura?', a: 'Ignaz von Seyfried', difficulty: 'intermedio' },
-  { q: 'Come entra il pianoforte nel primo movimento?', a: 'Con tre scale ascendenti fortissimo in doppie ottave', difficulty: 'intermedio' },
-  { q: 'Qual è l\'innovazione tecnica che Beethoven sfruttò nel secondo movimento?', a: 'Uso pionieristico del pedale di risonanza', difficulty: 'intermedio' },
-  { q: 'Cosa scrisse Beethoven nel Testamento di Heiligenstadt?', a: 'La disperazione per la sordità', difficulty: 'intermedio' },
-  { q: 'Quale elemento inusuale compare nel terzo movimento?', a: 'Un fugato elaborato', difficulty: 'intermedio' },
-  { q: 'Quale altro lavoro fu eseguito nella stessa serata della prima dell\'Op. 37?', a: 'La Seconda Sinfonia', difficulty: 'intermedio' },
-  { q: 'Come cambia il ruolo del solista rispetto ai concerti mozartiani?', a: 'Si oppone all\'orchestra invece di dialogare', difficulty: 'intermedio' },
-  { q: 'Quale strumento espone il secondo tema nel primo movimento?', a: 'Clarinetto e violini', difficulty: 'intermedio' },
-  { q: 'Chi ha registrato l\'Op. 37 con Otto Klemperer nel 1957?', a: 'Arrau', difficulty: 'intermedio' },
-  { q: 'Quale interprete è famoso per l\'approccio "cristallino e apollineo"?', a: 'Michelangeli', difficulty: 'intermedio' },
-  { q: 'Chi suonò con l\'Orchestra della RAI di Torino nel 1962?', a: 'Kempff', difficulty: 'intermedio' },
-  { q: 'Quale interprete usa un approccio "intimista e cantabile"?', a: 'Kempff', difficulty: 'intermedio' },
-  { q: 'Quanti flauti sono nell\'organico orchestrale dell\'Op. 37?', a: '2', difficulty: 'intermedio' },
-  { q: 'In quale tonalità sono i clarinetti dell\'Op. 37?', a: 'Si♭', difficulty: 'intermedio' },
-  { q: 'Quale pianoforte possedette Beethoven dal 1803?', a: 'Érard', difficulty: 'intermedio' },
-  { q: 'Cosa caratterizza il carattere del primo tema?', a: 'Marziale con ritmo puntato', difficulty: 'intermedio' },
-  { q: 'Come finisce la cadenza del primo movimento?', a: 'Con passaggio dolce e liquido', difficulty: 'intermedio' },
-  { q: 'Quando Napoleone entrò a Vienna?', a: '1809', difficulty: 'intermedio' },
-  { q: 'Chi invitò Beethoven a Vienna nel 1792?', a: 'Conte Waldstein', difficulty: 'intermedio' },
-  { q: 'Qual è la forma del primo movimento?', a: 'Forma sonata con doppia esposizione', difficulty: 'intermedio' },
-  { q: 'Qual è il carattere principale del Do minore beethoveniano?', a: 'Eroico e tempestoso', difficulty: 'intermedio' },
-  { q: 'Quale opera precedente di Beethoven in Do minore è chiamata "Patetica"?', a: 'Op. 13', difficulty: 'intermedio' },
-  { q: 'Che cosa caratterizza l\'ingresso del solista nel primo movimento?', a: 'Tre scale ascendenti fortissimo', difficulty: 'intermedio' },
-  { q: 'Quante battute dura circa l\'esposizione orchestrale (ESPOSIZIONE 1)?', a: '111 battute', difficulty: 'intermedio' },
-  { q: 'La distanza tonale tra primo e secondo movimento (Do minore - Mi maggiore) è chiamata:', a: 'Terza cromatica', difficulty: 'intermedio' },
-  { q: 'Quale innovazione compare nella coda finale del primo movimento?', a: 'Il piano continua durante il TUTTI', difficulty: 'intermedio' },
-  { q: 'Nel secondo movimento, quali strumenti dialogano principalmente con il pianoforte?', a: 'Fagotti e legni', difficulty: 'intermedio' },
-  { q: 'Il terzo movimento è in forma:', a: 'Rondò', difficulty: 'intermedio' },
-  { q: 'Cosa disse Beethoven del concerto K. 491 di Mozart?', a: '"Non saremo mai in grado di fare qualcosa di simile"', difficulty: 'intermedio' },
-  { q: 'In quale documento Beethoven scrisse della sua disperazione per la sordità?', a: 'Testamento di Heiligenstadt', difficulty: 'intermedio' },
-  { q: 'Quale altra grande opera Beethoven completò nello stesso anno del concerto (1802)?', a: 'Seconda Sinfonia', difficulty: 'intermedio' },
-  { q: 'Quale periodo stilistico di Beethoven inizia con opere come l\'Op. 37?', a: 'Periodo eroico', difficulty: 'intermedio' },
-  { q: 'Quale caratteristica distingue il pianoforte Érard che Beethoven ricevette nel 1803?', a: 'Aveva il pedale di risonanza innovativo', difficulty: 'intermedio' },
-  { q: 'In che anno iniziò a manifestarsi la sordità di Beethoven?', a: '1796-98', difficulty: 'intermedio' },
+  {
+    q: 'Chi era il direttore durante la prima, che vide "geroglifici egizi" invece della partitura?',
+    a: 'Ignaz von Seyfried',
+    difficulty: 'intermedio',
+    details: 'Ignaz von Seyfried raccontò nelle sue memorie che la partitura orchestrale di Beethoven era praticamente illeggibile, piena di correzioni e scarabocchi. Beethoven aveva l\'abitudine di scrivere in modo affrettato e di fare continue modifiche fino all\'ultimo momento.'
+  },
+  {
+    q: 'Come entra il pianoforte nel primo movimento?',
+    a: 'Con tre scale ascendenti fortissimo in doppie ottave',
+    difficulty: 'intermedio',
+    details: 'Questo ingresso drammatico e assertivo era rivoluzionario: invece di un dialogo gentile con l\'orchestra come in Mozart, Beethoven fa "irrompere" il solista con una dichiarazione di forza. È un gesto eroico che definisce il nuovo ruolo del pianista.'
+  },
+  {
+    q: 'Qual è l\'innovazione tecnica che Beethoven sfruttò nel secondo movimento?',
+    a: 'Uso pionieristico del pedale di risonanza',
+    difficulty: 'intermedio',
+    details: 'Il pianoforte Érard che Beethoven ricevette in dono nel 1803 aveva un innovativo pedale di risonanza. Beethoven lo sfruttò magistralmente nel secondo movimento per creare atmosfere liquide e sospese, impossibili sui pianoforti precedenti.'
+  },
+  {
+    q: 'Cosa scrisse Beethoven nel Testamento di Heiligenstadt?',
+    a: 'La disperazione per la sordità',
+    difficulty: 'intermedio',
+    details: 'Nel Testamento di Heiligenstadt (ottobre 1802), Beethoven confessò ai fratelli la sua profonda disperazione per la sordità progressiva, arrivando persino a contemplare il suicidio. Tuttavia, decise di continuare a vivere per la sua arte. Il concerto Op. 37 fu composto in questo periodo drammatico.'
+  },
+  {
+    q: 'Quale elemento inusuale compare nel terzo movimento?',
+    a: 'Un fugato elaborato',
+    difficulty: 'intermedio',
+    details: 'L\'inserimento di un fugato contrappuntistico in un finale di concerto era audace e inusuale. Beethoven dimostra di voler elevare il genere del concerto oltre il puro intrattenimento virtuosistico, fondendo brillantezza e profondità intellettuale alla Bach.'
+  },
+  {
+    q: 'Quale altro lavoro fu eseguito nella stessa serata della prima dell\'Op. 37?',
+    a: 'La Seconda Sinfonia',
+    difficulty: 'intermedio',
+    details: 'Il concerto del 5 aprile 1803 fu un evento monumentale: oltre al Concerto Op. 37, venne eseguita la prima della Seconda Sinfonia e l\'oratorio "Cristo sul Monte degli Ulivi". Beethoven diresse e suonò in un maratona musicale che durò oltre tre ore.'
+  },
+  {
+    q: 'Come cambia il ruolo del solista rispetto ai concerti mozartiani?',
+    a: 'Si oppone all\'orchestra invece di dialogare',
+    difficulty: 'intermedio',
+    details: 'Nei concerti di Mozart, solista e orchestra dialogano come partner. In Beethoven, il solista diventa un eroe che si oppone, lotta e infine trionfa sull\'orchestra. Questo riflette l\'ideale romantico dell\'individuo che affronta il destino.'
+  },
+  {
+    q: 'Quale strumento espone il secondo tema nel primo movimento?',
+    a: 'Clarinetto e violini',
+    difficulty: 'intermedio',
+    details: 'Il secondo tema è affidato al clarinetto e ai violini in un delicato dialogo. Questo timbro più morbido crea un contrasto con l\'aggressività del primo tema marziale, seguendo la dialettica drammatica tipica della forma sonata beethoveniana.'
+  },
+  {
+    q: 'Chi ha registrato l\'Op. 37 con Otto Klemperer nel 1957?',
+    a: 'Arrau',
+    difficulty: 'intermedio',
+    details: 'La registrazione di Claudio Arrau con Otto Klemperer è considerata una delle interpretazioni più monumentali dell\'Op. 37. Arrau apporta un suono pieno e romantico, mentre Klemperer offre un accompagnamento orchestrale maestoso e architettonico.'
+  },
+  {
+    q: 'Quale interprete è famoso per l\'approccio "cristallino e apollineo"?',
+    a: 'Michelangeli',
+    difficulty: 'intermedio',
+    details: 'Arturo Benedetti Michelangeli era celebre per la sua tecnica perfetta e il tocco cristallino. Il suo approccio "apollineo" privilegia la chiarezza, la precisione e il controllo, in contrasto con interpretazioni più "dionisiache" ed emotive.'
+  },
+  {
+    q: 'Chi suonò con l\'Orchestra della RAI di Torino nel 1962?',
+    a: 'Kempff',
+    difficulty: 'intermedio',
+    details: 'Wilhelm Kempff registrò l\'Op. 37 con la RAI di Torino nel 1962. La sua interpretazione è caratterizzata da un approccio intimista e poetico, con particolare attenzione al cantabile e alle sfumature dinamiche più sottili.'
+  },
+  {
+    q: 'Quale interprete usa un approccio "intimista e cantabile"?',
+    a: 'Kempff',
+    difficulty: 'intermedio',
+    details: 'Wilhelm Kempff privilegia il canto lirico e l\'intimità espressiva rispetto alla potenza. Il suo Beethoven è più introspettivo e cameristico, cercando la voce interiore anche nei passaggi più drammatici del concerto.'
+  },
+  {
+    q: 'Quanti flauti sono nell\'organico orchestrale dell\'Op. 37?',
+    a: '2',
+    difficulty: 'intermedio',
+    details: 'L\'organico include 2 flauti, 2 oboi, 2 clarinetti in Si♭, 2 fagotti, 2 corni in Do, 2 trombe in Do, timpani e archi. È un organico classico, non ancora espanso come nelle sinfonie successive di Beethoven.'
+  },
+  {
+    q: 'In quale tonalità sono i clarinetti dell\'Op. 37?',
+    a: 'Si♭',
+    difficulty: 'intermedio',
+    details: 'I clarinetti in Si♭ erano gli strumenti standard per musica in tonalità con pochi bemolli o diesis. Il timbro caldo del clarinetto in Si♭ si adatta perfettamente al carattere lirico del secondo tema.'
+  },
+  {
+    q: 'Quale pianoforte possedette Beethoven dal 1803?',
+    a: 'Érard',
+    difficulty: 'intermedio',
+    details: 'Nel 1803 Beethoven ricevette in dono un pianoforte Érard dalla celebre casa costruttrice parigina. Questo strumento aveva innovazioni tecniche come il pedale di risonanza, che Beethoven sfruttò nel secondo movimento del concerto.'
+  },
+  {
+    q: 'Cosa caratterizza il carattere del primo tema?',
+    a: 'Marziale con ritmo puntato',
+    difficulty: 'intermedio',
+    details: 'Il primo tema ha un carattere marziale con ritmo puntato (lunga-breve) tipico delle marce militari. Questo conferisce alla musica un\'energia determinata e un senso di avanzamento inesorabile, evocando l\'immagine di un esercito in marcia.'
+  },
+  {
+    q: 'Come finisce la cadenza del primo movimento?',
+    a: 'Con passaggio dolce e liquido',
+    difficulty: 'intermedio',
+    details: 'Dopo i virtuosismi della cadenza, Beethoven conclude con un passaggio pianissimo dolce e liquido che prepara il ritorno dell\'orchestra. Questo contrasto tra forza e dolcezza è tipico della dialettica espressiva beethoveniana.'
+  },
+  {
+    q: 'Quando Napoleone entrò a Vienna?',
+    a: '1809',
+    difficulty: 'intermedio',
+    details: 'Napoleone entrò a Vienna nel 1809, durante il periodo della composizione della Quinta Sinfonia. Beethoven inizialmente ammirò Napoleone come simbolo degli ideali rivoluzionari, ma si disillusionò quando questi si proclamò imperatore.'
+  },
+  {
+    q: 'Chi invitò Beethoven a Vienna nel 1792?',
+    a: 'Conte Waldstein',
+    difficulty: 'intermedio',
+    details: 'Il Conte Ferdinand von Waldstein fu il mecenate che aiutò Beethoven a trasferirsi a Vienna nel 1792. Gli scrisse profeticamente: "riceverete lo spirito di Mozart dalle mani di Haydn". A lui è dedicata la celebre Sonata Op. 53 "Waldstein".'
+  },
+  {
+    q: 'Qual è la forma del primo movimento?',
+    a: 'Forma sonata con doppia esposizione',
+    difficulty: 'intermedio',
+    details: 'Il primo movimento usa la forma sonata con doppia esposizione: prima l\'orchestra espone i temi (Esposizione 1), poi il solista li riprende con variazioni (Esposizione 2). Seguono sviluppo, ripresa e cadenza, secondo lo schema del concerto classico.'
+  },
+  {
+    q: 'Qual è il carattere principale del Do minore beethoveniano?',
+    a: 'Eroico e tempestoso',
+    difficulty: 'intermedio',
+    details: 'La tonalità di Do minore ha un significato speciale per Beethoven: è la tonalità dell\'eroismo tragico, della lotta e della determinazione. La troviamo anche nella Sonata Patetica (Op. 13), nella Quinta Sinfonia e nell\'Ouverture Coriolano.'
+  },
+  {
+    q: 'Quale opera precedente di Beethoven in Do minore è chiamata "Patetica"?',
+    a: 'Op. 13',
+    difficulty: 'intermedio',
+    details: 'La Sonata per pianoforte Op. 13 "Patetica" (1798) è un\'opera giovanile in Do minore che anticipa molti elementi del concerto: il contrasto drammatico, l\'uso del registro grave, e la trasformazione da oscurità a luce (sebbene nella sonata rimanga in minore).'
+  },
+  {
+    q: 'Che cosa caratterizza l\'ingresso del solista nel primo movimento?',
+    a: 'Tre scale ascendenti fortissimo',
+    difficulty: 'intermedio',
+    details: 'Le tre scale ascendenti in doppie ottave fortissimo sono un gesto rivoluzionario: invece di aspettare educatamente il proprio turno, il solista "irrompe" sulla scena con una dichiarazione di potenza. È l\'ingresso di un eroe, non di un gentiluomo.'
+  },
+  {
+    q: 'Quante battute dura circa l\'esposizione orchestrale (ESPOSIZIONE 1)?',
+    a: '111 battute',
+    difficulty: 'intermedio',
+    details: 'L\'esposizione orchestrale iniziale è straordinariamente lunga (circa 111 battute), molto più estesa di quelle mozartiane. Questo permette a Beethoven di sviluppare pienamente il materiale tematico prima dell\'ingresso del solista.'
+  },
+  {
+    q: 'La distanza tonale tra primo e secondo movimento (Do minore - Mi maggiore) è chiamata:',
+    a: 'Terza cromatica',
+    difficulty: 'intermedio',
+    details: 'Il salto da Do minore a Mi maggiore è un intervallo di terza maggiore cromatica. Questa relazione tonale inaspettata crea uno "shock" armonico che era audace per l\'epoca classica, dove si preferivano tonalità più vicine.'
+  },
+  {
+    q: 'Quale innovazione compare nella coda finale del primo movimento?',
+    a: 'Il piano continua durante il TUTTI',
+    difficulty: 'intermedio',
+    details: 'Nella coda finale, Beethoven innova facendo continuare il pianoforte durante il tutti orchestrale finale, invece di tacere come da tradizione. Questo crea un climax di potenza sonora e afferma il ruolo egualitario del solista rispetto all\'orchestra.'
+  },
+  {
+    q: 'Nel secondo movimento, quali strumenti dialogano principalmente con il pianoforte?',
+    a: 'Fagotti e legni',
+    difficulty: 'intermedio',
+    details: 'Il secondo movimento è caratterizzato da un dialogo intimo tra il pianoforte e i legni, in particolare i fagotti. Questo timbro scuro e vellutato dei fagotti si fonde perfettamente con il registro medio del pianoforte, creando atmosfere notturne.'
+  },
+  {
+    q: 'Il terzo movimento è in forma:',
+    a: 'Rondò',
+    difficulty: 'intermedio',
+    details: 'Il finale è un rondò: una forma dove un tema principale (ritornello) alterna con episodi contrastanti (A-B-A-C-A). Beethoven arricchisce questa forma con un fugato contrappuntistico, elevando il genere oltre la semplice brillantezza virtuosistica.'
+  },
+  {
+    q: 'Cosa disse Beethoven del concerto K. 491 di Mozart?',
+    a: '"Non saremo mai in grado di fare qualcosa di simile"',
+    difficulty: 'intermedio',
+    details: 'Questa affermazione testimonia l\'enorme ammirazione di Beethoven per Mozart, nonostante la sua ambizione di superare i maestri. Il K. 491, anch\'esso in Do minore, rimase per Beethoven un modello insuperabile di perfezione formale ed espressiva.'
+  },
+  {
+    q: 'In quale documento Beethoven scrisse della sua disperazione per la sordità?',
+    a: 'Testamento di Heiligenstadt',
+    difficulty: 'intermedio',
+    details: 'Il Testamento di Heiligenstadt (ottobre 1802) è una lettera mai spedita ai fratelli, in cui Beethoven confessa la sua disperazione per la sordità. È un documento toccante che rivela la sua crisi esistenziale proprio mentre componeva l\'Op. 37.'
+  },
+  {
+    q: 'Quale altra grande opera Beethoven completò nello stesso anno del concerto (1802)?',
+    a: 'Seconda Sinfonia',
+    difficulty: 'intermedio',
+    details: 'La Seconda Sinfonia in Re maggiore fu completata nel 1802 ed eseguita nella stessa serata della prima del Concerto Op. 37 (5 aprile 1803). Entrambe le opere mostrano l\'energia e l\'ottimismo dello stile eroico emergente, nonostante la crisi personale di Beethoven.'
+  },
+  {
+    q: 'Quale periodo stilistico di Beethoven inizia con opere come l\'Op. 37?',
+    a: 'Periodo eroico',
+    difficulty: 'intermedio',
+    details: 'L\'Op. 37 segna l\'inizio del cosiddetto "periodo eroico" di Beethoven (1803-1814), caratterizzato da opere monumentali come la Terza Sinfonia "Eroica", la Quinta Sinfonia, e il Fidelio. Lo stile diventa più drammatico, espansivo e rivoluzionario.'
+  },
+  {
+    q: 'Quale caratteristica distingue il pianoforte Érard che Beethoven ricevette nel 1803?',
+    a: 'Aveva il pedale di risonanza innovativo',
+    difficulty: 'intermedio',
+    details: 'Il pianoforte Érard aveva meccanismi innovativi incluso il pedale di risonanza (sustain pedal), che permette di far risuonare tutte le corde contemporaneamente. Beethoven sfruttò questa innovazione per creare le atmosfere liquide e sospese del secondo movimento.'
+  },
+  {
+    q: 'In che anno iniziò a manifestarsi la sordità di Beethoven?',
+    a: '1796-98',
+    difficulty: 'intermedio',
+    details: 'I primi sintomi della sordità apparvero intorno al 1796-98, quando Beethoven aveva circa 26-28 anni. Inizialmente erano acufeni e difficoltà a sentire le frequenze alte, che progressivamente peggiorarono fino alla sordità quasi totale negli ultimi anni di vita.'
+  },
 
   // AVANZATO
-  { q: 'Quale relazione tonale crea lo "shock" tra primo e secondo movimento?', a: 'Salto cromatico di terza (Do minore → Mi maggiore)', difficulty: 'avanzato' },
-  { q: 'Cosa rappresenta il Esposizione 4 (R4) finale?', a: 'Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I', difficulty: 'avanzato' }
+  {
+    q: 'Quale relazione tonale crea lo "shock" tra primo e secondo movimento?',
+    a: 'Salto cromatico di terza (Do minore → Mi maggiore)',
+    difficulty: 'avanzato',
+    details: 'Il passaggio da Do minore (primo movimento) a Mi maggiore (secondo movimento) rappresenta un salto di terza maggiore cromatica. Questa relazione tonale era straordinariamente audace per il 1803. La norma classica prevedeva movimenti in tonalità vicine (relativa maggiore/minore, dominante, sottodominante). Questo "shock" armonico crea un effetto visionario, quasi come aprire una porta su un mondo completamente diverso. La scelta riflette l\'ambizione di Beethoven di espandere i confini formali e tonali del concerto classico.'
+  },
+  {
+    q: 'Cosa rappresenta il Esposizione 4 (R4) finale?',
+    a: 'Una deformazione della norma classica con risoluzione ambigua V7/iv invece di I',
+    difficulty: 'avanzato',
+    details: 'Nell\'analisi formale del primo movimento, la quarta ripresa (R4) nella coda finale mostra una deformazione della norma classica. Invece di una chiara risoluzione sulla tonica (Do minore), Beethoven introduce una risoluzione armonica ambigua su V7/iv (dominante settima del quarto grado). Questa ambiguità armonica crea tensione e instabilità persino nel momento conclusivo, riflettendo il carattere inquieto e rivoluzionario dell\'opera. È un esempio della tendenza beethoveniana a problematizzare le convenzioni formali.'
+  }
 ];
 
 const interpretersData = [
@@ -352,7 +582,8 @@ const quizData = [
     question: "In quale anno avvenne la prima esecuzione assoluta?",
     options: ["1800", "1802", "1803", "1805"],
     correct: 2,
-    difficulty: "base"
+    difficulty: "base",
+    explanation: "La prima esecuzione avvenne il 5 aprile 1803 al Theater an der Wien. Beethoven stesso suonò come solista in un concerto che includeva anche la prima della Seconda Sinfonia e l'oratorio 'Cristo sul Monte degli Ulivi'. Fu un evento monumentale che durò oltre tre ore."
   },
   {
     question: "In quali anni Beethoven arrivò a Vienna (prima visita e stabilizzazione definitiva)?",
@@ -363,7 +594,8 @@ const quizData = [
       "1800 (solo)"
     ],
     correct: 0,
-    difficulty: "base"
+    difficulty: "base",
+    explanation: "Beethoven visitò Vienna per la prima volta nel 1787 per studiare con Mozart, ma dovette tornare a Bonn per la malattia della madre. Nel 1792 si stabilì definitivamente a Vienna su invito del Conte Waldstein per studiare con Haydn, diventando rapidamente uno dei pianisti più celebri della città."
   },
   {
     question: "Quale concerto di Mozart è il modello principale dell’Op. 37?",
@@ -375,7 +607,8 @@ const quizData = [
     question: "In quale tonalità finisce il terzo movimento?",
     options: ["Do minore", "Do maggiore", "Mi maggiore", "Mib maggiore"],
     correct: 1,
-    difficulty: "base"
+    difficulty: "base",
+    explanation: "Il terzo movimento inizia in Do minore ma conclude trionfalmente in Do maggiore. Questa trasformazione da oscurità a luce è tipica dello stile eroico beethoveniano e rappresenta una vittoria conquistata attraverso la lotta - un tema centrale nella filosofia musicale di Beethoven."
   },
   {
     question: "A chi fu dedicato il concerto?",
@@ -4488,6 +4721,7 @@ const FlashcardsSection = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState('tutti');
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Filtra le flashcard in base alla difficoltà selezionata
   const filteredCards = selectedDifficulty === 'tutti'
@@ -4496,11 +4730,13 @@ const FlashcardsSection = () => {
 
   const nextCard = () => {
     setIsFlipped(false);
+    setIsExpanded(false);
     setTimeout(() => setCurrentCard((prev) => (prev + 1) % filteredCards.length), 300);
   };
 
   const prevCard = () => {
     setIsFlipped(false);
+    setIsExpanded(false);
     setTimeout(() => setCurrentCard((prev) => (prev - 1 + filteredCards.length) % filteredCards.length), 300);
   };
 
@@ -4508,6 +4744,7 @@ const FlashcardsSection = () => {
     setSelectedDifficulty(difficulty);
     setCurrentCard(0);
     setIsFlipped(false);
+    setIsExpanded(false);
   };
 
   const getDifficultyColor = (difficulty) => {
@@ -4612,15 +4849,49 @@ const FlashcardsSection = () => {
 
           {/* Back */}
           <div
-            className="absolute w-full h-full bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-10 flex flex-col justify-center items-center shadow-2xl border-4 border-slate-600"
+            className="absolute w-full h-full bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-10 flex flex-col justify-center items-center shadow-2xl border-4 border-slate-600 overflow-y-auto"
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="bg-blue-500/20 p-4 rounded-full mb-6">
               <CheckCircle className="w-16 h-16 text-blue-400" />
             </div>
-            <p className="text-xl text-center text-slate-100 leading-relaxed font-medium px-4">
+            <p className="text-xl text-center text-slate-100 leading-relaxed font-medium px-4 mb-4">
               {filteredCards[currentCard].a}
             </p>
+
+            {filteredCards[currentCard].details && (
+              <div className="w-full px-4">
+                {!isExpanded ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsExpanded(true);
+                    }}
+                    className="mx-auto flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold"
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                    Leggi tutto
+                  </button>
+                ) : (
+                  <div className="space-y-2">
+                    <p className="text-sm text-slate-300 leading-relaxed text-left bg-slate-900/50 p-4 rounded-lg border border-slate-600">
+                      {filteredCards[currentCard].details}
+                    </p>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsExpanded(false);
+                      }}
+                      className="mx-auto flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold"
+                    >
+                      <ChevronDown className="w-4 h-4 rotate-180" />
+                      Chiudi
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -4668,6 +4939,7 @@ const QuizSection = () => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isExplanationExpanded, setIsExplanationExpanded] = useState(false);
 
   const startQuiz = (difficulty) => {
     const filtered = quizData.filter(q => q.difficulty === difficulty);
@@ -4691,6 +4963,7 @@ const QuizSection = () => {
     if (currentQuestion < shuffledQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
+      setIsExplanationExpanded(false);
     } else {
       setShowResult(true);
     }
@@ -4901,9 +5174,27 @@ const QuizSection = () => {
             <div className="mt-6 p-4 bg-slate-900 border border-slate-600 rounded-lg">
               <div className="flex items-start space-x-2">
                 <BookOpen className="w-5 h-5 text-blue-400 mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-sm font-semibold text-blue-400 mb-1">Approfondimento:</p>
-                  <p className="text-sm text-slate-300 leading-relaxed">{currentQ.explanation}</p>
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-blue-400 mb-2">Approfondimento:</p>
+
+                  {currentQ.explanation.length > 150 ? (
+                    // Spiegazione lunga - usa espansione
+                    <div>
+                      <p className="text-sm text-slate-300 leading-relaxed mb-2">
+                        {isExplanationExpanded ? currentQ.explanation : currentQ.explanation.substring(0, 150) + '...'}
+                      </p>
+                      <button
+                        onClick={() => setIsExplanationExpanded(!isExplanationExpanded)}
+                        className="flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors text-xs font-semibold"
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform ${isExplanationExpanded ? 'rotate-180' : ''}`} />
+                        {isExplanationExpanded ? 'Chiudi' : 'Leggi tutto'}
+                      </button>
+                    </div>
+                  ) : (
+                    // Spiegazione breve - mostra tutto
+                    <p className="text-sm text-slate-300 leading-relaxed">{currentQ.explanation}</p>
+                  )}
                 </div>
               </div>
             </div>
