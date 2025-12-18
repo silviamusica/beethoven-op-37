@@ -1411,8 +1411,8 @@ const IntroduzioneSection = () => {
       </div>
 
       <p className="text-sm text-slate-300 leading-relaxed">
-        Le lettere di Beethoven agli editori e agli amici rivelano il suo atteggiamento critico verso i propri lavori e
-        il contesto in cui i concerti furono composti e pubblicati.
+        La lettere di Beethoven sono documenti primari essenziali per ricostruire la sua vita e il suo processo creativo; per fortuna,
+        ne abbiamo conservate una considerevole quantità. Puoi approfondire nella sezione <a href="#fonti" className="text-blue-300 underline decoration-dotted">Fonti</a>.
       </p>
 
       {/* Triplo Concerto */}
@@ -1432,8 +1432,11 @@ const IntroduzioneSection = () => {
           </p>
         </div>
         <p className="text-sm text-slate-300 italic">
-          <strong>Nota:</strong> il Triplo Concerto non ebbe grande successo né all’epoca né oggi. Beethoven stesso
-          sembrava consapevole della sua natura sperimentale più che del suo valore assoluto.
+          <strong>Nota:</strong> il Triplo Concerto, un “concertante” per violino, violoncello, pianoforte e orchestra che
+          rilegge la tradizione del concerto solista in forma dialettica, non ebbe successo né all’epoca né oggi: la
+          strumentazione insolita lo rese difficile da promuovere e la sua sperimentazione armonica e formale non
+          incontrò i gusti dei contemporanei, e Beethoven pareva consapevole di questa natura più innovativa che
+          “commerciale”.
         </p>
       </div>
 
@@ -1729,7 +1732,13 @@ const IntroduzioneSection = () => {
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-slate-100 p-8 rounded-2xl shadow-2xl border border-slate-600">
-        <h2 className="text-center text-3xl font-[family:'Cinzel',serif] font-bold tracking-[0.2em] mb-8 text-blue-300 leading-tight">Concerto per pianoforte n. 3 in Do minore, Op. 37</h2>
+        <h2 className="text-center text-3xl font-[family:'Cinzel',serif] font-bold tracking-[0.2em] mb-8 text-blue-300 leading-tight">
+          Concerto per pianoforte n. 3
+          <span className="hidden lg:inline-block">
+            <br />
+          </span>
+          in Do minore, Op. 37
+        </h2>
 
         {/* Immagine hero principale */}
         <div className="mb-6 rounded-lg overflow-hidden shadow-2xl">
@@ -1820,7 +1829,7 @@ const IntroduzioneSection = () => {
           </div>
         </div>
         <p className="text-sm text-slate-300 mb-6">
-          Dei cinque concerti per pianoforte, composti fra il 1795 e il 1810, Beethoven considera i primi due inferiori al Terzo; quest’ultimo segna il passaggio dallo stile classico allo stile eroico, caratterizzato da maggiore drammaticità, sperimentazione ed espressività.
+          Dei cinque concerti per pianoforte, composti fra il 1795 e il 1810, Beethoven considera i primi due inferiori al Terzo; quest’ultimo segna il passaggio dallo stile classico allo stile eroico, con una maggiore drammaticità, sperimentazione ed espressività.
         </p>
 
         {/* Tabella I 5 Concerti in Prospettiva */}
@@ -1898,7 +1907,7 @@ const IntroduzioneSection = () => {
             <p className="text-sm text-slate-300 mb-2">
               Tra il 1800 e il 1801, Beethoven negozia con gli editori per vendere i suoi primi concerti: 
               ha bisogno di guadagnare, ma è consapevole che queste opere non rappresentano più il suo attuale 
-              livello di eccellenza. I primi due furono da lui giudicati lavori giovanili ormai superati dal Terzo Concerto (Op. 37).
+              livello.
             </p>
             <p className="text-sm text-slate-400 mb-2">A Franz Anton Hoffmeister (editore a Lipsia), circa 15 dicembre 1800 o 15 gennaio 1801:</p>
             <p className="text-sm text-slate-200 leading-relaxed italic">
