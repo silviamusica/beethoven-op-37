@@ -1,0 +1,56 @@
+Content Template for “Introduzione” Tab (Curiosità Block)
+
+Use this prompt structure when asking an AI to fill the text for a new subject that should follow the same layout as the existing introduction page.
+
+1. **Hero banner**
+   - `heroTitle`: main heading (e.g., “Concerto per pianoforte n. 3 in Do minore, Op. 37”)
+   - `heroSubtitle`: supporting line(s) that explain significance or mood.
+   - `heroImageAlt`: description of the featured image.
+   - `heroParagraphs`: two short paragraphs summarizing the context and emotional tone.
+   - `heroTooltipTerms`: roughly two tooltip callouts (term + short explanation) used inline inside one of the paragraphs (e.g., “Testamento di Heiligenstadt” + explanation).
+
+2. **Highlight grid (info cards on the right column)**
+   - `highlightImageAlt`: alt text for the background image.
+   - `highlightButtonLabel`: CTA text for opening the modal (usually “Leggi il testo completo”).
+   - `highlightModalTitle`: title of the modal opened by the CTA.
+   - `highlightModalSummary`: one-sentence synopsis used in the modal body.
+
+3. **Essentials inline grid**
+   For each of the four key facts (compositore, composizione, prima esecuzione, tonalità/movimenti), provide:
+   - `factLabel`
+   - `factValue`
+   - `factTooltip`: optional clarification string for icon explanation.
+
+4. **“I 5 Concerti in prospettiva” table**
+   - `tableTitle`: header text.
+   - `tableCaption`: optional italic caption under the featured image.
+   - Provide rows with:
+     - `column1`: section title (e.g., “Contesto storico”)
+     - `column2`: short description (~2 sentences)
+     - `ctaLabel`: button text (e.g., “Approfondisci”)
+     - `modalTitle`: modal heading for each card
+     - `modalContent`: summary or longer explanation used by its modal.
+
+5. **Expandable “Curiosità” block**
+   - `curiosityHeader`: title line (e.g., “Curiosità: il ‘Concerto 0’ (WoO 4)”)
+   - `curiositySubheader`: timestamp/subtitle.
+   - `curiositySummary`: paragraph introducing the subject.
+   - `curiositySideNotes`: array of factoids to show inside the styled info boxes (each with `label`, `text`).
+   - `curiosityStructure`: ordered list of structural points (e.g., movement names).
+   - `curiosityAudio`: 
+     * `audioTitle`
+     * `audioDescription`
+     * `audioCtaLabel`
+     * `audioLink`
+   - `curiosityModalButtonLabel` (if you want a CTA inside the expansion)
+   - `curiosityModalTitle`
+   - `curiosityModalContent` (long text shown when CTA clicked)
+
+6. **Optional media section**
+   - `mediaImageAlt`: alt text for supporting image inside the curiosity block.
+   - `mediaCaption`: italic note describing the image.
+
+7. **Footnote block**
+   - Provide any final “Did you know” lines or technical notes to appear before the curiosity CTA.
+
+Usage instructions: feed the prompt with the headline/topic plus the template fields above. Example prompt: “Write copy for a hero similar to this structure for Luigi Boccherini’s cello concerto, fill every placeholder.” Include tone (e.g., “educational, dramatic, subtitle referencing the era”) to keep consistency.
