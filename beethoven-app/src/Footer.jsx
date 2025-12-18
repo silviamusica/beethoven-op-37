@@ -42,6 +42,12 @@ export default function Footer({ setActiveTab }) {
               <img src="/Logo%20Sip.png" alt="Sognando il Piano logo" title="Sognando il Piano" className="h-16 w-auto" />
             </a>
           </div>
+          <img
+            src="/images/Beethoven_Signature.png"
+            alt="Firma di Ludwig van Beethoven"
+            className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity mt-6"
+            style={{ filter: 'invert(1)' }}
+          />
           <hr className="w-32 border-t border-slate-700/60" />
           <div className="flex flex-wrap gap-2 justify-center w-full mt-2">
             <button
