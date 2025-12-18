@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 // Swipe navigation tra tab principali su mobile
-const TABS = ['introduzione', 'fonti', 'analysis', 'interpreters', 'glossary', 'flashcards', 'quiz'];
+const TABS = ['introduzione', 'fonti', 'analysis', 'interpreters', 'glossary', 'impara'];
 import Footer from './Footer';
 import { BookOpen, Music, Brain, GraduationCap, ChevronRight, ChevronLeft, RotateCcw, CheckCircle, HelpCircle, Menu, X, PlayCircle, ChevronDown, Library, User, FileText, ZoomIn, ZoomOut } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -651,7 +651,7 @@ const Navigation = ({ activeTab, setActiveTab, isMobile, isMobileMenuOpen, setIs
     { id: 'analysis', label: 'Analisi', icon: Music },
     { id: 'interpreters', label: 'Interpreti', icon: PlayCircle },
     { id: 'glossary', label: 'Glossario', icon: Library },
-    { id: 'quiz', label: 'Quiz', icon: GraduationCap },
+    { id: 'impara', label: 'Impara', icon: GraduationCap },
     { id: 'fonti', label: 'Fonti', icon: Library },
   ];
 
@@ -4432,6 +4432,60 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
   );
 };
 
+// Sezione IMPARA che contiene sia Memorizza (Flashcard) che Mettiti alla prova (Quiz)
+const ImparaSection = () => {
+  const [activeSubTab, setActiveSubTab] = useState('memorizza');
+
+  return (
+    <div className="max-w-5xl mx-auto animate-fadeIn">
+      {/* Header con sottotab */}
+      <div className="mb-8 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
+        <div className="p-8">
+          <h2 className="text-3xl font-bold text-slate-100 mb-3 flex items-center">
+            <GraduationCap className="w-8 h-8 mr-3 text-blue-400" />
+            Impara
+          </h2>
+          <p className="text-slate-300 leading-relaxed mb-6">
+            Metti alla prova la tua conoscenza del Concerto n. 3 attraverso flashcard interattive e quiz a difficoltà crescente.
+          </p>
+
+          {/* Sottotab Memorizza / Mettiti alla prova */}
+          <div className="flex gap-3">
+            <button
+              onClick={() => setActiveSubTab('memorizza')}
+              className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+                activeSubTab === 'memorizza'
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              }`}
+            >
+              <Brain className="w-5 h-5" />
+              Memorizza
+              <span className="text-xs opacity-75">(Flashcard)</span>
+            </button>
+            <button
+              onClick={() => setActiveSubTab('quiz')}
+              className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+                activeSubTab === 'quiz'
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+              }`}
+            >
+              <GraduationCap className="w-5 h-5" />
+              Mettiti alla prova
+              <span className="text-xs opacity-75">(Quiz)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Contenuto della sottosezione */}
+      {activeSubTab === 'memorizza' && <FlashcardsSection />}
+      {activeSubTab === 'quiz' && <QuizSection />}
+    </div>
+  );
+};
+
 const FlashcardsSection = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState('tutti');
   const [currentCard, setCurrentCard] = useState(0);
@@ -4477,11 +4531,8 @@ const FlashcardsSection = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto py-8 animate-fadeIn">
+    <div className="max-w-3xl mx-auto animate-fadeIn">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-slate-100 mb-3">Memorizzazione Attiva</h2>
-        <p className="text-slate-300 text-lg mb-6">Clicca sulla carta per rivelare la risposta</p>
-
         {/* Filtri difficoltà */}
         <div className="flex flex-wrap justify-center gap-3 mb-4">
           <button
@@ -5010,8 +5061,7 @@ const App = () => {
           {activeTab === 'glossary' && (
             <GlossarySection focusCategory={glossaryFocus} onFocusConsumed={() => setGlossaryFocus(null)} />
           )}
-          {activeTab === 'flashcards' && <FlashcardsSection />}
-          {activeTab === 'quiz' && <QuizSection />}
+          {activeTab === 'impara' && <ImparaSection />}
         </main>
         <Footer setActiveTab={setActiveTab} />
         {imageModal && (
