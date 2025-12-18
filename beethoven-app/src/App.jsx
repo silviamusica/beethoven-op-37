@@ -2400,19 +2400,6 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
                   Ascolta su YouTube
                 </a>
               </div>
-              <div className="mt-4 text-center">
-                <button
-                  onClick={() =>
-                    openModal(
-                      'Testamento di Heiligenstadt',
-                      <TestamentoModal />
-                    )
-                  }
-                  className="w-full text-sm font-semibold text-white bg-blue-600/90 rounded-full py-2 shadow-lg hover:bg-blue-500 transition"
-                >
-                  Leggi il testo completo
-                </button>
-              </div>
             </div>
           </div>
         )}
