@@ -931,39 +931,35 @@ const FontiSection = () => {
       id: 1,
       title: "Quaderni di schizzi (Skizzenbücher)",
       content: (
-        <ul className="space-y-3 text-slate-200">
-          <li><strong>Concezione ed evoluzione:</strong> fino al <strong>1798</strong> circa, Beethoven usava fogli sciolti o piccoli fascicoli raccolti in portafogli. Dal 1798 passò a quaderni rilegati, custoditi fino alla morte come memoria del proprio sviluppo artistico.</li>
-          <li><strong>Tipologie:</strong>
-            <ul className="mt-2 space-y-2 ml-4">
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-200"><strong>Quaderni da scrivania:</strong> formato grande, scrittura a inchiostro, usati a casa per elaborazioni sistematiche.</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-200"><strong>Quaderni tascabili:</strong> formato piccolo, scrittura a matita. Portati durante le passeggiate per fissare idee improvvise. Beethoven diceva: "Non oso uscire senza il mio stendardo".</span>
+        <ul className="space-y-4 text-slate-200">
+          <li>
+            <strong>Fase iniziale (fino al 1798)</strong>: durante Bonn e i primi anni viennesi Beethoven non usa ancora quaderni sistematici, ma fogli sciolti e fascicoli assemblati in casa. Un mix eterogeneo di abbozzi e partiture finite confluì in molte raccolte, oggi note come la "Miscellanea Kafka".
+          </li>
+          <li>
+            <strong>La svolta del 1798</strong>: con l’avvio dei Quartetti Op. 18 arriva l’uso di quaderni di schizzi rilegati acquistati pronti. Il primo testimoniato è il <strong>Grasnick 1</strong>, che segna il passaggio da materiale frammentario a supporti continui e numerati.
+          </li>
+          <li>
+            <strong>Custodia</strong>: a differenza delle partiture definitive, di cui spesso si disfava dopo la pubblicazione, Beethoven conserva con tenacia questi quaderni fino alla morte (oltre settanta), considerandoli una riserva vivente di idee e la testimonianza più diretta del suo percorso creativo.
+          </li>
+          <li>
+            <strong>Tipologie di quaderni</strong>: le fonti distinguono i <strong>quaderni da scrivania</strong> (formato più grande, 16 pentagrammi, uso domestico e scrittura a inchiostro per sviluppare bozze sistematiche) e i <strong>quaderni tascabili</strong> (dal 1815 in poi, con esemplari già nel 1811), piccoli fascicoli di fogli piegati a metà, portati in tasca durante le passeggiate per annotare idee improvvise in matita. Seyfried e altri riferiscono che Beethoven non si separava mai dal suo taccuino e si alzava di notte per non dimenticare spunti improvvisi.
+            <ul className="mt-2 space-y-2 ml-6">
+              <li className="text-sm text-slate-200">
+                *Nota*: la tradizione dello "stendardo" personale viene da testimonianze che raccontano come Beethoven non uscisse mai senza un taccuino, nemmeno di notte.
               </li>
             </ul>
           </li>
-          <li><strong>Organizzazione interna:</strong>
-            <ul className="mt-2 space-y-2 ml-4">
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-200"><strong>Concept sketches:</strong> idee iniziali per definire il carattere di un&apos;opera.</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-200"><strong>Continuity drafts:</strong> bozze lunghe su un singolo rigo per l&apos;andamento complessivo.</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-200"><strong>Varianti:</strong> alternative per brevi passaggi.</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
-                <span className="text-slate-200"><strong>Piani di movimento:</strong> sinossi per opere in più movimenti.</span>
-              </li>
+          <li>
+            <strong>Organizzazione interna del lavoro</strong>: gli studiosi come Nottebohm, Kerman e Cooper descrivono categorie riconoscibili nei quaderni:
+            <ul className="mt-2 space-y-2 ml-6">
+              <li className="text-slate-200"><strong>Schizzi concettuali</strong>: prime idee brevissime che definiscono carattere, tonalità e impronta iniziale di un’opera; spesso occupano l’inizio di una pagina.</li>
+              <li className="text-slate-200"><strong>Bozze di continuità</strong>: tentativi di stendere intere sezioni o movimenti su un unico rigo (monodico), focalizzandosi sulla linea melodica principale e sulla struttura più che sull’orchestrazione.</li>
+              <li className="text-slate-200"><strong>Varianti</strong>: alternative per brevi passaggi raccolte fianco a fianco per verificare diverse soluzioni prima di inserirle nelle bozze estese.</li>
+              <li className="text-slate-200"><strong>Piani di movimento</strong>: sinossi con temi musicali e note verbali per pianificare successioni di sezioni, tonalità o tempi nelle opere a più movimenti.</li>
             </ul>
+          </li>
+          <li>
+            <strong>Schizzi in partitura</strong>: a partire dal 1824, soprattutto negli ultimi quartetti, compaiono quaderni con quattro pentagrammi che servono a elaborare intricate trame polifoniche, anticipando già la partitura definitiva.
           </li>
         </ul>
       )
@@ -996,7 +992,7 @@ const FontiSection = () => {
       content: (
         <ul className="space-y-3 text-slate-200">
           <li><strong>Tagebuch:</strong> diario (1812-1818) per introspezione, preghiere, citazioni filosofiche, riflessioni personali.</li>
-          <li><strong>Concetto:</strong> stadio intermedio tra schizzo e partitura finale. Partitura quasi completa ma non definitiva, da ripulire prima della copia per l&apos;editore.</li>
+          <li>Stadio intermedio tra schizzo e partitura finale. Partitura quasi completa ma non definitiva, da ripulire prima della copia per l&apos;editore.</li>
         </ul>
       )
     }
@@ -1264,19 +1260,20 @@ const FontiSection = () => {
 
           <div>
             <h4 className="text-base font-semibold text-slate-200 mb-3">Fonti epistolari e documentarie</h4>
-            <ul className="space-y-2 pl-5">
-              <li className="leading-relaxed">
-                <strong>Beethoven, Ludwig van.</strong> <em>Beethoven’s Letters</em>. Ed. Emily Anderson. 3 voll. London: Macmillan, 1961 (o edizioni successive).
-              </li>
-              <li className="leading-relaxed">
-                <strong>Beethoven, Ludwig van.</strong> <em>Epistolario</em>, I (1783-1807), a cura di Sieghard Brandenburg. Milano: Skira, 1999, pp. 150, 160, 166. 
-                (Lettere agli editori Hoffmeister e Breitkopf &amp; Härtel in cui giudica l’Op. 37 superiore ai primi due concerti).
-              </li>
-              <li className="leading-relaxed">
-                <em>Ludwig van Beethovens Konversationshefte</em> (Quaderni di Conversazione). Ed. Karl-Heinz Köhler, Grita Herre, et al.
-                Leipzig: Deutscher Verlag für Musik. (Riferimenti sparsi nelle biografie citate).
-              </li>
-            </ul>
+            <p className="text-sm text-slate-300 leading-relaxed mb-3">
+              I fondi Anderson, Brandenburg, Köhler e Herre permettono di ricostruire in dettaglio l’evoluzione del rapporto di Beethoven con il quaderno di schizzi e con il lavoro preparatorio stesso.
+            </p>
+            <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+              <div>
+                <strong>Concezione ed evoluzione</strong>: il cambiamento decisivo avviene intorno al <strong>1798</strong>. Fino ad allora Beethoven si serve di fogli sciolti o di piccoli fascicoli assemblati in casa (molti confluiscono nella "Miscellanea Kafka"). Con i primi Quartetti per archi (Op. 18) introduce quaderni rilegati già pronti (il primo noto è il <strong>Grasnick 1</strong>) e, a differenza delle partiture definitive che spesso eliminava dopo la pubblicazione, conserva con tenacia questi quaderni, oltre settanta, come riserva permanente di idee.
+              </div>
+              <div>
+                <strong>Tipologie di quaderni</strong>: le fonti distinguono i <em>quaderni da scrivania</em> (formato più grande, spesso oblungo con 16 pentagrammi, uso domestico e inchiostro per bozze sistematiche) dai <em>quaderni tascabili</em> (a partire dal 1815, con alcuni esempi del 1811), piccoli fascicoli ottenuti piegando fogli di carta a metà, facilmente portabili in tasca, usati durante le passeggiate per annotare idee rapide in matita. Seyfried e altri contemporanei riferiscono che Beethoven non si separava mai dal suo quaderno, nemmeno di notte, per non perdere uno spunto.
+              </div>
+              <div>
+                <strong>Organizzazione interna dell’opera</strong>: Nottebohm, Kerman e Cooper classificano le annotazioni in schizzi concettuali (idee di carattere e tonalità scritte in cima alle pagine), bozze di continuità (linee melodiche monodiche che delineano il flusso di un movimento), varianti prossime tra loro per sondare diverse soluzioni e piani di movimento che mescolano temi musicali e parole per progettare opere multi-movimento. Nei quaderni degli ultimi quartetti (dal 1824) compaiono anche gli <em>schizzi in partitura</em> a quattro pentagrammi per dipanare le trame polifoniche complesse.
+              </div>
+            </div>
           </div>
         </div>
             </div>
@@ -3502,7 +3499,7 @@ const GlossarySection = ({ focusCategory, onFocusConsumed }) => {
             <div className="space-y-5 text-sm text-slate-300">
               {/* Etimologia */}
               <div className="bg-slate-800/50 p-4 rounded-lg border-l-2 border-orange-500">
-                <h4 className="text-base font-semibold text-slate-200 mb-3">Etimologia e concetto</h4>
+                <h4 className="text-base font-semibold text-slate-200 mb-3">Etimologia</h4>
                 <p className="mb-3">
                   Il termine <strong>"Concerto"</strong> possiede un’etimologia doppia e apparentemente contraddittoria:
                 </p>
