@@ -158,7 +158,7 @@ const flashcardsData = [
     q: 'A chi fu dedicato il concerto?',
     a: 'Principe Luigi Ferdinando di Prussia',
     difficulty: 'base',
-    details: 'Il Principe Luigi Ferdinando di Prussia (1772-1806) era egli stesso un pianista di talento e ammiratore di Beethoven. Morì in battaglia durante le guerre napoleoniche, solo tre anni dopo la pubblicazione del concerto.'
+    details: 'Il Principe Luigi Ferdinando di Prussia (1772-1806) era egli stesso un pianista di talento e ammiratore di Beethoven. Morì in battaglia durante le guerre napoleoniche, solo due anni dopo la pubblicazione del concerto.'
   },
   {
     q: 'In quale teatro avvenne la prima esecuzione?',
@@ -182,13 +182,13 @@ const flashcardsData = [
     q: 'Quale editore pubblicò per primo il concerto?',
     a: 'Bureau des Arts et d\'Industrie',
     difficulty: 'base',
-    details: 'Il Bureau des Arts et d\'Industrie era una casa editrice viennese fondata nel 1801. Pubblicò molte opere di Beethoven nei primi anni dell\'Ottocento, incluso questo concerto nel 1806.'
+    details: 'Il Bureau des Arts et d\'Industrie era una casa editrice viennese fondata nel 1801. Pubblicò molte opere di Beethoven nei primi anni dell\'Ottocento, incluso questo concerto nel 1804.'
   },
   {
     q: 'In che anno fu pubblicato il concerto?',
-    a: '1806',
+    a: '1804',
     difficulty: 'base',
-    details: 'Nonostante la prima esecuzione del 1803, il concerto fu pubblicato solo nel 1806. Questo ritardo di tre anni era comune all\'epoca, quando Beethoven spesso negoziava a lungo con gli editori per ottenere le migliori condizioni.'
+    details: 'Nonostante la prima esecuzione del 1803, il concerto fu pubblicato solo nel 1804. Questo ritardo di un anno era comune all\'epoca, quando Beethoven spesso negoziava a lungo con gli editori per ottenere le migliori condizioni.'
   },
 
   // INTERMEDIO
@@ -239,12 +239,6 @@ const flashcardsData = [
     a: 'Clarinetto e violini',
     difficulty: 'intermedio',
     details: 'Il secondo tema è affidato al clarinetto e ai violini in un delicato dialogo. Questo timbro più morbido crea un contrasto con l\'aggressività del primo tema marziale, seguendo la dialettica drammatica tipica della forma sonata beethoveniana.'
-  },
-  {
-    q: 'Quale interprete è famoso per l\'approccio "cristallino e apollineo"?',
-    a: 'Michelangeli',
-    difficulty: 'intermedio',
-    details: 'Arturo Benedetti Michelangeli era celebre per la sua tecnica perfetta e il tocco cristallino. Il suo approccio "apollineo" privilegia la chiarezza, la precisione e il controllo, in contrasto con interpretazioni più "dionisiache" ed emotive.'
   },
   {
     q: 'Quale interprete usa un approccio "intimista e cantabile"?',
@@ -665,12 +659,6 @@ const quizData = [
     difficulty: "intermedio"
   },
   {
-    question: "Quale interprete è famoso per l’approccio 'cristallino e apollineo'?",
-    options: ["Arrau", "Michelangeli", "Kempff", "Rubinstein"],
-    correct: 1,
-    difficulty: "intermedio"
-  },
-  {
     question: "Quale interprete usa un approccio 'intimista e cantabile'?",
     options: ["Arrau", "Michelangeli", "Kempff", "Barenboim"],
     correct: 2,
@@ -808,13 +796,6 @@ const quizData = [
     correct: 0,
     difficulty: "intermedio",
     explanation: "Le parti orchestrali furono salvate grazie alla copiatura manuale effettuata dal copista di Beethoven prima della pubblicazione ufficiale della partitura completa."
-  },
-  {
-    question: "Quale errore famoso di trillo è presente nella cadenza pubblicata nel 1806?",
-    options: ["Trillo troppo lungo", "Trillo nella mano sbagliata", "Trillo sulla nota sbagliata", "Assenza di trillo"],
-    correct: 1,
-    difficulty: "intermedio",
-    explanation: "Nella cadenza pubblicata nel 1806 c’è un errore celebre: il trillo è scritto nella mano sinistra invece che nella destra, rendendo il passaggio praticamente ineseguibile come scritto."
   },
   {
     question: "Quanti pedali aveva il pianoforte Érard del 1803?",
@@ -4893,8 +4874,6 @@ const QuizSection = () => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [isExplanationExpanded, setIsExplanationExpanded] = useState(false);
-  const [flashcardDetailVisible, setFlashcardDetailVisible] = useState(false);
 
   const startQuiz = (difficulty) => {
     const filtered = quizData.filter(q => q.difficulty === difficulty);
@@ -4913,10 +4892,6 @@ const QuizSection = () => {
       setScore(score + 1);
     }
   };
-
-  useEffect(() => {
-    setFlashcardDetailVisible(false);
-  }, [currentQuestion]);
 
   const handleNext = () => {
     if (currentQuestion < shuffledQuestions.length - 1) {
@@ -5060,8 +5035,17 @@ const QuizSection = () => {
     );
   }
 
+  const normalizeText = (text) => {
+    if (!text) return text;
+    return text
+      .replace(/[‘’]/g, "'")
+      .replace(/[“”]/g, '"')
+      .replace(/\s+/g, ' ')
+      .trim();
+  };
   const currentQ = shuffledQuestions[currentQuestion];
-  const flashcardDetail = flashcardsData.find(card => card.q === currentQ?.question)?.details;
+  const flashcardDetail = flashcardsData.find(card => normalizeText(card.q) === normalizeText(currentQ?.question))?.details;
+  const detailToShow = flashcardDetail || currentQ?.explanation;
 
   return (
     <div className="max-w-3xl mx-auto animate-fadeIn">
@@ -5122,48 +5106,14 @@ const QuizSection = () => {
           </div>
 
           {/* Mostra spiegazione se presente e se la risposta è stata data */}
-          {selectedOption !== null && currentQ.explanation && (
+          {selectedOption !== null && detailToShow && (
             <div className="mt-6 p-4 bg-slate-900 border border-slate-600 rounded-lg">
               <div className="flex items-start space-x-2">
                 <BookOpen className="w-5 h-5 text-blue-400 mt-0.5 shrink-0" />
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-blue-400 mb-2">Approfondimento:</p>
-
-                  {currentQ.explanation.length > 150 ? (
-                    // Spiegazione lunga - usa espansione
-                    <div>
-                      <p className="text-sm text-slate-300 leading-relaxed mb-2">
-                        {isExplanationExpanded ? currentQ.explanation : currentQ.explanation.substring(0, 150) + '...'}
-                      </p>
-                      <button
-                        onClick={() => setIsExplanationExpanded(!isExplanationExpanded)}
-                        className="flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors text-xs font-semibold"
-                      >
-                        <ChevronDown className={`w-4 h-4 transition-transform ${isExplanationExpanded ? 'rotate-180' : ''}`} />
-                        {isExplanationExpanded ? 'Chiudi' : 'Leggi tutto'}
-                      </button>
-                    </div>
-                  ) : (
-                    // Spiegazione breve - mostra tutto
-                    <p className="text-sm text-slate-300 leading-relaxed">{currentQ.explanation}</p>
-                  )}
+                <div className="flex-1 text-sm leading-relaxed text-slate-300">
+                  {detailToShow}
                 </div>
               </div>
-              {flashcardDetail && (
-                <div className="mt-4">
-                  <button
-                    onClick={() => setFlashcardDetailVisible(!flashcardDetailVisible)}
-                    className="text-xs font-semibold text-blue-300 hover:text-blue-200 transition-colors"
-                  >
-                    {flashcardDetailVisible ? 'Nascondi approfondimento flashcard' : 'Approfondisci con la flashcard corrispondente'}
-                  </button>
-                  {flashcardDetailVisible && (
-                    <p className="mt-2 text-sm text-slate-300 leading-relaxed bg-slate-900/60 p-3 rounded-lg border border-slate-700">
-                      {flashcardDetail}
-                    </p>
-                  )}
-                </div>
-              )}
             </div>
           )}
 
@@ -5172,7 +5122,7 @@ const QuizSection = () => {
             <div className="mt-6 flex justify-end">
               <button
                 onClick={handleNext}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all flex items-center space-x-2 shadow-lg"
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all flex items-center space-x-2 shadow-lg w-full sm:w-auto justify-center"
               >
                 <span>{currentQuestion < shuffledQuestions.length - 1 ? 'Prossima domanda' : 'Vedi Risultato'}</span>
                 <ChevronRight className="w-5 h-5" />
