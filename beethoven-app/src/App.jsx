@@ -2045,14 +2045,6 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
                   <span className="text-blue-200 font-semibold underline decoration-dotted">Leggi il testo completo</span>
                 </button>
               </div>
-              <div className="mt-4 flex justify-center">
-                <button
-                  onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
-                  className="text-sm font-semibold text-blue-200 underline decoration-dotted hover:text-white transition"
-                >
-                  Leggi il testo completo
-                </button>
-              </div>
             </div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400 mt-6">
                 Prima esecuzione
@@ -2086,14 +2078,6 @@ const IntroduzioneSection = ({ onNavigateToFonti }) => {
             >
               <span>Testamento di Heiligenstadt:</span>
               <span className="text-blue-200 font-semibold underline decoration-dotted">Leggi il testo completo</span>
-            </button>
-          </div>
-          <div className="px-4 py-3">
-            <button
-              onClick={() => openModal('Testamento di Heiligenstadt', <TestamentoModal />)}
-              className="w-full text-center text-sm font-semibold text-blue-200 underline decoration-dotted hover:text-white transition"
-            >
-              Leggi il testo completo
             </button>
           </div>
         </div>
