@@ -1771,7 +1771,7 @@ const IntroduzioneSection = () => {
                 Prima esecuzione
               </h3>
             <p>
-              La prima esecuzione avviene il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma è sovraccarico: Beethoven esegue nuovamente la Sinfonia n. 1, presenta per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l’oratorio Cristo sul Monte degli Ulivi. <Tooltip text="Allievo e biografo di Beethoven, raccontò l’eccessiva durata dell’Akademie"><span className="text-blue-300 underline decoration-dotted cursor-help">Ferdinand Ries</span></Tooltip> scrive: «Il concerto inizia alle sei, ma dura così tanto che un paio di brani non vengono eseguiti».
+              La prima esecuzione avviene il 5 aprile 1803 al Theater an der Wien in un'<Tooltip text="Concerto pubblico dove i compositori presentavano le proprie opere"><span className="text-blue-300 underline decoration-dotted cursor-help">Akademie</span></Tooltip>. Il programma è sovraccarico: Beethoven esegue nuovamente la Sinfonia n. 1, presenta per la prima volta la Sinfonia n. 2, il Concerto n. 3 e l’oratorio Cristo sul Monte degli Ulivi. Ferdinand Ries scrive: «Il concerto inizia alle sei, ma dura così tanto che un paio di brani non vengono eseguiti».
             </p>
             <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
               <li>Sinfonia n. 1 (riproposta, ~35 minuti)</li>
@@ -1779,12 +1779,10 @@ const IntroduzioneSection = () => {
               <li>Concerto per pianoforte n. 3 in Do minore, Op. 37 (~40 minuti)</li>
               <li>Oratorio Cristo sul Monte degli Ulivi (~45 minuti)</li>
             </ul>
-            <p className="text-xs italic text-slate-400">
-              Ries annota che la serata «sarebbe dovuta essere ancora più lunga», ma i tagli imposti dalle circostanze obbligano a eliminare un paio di brani.
+            <p className="text-sm text-slate-300">
+              Ries, biografo e allievo di Beethoven, annota che la serata «sarebbe dovuta essere ancora più lunga», ma i tagli imposti dalle circostanze, li obbligarono a eliminare un paio di brani.
             </p>
-            <p>
-              Quest’ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
-            </p>
+            
             </div>
           </div>
           <div className="hidden lg:block rounded-lg overflow-hidden shadow-2xl border border-slate-700 bg-slate-900/60 self-start">
@@ -1802,7 +1800,7 @@ const IntroduzioneSection = () => {
         </div>
 
         {/* Informazioni essenziali inline */}
-        <div className="grid md:grid-cols-2 gap-4 mt-10 mb-10 text-sm bg-slate-900/50 p-4 rounded-lg">
+        <div className="grid md:grid-cols-2 gap-4 my-6 text-sm bg-slate-900/50 p-4 rounded-lg">
           <div className="space-y-1.5">
             <p><strong>Compositore:</strong> Ludwig van Beethoven (1770-1827)</p>
             <p><strong>Composizione:</strong> 1800-1803</p>
@@ -1821,8 +1819,8 @@ const IntroduzioneSection = () => {
             <p><strong>Movimenti:</strong> Allegro con brio • Largo • Rondò</p>
           </div>
         </div>
-        <p className="text-sm text-slate-300 mb-8">
-          Dei cinque concerti per pianoforte, scritti fra il 1795 e il 1810, Mozart ne compone venticinque; Beethoven considera i primi due inferiori all’op. 37. Quest’ultimo segna il passaggio dallo stile classico di Mozart allo stile eroico, caratterizzato da maggiore drammaticità ed espressività.
+        <p className="text-sm text-slate-300 mb-6">
+          Dei cinque concerti per pianoforte, composti fra il 1795 e il 1810, Beethoven considera i primi due inferiori al Terzo; quest’ultimo segna il passaggio dallo stile classico allo stile eroico, caratterizzato da maggiore drammaticità, sperimentazione ed espressività.
         </p>
 
         {/* Tabella I 5 Concerti in Prospettiva */}
